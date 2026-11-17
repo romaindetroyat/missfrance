@@ -6,7 +6,8 @@
 //     autres « en attente » en pointant vers l'aperçu Google (rien n'est stocké à ce stade) ;
 //     la vérification visuelle (candidate seule, nette, bien cadrée ; portrait / maillot…) et le
 //     dédoublonnage passent ensuite ;
-//  3. copie dans le stockage du site des seules photos acceptées et non doublons (1600 px max).
+//  3. copie dans le stockage du site des seules photos acceptées et non doublons (1200 px max, WebP qualité 80) ;
+//  4. ménage : fichiers des photos rejetées ou en doublon retirés du stockage.
 import { createClient } from "jsr:@supabase/supabase-js@2";
 
 const sb = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
@@ -103,8 +104,11 @@ async function importOne(f: { id: string; name: string; handle: string; candidat
 }
 
 // Copie dans le stockage du site d'une photo acceptée (et passée au dédoublonnage)
+// Format de stockage : 1200 px maximum, WebP qualité 80 (assez pour l'écran, 3 à 4 fois plus léger que l'original)
+const slim = (url: string) => `https://wsrv.nl/?url=${encodeURIComponent(url)}&w=1200&h=1200&fit=inside&we&q=80&output=webp`;
+
 async function promote(p: { id: number; candidate_id: string; url: string; hash: string }): Promise<string> {
-  const res = await fetch(p.url, { signal: AbortSignal.timeout(40000) });
+  const res = await fetch(slim(p.url), { signal: AbortSignal.timeout(40000) });
   if (!res.ok) return "http " + res.status;
   const buf = new Uint8Array(await res.arrayBuffer());
   const ext = kind(buf);
@@ -113,9 +117,26 @@ async function promote(p: { id: number; candidate_id: string; url: string; hash:
   const path = `${p.candidate_id}/drive-${p.hash}.${ext}`;
   const up = await sb.storage.from("photos").upload(path, buf, { contentType: MIME[ext], upsert: true, cacheControl: "31536000" });
   if (up.error) return "stockage";
+  // Ancienne copie en JPEG (avant le passage au WebP) : supprimée
+  if (ext !== "jpg") await sb.storage.from("photos").remove([`${p.candidate_id}/drive-${p.hash}.jpg`]);
   const url = sb.storage.from("photos").getPublicUrl(path).data.publicUrl;
   const { error } = await sb.from("photos").update({ url, bytes: buf.length, ...(d ? { width: d.w, height: d.h } : {}) }).eq("id", p.id);
   return error ? "base" : "copiée";
+}
+
+const STORE = "/storage/v1/object/public/photos/";
+async function cleanup(): Promise<number> {
+  const { data } = await sb.from("photos").select("id,url,source_url").or("review.eq.rejected,hidden.eq.true").like("url", `%${STORE}%`).limit(200);
+  if (!data?.length) return 0;
+  const paths = data.map((p) => decodeURIComponent(p.url.split(STORE)[1]));
+  const { error } = await sb.storage.from("photos").remove(paths);
+  if (error) return 0;
+  for (const p of data) {
+    // Photo du Drive : on repointe vers l'aperçu Google, pour pouvoir la réexaminer plus tard
+    const drive = p.source_url?.startsWith("drive:") ? lh3(p.source_url.slice(6), "w1600") : null;
+    await sb.from("photos").update(drive ? { url: drive } : { url: `retire:${p.id}:${p.url}`.slice(0, 500) }).eq("id", p.id);
+  }
+  return data.length;
 }
 
 Deno.serve(async (req) => {
@@ -146,6 +167,8 @@ Deno.serve(async (req) => {
     const o = await promote(p as never).catch(() => "erreur");
     promoted[o] = (promoted[o] || 0) + 1;
   });
+  // Ménage : fichiers des photos rejetées ou en doublon retirés du stockage (la ligne reste)
+  const cleaned = body.cleanup === false ? 0 : await cleanup();
   const { count } = await sb.from("drive_files").select("id", { count: "exact", head: true }).in("status", ["new", "en_cours"]);
-  return Response.json({ ms: Date.now() - t0, ...report, processed: counts, promoted, remaining: count });
+  return Response.json({ ms: Date.now() - t0, ...report, processed: counts, promoted, cleaned, remaining: count });
 });
