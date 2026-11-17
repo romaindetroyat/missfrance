@@ -85,10 +85,10 @@ export async function GET(req) {
       const isHer = v.same_person === "oui" || (fromOwnAccount && v.same_person === "incertain" && v.others === "aucun");
       let ok = v.content === "candidate" && isHer && v.main_subject && v.others !== "accompagnee" && v.sharp && v.well_framed;
       // Maillot : rubrique recherchée, les poses (allongée, de profil, lunettes) rendent le visage moins sûr.
-      // Sur son propre compte, on garde si elle est seule, nette, visage visible et pas jugée « autre personne »
-      // (l'écharpe de sa région 2026 l'emporte sur un doute du modèle).
+      // Sur son propre compte, on garde dès qu'elle est seule, nette et visage visible, même si le modèle doute
+      // de l'identité (choix du propriétaire du site) ; ailleurs, il faut « oui » ou l'écharpe de sa région 2026.
       if (!ok && v.category === "maillot" && v.content === "candidate" && v.sharp && v.face_visible && v.others !== "accompagnee"
-        && (v.same_person === "oui" || v.own_sash || (fromOwnAccount && v.same_person === "incertain"))) ok = true;
+        && (v.same_person === "oui" || v.own_sash || fromOwnAccount)) ok = true;
       const flags = [v.content !== "candidate" && v.content, !v.sharp && "floue", !v.well_framed && "mal cadrée", !v.face_visible && "visage caché", v.own_sash && "écharpe 2026"].filter(Boolean).join(", ");
       await sb.rpc("review_set", { p_key: key, p_id: p.id, p_ok: ok, p_type: v.category, p_note: `${v.same_person} · ${v.others}${flags ? " · " + flags : ""} · ${v.category} · ${v.reason}` });
       ok ? out.ok++ : out.rejected++;
