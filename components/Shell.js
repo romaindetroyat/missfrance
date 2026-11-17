@@ -9,6 +9,9 @@ import Top5Dock from "./Top5Dock";
 
 const LINKS = [
   ["/", "Candidates"],
+  ["/defile", "Défilé"],
+  ["/duel", "Duel"],
+  ["/comparer", "Comparer"],
   ["/prono", "Mon Top 5"],
   ["/joueurs", "Joueurs"],
   ["/etude", "Étude"],

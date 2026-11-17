@@ -6,6 +6,7 @@ import { cote } from "@/components/Bits";
 import Top5Panel from "@/components/Top5Panel";
 import { PHOTO_TYPES, featured } from "@/lib/photos";
 import { useTop5 } from "@/lib/top5";
+import { useCompare } from "@/lib/compare";
 
 const SORTS = {
   region: ["Région", (a, b) => a.region.localeCompare(b.region, "fr")],
@@ -19,6 +20,7 @@ const Plus = () => (
 export default function Home() {
   const app = useApp();
   const t = useTop5();
+  const cmp = useCompare();
   const [sort, setSort] = useState("region");
   const [ptype, setPtype] = useState("officiel");
   const list = [...app.candidates].sort(SORTS[sort][1]);
@@ -44,6 +46,9 @@ export default function Home() {
             );
           })}
         </div>
+        {cmp.ids.length > 0 && (
+          <p className="hint first">{cmp.ids.length} candidate{cmp.ids.length > 1 ? "s" : ""} à comparer · <a href="/comparer">Ouvrir le comparateur</a> · <a href="/defile">Lancer le défilé</a></p>
+        )}
         {t.editable && t.picks.length === 0 && (
           <p className="hint first">Touche <span className="plus-demo"><Plus /></span> sur une photo pour l'ajouter à ton Top 5, dans l'ordre de tes préférences.</p>
         )}
@@ -61,6 +66,9 @@ export default function Home() {
                   </Link>
                   {n > 0 && <span className="pill">{n} photo{n > 1 ? "s" : ""}</span>}
                   {fallback && <span className="pill soft">Portrait</span>}
+                  <button className={`cmp-toggle${cmp.has(c.id) ? " on" : ""}`} onClick={() => cmp.toggle(c.id)} aria-pressed={cmp.has(c.id)} aria-label={cmp.has(c.id) ? `Retirer ${c.nom} du comparateur` : `Comparer ${c.nom}`}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" aria-hidden="true"><path d="M3 5h7v14H3zM14 5h7v14h-7z" /></svg>
+                  </button>
                   {t.editable ? (
                     pos >= 0 ? (
                       <button key="on" className="pick on pop" onClick={() => t.toggle(c.id)} aria-label={`Retirer ${c.nom} de mon Top 5 (n° ${pos + 1})`}>{pos + 1}</button>
