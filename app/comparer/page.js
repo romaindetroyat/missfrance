@@ -81,7 +81,7 @@ export default function Comparer() {
         <h1>Comparer</h1>
         <p className="muted">Mets jusqu'à {COMPARE_MAX} candidates côte à côte, sur le même type de photo, avec leurs chiffres.</p>
         <div className="side-actions">
-          {t.picks.length >= 2 && <button className="btn primary" onClick={() => cmp.set(t.picks.slice(0, COMPARE_MAX))}>Comparer mon Top 5</button>}
+          {t.count >= 2 && <button className="btn primary" onClick={() => cmp.set(t.picks.filter(Boolean).slice(0, COMPARE_MAX))}>Comparer mon Top 5</button>}
           <button className="btn" onClick={() => cmp.set(fav)}>Comparer les 3 favorites du modèle</button>
           <Link className="btn" href="/defile">Choisir depuis le défilé</Link>
         </div>

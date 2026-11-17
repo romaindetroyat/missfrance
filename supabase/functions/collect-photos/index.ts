@@ -10,7 +10,7 @@ import { createClient } from "jsr:@supabase/supabase-js@2";
 const sb = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36";
 const PER_SOURCE = 12;
-const TARGET = 40; // au-delà, on n'ajoute plus de photos à une candidate
+const TARGET = 60; // au-delà, on n'ajoute plus de photos à une candidate
 const MIN_BYTES = 20_000;
 const MAX_BYTES = 12_000_000;
 const BUDGET_MS = 120_000;
@@ -215,7 +215,7 @@ Deno.serve(async (req) => {
       let found = 0;
       const notes: Record<string, number> = {};
       if (!err) {
-        const { count } = await sb.from("photos").select("id", { count: "exact", head: true }).eq("candidate_id", c.id);
+        const { count } = await sb.from("photos").select("id", { count: "exact", head: true }).eq("candidate_id", c.id).eq("hidden", false).neq("review", "rejected");
         const room = Math.max(0, Math.min(PER_SOURCE, TARGET - (count || 0)));
         const hits = isBing ? fromBing(html, c) : fromPage(html, page, c, r.dedicated);
         notes["trouvées"] = hits.length;

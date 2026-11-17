@@ -1,96 +1,14 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
 import { useApp } from "../providers";
 import { CandidateRow, cote } from "@/components/Bits";
-import { useDraft } from "@/lib/draft";
+import Top5Panel from "@/components/Top5Panel";
+import { useTop5 } from "@/lib/top5";
 import { RANKS, scoreFinal } from "@/lib/scoring";
-import { supabase } from "@/lib/supabase";
 
 const fmt = (t) =>
   new Date(t).toLocaleString("fr-FR", { weekday: "long", day: "numeric", month: "long", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Paris" });
 const hour = (t) => new Date(t).toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Paris" }).replace(":", " h ");
-
-// Éditeur d'un Top 5 ordonné, avec brouillon local et enregistrement dans la table indiquée.
-function Editor({ table, kind, saved, fallbackPicks, label }) {
-  const app = useApp();
-  const { picks, update, clear, dirty } = useDraft(app.email, saved, kind, fallbackPicks);
-  const [state, setState] = useState({ saving: false, msg: "", ok: false });
-  const [add, setAdd] = useState("");
-
-  const move = (i, d) => {
-    const next = [...picks];
-    [next[i], next[i + d]] = [next[i + d], next[i]];
-    update(next);
-  };
-
-  async function save() {
-    setState({ saving: true, msg: "", ok: false });
-    const { error } = await supabase.from(table).upsert({ email: app.email, picks });
-    if (error) {
-      const closed = /verrouill|ouverts/i.test(error.message);
-      return setState({ saving: false, ok: false, msg: closed ? "C'est trop tard : cette phase est fermée." : "L'enregistrement a échoué. Ton brouillon est conservé, réessaie." });
-    }
-    await app.reload();
-    clear();
-    setState({ saving: false, msg: `${label} enregistré.`, ok: true });
-  }
-
-  const others = app.candidates.filter((c) => !picks.includes(c.id));
-
-  return (
-    <>
-      <div className="list">
-        {RANKS.map((r, i) =>
-          picks[i] ? (
-            <CandidateRow key={picks[i]} id={picks[i]} rank={i + 1}
-              right={
-                <span className="actions">
-                  <span className="meta">Cote {cote(app.byId[picks[i]])}</span>
-                  <button className="icon" disabled={i === 0} onClick={() => move(i, -1)} aria-label="Monter">↑</button>
-                  <button className="icon" disabled={i === picks.length - 1} onClick={() => move(i, 1)} aria-label="Descendre">↓</button>
-                  <button className="icon" onClick={() => update(picks.filter((p) => p !== picks[i]))} aria-label="Retirer">×</button>
-                </span>
-              } />
-          ) : (
-            <div key={i} className="row empty">
-              <span className="rank">{i + 1}</span>
-              <span className="muted">{r}</span>
-            </div>
-          )
-        )}
-      </div>
-
-      {picks.length < 5 && (
-        <div className="adder">
-          <select value={add} onChange={(e) => setAdd(e.target.value)} aria-label="Choisir une candidate">
-            <option value="">Ajouter une candidate…</option>
-            {others.map((c) => (
-              <option key={c.id} value={c.id}>{c.region} — {c.nom} (cote {cote(c)})</option>
-            ))}
-          </select>
-          <button className="btn" disabled={!add} onClick={() => { update([...picks, add]); setAdd(""); }}>Ajouter</button>
-        </div>
-      )}
-
-      <div className="savebar">
-        <button className="btn primary" disabled={picks.length !== 5 || !dirty || state.saving} onClick={save}>
-          {state.saving ? "Enregistrement…" : saved ? "Enregistrer les modifications" : `Enregistrer ${label.toLowerCase()}`}
-        </button>
-        <span className={state.ok && !dirty ? "ok" : "muted"}>
-          {state.msg && state.ok && !dirty
-            ? state.msg
-            : picks.length !== 5
-            ? `Encore ${5 - picks.length} candidate${5 - picks.length > 1 ? "s" : ""} à choisir.`
-            : dirty
-            ? "Modifications non enregistrées."
-            : "Enregistré."}
-        </span>
-        {state.msg && !state.ok && <span className="error">{state.msg}</span>}
-      </div>
-    </>
-  );
-}
 
 function ReadOnly({ picks, detail }) {
   const app = useApp();
@@ -106,6 +24,7 @@ function ReadOnly({ picks, detail }) {
 
 export default function Prono() {
   const app = useApp();
+  const t = useTop5();
   const main = app.myPrediction?.picks || null;
   const adj = app.myAdjustment?.picks || null;
   const coteById = Object.fromEntries(app.candidates.map((c) => [c.id, c.cote]));
@@ -117,7 +36,7 @@ export default function Prono() {
       <ul>
         <li>Une candidate de ton Top 5 présente dans le Top 5 réel rapporte 10 × sa cote ; à la place exacte, les points sont doublés ; Miss France 2027 trouvée en n° 1 : triplés.</li>
         <li>Score final : 80 % pour le Top 5 principal, 20 % pour les ajustements de dernière minute. Sans ajustement, ton Top 5 principal compte pour les deux parts.</li>
-        <li>La cote vient du modèle statistique (voir <Link href="/etude">l'étude</Link>) et se fige au début de la cérémonie.</li>
+        <li>La cote vient du modèle statistique (voir <Link href="/ia">les pronos de l'IA</Link>) et se fige au début de la cérémonie.</li>
       </ul>
     </details>
   );
@@ -128,11 +47,11 @@ export default function Prono() {
       <>
         <h1>Mon Top 5</h1>
         <p className="muted">
-          Dans l'ordre : la n° 1 est ta Miss France 2027. Modifiable jusqu'au début de la cérémonie
+          Remplis les places dans l'ordre que tu veux : tu peux désigner ta 3e dauphine avant ta Miss France. Modifiable jusqu'au début de la cérémonie
           {app.lockAt ? ` (${fmt(app.lockAt)})` : ""}. Pendant l'émission, tu pourras encore faire des ajustements de dernière minute
           {app.adjustUntil ? ` jusqu'à ${hour(app.adjustUntil)}` : ""}, qui compteront pour 20 % du score.
         </p>
-        <Editor table="predictions" kind="top5" saved={app.myPrediction} label="Mon Top 5" />
+        <Top5Panel t={t} />
         {rules}
       </>
     );
@@ -147,7 +66,7 @@ export default function Prono() {
           Ton Top 5 principal est verrouillé. Jusqu'à {app.adjustUntil ? hour(app.adjustUntil) : "la fin des ajustements"}, tu peux
           enregistrer un Top 5 ajusté d'après ce que tu vois à l'écran : il comptera pour 20 % du score final.
         </p>
-        <Editor table="adjustments" kind="ajust" saved={app.myAdjustment} fallbackPicks={main} label="Mon ajustement" />
+        <Top5Panel t={t} />
         <h2>Mon Top 5 principal <span className="muted small">(80 %)</span></h2>
         {main ? <ReadOnly picks={main} /> : <p className="muted">Tu n'as pas enregistré de Top 5 principal avant la cérémonie.</p>}
         {rules}

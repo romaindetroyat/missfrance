@@ -51,7 +51,7 @@ export default function Home() {
         {cmp.ids.length > 0 && (
           <p className="hint first">{cmp.ids.length} candidate{cmp.ids.length > 1 ? "s" : ""} à comparer · <a href="/comparer">Ouvrir le comparateur</a> · <a href="/defile">Lancer le défilé</a></p>
         )}
-        {t.editable && t.picks.length === 0 && (
+        {t.editable && t.count === 0 && (
           <p className="hint first">Touche <span className="plus-demo"><Plus /></span> sur une photo, ou glisse-la vers ton Top 5 (appui long sur mobile), pour l'ajouter dans l'ordre de tes préférences.</p>
         )}
         <div className="grid" key={sort}>

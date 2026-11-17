@@ -26,7 +26,7 @@ export default function Top5Dock() {
       <button data-drop="top5" className={`dock${t.dirty ? " dirty" : ""}${dnd?.drag ? " drop-ready" : ""}`} onClick={() => setOpen(true)} aria-label={`Ouvrir ${label}`}>
         <span className="dock-text">
           <strong>{label}</strong>
-          <span>{!t.editable ? "Verrouillé" : t.dirty ? "À enregistrer" : t.full ? "Complet ✓" : `${t.picks.length}/5 choisies`}</span>
+          <span>{!t.editable ? "Verrouillé" : t.dirty ? "À enregistrer" : t.full ? "Complet ✓" : `${t.count}/5 choisies`}</span>
         </span>
         <span className="dock-slots">
           {[0, 1, 2, 3, 4].map((i) => {

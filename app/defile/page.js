@@ -6,6 +6,7 @@ import { cote } from "@/components/Bits";
 import { PHOTO_TYPES, TYPE_LABEL, photosOf } from "@/lib/photos";
 import { useTop5 } from "@/lib/top5";
 import { useCompare } from "@/lib/compare";
+import RankPicker from "@/components/RankPicker";
 
 const DURATION = 5000;
 const ORDERS = {
@@ -13,6 +14,8 @@ const ORDERS = {
   region: ["Région", (a, b) => a.region.localeCompare(b.region, "fr")],
   outsiders: ["Outsiders", (a, b) => (b.cote ?? 0) - (a.cote ?? 0)],
 };
+// Teinte propre à chaque région (écharpe colorée du défilé)
+const hueOf = (id) => [...id].reduce((h, ch) => (h * 31 + ch.charCodeAt(0)) % 360, 7);
 const pct = (p) => (p != null ? `${Math.round(Number(p) * 100)} %` : "—");
 const I = ({ d, size = 22 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={d} /></svg>
@@ -102,7 +105,7 @@ export default function Defile() {
               <button key={x.id} className={`queue-item${j === i ? " on" : ""}`} onClick={() => { setDir(j > i ? "next" : "prev"); setI(j); setK(0); }} aria-current={j === i}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <span className="queue-img">{src && <img src={src} alt="" loading="lazy" />}</span>
-                <span className="queue-txt"><span className="region">{x.region}</span><span className="name">{x.nom}</span></span>
+                <span className="queue-txt"><span className="q-region" style={{ "--h": hueOf(x.id) }}>{x.region}</span><span className="name">{x.nom}</span></span>
                 {t.picks.includes(x.id) && <span className="queue-rank">{t.picks.indexOf(x.id) + 1}</span>}
               </button>
             );
@@ -158,6 +161,9 @@ export default function Defile() {
             </div>
           </div>
 
+          <div key={`sash-${c.id}`} className="sash" style={{ "--h": hueOf(c.id) }} aria-hidden>
+            <span>Miss {c.region}</span>
+          </div>
           <div key={`id-${c.id}`} className="story-id rise">
             <span className="story-region">Miss {c.region}</span>
             <h1>{c.nom}</h1>
@@ -167,7 +173,7 @@ export default function Defile() {
 
           <div className="story-nav">
             <button className="nav-sq" onClick={() => goCand(-1)} aria-label="Candidate précédente"><I d="M6 15l6-6 6 6" size={20} /></button>
-            <button className="nav-next" onClick={() => goCand(1)}>Suivante : {next.nom.split(" ")[0]} <I d="M6 9l6 6 6-6" size={18} /></button>
+            <button className="nav-next" onClick={() => goCand(1)}>Suivante : <span className="nn-region">{next.region}</span> <I d="M6 9l6 6 6-6" size={18} /></button>
             <Link href="/comparer" className={`nav-cmp${cmp.ids.length ? " on" : ""}`}>Comparer · {cmp.ids.length}</Link>
           </div>
         </section>
@@ -191,12 +197,9 @@ export default function Defile() {
               ))}
             </div>
           )}
+          <p className="small muted" style={{ margin: 0 }}>Sa place dans mon Top 5</p>
+          <RankPicker t={t} id={c.id} />
           <div className="side-actions">
-            {t.editable && (pos >= 0 ? (
-              <button className="btn outline" onClick={() => t.toggle(c.id)}>N° {pos + 1} de mon Top 5 · Retirer</button>
-            ) : (
-              <button className="btn primary" onClick={() => t.toggle(c.id)} disabled={t.full}>{t.full ? "Top 5 complet" : `Ajouter à mon Top 5 (n° ${t.picks.length + 1})`}</button>
-            ))}
             <button className="btn" onClick={() => cmp.toggle(c.id)}>{inCmp ? "Retirer du comparateur" : "Ajouter au comparateur"}</button>
             <Link className="btn" href={`/candidate/${c.id}`}>Fiche complète</Link>
           </div>

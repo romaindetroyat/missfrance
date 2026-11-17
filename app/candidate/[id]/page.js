@@ -8,6 +8,7 @@ import profiles from "@/data/profiles.json";
 import { PHOTO_TYPES, TYPE_LABEL } from "@/lib/photos";
 import { supabase } from "@/lib/supabase";
 import { useTop5 } from "@/lib/top5";
+import RankPicker from "@/components/RankPicker";
 
 const FIELDS = [
   ["ville", "Ville"],
@@ -226,18 +227,13 @@ export default function Candidate() {
         </section>
       </div>
 
-      {/* Bouton Top 5, toujours à portée de pouce */}
+      {/* Choix du rang, toujours à portée de pouce */}
       {t.editable && (
         <div className="cta-bar">
-          {pos >= 0 ? (
-            <button key="in" className="btn block outline pop" onClick={() => t.toggle(c.id)}>
-              N° {pos + 1} de {t.phase === "adjust" ? "mes ajustements" : "mon Top 5"} · Retirer
-            </button>
-          ) : (
-            <button key="out" className="btn block primary" onClick={() => t.toggle(c.id)} disabled={t.full}>
-              {t.full ? "Top 5 complet" : `Ajouter à ${t.phase === "adjust" ? "mes ajustements" : "mon Top 5"} (n° ${t.picks.length + 1})`}
-            </button>
-          )}
+          <div className="cta-card">
+            <span className="small">{pos >= 0 ? `${t.RANK_NAMES[pos]} dans ${t.phase === "adjust" ? "mes ajustements" : "mon Top 5"}` : "Quelle place pour elle ?"}</span>
+            <RankPicker t={t} id={c.id} />
+          </div>
         </div>
       )}
 

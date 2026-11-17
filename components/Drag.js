@@ -32,7 +32,7 @@ export default function DragProvider({ children }) {
     if (s?.active && commit) {
       const { slot, zone } = target(x, y);
       if (slot != null) t.placeAt(s.id, slot);
-      else if (zone) t.placeAt(s.id, t.picks.includes(s.id) ? t.picks.indexOf(s.id) : t.picks.length);
+      else if (zone && !t.picks.includes(s.id)) t.toggle(s.id);
       suppressClick.current = true;
       setTimeout(() => (suppressClick.current = false), 50);
     }

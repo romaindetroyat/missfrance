@@ -20,7 +20,7 @@ export default function Top5Panel({ t, onNavigate }) {
     <div className={`t5${dnd?.drag ? " drop-ready" : ""}`} data-drop="top5">
       <div className="t5-head">
         <h2>{title}</h2>
-        <span className="muted small">{t.full ? "Complet ✓" : `${t.picks.length}/5`}</span>
+        <span className="muted small">{t.full ? "Complet ✓" : `${t.count}/5`}</span>
       </div>
       {t.phase === "adjust" && <p className="small muted">Pendant la cérémonie : compte pour 20 % du score.</p>}
       <ol className="t5-list">
@@ -45,22 +45,32 @@ export default function Top5Panel({ t, onNavigate }) {
               {t.editable && (
                 <span className="t5-actions">
                   <button className="icon" disabled={i === 0} onClick={() => t.move(i, -1)} aria-label={`Monter ${c.nom}`}><Icon d="M6 15l6-6 6 6" /></button>
-                  <button className="icon" disabled={i === t.picks.length - 1} onClick={() => t.move(i, 1)} aria-label={`Descendre ${c.nom}`}><Icon d="M6 9l6 6 6-6" /></button>
-                  <button className="icon" onClick={() => t.toggle(c.id)} aria-label={`Retirer ${c.nom}`}><Icon d="M6 6l12 12M18 6L6 18" /></button>
+                  <button className="icon" disabled={i === 4} onClick={() => t.move(i, 1)} aria-label={`Descendre ${c.nom}`}><Icon d="M6 9l6 6 6-6" /></button>
+                  <button className="icon" onClick={() => t.clearSlot(i)} aria-label={`Retirer ${c.nom}`}><Icon d="M6 6l12 12M18 6L6 18" /></button>
                 </span>
               )}
             </li>
           ) : (
             <li key={`empty-${i}`} className={`t5-row empty${over(i) ? " over" : ""}`} data-slot={i}>
               <span className="rank dashed">{i + 1}</span>
-              <span className="muted small">{label}{t.editable && i === t.picks.length ? (dnd?.drag ? " — dépose ici" : " — « + » ou glisse une photo ici") : ""}</span>
+              <span className="t5-empty">
+                <span className="muted small">{label}{dnd?.drag ? " — dépose ici" : ""}</span>
+                {t.editable && !dnd?.drag && (
+                  <select value="" onChange={(e) => e.target.value && t.placeAt(e.target.value, i)} aria-label={`Choisir ma ${label}`}>
+                    <option value="">Choisir…</option>
+                    {[...app.candidates].sort((a, b) => a.region.localeCompare(b.region, "fr")).map((c) => (
+                      <option key={c.id} value={c.id}>{t.picks.includes(c.id) ? "↺ " : ""}{c.region} — {c.nom}</option>
+                    ))}
+                  </select>
+                )}
+              </span>
             </li>
           );
         })}
       </ol>
       {t.editable ? (
         <button className="btn primary block" disabled={!t.full || !t.dirty || t.saving} onClick={t.save}>
-          {t.saving ? "Enregistrement…" : !t.full ? `Encore ${5 - t.picks.length} à choisir` : t.dirty ? (t.hasSaved ? "Enregistrer les modifications" : "Enregistrer") : "Enregistré ✓"}
+          {t.saving ? "Enregistrement…" : !t.full ? `Encore ${5 - t.count} place${5 - t.count > 1 ? "s" : ""} à remplir` : t.dirty ? (t.hasSaved ? "Enregistrer les modifications" : "Enregistrer") : "Enregistré ✓"}
         </button>
       ) : (
         <p className="small muted">Pronostics verrouillés.</p>

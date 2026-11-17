@@ -15,7 +15,7 @@ const LINKS = [
   ["/comparer", "Comparer"],
   ["/prono", "Mon Top 5"],
   ["/joueurs", "Joueurs"],
-  ["/etude", "Étude"],
+  ["/ia", "Pronos IA"],
 ];
 
 export function countdown(target, now) {
@@ -87,7 +87,7 @@ export default function Shell({ children }) {
       <ToastProvider>
         <DragProvider>
           <main className="wrap page">{children}</main>
-          {path !== "/prono" && path !== "/admin" && path !== "/admin/instagram" && <Top5Dock />}
+          {!["/prono", "/admin", "/admin/instagram", "/defile"].includes(path) && <Top5Dock />}
         </DragProvider>
       </ToastProvider>
     </>
