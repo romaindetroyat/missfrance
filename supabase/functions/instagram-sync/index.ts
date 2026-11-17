@@ -9,7 +9,7 @@ import { createClient } from "jsr:@supabase/supabase-js@2";
 
 const sb = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
 const BOT = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)";
-const MAX_PER_ACCOUNT = 36;
+const MAX_PER_ACCOUNT = 80;
 
 const norm = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9@._]+/g, " ").trim();
 
@@ -22,34 +22,65 @@ function unescape(t: string): string {
   return t.replace(/\\u([0-9a-fA-F]{4})/g, (_, h) => String.fromCharCode(parseInt(h, 16))).replace(/\\n/g, "\n");
 }
 
-type Media = { code: string; caption: string; images: { url: string; key: string; w: number; h: number }[] };
+type Img = { url: string; key: string; w: number; h: number };
+type Media = { code: string; caption: string; images: Img[] };
 type Profile = { fullName: string; followers: number | null; posts: number | null; media: Media[] };
 
+const IMG_RE = /"dimensions":\{"height":(\d+),"width":(\d+)\},"display_url":"([^"]+)"/g;
+const isProfilePic = (u: string) => /\/t51\.2885-19\/|s150x150|s320x320|profile_pic/.test(u);
+const fileId = (u: string) => (/\/([^/?]+)\.(?:jpe?g|webp|png)/.exec(u)?.[1] || u).slice(0, 80);
+
+// Toutes les images d'un fragment (publication, carrousel complet, couverture de reel), sans doublon
+function imagesOf(code: string, t: string): Img[] {
+  const seen = new Set<string>();
+  const out: Img[] = [];
+  for (const m of t.matchAll(IMG_RE)) {
+    const url = m[3];
+    if (isProfilePic(url)) continue;
+    const id = fileId(url);
+    if (seen.has(id)) continue;
+    seen.add(id);
+    out.push({ url, key: `ig:${code}:${id}`, w: Number(m[2]), h: Number(m[1]) });
+  }
+  return out;
+}
+const captionOf = (t: string) => /"edge_media_to_caption":\{"edges":\[\{"node":\{"text":"((?:[^"\\]|\\.)*)"/.exec(t)?.[1] || "";
+
+async function get(url: string): Promise<string | null> {
+  const r = await fetch(url, { headers: { "User-Agent": BOT, "Accept-Language": "fr-FR,fr;q=0.9" }, signal: AbortSignal.timeout(20000) }).catch(() => null);
+  if (!r || !r.ok) return null;
+  return unescape(await r.text());
+}
+
+// Encart d'une publication : donne le carrousel en entier (l'encart du profil n'en montre qu'une partie)
+async function post(code: string, fallback: Media): Promise<Media> {
+  const t = await get(`https://www.instagram.com/p/${code}/embed/captioned/`);
+  if (!t) return fallback;
+  const images = imagesOf(code, t);
+  const caption = captionOf(t) || fallback.caption;
+  return images.length >= fallback.images.length ? { code, caption, images } : { ...fallback, caption };
+}
+
 async function profile(handle: string): Promise<Profile | null> {
-  const r = await fetch(`https://www.instagram.com/${handle}/embed/`, { headers: { "User-Agent": BOT, "Accept-Language": "fr-FR,fr;q=0.9" }, signal: AbortSignal.timeout(20000) });
-  if (!r.ok) return null;
-  const t = unescape(await r.text());
+  const t = await get(`https://www.instagram.com/${handle}/embed/`);
+  if (!t) return null;
   const fullName = /"full_name":"([^"]*)"/.exec(t)?.[1] || "";
   const followers = Number(/"followers_count":(\d+)/.exec(t)?.[1] || /"edge_followed_by":\{"count":(\d+)\}/.exec(t)?.[1] || NaN);
   const posts = Number(/"posts_count":(\d+)/.exec(t)?.[1] || NaN);
   const media: Media[] = [];
-  const chunks = t.split('"shortcode_media":').slice(1);
-  for (const ch of chunks) {
+  for (const ch of t.split('"shortcode_media":').slice(1)) {
     const code = /"shortcode":"([\w-]+)"/.exec(ch)?.[1];
     if (!code || media.some((m) => m.code === code)) continue;
-    const caption = /"edge_media_to_caption":\{"edges":\[\{"node":\{"text":"((?:[^"\\]|\\.)*)"/.exec(ch)?.[1] || "";
-    const images: Media["images"] = [];
-    const kids = /"edge_sidecar_to_children":\{"edges":\[(.*?)\]\},"/s.exec(ch)?.[1];
-    const blocks = kids ? kids.split('"node":').slice(1) : [ch];
-    blocks.forEach((b, i) => {
-      if (/"is_video":true/.test(b.slice(0, 600))) return;
-      const url = /"display_url":"([^"]+)"/.exec(b)?.[1];
-      const w = Number(/"width":(\d+)/.exec(b)?.[1] || 0), h = Number(/"height":(\d+)/.exec(b)?.[1] || 0);
-      if (url) images.push({ url, key: `ig:${code}:${i}`, w, h });
-    });
-    if (images.length) media.push({ code, caption, images });
+    media.push({ code, caption: captionOf(ch), images: imagesOf(code, ch) });
   }
   return { fullName, followers: Number.isFinite(followers) ? followers : null, posts: Number.isFinite(posts) ? posts : null, media };
+}
+
+async function pool<T, R>(xs: T[], n: number, f: (x: T) => Promise<R>): Promise<R[]> {
+  const out: R[] = new Array(xs.length);
+  let i = 0;
+  await Promise.all(Array.from({ length: Math.min(n, xs.length) }, async () => { while (i < xs.length) { const k = i++; out[k] = await f(xs[k]); } }));
+  return out;
 }
 
 function classify(text: string): string {
@@ -93,13 +124,13 @@ Deno.serve(async (req) => {
   const t0 = Date.now();
   const { data: cands } = await sb.from("candidates").select("id,nom,region");
   const byId = new Map(cands!.map((c) => [c.id, c]));
-  let q = sb.from("instagram_accounts").select("candidate_id,handle,kind,checked_at").order("checked_at", { ascending: true, nullsFirst: true }).limit(Number(body.limit) || 6);
+  let q = sb.from("instagram_accounts").select("candidate_id,handle,kind,checked_at").order("checked_at", { ascending: true, nullsFirst: true }).limit(Number(body.limit) || 4);
   if (body.handle) q = sb.from("instagram_accounts").select("candidate_id,handle,kind,checked_at").eq("handle", body.handle);
   const { data: accounts } = await q;
   const report: unknown[] = [];
 
   for (const a of accounts || []) {
-    if (Date.now() - t0 > 100000) break;
+    if (Date.now() - t0 > 90000) break;
     const c = byId.get(a.candidate_id)!;
     const p = await profile(a.handle).catch(() => null);
     const r: Record<string, unknown> = { handle: a.handle, kind: a.kind };
@@ -132,14 +163,12 @@ Deno.serve(async (req) => {
 
     let ok = 0;
     const notes: Record<string, number> = {};
-    const media = a.kind === "perso" ? p.media : p.media.filter((m) => mentionsHer(m.caption));
-    outer: for (const m of media) {
-      for (const img of m.images) {
-        if (ok >= MAX_PER_ACCOUNT || Date.now() - t0 > 110000) break outer;
-        const o = await storeImage(c.id, a.handle, m, img).catch(() => "erreur");
-        if (o === "ok") ok++; else notes[o] = (notes[o] || 0) + 1;
-      }
-    }
+    const chosen = a.kind === "perso" ? p.media : p.media.filter((m) => mentionsHer(m.caption));
+    const full = await pool(chosen, 6, (m) => post(m.code, m));
+    const jobs = full.flatMap((m) => (a.kind === "perso" || mentionsHer(m.caption) ? m.images.map((img) => ({ m, img })) : [])).slice(0, MAX_PER_ACCOUNT);
+    const res = await pool(jobs, 6, ({ m, img }) => Date.now() - t0 > 120000 ? Promise.resolve("temps") : storeImage(c.id, a.handle, m, img).catch(() => "erreur"));
+    for (const o of res) if (o === "ok") ok++; else notes[o] = (notes[o] || 0) + 1;
+    r.posts_seen = full.length; r.images_seen = jobs.length;
     r.added = ok; r.skipped = notes;
     report.push(r);
   }
