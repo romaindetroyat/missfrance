@@ -29,6 +29,8 @@ const Verdict = z.object({
   others: z.enum(["aucun", "arriere_plan", "accompagnee"]).describe("Autres personnes : aucune ; seulement au loin / floues en arrière-plan ; ou bien posant avec elle ou au premier plan (amis, famille, autres Miss, groupe)"),
   sharp: z.boolean().describe("Photo nette (pas floue, pas bougée, pas trop sombre ni pixelisée)"),
   well_framed: z.boolean().describe("Bien cadrée : la candidate est entière ou coupée proprement (visage complet, pas tête coupée, pas de cadrage de travers ou de gros plan sur un détail)"),
+  face_visible: z.boolean().describe("Son visage est visible (même de trois quarts, avec des lunettes de soleil ou de loin), pas caché ni de dos"),
+  own_sash: z.boolean().describe("Elle porte une écharpe de SA région et de 2026 (Miss <sa région> 2026)"),
   category: z.enum(["officiel", "portrait", "election", "maillot", "voyage", "autre"]),
   reason: z.string().describe("Une phrase courte en français"),
 });
@@ -39,11 +41,12 @@ Une écharpe « Miss ${region} 2026 » ou « ${region} 2026 » est NORMALE et co
 Photo 1 : son portrait officiel (référence). Photo 2 : photo à trier.
 Compare les visages (traits, forme du visage, sourcils, nez, bouche), pas la coiffure, le maquillage ou la tenue.
 same_person = "non" si la photo 2 montre un homme, un enfant, une autre femme, une autre Miss, ou si la candidate n'y est pas ; "incertain" si le visage est trop petit, caché ou de dos.
+Une photo en maillot (allongée, de profil, avec lunettes de soleil) n'est pas « mal cadrée » pour autant : juge le cadrage normalement.
 À écarter : lieux, paysages, plats, objets, textes, captures d'écran ; photos avec ses amis, sa famille ou d'autres personnes posant avec elle ; photos floues, sombres, pixelisées, mal cadrées.
 Catégorie de la photo 2 :
 - officiel : portrait officiel ou photo studio normée (fond uni, pose face caméra) ;
 - portrait : photo centrée sur son visage ou son buste, posée et soignée (hors studio officiel) ;
-- maillot : en maillot de bain ou bikini ;
+- maillot : en maillot de bain ou bikini (plage, piscine, défilé ou séance photo en maillot) ;
 - election : soirée d'élection régionale, robe de soirée avec écharpe ou couronne ;
 - voyage : voyage de préparation Miss France 2027 ;
 - autre : le reste (en pied, tenue de ville, événements…).`;
@@ -80,8 +83,13 @@ export async function GET(req) {
       // Photos du Drive : elles viennent de son propre compte Instagram, un « incertain » seule à l'image suffit
       const fromOwnAccount = p.url.startsWith("https://lh3.googleusercontent.com/");
       const isHer = v.same_person === "oui" || (fromOwnAccount && v.same_person === "incertain" && v.others === "aucun");
-      const ok = v.content === "candidate" && isHer && v.main_subject && v.others !== "accompagnee" && v.sharp && v.well_framed;
-      const flags = [v.content !== "candidate" && v.content, !v.sharp && "floue", !v.well_framed && "mal cadrée"].filter(Boolean).join(", ");
+      let ok = v.content === "candidate" && isHer && v.main_subject && v.others !== "accompagnee" && v.sharp && v.well_framed;
+      // Maillot : rubrique recherchée, les poses (allongée, de profil, lunettes) rendent le visage moins sûr.
+      // Sur son propre compte, on garde si elle est seule, nette, visage visible et pas jugée « autre personne »
+      // (l'écharpe de sa région 2026 l'emporte sur un doute du modèle).
+      if (!ok && v.category === "maillot" && v.content === "candidate" && v.sharp && v.face_visible && v.others !== "accompagnee"
+        && (v.same_person === "oui" || v.own_sash || (fromOwnAccount && v.same_person === "incertain"))) ok = true;
+      const flags = [v.content !== "candidate" && v.content, !v.sharp && "floue", !v.well_framed && "mal cadrée", !v.face_visible && "visage caché", v.own_sash && "écharpe 2026"].filter(Boolean).join(", ");
       await sb.rpc("review_set", { p_key: key, p_id: p.id, p_ok: ok, p_type: v.category, p_note: `${v.same_person} · ${v.others}${flags ? " · " + flags : ""} · ${v.category} · ${v.reason}` });
       ok ? out.ok++ : out.rejected++;
     } catch (e) {
