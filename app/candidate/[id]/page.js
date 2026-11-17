@@ -6,6 +6,7 @@ import { useApp } from "@/app/providers";
 import { cote } from "@/components/Bits";
 import { useDraft } from "@/lib/draft";
 import profiles from "@/data/profiles.json";
+import { PHOTO_TYPES, TYPE_LABEL } from "@/lib/photos";
 
 const FIELDS = [
   ["ville", "Ville"],
@@ -26,7 +27,9 @@ export default function Candidate() {
   const app = useApp();
   const { id } = useParams();
   const c = app.byId[id];
-  const photos = app.photosBy[id] || [];
+  const all = app.photosBy[id] || [];
+  const [ptype, setPtype] = useState("tout");
+  const photos = ptype === "tout" ? all : all.filter((p) => p.type === ptype);
   const [open, setOpen] = useState(null);
   const { picks, update } = useDraft(app.email, app.myPrediction);
 
@@ -104,7 +107,20 @@ export default function Candidate() {
         </>
       )}
 
-      <h2>Photos {photos.length > 0 && <span className="muted">({photos.length})</span>}</h2>
+      <h2>Photos {all.length > 0 && <span className="muted">({all.length})</span>}</h2>
+      {all.length > 0 && (
+        <div className="filters" role="group" aria-label="Type de photo">
+          <button className={`chip${ptype === "tout" ? " on" : ""}`} onClick={() => { setPtype("tout"); setOpen(null); }}>Toutes</button>
+          {PHOTO_TYPES.map(([k, label]) => {
+            const n = all.filter((p) => p.type === k).length;
+            return n ? (
+              <button key={k} className={`chip${ptype === k ? " on" : ""}`} onClick={() => { setPtype(k); setOpen(null); }}>
+                {label} <span className="count">{n}</span>
+              </button>
+            ) : null;
+          })}
+        </div>
+      )}
       {photos.length === 0 ? (
         <p className="muted">Pas encore de photo. La collecte tourne tous les 3 jours.</p>
       ) : (
@@ -135,6 +151,7 @@ export default function Candidate() {
           <img src={photos[open].url} alt={`${c.nom}, photo ${open + 1}`} onClick={(e) => e.stopPropagation()} />
           <p onClick={(e) => e.stopPropagation()}>
             {open + 1} / {photos.length}
+            {TYPE_LABEL[photos[open].type] ? ` · ${TYPE_LABEL[photos[open].type]}` : ""}
             {photos[open].credit ? ` · © ${photos[open].credit}` : ""}
             {photos[open].source_page && (
               <> · <a href={photos[open].source_page} target="_blank" rel="noreferrer">Source</a></>

@@ -2,7 +2,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useApp } from "./providers";
-import { cote, portraitOf } from "@/components/Bits";
+import { cote } from "@/components/Bits";
+import { PHOTO_TYPES, featured } from "@/lib/photos";
 import { useDraft } from "@/lib/draft";
 
 const SORTS = {
@@ -14,6 +15,7 @@ const SORTS = {
 export default function Home() {
   const app = useApp();
   const [sort, setSort] = useState("region");
+  const [ptype, setPtype] = useState("officiel");
   const { picks } = useDraft(app.email, app.myPrediction);
   const list = [...app.candidates].sort(SORTS[sort][1]);
 
@@ -29,9 +31,20 @@ export default function Home() {
           ))}
         </div>
       </div>
+      <div className="filters" role="group" aria-label="Photo mise en avant">
+        <span className="muted small">Photos :</span>
+        {PHOTO_TYPES.map(([k, label]) => {
+          const n = app.candidates.filter((c) => (app.photosBy[c.id] || []).some((p) => p.type === k)).length;
+          return (
+            <button key={k} className={`chip${ptype === k ? " on" : ""}`} onClick={() => setPtype(k)} disabled={!n && k !== "officiel"}>
+              {label} {k !== "officiel" && <span className="count">{n}</span>}
+            </button>
+          );
+        })}
+      </div>
       <div className="grid">
         {list.map((c) => {
-          const src = portraitOf(app, c);
+          const { url: src, fallback } = featured(c, app.photosBy[c.id], ptype);
           const pos = picks.indexOf(c.id);
           const n = app.photosBy[c.id]?.length || 0;
           return (
@@ -40,6 +53,7 @@ export default function Home() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 {src ? <img src={src} alt={`Portrait de ${c.nom}`} loading="lazy" /> : <span className="placeholder" />}
                 {pos >= 0 && <span className="badge">N° {pos + 1}</span>}
+                {fallback && <span className="badge soft">Portrait</span>}
               </div>
               <span className="region">{c.region}</span>
               <span className="name">{c.nom}</span>

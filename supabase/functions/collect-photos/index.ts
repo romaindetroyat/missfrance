@@ -9,8 +9,8 @@ import { createClient } from "jsr:@supabase/supabase-js@2";
 
 const sb = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36";
-const PER_SOURCE = 10;
-const TARGET = 18; // au-delà, on n'ajoute plus de photos à une candidate
+const PER_SOURCE = 12;
+const TARGET = 40; // au-delà, on n'ajoute plus de photos à une candidate
 const MIN_BYTES = 20_000;
 const MAX_BYTES = 12_000_000;
 const BUDGET_MS = 120_000;
@@ -21,7 +21,17 @@ const strip = (h: string) => h.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?
 const decode = (s: string) => s.replace(/&quot;/g, '"').replace(/&amp;/g, "&").replace(/&#39;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
 
 type Cand = { id: string; nom: string; region: string };
-type Hit = { url: string; page: string; why: string; official?: boolean };
+type Hit = { url: string; page: string; why: string; official?: boolean; cat?: string; caption?: string };
+
+// Catégorie d'une photo d'après le texte qui l'accompagne (titre, légende, adresse de la page)
+function classify(text: string): string {
+  const t = norm(text);
+  if (/maillot|bikini|swimsuit|bain de mer|plage/.test(t)) return "maillot";
+  if (/voyage de preparation|preparation|voyage/.test(t)) return "voyage";
+  if (/portrait officiel|portraits officiels|photo officielle|photos officielles/.test(t)) return "officiel";
+  if (/elue|election|sacree|couronnee|couronne|echarpe|sacre/.test(t)) return "election";
+  return "autre";
+}
 
 function nameKeys(c: Cand) {
   const full = norm(c.nom);
@@ -66,7 +76,7 @@ function fromPage(html: string, page: string, c: Cand, dedicated: boolean): Hit[
   const add = (u: string | null | undefined, why: string, official = false) => {
     const abs = u && absolute(u, page);
     if (!abs || BAD.test(abs) || out.has(abs)) return;
-    out.set(abs, { url: abs, page, why, official });
+    out.set(abs, { url: abs, page, why, official, cat: official ? "officiel" : classify(page + " " + why) });
   };
   if (dedicated) {
     for (const m of html.matchAll(/<meta[^>]+(?:property|name)=["'](?:og:image|twitter:image)(?::src)?["'][^>]*>/gi)) {
@@ -86,7 +96,7 @@ function fromPage(html: string, page: string, c: Cand, dedicated: boolean): Hit[
       const start = imgs[i].index! + tag.length;
       k = byName(strip(html.slice(start, Math.min(start + 400, imgs[i + 1]?.index ?? html.length))));
     }
-    if (k) add(src, k);
+    if (k) { add(src, k); const h = out.get(absolute(src, page) || ""); if (h && !h.official) { h.caption = alt.trim().slice(0, 200); h.cat = classify(page + " " + alt); } }
   }
   // Images référencées dans des données embarquées (diaporamas, JSON)
   const raw = html.replace(/\\u002F/gi, "/").replace(/\\\//g, "/");
@@ -118,7 +128,8 @@ function fromBing(html: string, c: Cand): Hit[] {
     const k = nk.find((x) => text.includes(x));
     if (!k) continue;
     seen.add(d.murl);
-    out.push({ url: d.murl, page: d.purl, why: "bing:" + k });
+    const caption = decode(`${d.t || ""}`).replace(/<[^>]+>/g, "").slice(0, 200);
+    out.push({ url: d.murl, page: d.purl, why: "bing:" + k, caption, cat: classify(`${d.t || ""} ${d.desc || ""} ${pu}`) });
   }
   return out;
 }
@@ -169,7 +180,7 @@ async function store(c: Cand, hit: Hit): Promise<string> {
   try { host = new URL(hit.page).hostname.replace(/^www\./, ""); } catch { /* */ }
   const ins = await sb.from("photos").insert({
     candidate_id: c.id, url, source_url: hit.url, source_page: hit.page, credit: host,
-    type: hit.official ? "portrait_officiel" : hit.why.startsWith("bing") ? "web" : "presse", hash, bytes: buf.length,
+    type: hit.cat || "autre", caption: hit.caption || null, hash, bytes: buf.length,
   });
   if (ins.error) return "base";
   if (hit.official) await sb.from("candidates").update({ portrait_url: url }).eq("id", c.id).is("portrait_url", null);
@@ -198,7 +209,7 @@ Deno.serve(async (req) => {
     let html = "", err = "";
     try { html = await getText(page); } catch (e) { err = String((e as Error).message || e).slice(0, 120); }
     const { data: cands } = await sb.from("candidates").select("id,nom,region").in("id", rows!.map((r: { candidate_id: string }) => r.candidate_id));
-    const isBing = /bing\.com\/images\/search/.test(page);
+    const isBing = /bing\.com\/images\/(search|async)/.test(page);
     await Promise.all(rows!.map(async (r: { id: number; candidate_id: string; dedicated: boolean }) => {
       const c = cands!.find((x) => x.id === r.candidate_id)!;
       let found = 0;

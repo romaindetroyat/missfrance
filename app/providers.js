@@ -29,7 +29,7 @@ export default function Providers({ children }) {
       supabase.from("players").select("*"),
       supabase.from("settings").select("*").eq("id", 1).maybeSingle(),
       supabase.from("candidates").select("*").order("region"),
-      supabase.from("photos").select("*").not("url", "is", null).order("added_at", { ascending: false }),
+      supabase.from("photos").select("id,candidate_id,url,type,caption,credit,source_page,width,height,added_at").eq("hidden", false).order("added_at", { ascending: false }),
       supabase.from("predictions").select("*"),
       supabase.rpc("players_status"),
     ]);
@@ -58,7 +58,9 @@ export default function Providers({ children }) {
     const lockAt = ceremonyAt ? ceremonyAt - 2 * 3600 * 1000 : null;
     const byId = Object.fromEntries(data.candidates.map((c) => [c.id, c]));
     const photosBy = {};
+    const rank = { officiel: 0, election: 1, maillot: 2, voyage: 3, autre: 4 };
     for (const p of data.photos) (photosBy[p.candidate_id] ||= []).push(p);
+    for (const k in photosBy) photosBy[k].sort((a, b) => (rank[a.type] ?? 5) - (rank[b.type] ?? 5));
     return {
       session,
       email,
