@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 import { useApp } from "../providers";
 import { RANKS } from "@/lib/scoring";
@@ -28,6 +29,7 @@ export default function Admin() {
     <>
       <h1>Résultats officiels</h1>
       <p className="muted">À saisir après la cérémonie. Les scores de tous les joueurs se calculent aussitôt.</p>
+      <p className="small"><Link href="/admin/instagram">Saisir les abonnés Instagram des candidates →</Link></p>
       <div className="list">
         {RANKS.map((label, i) => (
           <div key={i} className="row">

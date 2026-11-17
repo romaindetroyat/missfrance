@@ -17,7 +17,23 @@ export default function Etude() {
     const id = idByRegion[slug(o.region)];
     return id ? <Link href={`/candidate/${id}`}>{o.nom}</Link> : o.nom;
   };
-  const max = Math.max(...pred.candidates.map((c) => c.p_top5));
+  // Valeurs en direct (recalculées en base avec les signaux de la saison), repli sur le fichier du modèle
+  const live = app.candidates.filter((c) => c.p_top5 != null).map((c) => ({
+    region: c.region, nom: c.nom, p_top5: Number(c.p_top5), p_victoire: Number(c.p_victoire), cote: Number(c.cote),
+    p_rang: (c.p_rang || []).map(Number), bonus_note: c.bonus_note, id: c.id,
+  }));
+  const cands = (live.length ? live : pred.candidates).slice().sort((a, b) => b.p_top5 - a.p_top5);
+  const top5 = [];
+  if (live.length && live[0].p_rang.length === 5) {
+    const taken = new Set();
+    for (let r = 0; r < 5; r++) {
+      const best = cands.filter((o) => !taken.has(o.region)).reduce((a, b) => (b.p_rang.slice(0, r + 1).reduce((x, y) => x + y, 0) > a.p_rang.slice(0, r + 1).reduce((x, y) => x + y, 0) ? b : a));
+      taken.add(best.region);
+      top5.push({ rang: r + 1, ...best });
+    }
+  } else top5.push(...pred.top5_pronostic);
+  const updated = app.candidates.map((c) => c.odds_updated_at).filter(Boolean).sort().pop();
+  const max = Math.max(...cands.map((c) => c.p_top5));
   const v = valid.resume;
   const t = stats.taille;
 
@@ -25,13 +41,13 @@ export default function Etude() {
     <article className="study">
       <h1>Étude statistique</h1>
       <p className="muted">
-        Modèle mis à jour le {new Date(pred.genere_le).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })}, à partir de{" "}
+        Cotes mises à jour le {new Date(updated || pred.genere_le).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })}. Modèle construit à partir de{" "}
         {stats.n_candidates} candidates sur {stats.n_editions} éditions (Miss France 2010 à 2026).
       </p>
 
       <h2>Le Top 5 le plus probable</h2>
       <div className="list">
-        {pred.top5_pronostic.map((o, i) => (
+        {top5.map((o, i) => (
           <div key={o.region} className="row">
             <span className="rank">{o.rang}</span>
             <span className="row-main">
@@ -43,7 +59,7 @@ export default function Etude() {
         ))}
       </div>
       <p className="hint">
-        À lire avec prudence : la favorite du modèle n'a que {pct(pred.candidates[0].p_victoire, 0)} de chances de gagner. Les données
+        À lire avec prudence : la favorite du modèle n'a que {pct(Math.max(...cands.map((c) => c.p_victoire)), 0)} de chances de gagner. Les données
         disponibles aujourd'hui (taille, région, région hôte) disent peu de chose de l'élection ; le classement s'affinera avec les
         signaux de dernière ligne droite.
       </p>
@@ -55,10 +71,11 @@ export default function Etude() {
             <tr><th>Candidate</th><th className="n">Top 5</th><th className="n">Victoire</th><th className="n">Cote</th></tr>
           </thead>
           <tbody>
-            {pred.candidates.map((o) => (
+            {cands.map((o) => (
               <tr key={o.region}>
                 <td>
                   <span className="region">{o.region}</span><br />{link(o)}
+                  {o.bonus_note && <><br /><span className="meta">{o.bonus_note}</span></>}
                   <span className="meter"><span style={{ width: `${(o.p_top5 / max) * 100}%` }} /></span>
                 </td>
                 <td className="n">{pct(o.p_top5)}</td>
@@ -135,7 +152,12 @@ export default function Etude() {
 
       <h2>Ce qui fera bouger les cotes</h2>
       <ul className="notes">
-        <li>Le classement des candidates les plus suivies sur Instagram : la n° 1 a fini 1re ou 2e lors des trois éditions documentées.</li>
+        <li>
+          <strong>Instagram, déjà intégré.</strong> La candidate la plus suivie a fini 1re ou 2e lors des trois éditions documentées (2019, 2025, 2026).
+          Dès que 25 comptes sont relevés, la n° 1 reçoit un bonus qui la porte autour de 25 % de victoire et 45 % de chances d'être dans les 2 premières,
+          volontairement moins que l'historique brut (3 sur 3), qui ne repose que sur trois éditions. Les suivantes reçoivent un bonus plus petit,
+          car le reste du classement Instagram prédit mal (en 2026, 3 des 5 plus suivies n'ont pas atteint la demi-finale).
+        </li>
         <li>Les favorites de la presse et des sites de fans, publiées dans les deux dernières semaines.</li>
         <li>Le prix de culture générale, signal en net recul depuis 2021.</li>
       </ul>

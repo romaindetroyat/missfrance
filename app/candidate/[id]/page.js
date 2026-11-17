@@ -83,6 +83,7 @@ export default function Candidate() {
         <div><dt>Victoire (modèle)</dt><dd>{pct(c.p_victoire)}</dd></div>
       </dl>
 
+      {c.bonus_note && <p className="hint">Signaux pris en compte dans la cote : {c.bonus_note}.</p>}
       {(d.bio || c.bio) && <p className="bio">{d.bio || c.bio}</p>}
 
       <dl className="facts">

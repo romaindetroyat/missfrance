@@ -167,3 +167,6 @@ h3.sub { font-size: 0.9375rem; font-weight: 600; margin: 14px 0 8px; }
 /* Application installée : marges des zones sûres (encoche, barre d'accueil) */
 .top { padding-top: env(safe-area-inset-top); }
 body { padding-bottom: env(safe-area-inset-bottom); }
+.row.ig input { width: 150px; flex: none; padding: 6px 10px; }
+.row.ig input.num { width: 100px; text-align: right; }
+@media (max-width: 560px) { .row.ig { flex-wrap: wrap; } .row.ig .row-main { flex-basis: 100%; } .row.ig input { flex: 1; width: auto; } }
