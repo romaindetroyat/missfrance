@@ -1,0 +1,836 @@
+{
+ "genere_le": "2026-11-17",
+ "signaux_maj": null,
+ "coefficients": {
+  "taille_175": {
+   "libelle": "Taille ≥ 175 cm",
+   "beta": 0.344
+  },
+  "reg_top5": {
+   "libelle": "Historique régional : taux de Top 5",
+   "beta": 0.314
+  },
+  "reg_demi": {
+   "libelle": "Historique régional : taux de demi-finale",
+   "beta": 0.197
+  },
+  "hote": {
+   "libelle": "Région hôte",
+   "beta": 0.305
+  }
+ },
+ "top5_pronostic": [
+  {
+   "rang": 1,
+   "region": "Guadeloupe",
+   "nom": "Julia Désirée",
+   "p_victoire": 0.0876,
+   "p_top5": 0.3979
+  },
+  {
+   "rang": 2,
+   "region": "Tahiti",
+   "nom": "Leia Diard",
+   "p_victoire": 0.0873,
+   "p_top5": 0.3944
+  },
+  {
+   "rang": 3,
+   "region": "Nord-Pas-de-Calais",
+   "nom": "Shana Mendes",
+   "p_victoire": 0.0765,
+   "p_top5": 0.3567
+  },
+  {
+   "rang": 4,
+   "region": "Côte d'Azur",
+   "nom": "May Haoues",
+   "p_victoire": 0.0626,
+   "p_top5": 0.3042
+  },
+  {
+   "rang": 5,
+   "region": "Provence",
+   "nom": "Ophélie Vitalbo",
+   "p_victoire": 0.0615,
+   "p_top5": 0.2929
+  }
+ ],
+ "candidates": [
+  {
+   "region": "Guadeloupe",
+   "nom": "Julia Désirée",
+   "age": 20,
+   "taille_cm": 181,
+   "score_base": 1.362,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.344,
+    "reg_top5": 0.829,
+    "reg_demi": 0.19,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0876,
+    0.0846,
+    0.0788,
+    0.0747,
+    0.0723
+   ],
+   "p_victoire": 0.0876,
+   "p_top5": 0.3979,
+   "cote": 2.5
+  },
+  {
+   "region": "Tahiti",
+   "nom": "Leia Diard",
+   "age": 22,
+   "taille_cm": 172,
+   "score_base": 1.348,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.0,
+    "reg_top5": 1.053,
+    "reg_demi": 0.295,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0873,
+    0.0821,
+    0.0787,
+    0.0747,
+    0.0716
+   ],
+   "p_victoire": 0.0873,
+   "p_top5": 0.3944,
+   "cote": 2.5
+  },
+  {
+   "region": "Nord-Pas-de-Calais",
+   "nom": "Shana Mendes",
+   "age": 18,
+   "taille_cm": 175,
+   "score_base": 1.228,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.344,
+    "reg_top5": 0.726,
+    "reg_demi": 0.158,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0765,
+    0.074,
+    0.0714,
+    0.0694,
+    0.0655
+   ],
+   "p_victoire": 0.0765,
+   "p_top5": 0.3567,
+   "cote": 2.8
+  },
+  {
+   "region": "Côte d'Azur",
+   "nom": "May Haoues",
+   "age": 19,
+   "taille_cm": 174,
+   "score_base": 1.033,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.0,
+    "reg_top5": 0.515,
+    "reg_demi": 0.518,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0626,
+    0.0623,
+    0.0604,
+    0.0604,
+    0.0586
+   ],
+   "p_victoire": 0.0626,
+   "p_top5": 0.3042,
+   "cote": 3.3
+  },
+  {
+   "region": "Provence",
+   "nom": "Ophélie Vitalbo",
+   "age": 27,
+   "taille_cm": 171,
+   "score_base": 0.993,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.0,
+    "reg_top5": 0.672,
+    "reg_demi": 0.321,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0615,
+    0.0589,
+    0.0588,
+    0.0575,
+    0.0562
+   ],
+   "p_victoire": 0.0615,
+   "p_top5": 0.2929,
+   "cote": 3.4
+  },
+  {
+   "region": "Martinique",
+   "nom": "Maureen-Alycia Lucéa-Merlin",
+   "age": 24,
+   "taille_cm": 176,
+   "score_base": 0.76,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.344,
+    "reg_top5": 0.358,
+    "reg_demi": 0.059,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0481,
+    0.0482,
+    0.0483,
+    0.0475,
+    0.0474
+   ],
+   "p_victoire": 0.0481,
+   "p_top5": 0.2396,
+   "cote": 4.2
+  },
+  {
+   "region": "Alsace",
+   "nom": "Chiara Blazevic",
+   "age": 24,
+   "taille_cm": 176,
+   "score_base": 0.669,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.344,
+    "reg_top5": 0.201,
+    "reg_demi": 0.124,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0437,
+    0.0441,
+    0.0444,
+    0.0443,
+    0.0442
+   ],
+   "p_victoire": 0.0437,
+   "p_top5": 0.2207,
+   "cote": 4.5
+  },
+  {
+   "region": "Languedoc",
+   "nom": "Candice Gauch",
+   "age": 29,
+   "taille_cm": 177,
+   "score_base": 0.6,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.344,
+    "reg_top5": 0.049,
+    "reg_demi": 0.207,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0406,
+    0.0406,
+    0.0414,
+    0.0422,
+    0.0417
+   ],
+   "p_victoire": 0.0406,
+   "p_top5": 0.2065,
+   "cote": 4.8
+  },
+  {
+   "region": "Île-de-France",
+   "nom": "Camilla Alash",
+   "age": 23,
+   "taille_cm": 181,
+   "score_base": 0.577,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.344,
+    "reg_top5": 0.044,
+    "reg_demi": 0.19,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0396,
+    0.0401,
+    0.0403,
+    0.0395,
+    0.0412
+   ],
+   "p_victoire": 0.0396,
+   "p_top5": 0.2008,
+   "cote": 5.0
+  },
+  {
+   "region": "Bourgogne",
+   "nom": "Ilona Perrot",
+   "age": 23,
+   "taille_cm": 176,
+   "score_base": 0.38,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.344,
+    "reg_top5": 0.044,
+    "reg_demi": -0.007,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0327,
+    0.0328,
+    0.0328,
+    0.0342,
+    0.0344
+   ],
+   "p_victoire": 0.0327,
+   "p_top5": 0.1669,
+   "cote": 6.0
+  },
+  {
+   "region": "Réunion",
+   "nom": "Laetitia Roguet",
+   "age": 20,
+   "taille_cm": 172,
+   "score_base": 0.325,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.0,
+    "reg_top5": 0.201,
+    "reg_demi": 0.124,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.031,
+    0.0319,
+    0.0331,
+    0.0329,
+    0.0331
+   ],
+   "p_victoire": 0.031,
+   "p_top5": 0.162,
+   "cote": 6.2
+  },
+  {
+   "region": "Normandie",
+   "nom": "Pauline Gourlez",
+   "age": 21,
+   "taille_cm": 171,
+   "score_base": 0.325,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.0,
+    "reg_top5": 0.201,
+    "reg_demi": 0.124,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0311,
+    0.0317,
+    0.0323,
+    0.0322,
+    0.0332
+   ],
+   "p_victoire": 0.0311,
+   "p_top5": 0.1604,
+   "cote": 6.2
+  },
+  {
+   "region": "Guyane",
+   "nom": "Sandra Justine",
+   "age": 23,
+   "taille_cm": 177,
+   "score_base": 0.158,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.344,
+    "reg_top5": -0.113,
+    "reg_demi": -0.073,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0265,
+    0.0265,
+    0.028,
+    0.0285,
+    0.0289
+   ],
+   "p_victoire": 0.0265,
+   "p_top5": 0.1384,
+   "cote": 7.2
+  },
+  {
+   "region": "Corse",
+   "nom": "Satine Nomary",
+   "age": 19,
+   "taille_cm": 176,
+   "score_base": 0.158,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.344,
+    "reg_top5": -0.113,
+    "reg_demi": -0.073,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0258,
+    0.0272,
+    0.0275,
+    0.0279,
+    0.0289
+   ],
+   "p_victoire": 0.0258,
+   "p_top5": 0.1373,
+   "cote": 7.3
+  },
+  {
+   "region": "Roussillon",
+   "nom": "Juliette Gauthier",
+   "age": 22,
+   "taille_cm": 174,
+   "score_base": 0.137,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.0,
+    "reg_top5": -0.157,
+    "reg_demi": 0.294,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0257,
+    0.026,
+    0.0275,
+    0.0277,
+    0.0281
+   ],
+   "p_victoire": 0.0257,
+   "p_top5": 0.1349,
+   "cote": 7.4
+  },
+  {
+   "region": "Saint-Martin et Saint-Barthélemy",
+   "nom": "Naïla Parotte",
+   "age": 22,
+   "taille_cm": 182,
+   "score_base": -0.036,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.344,
+    "reg_top5": -0.242,
+    "reg_demi": -0.138,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.021,
+    0.0224,
+    0.0227,
+    0.0233,
+    0.024
+   ],
+   "p_victoire": 0.021,
+   "p_top5": 0.1134,
+   "cote": 8.8
+  },
+  {
+   "region": "Champagne-Ardenne",
+   "nom": "Céline Leduc",
+   "age": 23,
+   "taille_cm": 183,
+   "score_base": -0.065,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.344,
+    "reg_top5": -0.27,
+    "reg_demi": -0.138,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0214,
+    0.022,
+    0.0219,
+    0.0232,
+    0.0236
+   ],
+   "p_victoire": 0.0214,
+   "p_top5": 0.1121,
+   "cote": 8.9
+  },
+  {
+   "region": "Aquitaine",
+   "nom": "Solène Videau",
+   "age": 22,
+   "taille_cm": 173,
+   "score_base": -0.08,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.0,
+    "reg_top5": -0.27,
+    "reg_demi": 0.19,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0204,
+    0.021,
+    0.0227,
+    0.0221,
+    0.0228
+   ],
+   "p_victoire": 0.0204,
+   "p_top5": 0.109,
+   "cote": 9.2
+  },
+  {
+   "region": "Pays de la Loire",
+   "nom": "Maëlle Hamon",
+   "age": 23,
+   "taille_cm": 172,
+   "score_base": -0.12,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.0,
+    "reg_top5": -0.113,
+    "reg_demi": -0.007,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0196,
+    0.0206,
+    0.0202,
+    0.0219,
+    0.0215
+   ],
+   "p_victoire": 0.0196,
+   "p_top5": 0.1038,
+   "cote": 9.6
+  },
+  {
+   "region": "Centre-Val de Loire",
+   "nom": "Justine Bourrelier",
+   "age": 25,
+   "taille_cm": 176,
+   "score_base": -0.158,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.344,
+    "reg_top5": -0.364,
+    "reg_demi": -0.138,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0193,
+    0.0193,
+    0.0201,
+    0.0209,
+    0.0211
+   ],
+   "p_victoire": 0.0193,
+   "p_top5": 0.1007,
+   "cote": 9.9
+  },
+  {
+   "region": "Nouvelle-Calédonie",
+   "nom": "Lana Prost",
+   "age": 17,
+   "taille_cm": 175,
+   "score_base": -0.2,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.344,
+    "reg_top5": -0.239,
+    "reg_demi": -0.305,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0183,
+    0.0193,
+    0.0197,
+    0.0203,
+    0.0211
+   ],
+   "p_victoire": 0.0183,
+   "p_top5": 0.0986,
+   "cote": 10.1
+  },
+  {
+   "region": "Bretagne",
+   "nom": "Margot Ferré-Bernard",
+   "age": 20,
+   "taille_cm": 171,
+   "score_base": -0.186,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.0,
+    "reg_top5": -0.113,
+    "reg_demi": -0.073,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0189,
+    0.0191,
+    0.0196,
+    0.0204,
+    0.0205
+   ],
+   "p_victoire": 0.0189,
+   "p_top5": 0.0985,
+   "cote": 10.2
+  },
+  {
+   "region": "Rhône-Alpes",
+   "nom": "Julia Grid-Costantino",
+   "age": 23,
+   "taille_cm": 174,
+   "score_base": -0.212,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.0,
+    "reg_top5": -0.27,
+    "reg_demi": 0.059,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0184,
+    0.0185,
+    0.0198,
+    0.0199,
+    0.0204
+   ],
+   "p_victoire": 0.0184,
+   "p_top5": 0.0969,
+   "cote": 10.3
+  },
+  {
+   "region": "Picardie",
+   "nom": "Marie Villez",
+   "age": 26,
+   "taille_cm": 173,
+   "score_base": -0.212,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.0,
+    "reg_top5": -0.27,
+    "reg_demi": 0.059,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0175,
+    0.0183,
+    0.0189,
+    0.0194,
+    0.0204
+   ],
+   "p_victoire": 0.0175,
+   "p_top5": 0.0946,
+   "cote": 10.6
+  },
+  {
+   "region": "Auvergne",
+   "nom": "Lina Berthelier",
+   "age": 24,
+   "taille_cm": 173,
+   "score_base": -0.317,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.0,
+    "reg_top5": -0.113,
+    "reg_demi": -0.204,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0166,
+    0.0173,
+    0.0176,
+    0.0181,
+    0.0189
+   ],
+   "p_victoire": 0.0166,
+   "p_top5": 0.0885,
+   "cote": 11.3
+  },
+  {
+   "region": "Poitou-Charentes",
+   "nom": "Mandy Goudal",
+   "age": 38,
+   "taille_cm": 174,
+   "score_base": -0.392,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.0,
+    "reg_top5": -0.427,
+    "reg_demi": -0.27,
+    "hote": 0.305
+   },
+   "p_rang": [
+    0.0156,
+    0.0158,
+    0.016,
+    0.0166,
+    0.0178
+   ],
+   "p_victoire": 0.0156,
+   "p_top5": 0.0819,
+   "cote": 12.2
+  },
+  {
+   "region": "Franche-Comté",
+   "nom": "Emma Ninot",
+   "age": 21,
+   "taille_cm": 173,
+   "score_base": -0.383,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.0,
+    "reg_top5": -0.113,
+    "reg_demi": -0.27,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.015,
+    0.0161,
+    0.0162,
+    0.017,
+    0.0171
+   ],
+   "p_victoire": 0.015,
+   "p_top5": 0.0815,
+   "cote": 12.3
+  },
+  {
+   "region": "Mayotte",
+   "nom": "Emma Saïd Issouf",
+   "age": 24,
+   "taille_cm": 176,
+   "score_base": -0.396,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.344,
+    "reg_top5": -0.419,
+    "reg_demi": -0.321,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0158,
+    0.016,
+    0.016,
+    0.0165,
+    0.017
+   ],
+   "p_victoire": 0.0158,
+   "p_top5": 0.0812,
+   "cote": 12.3
+  },
+  {
+   "region": "Lorraine",
+   "nom": "Léane Froment",
+   "age": 21,
+   "taille_cm": 172,
+   "score_base": -0.409,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.0,
+    "reg_top5": -0.27,
+    "reg_demi": -0.138,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0146,
+    0.0154,
+    0.0159,
+    0.0164,
+    0.0172
+   ],
+   "p_victoire": 0.0146,
+   "p_top5": 0.0795,
+   "cote": 12.6
+  },
+  {
+   "region": "Limousin",
+   "nom": "Élise Escuriol",
+   "age": 22,
+   "taille_cm": 174,
+   "score_base": -0.409,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.0,
+    "reg_top5": -0.27,
+    "reg_demi": -0.138,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0148,
+    0.0154,
+    0.0158,
+    0.0164,
+    0.017
+   ],
+   "p_victoire": 0.0148,
+   "p_top5": 0.0793,
+   "cote": 12.6
+  },
+  {
+   "region": "Midi-Pyrénées",
+   "nom": "Carla Rachail",
+   "age": 23,
+   "taille_cm": 174,
+   "score_base": -0.603,
+   "bonus_signaux": 0.0,
+   "motifs_signaux": [],
+   "contributions": {
+    "taille_175": 0.0,
+    "reg_top5": -0.419,
+    "reg_demi": -0.184,
+    "hote": 0.0
+   },
+   "p_rang": [
+    0.0126,
+    0.0124,
+    0.0133,
+    0.0138,
+    0.0144
+   ],
+   "p_victoire": 0.0126,
+   "p_top5": 0.0665,
+   "cote": 15.0
+  }
+ ]
+}

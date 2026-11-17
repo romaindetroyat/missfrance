@@ -1,0 +1,243 @@
+{
+ "n_candidates": 531,
+ "n_editions": 17,
+ "taille": {
+  "toutes": 174.6,
+  "top5": 175.1,
+  "gagnantes": 177.1,
+  "gagnantes_175_plus": 15,
+  "part_candidates_175_plus": 0.469,
+  "top5_si_175_plus": 0.197,
+  "top5_si_moins_175": 0.128
+ },
+ "age": {
+  "toutes": 20.9,
+  "top5": 21.0,
+  "gagnantes": 21.6
+ },
+ "hote": {
+  "n": 17,
+  "victoires": 1,
+  "top5": 4,
+  "demi": 12
+ },
+ "regions": [
+  {
+   "region": "Tahiti",
+   "participations": 16,
+   "victoires": 2,
+   "top5": 9,
+   "demi": 11
+  },
+  {
+   "region": "Guadeloupe",
+   "participations": 17,
+   "victoires": 2,
+   "top5": 8,
+   "demi": 10
+  },
+  {
+   "region": "Provence",
+   "participations": 17,
+   "victoires": 0,
+   "top5": 7,
+   "demi": 12
+  },
+  {
+   "region": "Nord-Pas-de-Calais",
+   "participations": 16,
+   "victoires": 4,
+   "top5": 7,
+   "demi": 9
+  },
+  {
+   "region": "Côte d'Azur",
+   "participations": 17,
+   "victoires": 0,
+   "top5": 6,
+   "demi": 15
+  },
+  {
+   "region": "Martinique",
+   "participations": 17,
+   "victoires": 1,
+   "top5": 5,
+   "demi": 8
+  },
+  {
+   "region": "Alsace",
+   "participations": 17,
+   "victoires": 1,
+   "top5": 4,
+   "demi": 9
+  },
+  {
+   "region": "Normandie",
+   "participations": 17,
+   "victoires": 2,
+   "top5": 4,
+   "demi": 9
+  },
+  {
+   "region": "Réunion",
+   "participations": 17,
+   "victoires": 0,
+   "top5": 4,
+   "demi": 9
+  },
+  {
+   "region": "Île-de-France",
+   "participations": 17,
+   "victoires": 1,
+   "top5": 3,
+   "demi": 10
+  },
+  {
+   "region": "Bourgogne",
+   "participations": 17,
+   "victoires": 1,
+   "top5": 3,
+   "demi": 7
+  },
+  {
+   "region": "Languedoc",
+   "participations": 11,
+   "victoires": 0,
+   "top5": 2,
+   "demi": 7
+  },
+  {
+   "region": "Pays de la Loire",
+   "participations": 17,
+   "victoires": 0,
+   "top5": 2,
+   "demi": 7
+  },
+  {
+   "region": "Bretagne",
+   "participations": 17,
+   "victoires": 1,
+   "top5": 2,
+   "demi": 6
+  },
+  {
+   "region": "Corse",
+   "participations": 17,
+   "victoires": 0,
+   "top5": 2,
+   "demi": 6
+  },
+  {
+   "region": "Guyane",
+   "participations": 17,
+   "victoires": 1,
+   "top5": 2,
+   "demi": 6
+  },
+  {
+   "region": "Auvergne",
+   "participations": 17,
+   "victoires": 0,
+   "top5": 2,
+   "demi": 4
+  },
+  {
+   "region": "Franche-Comté",
+   "participations": 17,
+   "victoires": 0,
+   "top5": 2,
+   "demi": 3
+  },
+  {
+   "region": "Aquitaine",
+   "participations": 17,
+   "victoires": 0,
+   "top5": 1,
+   "demi": 10
+  },
+  {
+   "region": "Picardie",
+   "participations": 17,
+   "victoires": 0,
+   "top5": 1,
+   "demi": 8
+  },
+  {
+   "region": "Rhône-Alpes",
+   "participations": 17,
+   "victoires": 0,
+   "top5": 1,
+   "demi": 8
+  },
+  {
+   "region": "Roussillon",
+   "participations": 11,
+   "victoires": 0,
+   "top5": 1,
+   "demi": 8
+  },
+  {
+   "region": "Champagne-Ardenne",
+   "participations": 17,
+   "victoires": 0,
+   "top5": 1,
+   "demi": 5
+  },
+  {
+   "region": "Limousin",
+   "participations": 17,
+   "victoires": 0,
+   "top5": 1,
+   "demi": 5
+  },
+  {
+   "region": "Lorraine",
+   "participations": 17,
+   "victoires": 0,
+   "top5": 1,
+   "demi": 5
+  },
+  {
+   "region": "Nouvelle-Calédonie",
+   "participations": 15,
+   "victoires": 0,
+   "top5": 1,
+   "demi": 2
+  },
+  {
+   "region": "Midi-Pyrénées",
+   "participations": 16,
+   "victoires": 0,
+   "top5": 0,
+   "demi": 4
+  },
+  {
+   "region": "Centre-Val de Loire",
+   "participations": 11,
+   "victoires": 0,
+   "top5": 0,
+   "demi": 3
+  },
+  {
+   "region": "Poitou-Charentes",
+   "participations": 17,
+   "victoires": 0,
+   "top5": 0,
+   "demi": 3
+  },
+  {
+   "region": "Mayotte",
+   "participations": 16,
+   "victoires": 0,
+   "top5": 0,
+   "demi": 2
+  },
+  {
+   "region": "Saint-Martin et Saint-Barthélemy",
+   "participations": 5,
+   "victoires": 0,
+   "top5": 0,
+   "demi": 1
+  }
+ ]
+}

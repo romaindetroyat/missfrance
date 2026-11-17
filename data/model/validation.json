@@ -1,0 +1,201 @@
+{
+ "resume": {
+  "editions": 17,
+  "top5_trouvees_moyenne": 1.88,
+  "top5_hasard_moyenne": 0.8,
+  "rang_median_gagnante": 8.0,
+  "gagnante_dans_top5_modele": 7,
+  "gagnante_dans_top10_modele": 13,
+  "logloss_top5": 0.4133,
+  "logloss_top5_hasard": 0.4405
+ },
+ "par_edition": [
+  {
+   "edition": 2010,
+   "n": 37,
+   "top5_trouvees": 1,
+   "attendu_hasard": 0.68,
+   "rang_modele_gagnante": 8,
+   "p_gagnante": 0.0274,
+   "p_hasard": 0.027,
+   "logloss_top5": 0.4117,
+   "logloss_top5_hasard": 0.396
+  },
+  {
+   "edition": 2011,
+   "n": 33,
+   "top5_trouvees": 0,
+   "attendu_hasard": 0.76,
+   "rang_modele_gagnante": 20,
+   "p_gagnante": 0.0187,
+   "p_hasard": 0.0303,
+   "logloss_top5": 0.5076,
+   "logloss_top5_hasard": 0.4253
+  },
+  {
+   "edition": 2012,
+   "n": 33,
+   "top5_trouvees": 2,
+   "attendu_hasard": 0.76,
+   "rang_modele_gagnante": 9,
+   "p_gagnante": 0.0334,
+   "p_hasard": 0.0303,
+   "logloss_top5": 0.384,
+   "logloss_top5_hasard": 0.4253
+  },
+  {
+   "edition": 2013,
+   "n": 33,
+   "top5_trouvees": 2,
+   "attendu_hasard": 0.76,
+   "rang_modele_gagnante": 16,
+   "p_gagnante": 0.0258,
+   "p_hasard": 0.0303,
+   "logloss_top5": 0.3828,
+   "logloss_top5_hasard": 0.4253
+  },
+  {
+   "edition": 2014,
+   "n": 33,
+   "top5_trouvees": 3,
+   "attendu_hasard": 0.76,
+   "rang_modele_gagnante": 17,
+   "p_gagnante": 0.0223,
+   "p_hasard": 0.0303,
+   "logloss_top5": 0.3238,
+   "logloss_top5_hasard": 0.4253
+  },
+  {
+   "edition": 2015,
+   "n": 33,
+   "top5_trouvees": 2,
+   "attendu_hasard": 0.76,
+   "rang_modele_gagnante": 3,
+   "p_gagnante": 0.0646,
+   "p_hasard": 0.0303,
+   "logloss_top5": 0.3591,
+   "logloss_top5_hasard": 0.4253
+  },
+  {
+   "edition": 2016,
+   "n": 31,
+   "top5_trouvees": 3,
+   "attendu_hasard": 0.81,
+   "rang_modele_gagnante": 5,
+   "p_gagnante": 0.0477,
+   "p_hasard": 0.0323,
+   "logloss_top5": 0.354,
+   "logloss_top5_hasard": 0.4418
+  },
+  {
+   "edition": 2017,
+   "n": 30,
+   "top5_trouvees": 2,
+   "attendu_hasard": 0.83,
+   "rang_modele_gagnante": 19,
+   "p_gagnante": 0.0196,
+   "p_hasard": 0.0333,
+   "logloss_top5": 0.4427,
+   "logloss_top5_hasard": 0.4506
+  },
+  {
+   "edition": 2018,
+   "n": 30,
+   "top5_trouvees": 1,
+   "attendu_hasard": 0.83,
+   "rang_modele_gagnante": 4,
+   "p_gagnante": 0.0713,
+   "p_hasard": 0.0333,
+   "logloss_top5": 0.5059,
+   "logloss_top5_hasard": 0.4506
+  },
+  {
+   "edition": 2019,
+   "n": 30,
+   "top5_trouvees": 2,
+   "attendu_hasard": 0.83,
+   "rang_modele_gagnante": 2,
+   "p_gagnante": 0.1069,
+   "p_hasard": 0.0333,
+   "logloss_top5": 0.4461,
+   "logloss_top5_hasard": 0.4506
+  },
+  {
+   "edition": 2020,
+   "n": 30,
+   "top5_trouvees": 4,
+   "attendu_hasard": 0.83,
+   "rang_modele_gagnante": 3,
+   "p_gagnante": 0.0724,
+   "p_hasard": 0.0333,
+   "logloss_top5": 0.3393,
+   "logloss_top5_hasard": 0.4506
+  },
+  {
+   "edition": 2021,
+   "n": 29,
+   "top5_trouvees": 2,
+   "attendu_hasard": 0.86,
+   "rang_modele_gagnante": 7,
+   "p_gagnante": 0.0426,
+   "p_hasard": 0.0345,
+   "logloss_top5": 0.4171,
+   "logloss_top5_hasard": 0.4597
+  },
+  {
+   "edition": 2022,
+   "n": 29,
+   "top5_trouvees": 1,
+   "attendu_hasard": 0.86,
+   "rang_modele_gagnante": 8,
+   "p_gagnante": 0.0338,
+   "p_hasard": 0.0345,
+   "logloss_top5": 0.4142,
+   "logloss_top5_hasard": 0.4597
+  },
+  {
+   "edition": 2023,
+   "n": 30,
+   "top5_trouvees": 2,
+   "attendu_hasard": 0.83,
+   "rang_modele_gagnante": 4,
+   "p_gagnante": 0.0649,
+   "p_hasard": 0.0333,
+   "logloss_top5": 0.4644,
+   "logloss_top5_hasard": 0.4506
+  },
+  {
+   "edition": 2024,
+   "n": 30,
+   "top5_trouvees": 1,
+   "attendu_hasard": 0.83,
+   "rang_modele_gagnante": 9,
+   "p_gagnante": 0.0464,
+   "p_hasard": 0.0333,
+   "logloss_top5": 0.44,
+   "logloss_top5_hasard": 0.4506
+  },
+  {
+   "edition": 2025,
+   "n": 30,
+   "top5_trouvees": 2,
+   "attendu_hasard": 0.83,
+   "rang_modele_gagnante": 9,
+   "p_gagnante": 0.0418,
+   "p_hasard": 0.0333,
+   "logloss_top5": 0.4092,
+   "logloss_top5_hasard": 0.4506
+  },
+  {
+   "edition": 2026,
+   "n": 30,
+   "top5_trouvees": 2,
+   "attendu_hasard": 0.83,
+   "rang_modele_gagnante": 1,
+   "p_gagnante": 0.1107,
+   "p_hasard": 0.0333,
+   "logloss_top5": 0.4235,
+   "logloss_top5_hasard": 0.4506
+  }
+ ]
+}

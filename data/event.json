@@ -1,0 +1,104 @@
+{
+  "edition": "Miss France 2027 (97e édition)",
+  "date": "2026-12-12",
+  "jour": "samedi",
+  "heure": {
+    "valeur": null,
+    "note": "Heure de diffusion TF1 non confirmée par une source lue. La page de l'Arena Futuroscope indiquerait 20h00 (probablement horaire salle/billetterie). À vérifier sur TF1."
+  },
+  "lieu": {
+    "salle": "Arena Futuroscope",
+    "commune": "Chasseneuil-du-Poitou",
+    "departement": "Vienne",
+    "note": "2e accueil de Miss France par cette salle ; 40 ans du Futuroscope"
+  },
+  "diffuseur": "TF1 (en direct)",
+  "presentateur": {
+    "nom": "Jean-Pierre Foucault",
+    "fiabilite": "un seul extrait de recherche ; à confirmer"
+  },
+  "theme": {
+    "valeur": "Les Miss et la mode",
+    "fiabilite": "source unique peu fiable (viralmag.fr) recoupée partiellement par un titre Ozap (« thème inédit »)"
+  },
+  "anniversaire": "40 ans de la diffusion télévisée du concours",
+  "marraine": "Sophie Thalmann (Miss France 1998), succède à Camille Cerf ; siégera aussi au jury",
+  "jury": {
+    "presidence": null,
+    "membres_connus": [
+      "Sophie Thalmann (marraine)"
+    ],
+    "note": "Composition non annoncée au 17/11/2026. En 2025 (édition 2026), le jury avait été annoncé 12 jours avant la cérémonie."
+  },
+  "tenante_du_titre": "Hinaupoko Devèze (Miss Tahiti 2025, Miss France 2026)",
+  "nombre_candidates": 31,
+  "regles_vote": {
+    "confirmees_2027": false,
+    "nb_demi_finalistes": null,
+    "nb_finalistes": null,
+    "part_public_jury": null,
+    "reference_edition_2026": "12 demi-finalistes présélectionnées par un jury en amont (entretiens) ; 5 finalistes ; classement final à 50 % jury / 50 % public (Wikipédia EN). De 2020 à 2025 : 15 demi-finalistes.",
+    "note": "Aucune source lue ne confirme les règles 2027 ; ne pas les supposer identiques à 2026."
+  },
+  "dates_cles": [
+    {
+      "date": "2026-04-26",
+      "evenement": "Première élection régionale (Centre-Val de Loire)"
+    },
+    {
+      "date": "2026-09-16",
+      "evenement": "Annonce du voyage de préparation à Saint-Martin (première fois)"
+    },
+    {
+      "date": "2026-09-27",
+      "evenement": "Dernière élection régionale (Champagne-Ardenne)"
+    },
+    {
+      "date": "2026-10-07",
+      "evenement": "Annonce officielle de la date et du lieu par la Société Miss France et TF1"
+    },
+    {
+      "date": "2026-11-12",
+      "evenement": "Rassemblement des 31 candidates à Paris ; présentation à la presse à la tour TF1 (un mois avant)",
+      "fiabilite": "date du 12/11 issue de Planet.fr"
+    },
+    {
+      "date": "2026-11-16",
+      "evenement": "Publication des portraits officiels des 31 candidates"
+    },
+    {
+      "date": "2026-11-17",
+      "evenement": "Ouverture de la billetterie Arena Futuroscope",
+      "fiabilite": "CGTV ; un autre site indiquait « pas ouverte au 15/11 »"
+    },
+    {
+      "date": null,
+      "evenement": "Voyage de préparation à Saint-Martin (dates exactes non trouvées), avec Hinaupoko Devèze"
+    },
+    {
+      "date": null,
+      "evenement": "Test de culture générale (date et résultats non trouvés)"
+    },
+    {
+      "date": "2026-12-12",
+      "evenement": "Cérémonie Miss France 2027, Arena Futuroscope, en direct sur TF1"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Miss_France_2027",
+    "https://www.ouest-france.fr/culture/people/miss-france/miss-france-2027-le-concours-aura-lieu-le-12-decembre-au-futuroscope-a184e516-c322-11f1-97ef-829bf84bf59f",
+    "https://www.arena-futuroscope.com/programmation/miss-france-2027/",
+    "https://www.cnews.fr/divertissement/2026-11-17/miss-france-2027-tout-savoir-sur-la-ceremonie-prevue-le-12-decembre",
+    "https://portail.free.fr/divertissement/people/miss-france-2027-sophie-thalmann-devient-la-nouvelle-marraine-et-rejoint-le-jury-de-lelection/",
+    "https://www.ozap.com/actu/theme-inedit-nouvelle-marraine-tf1-devoile-les-nouveautes-de-ledition-2027-de-miss-france/657984",
+    "https://la1ere.franceinfo.fr/guadeloupe/miss-france-2027-pour-la-premiere-fois-les-31-candidates-feront-leur-voyage-de-preparation-a-saint-martin-1740041.html",
+    "https://www.stmartinweek.fr/miss-france-2027-les-31-candidates-senvolent-pour-saint-martin-pour-un-voyage-de-preparation-inedit/",
+    "https://www.cg-tv.com/articles/miss-france-2027-la-billetterie-pour-assister-a-l-election-a-l-arena-futuroscope-ouvrira-le-17-novembre",
+    "https://www.actu-alt-plus.com/culture-tendances/comment-voter-miss-france/41966/",
+    "https://viralmag.fr/miss-france-2027-au-futuroscope-nouvelle-marraine-et-theme-mode/",
+    "https://en.wikipedia.org/wiki/Miss_France_2026",
+    "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php"
+  ],
+  "releve_le": "2026-11-17"
+}
