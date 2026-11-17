@@ -31,10 +31,14 @@ const Verdict = z.object({
   reason: z.string().describe("Une phrase courte en français"),
 });
 
-const PROMPT = (nom, region) => `Tu vérifies les photos d'une candidate à Miss France 2027 : ${nom}, Miss ${region}.
+const PROMPT = (nom, region) => `Tu vérifies les photos d'une candidate à Miss France 2027 : ${nom}.
+Elle a été élue Miss ${region} 2026 (élection régionale de 2026, qualificative pour Miss France 2027) :
+une écharpe « Miss ${region} 2026 » ou « ${region} 2026 » est donc NORMALE et correspond à elle.
+Une écharpe d'une autre année (2025, 2024…) ou d'une autre région désigne une autre Miss.
 Photo 1 : son portrait officiel (référence). Photo 2 : photo trouvée sur internet.
-Compare les visages (traits, forme du visage, sourcils, nez, bouche), pas seulement la coiffure ou la tenue.
-Réponds "non" si la photo 2 montre un homme, un enfant, une autre Miss (autre année ou autre région), un membre du comité, une autre célébrité, ou si la candidate n'y est pas.
+Compare les visages (traits, forme du visage, sourcils, nez, bouche), pas seulement la coiffure ou la tenue :
+le maquillage, la coiffure et l'éclairage changent beaucoup d'une photo à l'autre, ne conclus pas « non » pour ces seules raisons.
+Réponds "non" si la photo 2 montre un homme, un enfant, une autre Miss (autre année ou autre région), une dauphine, un membre du comité, une autre célébrité, ou si la candidate n'y est pas.
 Réponds "incertain" si le visage est trop petit, caché ou flou pour conclure.
 Catégorie de la photo 2 :
 - officiel : portrait officiel ou photo studio normée de la candidate (fond uni, pose face caméra) ;
