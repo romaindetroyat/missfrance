@@ -11,8 +11,8 @@ import Help from "@/components/Help";
 
 const DURATION = 5000;
 const ORDERS = {
-  cote: ["Favorites", (a, b) => (a.cote ?? 99) - (b.cote ?? 99)],
   region: ["Région", (a, b) => a.region.localeCompare(b.region, "fr")],
+  cote: ["Favorites", (a, b) => (a.cote ?? 99) - (b.cote ?? 99)],
   outsiders: ["Outsiders", (a, b) => (b.cote ?? 0) - (a.cote ?? 0)],
 };
 // Teinte propre à chaque région (écharpe colorée du défilé)
@@ -26,7 +26,7 @@ export default function Defile() {
   const app = useApp();
   const t = useTop5();
   const cmp = useCompare();
-  const [order, setOrder] = useState("cote");
+  const [order, setOrder] = useState("region");
   const [type, setType] = useState("tout");
   const [i, setI] = useState(0);
   const [k, setK] = useState(0);
