@@ -13,7 +13,8 @@ export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
 // Modèle de vision : clé Anthropic ou Google si fournie dans les variables Vercel, sinon passerelle IA Vercel.
-function pickModel() {
+function pickModel(forced) {
+  if (forced) return { model: forced, via: "gateway:" + forced };
   if (process.env.ANTHROPIC_API_KEY) return { model: createAnthropic({ apiKey: process.env.ANTHROPIC_API_KEY })("claude-haiku-5-5"), via: "anthropic" };
   if (process.env.GOOGLE_GENERATIVE_AI_API_KEY) return { model: createGoogleGenerativeAI({ apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY })("gemini-2.5-flash"), via: "google" };
   return { model: "anthropic/claude-haiku-5.5", via: "gateway" };
@@ -43,14 +44,16 @@ Catégorie de la photo 2 :
 - autre : tout le reste (vie quotidienne, presse, événements).`;
 
 export async function GET(req) {
-  const key = new URL(req.url).searchParams.get("key") || "";
+  const params = new URL(req.url).searchParams;
+  const key = params.get("key") || "";
+  const forced = /^[a-z0-9-]+\/[a-z0-9.\-]+$/i.test(params.get("model") || "") ? params.get("model") : process.env.VERIFY_MODEL || null;
   const sb = createClient("https://gxopzeiigbqhdopztsgv.supabase.co", "sb_publishable_PuCqto4auWV1PLgSdp0Lcg_ykrKIEKg");
   const { data: batch, error } = await sb.rpc("review_next", { p_key: key, p_limit: BATCH });
   if (error) return Response.json({ error: error.message }, { status: 500 });
   if (!batch?.length) return Response.json({ done: true });
 
-  const { model, via } = pickModel();
-  const out = { via, ok: 0, rejected: 0, errors: [] };
+  const { model, via } = pickModel(forced);
+  const out = { via, hasAnthropicKey: !!process.env.ANTHROPIC_API_KEY, ok: 0, rejected: 0, errors: [] };
   const t0 = Date.now();
   async function one(p) {
     if (!p.ref_url) return;
