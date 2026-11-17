@@ -1,0 +1,1657 @@
+{
+ "date": "2026-11-17",
+ "methode": {
+  "instagram": "Identifiants : fiches pronomiss.com (site de fans agrégateur, liste arrêtée au 22/10/2026, sources citées sur chaque fiche). Abonnés : seulement quand un article les cite. instagram.com exige une connexion ; Social Blade a répondu 403.",
+  "buzz_articles": "Nombre d'éléments renvoyés par le flux Google News RSS (recherche du nom exact, fenêtre when:30d, hl=fr) le 17/11/2026, puis nombre de sources distinctes. Les reprises syndiquées comptent séparément, la galerie commune des portraits officiels (16/11) entre dans le compte, et le flux est plafonné. Indicateur relatif, pas un décompte exhaustif.",
+  "regionale_nb_candidates": "Titres d'articles de presse régionale repérés via Google News. L'URL donnée est celle de la recherche, faute de lien direct résolu.",
+  "profil": "Fiches pronomiss (agrégateur de presse régionale) complétées par les fiches du forum La vie en Miss (t1270, 03/11/2026). Les langues y sont souvent « supposées » d'après les études : fiabilité faible."
+ },
+ "candidates": {
+  "alsace": {
+   "nom": "Chiara Blazevic",
+   "instagram": {
+    "handle": "@chiarablazevic.off",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-alsace-2026-chiara-blazevic/",
+    "source_handle": "https://pronomiss.com/miss-alsace-2026-chiara-blazevic/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 12,
+    "nb_source": "DNA, « Miss Alsace 2026. Voici les douze candidates… »",
+    "nb_date": "2026-06-13",
+    "participations_anterieures": [
+     "4e dauphine de Miss Alsace 2021 (à 18 ans)"
+    ],
+    "dauphines": "1re dauphine : Alexia Cordier (profiles.json)",
+    "prix_regionaux": null,
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Alsace+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-alsace-2026-chiara-blazevic/"
+   },
+   "profil": {
+    "etudes_metier": "Fin d'études (école de commerce et de management de Mulhouse) ; événementiel ; reprend l'entreprise familiale (Paris Match 10/11/2026)",
+    "langues": "anglais « supposé » (forum)",
+    "sport": null,
+    "engagement": "Sensibiliser les jeunes aux dangers des réseaux sociaux",
+    "medias": [
+     "Interview Paris Match (10/11)",
+     "Interview décalée TF1 Info (17/11, série alphabétique)"
+    ],
+    "particularite": "Revient 5 ans après une 4e place régionale ; objectif affiché « au minimum le top 5 »",
+    "sources": [
+     "https://pronomiss.com/miss-alsace-2026-chiara-blazevic/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [
+    {
+     "date": "2026-11-17",
+     "fait": "Première « interview décalée » TF1 Info de la promo 2027 (la série suit l'ordre alphabétique des régions, comme en 2025 : pas un signal de mise en avant)",
+     "source": "https://www.tf1info.fr/culture/miss-france-2027-l-interview-decalee-de-chiara-blazevic-miss-alsace-je-veux-sensibiliser-les-plus-jeunes-aux-dangers-des-reseaux-sociaux-2469732.html"
+    }
+   ],
+   "buzz_articles": 9,
+   "buzz_sources_distinctes": 6,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Chiara+Blazevic%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  },
+  "aquitaine": {
+   "nom": "Solène Videau",
+   "instagram": {
+    "handle": "@solene.videau",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-aquitaine-2026-solene-videau/",
+    "source_handle": "https://pronomiss.com/miss-aquitaine-2026-solene-videau/"
+   },
+   "classements": [
+    {
+     "source": "Télé Star (Elodie Schwartz), top 5 de la rédaction d'après les portraits officiels",
+     "url": "https://www.telestar.fr/actu_tv/miss-france-2027-roussillon-et-cote-dazur-en-finale-notre-top-des-miss-regionales-avant-lelection-du-12-decembre-1793259",
+     "date": "2026-11-16",
+     "rang": 5,
+     "sur": 5
+    },
+    {
+     "source": "Viralmag (fiabilité faible : contenu vraisemblablement généré automatiquement, ordre identique à Télé Star)",
+     "url": "https://viralmag.fr/miss-france-2027-favorites-roussillon-cotedrafting-the-miss-france-2027-article-dazur-surprise/",
+     "date": "2026-11-16",
+     "rang": 5,
+     "sur": 5
+    }
+   ],
+   "regionale": {
+    "nb_candidates": 16,
+    "nb_source": "Sud Ouest, « Miss Aquitaine 2026 : découvrez les 16 candidates en lice »",
+    "nb_date": "2026-05-13",
+    "participations_anterieures": [
+     "Miss Bordeaux 2025",
+     "1re dauphine de Miss Aquitaine 2025 (selon pronomiss ; profiles.json signale une divergence : 1re dauphine de Miss Bordeaux 2023)",
+     "Victoire à sa 3e participation régionale (pronomiss)"
+    ],
+    "dauphines": null,
+    "prix_regionaux": null,
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Aquitaine+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-aquitaine-2026-solene-videau/"
+   },
+   "profil": {
+    "etudes_metier": "Étudiante en mode (bachelor stylisme), travaille dans l'événementiel ; veut devenir styliste",
+    "langues": "« notions d'anglais » (forum)",
+    "sport": null,
+    "engagement": "Droits des femmes, jeunesse inclusive et éco-responsable (forum)",
+    "medias": [
+     "Interview C6 Radio (YouTube)",
+     "Paris Match 12/11 : « l'artiste de sa promo, je sais peindre »"
+    ],
+    "particularite": "Se dit « assez introvertie à la base »",
+    "sources": [
+     "https://pronomiss.com/miss-aquitaine-2026-solene-videau/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [],
+   "buzz_articles": 7,
+   "buzz_sources_distinctes": 6,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Solène+Videau%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  },
+  "auvergne": {
+   "nom": "Lina Berthelier",
+   "instagram": {
+    "handle": "@linaberthelier",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-auvergne-2026-lina-berthelier/",
+    "source_handle": "https://pronomiss.com/miss-auvergne-2026-lina-berthelier/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 16,
+    "nb_source": "France 3 Régions, « Miss Auvergne 2026 : découvrez qui sont les 16 candidates » ; La Montagne (16/09)",
+    "nb_date": "2026-09-14",
+    "participations_anterieures": [
+     "Miss Allier 2026 (élue le 18/04/2026 face à 12 candidates, La Montagne 23/04/2026)"
+    ],
+    "dauphines": "1re dauphine : Kadidja Touré (profiles.json)",
+    "prix_regionaux": null,
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Auvergne+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-auvergne-2026-lina-berthelier/"
+   },
+   "profil": {
+    "etudes_metier": "Ingénieure commerciale en alternance chez ENGIE, diplômée d'école de commerce (2026)",
+    "langues": "anglais « supposé » (forum)",
+    "sport": "Ancienne gymnaste en GR (coach selon le forum), course à pied",
+    "engagement": "Être la voix des femmes « qui étudient, travaillent, entreprennent »",
+    "medias": [
+     "Paris Match 12/11 : « une gymnaste de retour à la compétition après une épreuve physique et psychologique »"
+    ],
+    "particularite": null,
+    "sources": [
+     "https://pronomiss.com/miss-auvergne-2026-lina-berthelier/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [],
+   "buzz_articles": 8,
+   "buzz_sources_distinctes": 7,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Lina+Berthelier%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  },
+  "bourgogne": {
+   "nom": "Ilona Perrot",
+   "instagram": {
+    "handle": "@ilonaperrot.off",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-bourgogne-2026-ilona-perrot/",
+    "source_handle": "https://pronomiss.com/miss-bourgogne-2026-ilona-perrot/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 10,
+    "nb_source": "Le JSL, « Voici les 10 candidates à l'élection de Miss Bourgogne 2026 »",
+    "nb_date": "2026-04-26",
+    "participations_anterieures": [
+     "Miss Nièvre 2024",
+     "Titre régional à la 2e tentative (pronomiss)"
+    ],
+    "dauphines": null,
+    "prix_regionaux": null,
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Bourgogne+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-bourgogne-2026-ilona-perrot/"
+   },
+   "profil": {
+    "etudes_metier": "Infirmière en psychiatrie",
+    "langues": null,
+    "sport": "Danse (passion)",
+    "engagement": "Santé / santé mentale",
+    "medias": [
+     "Paris Match 13/11 : « une candidate repérée dès ses 15 ans : pour mon premier casting je n'avais prévenu personne »"
+    ],
+    "particularite": null,
+    "sources": [
+     "https://pronomiss.com/miss-bourgogne-2026-ilona-perrot/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [
+    {
+     "date": "2026-11-16",
+     "fait": "Dit avoir hâte de passer le test de culture générale",
+     "source": "https://www.parismatch.com/bras-en-echarpe-miss-france-sur-point-manquer-lavion-deja-laventure-pour-miss-arrivees-saint-martin-5RrzirEs6BXI5PWDbTM5ws"
+    }
+   ],
+   "buzz_articles": 7,
+   "buzz_sources_distinctes": 6,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Ilona+Perrot%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  },
+  "bretagne": {
+   "nom": "Margot Ferré-Bernard",
+   "instagram": {
+    "handle": "@margot.ferrebernard",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-bretagne-2026-margot-ferre-bernard/",
+    "source_handle": "https://pronomiss.com/miss-bretagne-2026-margot-ferre-bernard/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 16,
+    "nb_source": "Actu.fr, « Miss Bretagne sera élue à la Brest Arena : les photos officielles des 16 candidates »",
+    "nb_date": "2026-08-30",
+    "participations_anterieures": [
+     "Miss Finistère 2026 (8 mai 2026)"
+    ],
+    "dauphines": null,
+    "prix_regionaux": null,
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Bretagne+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-bretagne-2026-margot-ferre-bernard/"
+   },
+   "profil": {
+    "etudes_metier": "3e année de droit (UBO, Brest) ; veut devenir juge des enfants",
+    "langues": null,
+    "sport": "Gymnastique, course à pied (forum)",
+    "engagement": "Protection de l'enfance (ses parents sont famille d'accueil depuis plus de dix ans)",
+    "medias": [
+     "Paris Match 14/11",
+     "ICI Armorique"
+    ],
+    "particularite": "Volume d'articles parmi les plus élevés de la promo sur 30 jours (élue tard, 25/09)",
+    "sources": [
+     "https://pronomiss.com/miss-bretagne-2026-margot-ferre-bernard/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [],
+   "buzz_articles": 12,
+   "buzz_sources_distinctes": 9,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Margot+Ferré-Bernard%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": [
+    "Paris Match (14/11) titre : « Ayant grandi dans une famille d'accueil, je veux devenir juge pour enfant » ; pronomiss écrit que ses parents accueillent des enfants depuis plus de dix ans. Formulations compatibles mais à préciser."
+   ]
+  },
+  "centre-val-de-loire": {
+   "nom": "Justine Bourrelier",
+   "instagram": {
+    "handle": "@justinebourrelier.off",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-centre-val-de-loire-2026-justine-bourrelier/",
+    "source_handle": "https://pronomiss.com/miss-centre-val-de-loire-2026-justine-bourrelier/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": null,
+    "nb_source": null,
+    "nb_date": null,
+    "participations_anterieures": [
+     "3e participation régionale ; 3e dauphine en 2023 (pronomiss, source unique)"
+    ],
+    "dauphines": null,
+    "prix_regionaux": null,
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-centre-val-de-loire-2026-justine-bourrelier/"
+   },
+   "profil": {
+    "etudes_metier": "Responsable marketing chez Burger King ; BTS MUC (pronomiss, source unique)",
+    "langues": "anglais « fortement supposé » (forum)",
+    "sport": null,
+    "engagement": "Protection de l'enfance / UNICEF (forum)",
+    "medias": [
+     "Interview Or Media (YouTube)",
+     "Paris Match 15/11 : « la globe-trotteuse du groupe… pacsée en Thaïlande »",
+     "Public.fr et Purepeople 09/11 : perte de 15 kg"
+    ],
+    "particularite": "Première Miss régionale élue (26/04) ; tatouage, voyages",
+    "sources": [
+     "https://pronomiss.com/miss-centre-val-de-loire-2026-justine-bourrelier/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [
+    {
+     "date": "2026-11-16",
+     "fait": "Dit avoir hâte de passer le test de culture générale « pour profiter des soirées après sans réviser »",
+     "source": "https://www.parismatch.com/bras-en-echarpe-miss-france-sur-point-manquer-lavion-deja-laventure-pour-miss-arrivees-saint-martin-5RrzirEs6BXI5PWDbTM5ws"
+    }
+   ],
+   "buzz_articles": 8,
+   "buzz_sources_distinctes": 7,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Justine+Bourrelier%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  },
+  "champagne-ardenne": {
+   "nom": "Céline Leduc",
+   "instagram": {
+    "handle": "@celineleducoff",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-champagne-ardenne-2026-celine-leduc/",
+    "source_handle": "https://pronomiss.com/miss-champagne-ardenne-2026-celine-leduc/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": null,
+    "nb_source": null,
+    "nb_date": null,
+    "participations_anterieures": [
+     "3e dauphine de Miss Champagne-Ardenne 2024",
+     "1re dauphine de Miss Ardennes (mai 2026)"
+    ],
+    "dauphines": "1re : Romane Renaud ; 2e : Aïcha Moumin (profiles.json)",
+    "prix_regionaux": null,
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-champagne-ardenne-2026-celine-leduc/"
+   },
+   "profil": {
+    "etudes_metier": "Master en éducation ; mannequin et modèle photo",
+    "langues": "anglais « supposé » (forum)",
+    "sport": "Gymnastique (forum)",
+    "engagement": "Prévention santé, sport et nutrition chez les jeunes ; savoir-faire locaux",
+    "medias": [
+     "Expérience de mannequin/modèle photo (pronomiss)"
+    ],
+    "particularite": "La plus grande de la promo (1,83 m) ; a fêté ses 24 ans le 16/11 à Saint-Martin (Télé-Loisirs, Le Parisien)",
+    "sources": [
+     "https://pronomiss.com/miss-champagne-ardenne-2026-celine-leduc/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [
+    {
+     "date": "2026-11-16",
+     "fait": "Fête ses 24 ans le soir de l'arrivée (bougie, accolade de la Miss France en titre)",
+     "source": "https://www.programme-tv.net/news/evenement/miss-france-miss-france/411025-miss-france-2027-danses-enjouees-anniversaire-les-candidates-ont-fait-leurs-premiers-pas-a-saint-martin-dans-une-ambiance-de-folie-photos/"
+    }
+   ],
+   "buzz_articles": 7,
+   "buzz_sources_distinctes": 7,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Céline+Leduc%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": [
+    "Âge à mettre à jour : 24 ans depuis le 16/11/2026 (23 ans dans candidates_2027.csv)."
+   ]
+  },
+  "corse": {
+   "nom": "Satine Nomary",
+   "instagram": {
+    "handle": "@satinenomary",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-corse-2026-satine-nomary/",
+    "source_handle": "https://pronomiss.com/miss-corse-2026-satine-nomary/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 9,
+    "nb_source": "Corse Net Infos (06/07) et Corse-Matin (05/07) : « les 9 candidates »",
+    "nb_date": "2026-07-06",
+    "participations_anterieures": [],
+    "dauphines": null,
+    "prix_regionaux": null,
+    "note": "Élue à Porticcio, sa commune, devant plus de 900 spectateurs (pronomiss)",
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Corse+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-corse-2026-satine-nomary/"
+   },
+   "profil": {
+    "etudes_metier": "Hôtesse de l'air",
+    "langues": "anglais (forum)",
+    "sport": "Volley-ball",
+    "engagement": "Cyberharcèlement (forum)",
+    "medias": [],
+    "particularite": "19 ans ; a dû vaincre sa timidité",
+    "sources": [
+     "https://pronomiss.com/miss-corse-2026-satine-nomary/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [],
+   "buzz_articles": 10,
+   "buzz_sources_distinctes": 9,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Satine+Nomary%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  },
+  "cote-d-azur": {
+   "nom": "May Haoues",
+   "instagram": {
+    "handle": "@may_haoues",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-cote-d-azur-2026-may-haoues/",
+    "source_handle": "https://pronomiss.com/miss-cote-d-azur-2026-may-haoues/"
+   },
+   "classements": [
+    {
+     "source": "Télé Star (Elodie Schwartz), top 5 de la rédaction d'après les portraits officiels",
+     "url": "https://www.telestar.fr/actu_tv/miss-france-2027-roussillon-et-cote-dazur-en-finale-notre-top-des-miss-regionales-avant-lelection-du-12-decembre-1793259",
+     "date": "2026-11-16",
+     "rang": 2,
+     "sur": 5
+    },
+    {
+     "source": "Viralmag (fiabilité faible : contenu vraisemblablement généré automatiquement, ordre identique à Télé Star)",
+     "url": "https://viralmag.fr/miss-france-2027-favorites-roussillon-cotedrafting-the-miss-france-2027-article-dazur-surprise/",
+     "date": "2026-11-16",
+     "rang": 2,
+     "sur": 5
+    }
+   ],
+   "regionale": {
+    "nb_candidates": null,
+    "nb_source": null,
+    "nb_date": null,
+    "participations_anterieures": [
+     "Miss Vallauris Golfe-Juan (27/06/2026)"
+    ],
+    "dauphines": null,
+    "prix_regionaux": null,
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-cote-d-azur-2026-may-haoues/"
+   },
+   "profil": {
+    "etudes_metier": "Étudiante en bachelor à l'EDHEC (Nice)",
+    "langues": "anglais, espagnol (forum)",
+    "sport": "Volley-ball depuis 4 ans",
+    "engagement": "Lutte contre le cancer ; collectes pour la SPA de Grasse",
+    "medias": [],
+    "particularite": "19 ans ; premier voyage lointain (Paris Match 17/11)",
+    "sources": [
+     "https://pronomiss.com/miss-cote-d-azur-2026-may-haoues/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [
+    {
+     "date": "2026-11-16",
+     "fait": "Citée dans le reportage de départ (premier voyage lointain, « hâte de suivre les masterclass »)",
+     "source": "https://www.parismatch.com/bras-en-echarpe-miss-france-sur-point-manquer-lavion-deja-laventure-pour-miss-arrivees-saint-martin-5RrzirEs6BXI5PWDbTM5ws"
+    }
+   ],
+   "buzz_articles": 7,
+   "buzz_sources_distinctes": 6,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22May+Haoues%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  },
+  "franche-comte": {
+   "nom": "Emma Ninot",
+   "instagram": {
+    "handle": "@emmaninot.off",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-franche-comte-2026-emma-ninot/",
+    "source_handle": "https://pronomiss.com/miss-franche-comte-2026-emma-ninot/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 14,
+    "nb_source": "L'Est Républicain (31/08, 04/09, 09/09), France 3 Régions (09/09), maCommune.info (11/09) : « 14 candidates »",
+    "nb_date": "2026-09-11",
+    "participations_anterieures": [
+     "Miss Pays de Belfort-Montbéliard 2026 (avril)"
+    ],
+    "dauphines": "1re : Theodora Dragomir Perrodin (profiles.json)",
+    "prix_regionaux": null,
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Franche-Comt%C3%A9+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-franche-comte-2026-emma-ninot/"
+   },
+   "profil": {
+    "etudes_metier": "Étudiante infirmière, vise médecine",
+    "langues": null,
+    "sport": "Sauveteuse en mer l'été depuis 5 ans ; course, vélo, VTT, natation",
+    "engagement": "Isolement des personnes âgées ; sauvetage en mer (forum)",
+    "medias": [],
+    "particularite": null,
+    "sources": [
+     "https://pronomiss.com/miss-franche-comte-2026-emma-ninot/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [],
+   "buzz_articles": 7,
+   "buzz_sources_distinctes": 6,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Emma+Ninot%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": [
+    "Taille : 1,73 m selon pronomiss, 1,74 m dans candidates_2027.csv."
+   ]
+  },
+  "guadeloupe": {
+   "nom": "Julia Désirée",
+   "instagram": {
+    "handle": "@_juliadesiree_",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-guadeloupe-2026-julia-desiree/",
+    "source_handle": "https://pronomiss.com/miss-guadeloupe-2026-julia-desiree/"
+   },
+   "classements": [
+    {
+     "source": "Télé Star (Elodie Schwartz), top 5 de la rédaction d'après les portraits officiels",
+     "url": "https://www.telestar.fr/actu_tv/miss-france-2027-roussillon-et-cote-dazur-en-finale-notre-top-des-miss-regionales-avant-lelection-du-12-decembre-1793259",
+     "date": "2026-11-16",
+     "rang": 3,
+     "sur": 5
+    },
+    {
+     "source": "Viralmag (fiabilité faible : contenu vraisemblablement généré automatiquement, ordre identique à Télé Star)",
+     "url": "https://viralmag.fr/miss-france-2027-favorites-roussillon-cotedrafting-the-miss-france-2027-article-dazur-surprise/",
+     "date": "2026-11-16",
+     "rang": 3,
+     "sur": 5
+    }
+   ],
+   "regionale": {
+    "nb_candidates": 10,
+    "nb_source": "Outre-mer La 1ère, « Miss Guadeloupe 2026 : dix candidates en lice… »",
+    "nb_date": "2026-07-16",
+    "participations_anterieures": [
+     "Miss Abymes"
+    ],
+    "dauphines": null,
+    "prix_regionaux": null,
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Guadeloupe+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-guadeloupe-2026-julia-desiree/"
+   },
+   "profil": {
+    "etudes_metier": "Conseillère en parfumerie et cosmétiques",
+    "langues": "créole, anglais « supposé » (forum)",
+    "sport": "Plongée sous-marine",
+    "engagement": "Violences faites aux femmes ; ambassadrice du Comité du tourisme des Îles de Guadeloupe",
+    "medias": [],
+    "particularite": null,
+    "sources": [
+     "https://pronomiss.com/miss-guadeloupe-2026-julia-desiree/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [],
+   "buzz_articles": 10,
+   "buzz_sources_distinctes": 8,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Julia+Désirée%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  },
+  "guyane": {
+   "nom": "Sandra Justine",
+   "instagram": {
+    "handle": "@sandrajustineoff",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-guyane-2026-sandra-justine/",
+    "source_handle": "https://pronomiss.com/miss-guyane-2026-sandra-justine/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 9,
+    "nb_source": "franceguyane.fr, « Qui succédera à Alicia Mertosetiko ? Les neuf candidates sont connues »",
+    "nb_date": "2026-05-22",
+    "participations_anterieures": [],
+    "dauphines": null,
+    "prix_regionaux": null,
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Guyane+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-guyane-2026-sandra-justine/"
+   },
+   "profil": {
+    "etudes_metier": "Infirmière coordinatrice petite enfance",
+    "langues": null,
+    "sport": null,
+    "engagement": "Troubles de l'apprentissage (dyslexique) ; artisans et consommation locale",
+    "medias": [],
+    "particularite": "Dyslexie surmontée, en fait sa cause",
+    "sources": [
+     "https://pronomiss.com/miss-guyane-2026-sandra-justine/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [
+    {
+     "date": "2026-11-16",
+     "fait": "Citée dans le reportage de départ (première fois à Saint-Martin)",
+     "source": "https://www.parismatch.com/bras-en-echarpe-miss-france-sur-point-manquer-lavion-deja-laventure-pour-miss-arrivees-saint-martin-5RrzirEs6BXI5PWDbTM5ws"
+    }
+   ],
+   "buzz_articles": 7,
+   "buzz_sources_distinctes": 6,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Sandra+Justine+Miss%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  },
+  "ile-de-france": {
+   "nom": "Camilla Alash",
+   "instagram": {
+    "handle": "@camillaalash",
+    "followers": 19000,
+    "date": "2026-10-02",
+    "source": "https://www.public.fr/miss-france-2027-camilla-alash-grande-favorite-des-reseaux-sociaux-miss-ile-de-france-sait-deja-sentourer-de-stars",
+    "source_handle": "https://pronomiss.com/miss-ile-de-france-2026-camilla-alash/",
+    "followers_approx": "plus de 19 000"
+   },
+   "classements": [
+    {
+     "source": "Télé Star (Elodie Schwartz), top 5 de la rédaction d'après les portraits officiels",
+     "url": "https://www.telestar.fr/actu_tv/miss-france-2027-roussillon-et-cote-dazur-en-finale-notre-top-des-miss-regionales-avant-lelection-du-12-decembre-1793259",
+     "date": "2026-11-16",
+     "rang": 4,
+     "sur": 5
+    },
+    {
+     "source": "Viralmag (fiabilité faible : contenu vraisemblablement généré automatiquement, ordre identique à Télé Star)",
+     "url": "https://viralmag.fr/miss-france-2027-favorites-roussillon-cotedrafting-the-miss-france-2027-article-dazur-surprise/",
+     "date": "2026-11-16",
+     "rang": 4,
+     "sur": 5
+    }
+   ],
+   "regionale": {
+    "nb_candidates": null,
+    "nb_source": null,
+    "nb_date": null,
+    "participations_anterieures": [
+     "Miss Hauts-de-Seine 2023",
+     "3e dauphine de Miss Île-de-France 2023",
+     "3e participation à Miss Île-de-France (profiles.json)"
+    ],
+    "dauphines": null,
+    "prix_regionaux": null,
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-ile-de-france-2026-camilla-alash/"
+   },
+   "profil": {
+    "etudes_metier": "Étudiante en journalisme ; veut devenir journaliste sportive",
+    "langues": "anglais, notions de russe et de kazakh (forum)",
+    "sport": "Tennis, inscrite sur le circuit ITF (pronomiss ; ICI la présente comme « joueuse de tennis professionnelle »)",
+    "engagement": "Diversité ; cancer du sein",
+    "medias": [
+     "Défilés en lingerie pour Etam (titre TV Magazine 21/09)",
+     "Vidéo Instagram des cadeaux reprise par Public.fr et Purepeople (14-16/11)"
+    ],
+    "particularite": "Franco-kazakhe (forum) ; la plus suivie après Midi-Pyrénées début octobre (Public.fr)",
+    "sources": [
+     "https://pronomiss.com/miss-ile-de-france-2026-camilla-alash/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [
+    {
+     "date": "2026-11-16",
+     "fait": "A failli manquer l'avion (aller-retour chez elle pour un passeport oublié) ; deux voyageuses citent Miss Île-de-France parmi leurs préférées",
+     "source": "https://www.parismatch.com/bras-en-echarpe-miss-france-sur-point-manquer-lavion-deja-laventure-pour-miss-arrivees-saint-martin-5RrzirEs6BXI5PWDbTM5ws"
+    },
+    {
+     "date": "2026-11-14",
+     "fait": "Vidéo Instagram de déballage des cadeaux reprise par Public.fr (commentaire d'un internaute sur la sécurité) et Purepeople",
+     "source": "https://www.public.fr/miss-france-2027-ipad-et-montres-a-gogo-maquillage-hors-de-prix-miss-ile-de-france-a-t-elle-mis-en-danger-lorganisation"
+    }
+   ],
+   "buzz_articles": 8,
+   "buzz_sources_distinctes": 6,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Camilla+Alash%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": [
+    "Public.fr (02/10/2026) titre « grande favorite des réseaux sociaux ? » (formulation interrogative, sans classement)."
+   ]
+  },
+  "languedoc": {
+   "nom": "Candice Gauch",
+   "instagram": {
+    "handle": "@candice.gauch",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-languedoc-2026-candice-gauch/",
+    "source_handle": "https://pronomiss.com/miss-languedoc-2026-candice-gauch/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 14,
+    "nb_source": "La Gazette de Nîmes (07/08), Objectif Gard (04/08) : 14 finalistes ; Midi Libre (01/08) : 21 candidates en demi-finale à Alès",
+    "nb_date": "2026-08-07",
+    "participations_anterieures": [
+     "Miss Paris 2025",
+     "Miss Sympathie à Miss Île-de-France 2025",
+     "Miss Lozère 2026"
+    ],
+    "dauphines": null,
+    "prix_regionaux": null,
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Languedoc+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-languedoc-2026-candice-gauch/"
+   },
+   "profil": {
+    "etudes_metier": "Consultante en organisation (vit à Paris)",
+    "langues": "anglais, occitan (forum)",
+    "sport": "Sports aquatiques, natation, plongée",
+    "engagement": "Territoires ruraux, cyberharcèlement, dérives de l'IA (forum)",
+    "medias": [
+     "Porteuse de la flamme olympique (Paris 2024)"
+    ],
+    "particularite": "29 ans, 2e plus âgée ; élue le jour de ses 29 ans ; ex-Miss Paris 2025",
+    "sources": [
+     "https://pronomiss.com/miss-languedoc-2026-candice-gauch/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [],
+   "buzz_articles": 10,
+   "buzz_sources_distinctes": 4,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Candice+Gauch%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  },
+  "limousin": {
+   "nom": "Élise Escuriol",
+   "instagram": {
+    "handle": "@elise_.escuriol",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-limousin-2026-elise-escuriol/",
+    "source_handle": "https://pronomiss.com/miss-limousin-2026-elise-escuriol/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 15,
+    "nb_source": "La Montagne, « Qui sera Miss Limousin 2026 ? Voici les 15 candidates »",
+    "nb_date": "2026-08-31",
+    "participations_anterieures": [
+     "1re dauphine de Miss Corrèze 2025 et de Miss Limousin 2025",
+     "2e dauphine de Miss Corrèze 2026"
+    ],
+    "dauphines": "1re : Maëva Walek (profiles.json)",
+    "prix_regionaux": null,
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Limousin+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-limousin-2026-elise-escuriol/"
+   },
+   "profil": {
+    "etudes_metier": "Diplômée d'un BUT GEA",
+    "langues": "anglais « supposé » (forum)",
+    "sport": "Équitation (forum)",
+    "engagement": "Confiance en soi (forum)",
+    "medias": [],
+    "particularite": "Participe en mémoire de son grand-père (forum)",
+    "sources": [
+     "https://pronomiss.com/miss-limousin-2026-elise-escuriol/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [],
+   "buzz_articles": 6,
+   "buzz_sources_distinctes": 6,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Élise+Escuriol%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  },
+  "lorraine": {
+   "nom": "Léane Froment",
+   "instagram": {
+    "handle": "@leanefromentoff",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-lorraine-2026-leane-froment/",
+    "source_handle": "https://pronomiss.com/miss-lorraine-2026-leane-froment/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 15,
+    "nb_source": "Le Républicain Lorrain (16/07, 04/09), Vosges Matin (06-07/09) : « 15 candidates »",
+    "nb_date": "2026-09-04",
+    "participations_anterieures": [
+     "Échec à Miss Lorraine 2025",
+     "Miss Excellence Lorraine puis 3e dauphine de Miss Excellence France 2023"
+    ],
+    "dauphines": "1re : Celia Lory (profiles.json)",
+    "prix_regionaux": null,
+    "note": "Couronnée devant 1 800 spectateurs ; jury régional présidé par Sophie Thalmann, qui siège au jury national (profiles.json, pronomiss)",
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Lorraine+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-lorraine-2026-leane-froment/"
+   },
+   "profil": {
+    "etudes_metier": "BTS commerce en alternance (boutique de seconde main de luxe)",
+    "langues": "anglais « supposé » (forum)",
+    "sport": "Équitation",
+    "engagement": "Bien-être animal, lutte contre les abandons (forum)",
+    "medias": [
+     "A travaillé sa présence sur les réseaux sociaux après 2025 (pronomiss)"
+    ],
+    "particularite": null,
+    "sources": [
+     "https://pronomiss.com/miss-lorraine-2026-leane-froment/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [],
+   "buzz_articles": 8,
+   "buzz_sources_distinctes": 7,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Léane+Froment%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  },
+  "martinique": {
+   "nom": "Maureen-Alycia Lucéa-Merlin",
+   "instagram": {
+    "handle": "@maureenalycialm_off",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-martinique-2026-maureen-alycia-lucea-merlin/",
+    "source_handle": "https://pronomiss.com/miss-martinique-2026-maureen-alycia-lucea-merlin/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 10,
+    "nb_source": "RCI et atvplus.fr, « Miss Martinique 2026 : les 10 candidates dévoilées »",
+    "nb_date": "2026-05-08",
+    "participations_anterieures": [
+     "1re dauphine de Miss Martinique 2020"
+    ],
+    "dauphines": null,
+    "prix_regionaux": null,
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Martinique+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-martinique-2026-maureen-alycia-lucea-merlin/"
+   },
+   "profil": {
+    "etudes_metier": "Responsable hébergement en Ehpad ; master management des établissements de santé",
+    "langues": "créole, anglais (forum)",
+    "sport": "Basket amateur (forum)",
+    "engagement": "Lien intergénérationnel, bien vieillir",
+    "medias": [],
+    "particularite": "Visites d'Ehpad à Villeurbanne en novembre (Le Progrès 11/11)",
+    "sources": [
+     "https://pronomiss.com/miss-martinique-2026-maureen-alycia-lucea-merlin/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [],
+   "buzz_articles": 9,
+   "buzz_sources_distinctes": 7,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Maureen-Alycia%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  },
+  "mayotte": {
+   "nom": "Emma Saïd Issouf",
+   "instagram": {
+    "handle": "@emma.saidissouf",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-mayotte-2026-emma-said-issouf/",
+    "source_handle": "https://pronomiss.com/miss-mayotte-2026-emma-said-issouf/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 7,
+    "nb_source": "Outre-mer La 1ère, « 7 candidates en lice… » ; Le Journal de Mayotte (13/07) : comité entièrement renouvelé",
+    "nb_date": "2026-07-10",
+    "participations_anterieures": [],
+    "dauphines": "1re : Solénna Songné ; 2e : Rachima Galfane (profiles.json)",
+    "prix_regionaux": null,
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Mayotte+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-mayotte-2026-emma-said-issouf/"
+   },
+   "profil": {
+    "etudes_metier": "Diplômée de lettres modernes ; veut devenir professeure des écoles",
+    "langues": "mahorais, anglais (forum)",
+    "sport": "Basket-ball",
+    "engagement": "Violences faites aux femmes",
+    "medias": [],
+    "particularite": "Comité Miss Mayotte entièrement renouvelé en 2026",
+    "sources": [
+     "https://pronomiss.com/miss-mayotte-2026-emma-said-issouf/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [
+    {
+     "date": "2026-11-16",
+     "fait": "Citée dans le reportage Télé-Loisirs (« je n'ai même pas dormi »)",
+     "source": "https://www.programme-tv.net/news/evenement/miss-france-miss-france/411025-miss-france-2027-danses-enjouees-anniversaire-les-candidates-ont-fait-leurs-premiers-pas-a-saint-martin-dans-une-ambiance-de-folie-photos/"
+    }
+   ],
+   "buzz_articles": 7,
+   "buzz_sources_distinctes": 5,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Emma+Saïd+Issouf%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  },
+  "midi-pyrenees": {
+   "nom": "Carla Rachail",
+   "instagram": {
+    "handle": "@carlarachailoff",
+    "followers": 24000,
+    "date": "2026-10-02",
+    "source": "https://www.public.fr/miss-france-2027-une-premiere-victoire-pour-miss-midi-pyrenees",
+    "source_handle": "https://pronomiss.com/miss-midi-pyrenees-2026-carla-rachail/",
+    "followers_approx": "près de 24 000"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 12,
+    "nb_source": "Actu.fr (30/08) et L'Opinion Indépendante (05/09) : « 12 candidates »",
+    "nb_date": "2026-08-30",
+    "participations_anterieures": [
+     "Miss Toulouse 2026 (profiles.json)"
+    ],
+    "dauphines": null,
+    "prix_regionaux": null,
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Midi-Pyr%C3%A9n%C3%A9es+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-midi-pyrenees-2026-carla-rachail/"
+   },
+   "profil": {
+    "etudes_metier": "Diplômée en management du sport ; reçue au concours de sous-officier de gendarmerie",
+    "langues": "anglais, espagnol, russe, croate (forum)",
+    "sport": "Rugby : ancienne 3e ligne du Stade toulousain, championne de France Espoirs",
+    "engagement": "Égalité femmes-hommes dans le sport",
+    "medias": [],
+    "particularite": "Candidate la plus suivie sur Instagram début octobre (Public.fr) ; première Tarn-et-Garonnaise à concourir",
+    "sources": [
+     "https://pronomiss.com/miss-midi-pyrenees-2026-carla-rachail/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [
+    {
+     "date": "2026-11-16",
+     "fait": "Au premier rang de la danse d'accueil sur le tarmac",
+     "source": "https://www.programme-tv.net/news/evenement/miss-france-miss-france/411025-miss-france-2027-danses-enjouees-anniversaire-les-candidates-ont-fait-leurs-premiers-pas-a-saint-martin-dans-une-ambiance-de-folie-photos/"
+    }
+   ],
+   "buzz_articles": 6,
+   "buzz_sources_distinctes": 4,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Carla+Rachail%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": [
+    "Public.fr (02/10/2026) la décrit comme « la candidate de Miss France 2027 la plus suivie sur les réseaux sociaux » : donnée antérieure au 1er novembre, aucune mise à jour trouvée."
+   ]
+  },
+  "nord-pas-de-calais": {
+   "nom": "Shana Mendes",
+   "instagram": {
+    "handle": "@shanamendesoff",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-nord-pas-de-calais-2026-shana-mendes/",
+    "source_handle": "https://pronomiss.com/miss-nord-pas-de-calais-2026-shana-mendes/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 21,
+    "nb_source": "Nord Littoral (01/09), Actu.fr et La Voix du Nord (14/09) : « 21 candidates »",
+    "nb_date": "2026-09-14",
+    "participations_anterieures": [
+     "Miss Noyelles-sous-Lens (profiles.json)",
+     "Première candidature après une annonce de casting (pronomiss)"
+    ],
+    "dauphines": null,
+    "prix_regionaux": null,
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Nord-Pas-de-Calais+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-nord-pas-de-calais-2026-shana-mendes/"
+   },
+   "profil": {
+    "etudes_metier": "Licence LEA ; après une 1re année de médecine ; projet d'études dentaires au Portugal",
+    "langues": "notions d'anglais et de portugais (forum ; franco-portugaise)",
+    "sport": "Saut d'obstacles",
+    "engagement": "Handicap, harcèlement, santé mentale, isolement",
+    "medias": [],
+    "particularite": "18 ans ; région la plus titrée depuis 2015",
+    "sources": [
+     "https://pronomiss.com/miss-nord-pas-de-calais-2026-shana-mendes/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [],
+   "buzz_articles": 4,
+   "buzz_sources_distinctes": 4,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Shana+Mendes+Miss%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  },
+  "normandie": {
+   "nom": "Pauline Gourlez",
+   "instagram": {
+    "handle": "@paulinegourlez",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-normandie-2026-pauline-gourlez/",
+    "source_handle": "https://pronomiss.com/miss-normandie-2026-pauline-gourlez/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 17,
+    "nb_source": "TV Magazine (20/05) et France 3 Régions (21/05) : « 17 candidates »",
+    "nb_date": "2026-05-21",
+    "participations_anterieures": [
+     "Miss Calvados 2026 (8 candidates au Calvados, Tendance Ouest 05/02)",
+     "Toute première participation à un concours (pronomiss)"
+    ],
+    "dauphines": null,
+    "prix_regionaux": null,
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Normandie+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-normandie-2026-pauline-gourlez/"
+   },
+   "profil": {
+    "etudes_metier": "Comptable",
+    "langues": null,
+    "sport": "Équitation",
+    "engagement": "Inclusion des personnes en situation de handicap",
+    "medias": [
+     "Figurante dans le clip « Je t'ai cherché » du chanteur Lennon"
+    ],
+    "particularite": "Accident de voiture mi-novembre (épaule, genou), bras en écharpe au départ ; candidate la plus citée de la promo sur 30 jours",
+    "sources": [
+     "https://pronomiss.com/miss-normandie-2026-pauline-gourlez/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [
+    {
+     "date": "2026-11-16",
+     "fait": "Arrive au départ (Orly) le bras en écharpe après un accident de voiture la veille de la conférence de presse du 13/11 ; épaule et genou touchés, se dit remise à temps. Sujet le plus repris de la semaine (TF1 Info, Le Parisien, Gala, Voici, TV Magazine, Public, Paris Match…)",
+     "source": "https://www.parismatch.com/bras-en-echarpe-miss-france-sur-point-manquer-lavion-deja-laventure-pour-miss-arrivees-saint-martin-5RrzirEs6BXI5PWDbTM5ws"
+    },
+    {
+     "date": "2026-11-17",
+     "fait": "Frédéric Gilbert (président de la société Miss France) : « On s'est dit : Mon Dieu… Et en fait, elle est là »",
+     "source": "https://www.gala.fr/l_actu/news_de_stars/exclu-miss-france-2027-le-voyage-de-preparation-va-etre-riche-en-emotions-surf-cuisine-accrochage-voici-le-programme-20261117"
+    }
+   ],
+   "buzz_articles": 14,
+   "buzz_sources_distinctes": 11,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Pauline+Gourlez%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": [
+    "L'accident gonfle son volume d'articles : un buzz conjoncturel, pas un signal de popularité."
+   ]
+  },
+  "nouvelle-caledonie": {
+   "nom": "Lana Prost",
+   "instagram": {
+    "handle": "@lana_prost_",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-nouvelle-caledonie-2026-lana-prost/",
+    "source_handle": "https://pronomiss.com/miss-nouvelle-caledonie-2026-lana-prost/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 8,
+    "nb_source": "Outre-mer La 1ère (18/05, 02/07), Radio1 (19/05) : « huit candidates »",
+    "nb_date": "2026-07-02",
+    "participations_anterieures": [],
+    "dauphines": "1re : Estelle Talatini ; 2e : Havaïki Berteau (profiles.json)",
+    "prix_regionaux": null,
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Nouvelle-Cal%C3%A9donie+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-nouvelle-caledonie-2026-lana-prost/"
+   },
+   "profil": {
+    "etudes_metier": "Lycéenne en terminale (lycée Lapérouse)",
+    "langues": null,
+    "sport": "Natation, plongée, escalade (forum)",
+    "engagement": "Tourisme calédonien, confiance de la jeunesse",
+    "medias": [
+     "Présente l'horoscope chaque jour sur Radio Rythme Bleu"
+    ],
+    "particularite": "Benjamine (17 ans)",
+    "sources": [
+     "https://pronomiss.com/miss-nouvelle-caledonie-2026-lana-prost/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [],
+   "buzz_articles": 7,
+   "buzz_sources_distinctes": 7,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Lana+Prost+Miss%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  },
+  "pays-de-la-loire": {
+   "nom": "Maëlle Hamon",
+   "instagram": {
+    "handle": "@maellehamonoff",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-pays-de-la-loire-2026-maelle-hamon/",
+    "source_handle": "https://pronomiss.com/miss-pays-de-la-loire-2026-maelle-hamon/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 14,
+    "nb_source": "Ouest-France (10/09), Actu.fr (17/08), Angers Info (24/08) : « 14 candidates »",
+    "nb_date": "2026-09-10",
+    "participations_anterieures": [
+     "Miss Loire-Atlantique 2022",
+     "Candidatures régionales 2022 et 2025 ; 2026 = dernière chance (3 participations max)"
+    ],
+    "dauphines": "1re : Lyse De Oliveira (profiles.json)",
+    "prix_regionaux": null,
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Pays+de+la+Loire+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-pays-de-la-loire-2026-maelle-hamon/"
+   },
+   "profil": {
+    "etudes_metier": "Éducatrice scolaire / AESH dans un lycée nantais",
+    "langues": "notions d'anglais (forum)",
+    "sport": "Parapente (forum)",
+    "engagement": "Jeunes en situation de handicap, confiance en soi",
+    "medias": [],
+    "particularite": "Couronne 2022 volée lors d'un cambriolage ; timidité surmontée",
+    "sources": [
+     "https://pronomiss.com/miss-pays-de-la-loire-2026-maelle-hamon/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [
+    {
+     "date": "2026-11-16",
+     "fait": "Citée dans le reportage Télé-Loisirs sur la cohésion du groupe",
+     "source": "https://www.programme-tv.net/news/evenement/miss-france-miss-france/411025-miss-france-2027-danses-enjouees-anniversaire-les-candidates-ont-fait-leurs-premiers-pas-a-saint-martin-dans-une-ambiance-de-folie-photos/"
+    }
+   ],
+   "buzz_articles": 6,
+   "buzz_sources_distinctes": 6,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Maëlle+Hamon%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  },
+  "picardie": {
+   "nom": "Marie Villez",
+   "instagram": {
+    "handle": "@marievillezoff",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-picardie-2026-marie-villez/",
+    "source_handle": "https://pronomiss.com/miss-picardie-2026-marie-villez/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 15,
+    "nb_source": "Actu.fr (10/09), L'Union (06/09), Oise Hebdo (07/09) : « 15 candidates »",
+    "nb_date": "2026-09-10",
+    "participations_anterieures": [
+     "Miss Somme 2024 et candidate à Miss Picardie 2024"
+    ],
+    "dauphines": null,
+    "prix_regionaux": null,
+    "note": "Couronnée par Hinaupoko Devèze devant plus de 2 500 spectateurs (pronomiss)",
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Picardie+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-picardie-2026-marie-villez/"
+   },
+   "profil": {
+    "etudes_metier": "Chargée de communication en alternance, étudiante à Sup de Com",
+    "langues": "anglais « supposé » (forum)",
+    "sport": "Équitation depuis l'âge de 3 ans",
+    "engagement": "Maladies hémorragiques (forum)",
+    "medias": [],
+    "particularite": null,
+    "sources": [
+     "https://pronomiss.com/miss-picardie-2026-marie-villez/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [],
+   "buzz_articles": 6,
+   "buzz_sources_distinctes": 6,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Marie+Villez%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  },
+  "poitou-charentes": {
+   "nom": "Mandy Goudal",
+   "instagram": {
+    "handle": "@mandygoudal",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-poitou-charentes-2026-mandy-goudal/",
+    "source_handle": "https://pronomiss.com/miss-poitou-charentes-2026-mandy-goudal/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 17,
+    "nb_source": "La Nouvelle République et Charente Libre (01-02/09) : « dix-sept candidates »",
+    "nb_date": "2026-09-01",
+    "participations_anterieures": [
+     "Miss Aisne 2012 (arrêtée à Miss Picardie, limite d'âge de l'époque)",
+     "3e dauphine de Miss Poitou-Charentes 2025"
+    ],
+    "dauphines": null,
+    "prix_regionaux": null,
+    "note": "Élue au Futuroscope, lieu de la finale nationale",
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Poitou-Charentes+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-poitou-charentes-2026-mandy-goudal/"
+   },
+   "profil": {
+    "etudes_metier": "Cheffe d'entreprise (boutique de robes de mariée à Saintes)",
+    "langues": "notions d'anglais « supposées » (forum)",
+    "sport": null,
+    "engagement": "Protection des enfants et des femmes (forum)",
+    "medias": [],
+    "particularite": "38 ans, plus âgée de l'histoire du concours ; première mère de famille (2 enfants) ; région hôte",
+    "sources": [
+     "https://pronomiss.com/miss-poitou-charentes-2026-mandy-goudal/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [
+    {
+     "date": "2026-11-16",
+     "fait": "Au premier rang de la danse d'accueil sur le tarmac",
+     "source": "https://www.programme-tv.net/news/evenement/miss-france-miss-france/411025-miss-france-2027-danses-enjouees-anniversaire-les-candidates-ont-fait-leurs-premiers-pas-a-saint-martin-dans-une-ambiance-de-folie-photos/"
+    }
+   ],
+   "buzz_articles": 10,
+   "buzz_sources_distinctes": 9,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Mandy+Goudal%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  },
+  "provence": {
+   "nom": "Ophélie Vitalbo",
+   "instagram": {
+    "handle": "@ophelievitalbo",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-provence-2026-ophelie-vitalbo/",
+    "source_handle": "https://pronomiss.com/miss-provence-2026-ophelie-vitalbo/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 14,
+    "nb_source": "La Provence, « Miss Provence 2026 : qui sont les 14 candidates à l'élection ? »",
+    "nb_date": "2026-07-24",
+    "participations_anterieures": [
+     "2e dauphine de Miss Provence 2022",
+     "4e dauphine de Miss Île-de-France 2023"
+    ],
+    "dauphines": null,
+    "prix_regionaux": null,
+    "note": "Élue devant près de 1 000 spectateurs à Saint-Raphaël (var-actu, cité par pronomiss) ; succède à une Miss Provence destituée (profiles.json)",
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Provence+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-provence-2026-ophelie-vitalbo/"
+   },
+   "profil": {
+    "etudes_metier": "Kinésithérapeute à Paris (pathologies féminines)",
+    "langues": "anglais « supposé » (forum)",
+    "sport": "Tennis (petit niveau, forum)",
+    "engagement": "Lipœdème (forum)",
+    "medias": [],
+    "particularite": "27 ans",
+    "sources": [
+     "https://pronomiss.com/miss-provence-2026-ophelie-vitalbo/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [
+    {
+     "date": "2026-11-16",
+     "fait": "Citée spontanément par deux voyageuses à l'aéroport (« Ah elle est super Miss Provence ! »)",
+     "source": "https://www.parismatch.com/bras-en-echarpe-miss-france-sur-point-manquer-lavion-deja-laventure-pour-miss-arrivees-saint-martin-5RrzirEs6BXI5PWDbTM5ws"
+    }
+   ],
+   "buzz_articles": 7,
+   "buzz_sources_distinctes": 4,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Ophélie+Vitalbo%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  },
+  "reunion": {
+   "nom": "Laetitia Roguet",
+   "instagram": {
+    "handle": "@laetitiaroguet_",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-reunion-2026-laetitia-roguet/",
+    "source_handle": "https://pronomiss.com/miss-reunion-2026-laetitia-roguet/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 12,
+    "nb_source": "Linfo.re (05/06), Le Quotidien (20 et 22/08), Zinfos974, Imaz Press : « 12 candidates »",
+    "nb_date": "2026-08-22",
+    "participations_anterieures": [
+     "Miss Saint-Joseph (profiles.json)"
+    ],
+    "dauphines": "Podium : Alycia Taochy, Stéphanie Lebreton (profiles.json)",
+    "prix_regionaux": null,
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+R%C3%A9union+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-reunion-2026-laetitia-roguet/"
+   },
+   "profil": {
+    "etudes_metier": "Étudiante préparatrice en pharmacie ; vise pharmacienne",
+    "langues": "créole, notions de langue des signes (forum)",
+    "sport": null,
+    "engagement": "Santé mentale",
+    "medias": [
+     "Apparition sur le plateau de la Star Academy (Linfo.re 15/11, comme toute la promo)"
+    ],
+    "particularite": "Linfo.re (19/10) : « figure parmi les favorites » ; Clicanoo (17/11) : « séduit déjà les internautes » (articles non lus)",
+    "sources": [
+     "https://pronomiss.com/miss-reunion-2026-laetitia-roguet/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [
+    {
+     "date": "2026-11-17",
+     "fait": "Clicanoo : « Miss Réunion séduit déjà les internautes » (titre seul, article inaccessible : 403)",
+     "source": "https://www.clicanoo.re/article/culture-et-loisirs/2026/11/17/miss-france-2027-miss-reunion-seduit-deja-les-internautes"
+    }
+   ],
+   "buzz_articles": 10,
+   "buzz_sources_distinctes": 2,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Laetitia+Roguet%22+OR+%22La%C3%ABtitia+Roguet%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": [
+    "Linfo.re (19/10/2026) : « Laetitia Roguet, Miss Réunion 2026, figure parmi les favorites ». Titre repéré via Google News, article non lu, source du classement inconnue ; antérieur au 1er novembre."
+   ]
+  },
+  "rhone-alpes": {
+   "nom": "Julia Grid-Costantino",
+   "instagram": {
+    "handle": "@julia_grid.costantino",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-rhone-alpes-2026-julia-grid-costantino/",
+    "source_handle": "https://pronomiss.com/miss-rhone-alpes-2026-julia-grid-costantino/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 16,
+    "nb_source": "Lyon Femmes (31/07) et Actu.fr (03/08) : « 16 candidates »",
+    "nb_date": "2026-07-31",
+    "participations_anterieures": [
+     "Miss Grand Lyon 2026 (mars)",
+     "Miss Rhône 2026 (13/06, 12 candidates selon Lyon Femmes 12/06)",
+     "3e dauphine de Miss Rhône-Alpes 2023"
+    ],
+    "dauphines": "1re : Margaux Bescond (profiles.json)",
+    "prix_regionaux": null,
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Rh%C3%B4ne-Alpes+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-rhone-alpes-2026-julia-grid-costantino/"
+   },
+   "profil": {
+    "etudes_metier": "Chargée de projets visibilité et animation (La Rosée)",
+    "langues": "anglais, notions d'italien (forum)",
+    "sport": "Danse (forum)",
+    "engagement": "Environnement (forum) ; « beauté authentique »",
+    "medias": [
+     "Lyon People 14/11 : « une Lyonnaise aux portes de la couronne nationale »"
+    ],
+    "particularite": "Trois titres en 2026",
+    "sources": [
+     "https://pronomiss.com/miss-rhone-alpes-2026-julia-grid-costantino/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [
+    {
+     "date": "2026-11-16",
+     "fait": "Au premier rang de la danse d'accueil sur le tarmac",
+     "source": "https://www.programme-tv.net/news/evenement/miss-france-miss-france/411025-miss-france-2027-danses-enjouees-anniversaire-les-candidates-ont-fait-leurs-premiers-pas-a-saint-martin-dans-une-ambiance-de-folie-photos/"
+    }
+   ],
+   "buzz_articles": 6,
+   "buzz_sources_distinctes": 5,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Grid-Costantino%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  },
+  "roussillon": {
+   "nom": "Juliette Gauthier",
+   "instagram": {
+    "handle": "@juliettegauthier___",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-roussillon-2026-juliette-gauthier/",
+    "source_handle": "https://pronomiss.com/miss-roussillon-2026-juliette-gauthier/"
+   },
+   "classements": [
+    {
+     "source": "Télé Star (Elodie Schwartz), top 5 de la rédaction d'après les portraits officiels",
+     "url": "https://www.telestar.fr/actu_tv/miss-france-2027-roussillon-et-cote-dazur-en-finale-notre-top-des-miss-regionales-avant-lelection-du-12-decembre-1793259",
+     "date": "2026-11-16",
+     "rang": 1,
+     "sur": 5
+    },
+    {
+     "source": "Viralmag (fiabilité faible : contenu vraisemblablement généré automatiquement, ordre identique à Télé Star)",
+     "url": "https://viralmag.fr/miss-france-2027-favorites-roussillon-cotedrafting-the-miss-france-2027-article-dazur-surprise/",
+     "date": "2026-11-16",
+     "rang": 1,
+     "sur": 5
+    }
+   ],
+   "regionale": {
+    "nb_candidates": 14,
+    "nb_source": "L'Indépendant (28/06) et Actu.fr (22/06) : « 14 candidates »",
+    "nb_date": "2026-06-28",
+    "participations_anterieures": [
+     "3e et dernière tentative régionale (3 participations max)"
+    ],
+    "dauphines": null,
+    "prix_regionaux": [
+     "Prix de culture générale de l'élection régionale (pronomiss ; forum La vie en Miss)"
+    ],
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Roussillon+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-roussillon-2026-juliette-gauthier/"
+   },
+   "profil": {
+    "etudes_metier": "Kinésithérapeute (en pause)",
+    "langues": "espagnol (études à Barcelone, forum)",
+    "sport": "Pilates, krav-maga ; danse, ski, randonnée, plongée (forum)",
+    "engagement": "Attachée de presse de l'association « Un rêve, un sourire » (enfants handicapés)",
+    "medias": [],
+    "particularite": "En fauteuil roulant à partir de 12 ans, rétablie ; soutenue par la ville du Boulou (L'Indépendant 05/11)",
+    "sources": [
+     "https://pronomiss.com/miss-roussillon-2026-juliette-gauthier/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [],
+   "buzz_articles": 7,
+   "buzz_sources_distinctes": 4,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Juliette+Gauthier+Miss%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  },
+  "saint-martin-saint-barthelemy": {
+   "nom": "Naïla Parotte",
+   "instagram": {
+    "handle": "@naila.parotte_officiel",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-saint-martin-et-saint-barthelemy-2026-naila-parotte/",
+    "source_handle": "https://pronomiss.com/miss-saint-martin-et-saint-barthelemy-2026-naila-parotte/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 8,
+    "nb_source": "SoualigaPost (06/07), Le Journal de Saint-Barth (22/06, 10/07) : « huit candidates »",
+    "nb_date": "2026-07-06",
+    "participations_anterieures": [
+     "Déjà candidate en 2024",
+     "Lauréate du concours Top Model Caraïbe 2023"
+    ],
+    "dauphines": null,
+    "prix_regionaux": [
+     "Prix de la photogénie",
+     "Prix des réseaux sociaux"
+    ],
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Saint-Martin+et+Saint-Barth%C3%A9lemy+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-saint-martin-et-saint-barthelemy-2026-naila-parotte/"
+   },
+   "profil": {
+    "etudes_metier": "Gestionnaire qualité et garanties chez un concessionnaire automobile",
+    "langues": "anglais (forum)",
+    "sport": "Volley, danse, gymnastique (forum)",
+    "engagement": "Bien-être animal (projet de refuge pour chiens errants)",
+    "medias": [
+     "Lauréate Top Model Caraïbe 2023"
+    ],
+    "particularite": "Représente l'île hôte du voyage ; accueillie comme « leur préférée » par la population à l'arrivée (Paris Match 17/11)",
+    "sources": [
+     "https://pronomiss.com/miss-saint-martin-et-saint-barthelemy-2026-naila-parotte/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [
+    {
+     "date": "2026-11-16",
+     "fait": "Accueil en musique à l'arrivée : la population locale fait danser « leur préférée », Naïla Parotte",
+     "source": "https://www.parismatch.com/bras-en-echarpe-miss-france-sur-point-manquer-lavion-deja-laventure-pour-miss-arrivees-saint-martin-5RrzirEs6BXI5PWDbTM5ws"
+    }
+   ],
+   "buzz_articles": 7,
+   "buzz_sources_distinctes": 7,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Naïla+Parotte%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  },
+  "tahiti": {
+   "nom": "Leia Diard",
+   "instagram": {
+    "handle": "@leiadiard_off",
+    "followers": null,
+    "date": null,
+    "source": "https://pronomiss.com/miss-tahiti-2026-leia-diard/",
+    "source_handle": "https://pronomiss.com/miss-tahiti-2026-leia-diard/"
+   },
+   "classements": [],
+   "regionale": {
+    "nb_candidates": 10,
+    "nb_source": "TNTV, Radio1, Outre-mer La 1ère (20/04) : « 10 candidates »",
+    "nb_date": "2026-04-20",
+    "participations_anterieures": [],
+    "dauphines": "1re : Turama Tapi ; 2e : Heimiri Huri (profiles.json)",
+    "prix_regionaux": null,
+    "nb_url": "https://news.google.com/rss/search?q=%22Miss+Tahiti+2026%22+candidates&hl=fr&gl=FR&ceid=FR:fr",
+    "favorite_regionale": null,
+    "ecart_votes": null,
+    "source_parcours": "https://pronomiss.com/miss-tahiti-2026-leia-diard/"
+   },
+   "profil": {
+    "etudes_metier": "Professeure de ʻori tahiti ; études d'AES",
+    "langues": null,
+    "sport": "Danse (a dansé au Heiva i Tahiti 2025)",
+    "engagement": "Endométriose (vidéos avec une gynécologue)",
+    "medias": [],
+    "particularite": "Originaire de Tours, à Papeete depuis 2024 ; succède à la Miss France en titre",
+    "sources": [
+     "https://pronomiss.com/miss-tahiti-2026-leia-diard/",
+     "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027"
+    ]
+   },
+   "voyage": [
+    {
+     "date": "2026-11-16",
+     "fait": "Au premier rang de la danse d'accueil sur le tarmac",
+     "source": "https://www.programme-tv.net/news/evenement/miss-france-miss-france/411025-miss-france-2027-danses-enjouees-anniversaire-les-candidates-ont-fait-leurs-premiers-pas-a-saint-martin-dans-une-ambiance-de-folie-photos/"
+    }
+   ],
+   "buzz_articles": 9,
+   "buzz_sources_distinctes": 6,
+   "buzz_requete": "https://news.google.com/rss/search?q=%22Leia+Diard%22+when:30d&hl=fr&gl=FR&ceid=FR:fr",
+   "notes": []
+  }
+ },
+ "classements_publies": [
+  {
+   "source": "Télé Star : « Notre top des miss régionales » (avis de la rédaction, d'après les portraits officiels ; aucune méthode, aucun vote)",
+   "url": "https://www.telestar.fr/actu_tv/miss-france-2027-roussillon-et-cote-dazur-en-finale-notre-top-des-miss-regionales-avant-lelection-du-12-decembre-1793259",
+   "url_lecture": "https://assets.msn.com/content/view/v2/Detail/fr-be/AA2hy9Fc",
+   "date": "2026-11-16",
+   "ordre": [
+    "roussillon",
+    "cote-d-azur",
+    "guadeloupe",
+    "ile-de-france",
+    "aquitaine"
+   ],
+   "fiabilite": "moyenne : choix éditorial fondé sur l'apparence"
+  },
+  {
+   "source": "Viralmag (déjà relevé dans favoris_2027.md)",
+   "url": "https://viralmag.fr/miss-france-2027-favorites-roussillon-cotedrafting-the-miss-france-2027-article-dazur-surprise/",
+   "date": "2026-11-16",
+   "ordre": [
+    "roussillon",
+    "cote-d-azur",
+    "guadeloupe",
+    "ile-de-france",
+    "aquitaine"
+   ],
+   "fiabilite": "faible : ordre identique à Télé Star, même jour, titre contenant un fragment de consigne de rédaction ; probable réécriture automatique. À ne pas compter comme une 2e source indépendante."
+  },
+  {
+   "source": "Public.fr : candidate la plus suivie sur Instagram (pas un classement complet)",
+   "url": "https://www.public.fr/miss-france-2027-une-premiere-victoire-pour-miss-midi-pyrenees",
+   "date": "2026-10-02",
+   "ordre": [
+    "midi-pyrenees"
+   ],
+   "fiabilite": "donnée antérieure au 1er novembre ; seule la n° 1 est nommée (≈ 24 000 abonnés). Île-de-France > 19 000 le même jour (autre article)."
+  }
+ ],
+ "votes_sans_resultat": [
+  {
+   "source": "CGTV, vote des lecteurs",
+   "url": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+   "date": "2026-11-16",
+   "resultat": null
+  },
+  {
+   "source": "ICI (France Bleu), vote « candidate préférée »",
+   "url": "https://www.ici.fr/nouvelle-aquitaine/vienne-86/chasseneuil-du-poitou/photos-miss-france-2027-votez-pour-votre-candidate-preferee-6772624",
+   "date": "2026-11-16",
+   "resultat": null
+  },
+  {
+   "source": "Forum La vie en Miss, jeu « Petite finale pronos MF 2027 » (top 12 des membres)",
+   "url": "https://la-vie-en-miss.forumactif.com/t1270-petite-finale-pronos-mf-2027",
+   "date": "2026-11-03",
+   "resultat": "aucun pronostic posté visible sur la page lue le 17/11"
+  },
+  {
+   "source": "Pronomiss / Prono TV, jeu « ton top 5 »",
+   "url": "https://pronomiss.com/",
+   "date": null,
+   "resultat": "pas de classement agrégé publié"
+  }
+ ],
+ "contexte_evenement": [
+  {
+   "fait": "Présélection d'un Top 12 par la société Miss France ; le test de culture générale (passé pendant le voyage) est pris en compte, de même que le comportement observé pendant le séjour ; puis le public vote pour 5 finalistes, puis pour la gagnante.",
+   "source": "https://www.parismatch.com/bras-en-echarpe-miss-france-sur-point-manquer-lavion-deja-laventure-pour-miss-arrivees-saint-martin-5RrzirEs6BXI5PWDbTM5ws",
+   "date": "2026-11-17"
+  },
+  {
+   "fait": "Voyage : départ d'Orly le 16/11, arrivée le soir même ; slackline, surf, cuisine traditionnelle ; masterclass de Camille Cerf (prise de parole) et d'Alicia Aylies ; coach catwalk Ritchy Cobral.",
+   "source": "https://www.gala.fr/l_actu/news_de_stars/exclu-miss-france-2027-le-voyage-de-preparation-va-etre-riche-en-emotions-surf-cuisine-accrochage-voici-le-programme-20261117",
+   "date": "2026-11-17"
+  },
+  {
+   "fait": "Diffusion TF1 à partir de 21h10, Jean-Pierre Foucault à la présentation.",
+   "source": "https://www.telestar.fr/actu_tv/miss-france-2027-roussillon-et-cote-dazur-en-finale-notre-top-des-miss-regionales-avant-lelection-du-12-decembre-1793259",
+   "date": "2026-11-16"
+  },
+  {
+   "fait": "Le 14/11, défilé des 31 candidates sur le plateau de la Star Academy (TF1) ; réactions mitigées d'internautes.",
+   "source": "https://www.public.fr/miss-france-2027-les-candidates-a-la-star-academy-le-cameraman-a-ses-favorites-et-un-show-ridicule-rabaissant",
+   "date": "2026-11-15"
+  },
+  {
+   "fait": "Séries de portraits Paris Match (10-15/11) et « interviews décalées » TF1 Info (à partir du 17/11) publiées dans l'ordre alphabétique des régions : ce ne sont pas des signaux de mise en avant.",
+   "source": "https://www.parismatch.com/chiara-blazevic-miss-alsace-2026-en-lice-pour-miss-france-javais-deja-tente-laventure-en-2021-je-me-sens-plus-prete-6SoDfCm98IRUiHOZGdkSI6",
+   "date": "2026-11-17"
+  }
+ ]
+}

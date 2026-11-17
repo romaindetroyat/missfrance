@@ -9,7 +9,7 @@ import { createClient } from "jsr:@supabase/supabase-js@2";
 
 const sb = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
 const N_SIM = 60_000;
-const IG_RANK_BONUS = [2.5, 0.8, 0.4];
+const IG_RANK_BONUS = [2.1, 0.7, 0.35]; // calé pour qu'une n° 1 isolée et moyenne par ailleurs ait ~60 % de Top 5
 const IG_MIN_FOR_RANK = 25;
 const MEDIA_WEIGHT = 0.22; // par écart-type de log(1 + sites distincts)
 const MEDIA_CAP = 0.35;
@@ -53,8 +53,14 @@ Deno.serve(async (req) => {
   const igz = zscores(cands!.map((c) => (fol.has(c.id) ? Math.log(fol.get(c.id)!) : null)));
   igz.forEach((z, i) => { if (z !== null) add(i, clip(0.15 * z, -0.3, 0.45), `Instagram ${fol.get(cands![i].id)!.toLocaleString("fr-FR")} abonnés`); });
   if (fol.size >= IG_MIN_FOR_RANK) {
+    // La plus suivie a fini 1re ou 2e lors des 3 éditions documentées. Si les deux premières sont au coude-à-coude,
+    // le bonus est partagé (g = 0 : égalité parfaite ; g = 1 : 30 % d'abonnés d'avance ou plus).
     const order = cands!.map((c, i) => [fol.get(c.id) ?? -1, i]).sort((a, b) => b[0] - a[0]);
-    IG_RANK_BONUS.forEach((b, r) => { if (order[r][0] > 0) add(order[r][1], b, `n° ${r + 1} sur Instagram`); });
+    const g = clip((order[0][0] / Math.max(1, order[1][0]) - 1) / 0.3, 0, 1);
+    const mid = (IG_RANK_BONUS[0] + IG_RANK_BONUS[1]) / 2, half = (IG_RANK_BONUS[0] - IG_RANK_BONUS[1]) / 2;
+    add(order[0][1], mid + half * g, "n° 1 sur Instagram");
+    add(order[1][1], mid - half * g, "n° 2 sur Instagram");
+    add(order[2][1], IG_RANK_BONUS[2], "n° 3 sur Instagram");
   }
 
   // 3. Couverture médiatique (collecte de photos, tous les 3 jours)
