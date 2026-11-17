@@ -23,7 +23,6 @@ const decode = (s: string) => s.replace(/&quot;/g, '"').replace(/&amp;/g, "&").r
 type Cand = { id: string; nom: string; region: string };
 type Hit = { url: string; page: string; why: string; official?: boolean };
 
-const GENERIC = new Set(["saint", "pays", "ile", "cote", "nord", "centre", "nouvelle", "franche", "midi", "rhone", "poitou", "champagne"]);
 function nameKeys(c: Cand) {
   const full = norm(c.nom);
   const parts = full.split(" ");
@@ -113,10 +112,11 @@ function fromBing(html: string, c: Cand): Hit[] {
     let d: Record<string, string>;
     try { d = JSON.parse(decode(m[1])); } catch { continue; }
     if (!d.murl || !d.purl || seen.has(d.murl) || BAD.test(d.murl)) continue;
-    const text = norm(`${d.t || ""} ${d.desc || ""} ${decodeURIComponent(d.purl)}`);
+    let pu = d.purl;
+    try { pu = decodeURIComponent(d.purl); } catch { /* adresse mal encodée */ }
+    const text = norm(`${d.t || ""} ${d.desc || ""} ${pu}`);
     const k = nk.find((x) => text.includes(x));
     if (!k) continue;
-    if (/instagram\.com|facebook\.com|tiktok\.com|pinterest\./i.test(d.purl) && !/\.(jpe?g|png|webp)/i.test(d.murl)) continue;
     seen.add(d.murl);
     out.push({ url: d.murl, page: d.purl, why: "bing:" + k });
   }
@@ -137,7 +137,7 @@ function dims(buf: Uint8Array, type: string): [number, number] {
       }
     }
     if (type.includes("webp") && buf[12] === 0x56 && buf[13] === 0x50) {
-      if (buf[15] === 0x38 && buf[14] === 0x38) return [v.getUint16(26, true) & 0x3fff, v.getUint16(28, true) & 0x3fff]; // VP8
+      if (buf[15] === 0x20) return [v.getUint16(26, true) & 0x3fff, v.getUint16(28, true) & 0x3fff]; // VP8
       if (buf[15] === 0x4c) { const b = v.getUint32(21, true); return [(b & 0x3fff) + 1, ((b >> 14) & 0x3fff) + 1]; } // VP8L
       if (buf[15] === 0x58) return [1 + (buf[24] | (buf[25] << 8) | (buf[26] << 16)), 1 + (buf[27] | (buf[28] << 8) | (buf[29] << 16))]; // VP8X
     }
@@ -191,16 +191,15 @@ Deno.serve(async (req) => {
   const report: unknown[] = [];
 
   for (let n = 0; n < nPages && Date.now() - t0 < BUDGET_MS * 0.6; n++) {
-    const { data: next } = await sb.from("photo_sources").select("page_url").eq("status", "pending").order("id").limit(1);
-    if (!next?.length) break;
-    const page = next[0].page_url;
-    const { data: rows } = await sb.from("photo_sources").select("id,candidate_id,dedicated").eq("page_url", page).eq("status", "pending");
-    await sb.from("photo_sources").update({ status: "running" }).in("id", rows!.map((r) => r.id));
+    // Réservation atomique d'une page : plusieurs exécutions tournent en parallèle sans se marcher dessus
+    const { data: rows } = await sb.rpc("claim_source");
+    if (!rows?.length) break;
+    const page: string = rows[0].page_url;
     let html = "", err = "";
     try { html = await getText(page); } catch (e) { err = String((e as Error).message || e).slice(0, 120); }
-    const { data: cands } = await sb.from("candidates").select("id,nom,region").in("id", rows!.map((r) => r.candidate_id));
+    const { data: cands } = await sb.from("candidates").select("id,nom,region").in("id", rows!.map((r: { candidate_id: string }) => r.candidate_id));
     const isBing = /bing\.com\/images\/search/.test(page);
-    for (const r of rows!) {
+    await Promise.all(rows!.map(async (r: { id: number; candidate_id: string; dedicated: boolean }) => {
       const c = cands!.find((x) => x.id === r.candidate_id)!;
       let found = 0;
       const notes: Record<string, number> = {};
@@ -209,15 +208,15 @@ Deno.serve(async (req) => {
         const room = Math.max(0, Math.min(PER_SOURCE, TARGET - (count || 0)));
         const hits = isBing ? fromBing(html, c) : fromPage(html, page, c, r.dedicated);
         notes["trouvées"] = hits.length;
-        for (let i = 0; i < hits.length && found < room && Date.now() - t0 < BUDGET_MS; i += 4) {
-          const outs = await Promise.all(hits.slice(i, i + 4).map((h) => store(c, h).catch(() => "erreur")));
+        for (let i = 0; i < hits.length && found < room && Date.now() - t0 < BUDGET_MS; i += 6) {
+          const outs = await Promise.all(hits.slice(i, i + 6).map((h) => store(c, h).catch(() => "erreur")));
           for (const o of outs) { if (o === "ok") found++; else notes[o] = (notes[o] || 0) + 1; }
         }
       }
       const note = err || Object.entries(notes).map(([k, v]) => `${k} ${v}`).join(", ");
       await sb.from("photo_sources").update({ status: err ? "error" : "done", found, note: note.slice(0, 300), processed_at: new Date().toISOString() }).eq("id", r.id);
       report.push({ c: c.id, found, err: err || undefined });
-    }
+    }));
   }
   return new Response(JSON.stringify({ ms: Date.now() - t0, report }), { headers: { "Content-Type": "application/json" } });
 });
