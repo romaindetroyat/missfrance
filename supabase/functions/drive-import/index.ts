@@ -124,8 +124,10 @@ Deno.serve(async (req) => {
   const body = await req.json().catch(() => ({}));
   const t0 = Date.now();
   const report: Record<string, unknown> = {};
-  if (body.scan !== false) await scan(report).catch((e) => { report.scan_error = String(e?.message || e); });
-  const { data: todo } = await sb.from("drive_files").select("id,name,handle,candidate_id").eq("status", "new").order("seen_at").limit(Number(body.limit) || 40);
+  // Relevé complet du dossier une fois sur cinq (ou sur demande)
+  if (body.scan === true || (body.scan !== false && new Date().getMinutes() % 5 === 0)) await scan(report).catch((e) => { report.scan_error = String(e?.message || e); });
+  // Lot réservé (aucun autre passage ne le prendra en même temps)
+  const { data: todo } = await sb.rpc("drive_claim", { p_limit: Number(body.limit) || 40 });
   const counts: Record<string, number> = {};
   await pool(todo || [], 6, async (f) => {
     if (Date.now() - t0 > 100000) return;
@@ -144,6 +146,6 @@ Deno.serve(async (req) => {
     const o = await promote(p as never).catch(() => "erreur");
     promoted[o] = (promoted[o] || 0) + 1;
   });
-  const { count } = await sb.from("drive_files").select("id", { count: "exact", head: true }).eq("status", "new");
+  const { count } = await sb.from("drive_files").select("id", { count: "exact", head: true }).in("status", ["new", "en_cours"]);
   return Response.json({ ms: Date.now() - t0, ...report, processed: counts, promoted, remaining: count });
 });

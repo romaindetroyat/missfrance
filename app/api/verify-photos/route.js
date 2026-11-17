@@ -77,7 +77,10 @@ export async function GET(req) {
           ],
         }],
       });
-      const ok = v.content === "candidate" && v.same_person === "oui" && v.main_subject && v.others !== "accompagnee" && v.sharp && v.well_framed;
+      // Photos du Drive : elles viennent de son propre compte Instagram, un « incertain » seule à l'image suffit
+      const fromOwnAccount = p.url.startsWith("https://lh3.googleusercontent.com/");
+      const isHer = v.same_person === "oui" || (fromOwnAccount && v.same_person === "incertain" && v.others === "aucun");
+      const ok = v.content === "candidate" && isHer && v.main_subject && v.others !== "accompagnee" && v.sharp && v.well_framed;
       const flags = [v.content !== "candidate" && v.content, !v.sharp && "floue", !v.well_framed && "mal cadrée"].filter(Boolean).join(", ");
       await sb.rpc("review_set", { p_key: key, p_id: p.id, p_ok: ok, p_type: v.category, p_note: `${v.same_person} · ${v.others}${flags ? " · " + flags : ""} · ${v.category} · ${v.reason}` });
       ok ? out.ok++ : out.rejected++;
