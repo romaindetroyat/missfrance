@@ -3,6 +3,8 @@
 // personnes, catégorie. Seules les photos validées s'affichent sur le site.
 // Appelé chaque minute par Supabase (pg_cron) avec la clé de revue.
 import { generateObject } from "ai";
+import { createAnthropic } from "@ai-sdk/anthropic";
+import { createGoogleGenerativeAI } from "@ai-sdk/google";
 import { z } from "zod";
 import { createClient } from "@supabase/supabase-js";
 
@@ -10,9 +12,14 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
-const MODEL = "anthropic/claude-haiku-5.5";
+// Modèle de vision : clé Anthropic ou Google si fournie dans les variables Vercel, sinon passerelle IA Vercel.
+function pickModel() {
+  if (process.env.ANTHROPIC_API_KEY) return { model: createAnthropic({ apiKey: process.env.ANTHROPIC_API_KEY })("claude-haiku-5-5"), via: "anthropic" };
+  if (process.env.GOOGLE_GENERATIVE_AI_API_KEY) return { model: createGoogleGenerativeAI({ apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY })("gemini-2.5-flash"), via: "google" };
+  return { model: "anthropic/claude-haiku-5.5", via: "gateway" };
+}
 const BATCH = 24;
-const PARALLEL = 8;
+const PARALLEL = Number(process.env.VERIFY_PARALLEL || 8);
 
 const Verdict = z.object({
   same_person: z.enum(["oui", "non", "incertain"]).describe("La personne principale de la photo 2 est-elle la même que sur le portrait officiel (photo 1) ?"),
@@ -42,13 +49,14 @@ export async function GET(req) {
   if (error) return Response.json({ error: error.message }, { status: 500 });
   if (!batch?.length) return Response.json({ done: true });
 
-  const out = { ok: 0, rejected: 0, errors: [] };
+  const { model, via } = pickModel();
+  const out = { via, ok: 0, rejected: 0, errors: [] };
   const t0 = Date.now();
   async function one(p) {
     if (!p.ref_url) return;
     try {
       const { object: v } = await generateObject({
-        model: MODEL,
+        model,
         schema: Verdict,
         maxRetries: 1,
         messages: [{
