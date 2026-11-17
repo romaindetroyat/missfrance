@@ -11,10 +11,15 @@
   "workspace": {
     "packageJson": {
       "dependencies": [
+        "npm:@ai-sdk/anthropic@^2.0.115",
+        "npm:@ai-sdk/google@^2.0.111",
         "npm:@supabase/supabase-js@^2.45.0",
+        "npm:ai@^5.0.290",
         "npm:next@^15.1.0",
         "npm:react-dom@19",
-        "npm:react@19"
+        "npm:react@19",
+        "npm:sharp@~0.35.5",
+        "npm:zod@^3.25.76"
       ]
     }
   }

@@ -15,14 +15,22 @@ import pandas as pd
 from scipy.optimize import minimize
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-HIST = os.path.join(ROOT, "data", "historique")
+HIST_DIR = os.path.join(ROOT, "data", "historique")
 OUT = os.path.join(ROOT, "data", "model")
 SIGNALS = os.path.join(ROOT, "data", "signaux_2027.json")
 
 # L'âge (linéaire : effet nul ; quadratique : porté par la seule gagnante de 34 ans en 2025)
 # et la taille continue ont été testés puis écartés : ils n'améliorent pas la validation de façon robuste.
+# Testés le 17/11/2026 sans gain en validation (édition laissée de côté) : forme récente du comité
+# (5 dernières éditions), région de la Miss France sortante, comité d'outre-mer. Le modèle historique
+# est au plafond de ce que 17 éditions permettent ; les gains viennent des signaux de la saison
+# (table candidate_signals, Instagram, couverture médiatique), ajoutés dans supabase/functions/recompute-odds.
 FEATURES = ["taille_175", "reg_top5", "reg_demi", "hote"]
 LABELS = {
+    "recent_top5": "Forme récente du comité : Top 5 sur les 5 dernières éditions",
+    "recent_demi": "Forme récente du comité : demi-finales sur les 5 dernières éditions",
+    "tenante": "Région de la Miss France sortante",
+    "outremer": "Comité d'outre-mer",
     "taille_z": "Taille (écart à la moyenne de la promotion)",
     "taille_175": "Taille ≥ 175 cm",
     "age_c": "Âge (plafonné à 27 ans)",
@@ -41,15 +49,18 @@ ALIAS = {}
 
 
 def load():
-    d = pd.read_csv(os.path.join(HIST, "editions.csv"))
+    global HIST
+    d = pd.read_csv(os.path.join(HIST_DIR, "editions.csv"))
     d["region_key"] = d["region_normalisee"].fillna(d["region"])
     d["top5"] = d["classement"].isin(["1", "2", "3", "4", "5"]).astype(int)
     d["demi"] = (d["classement"] != "non_classee").astype(int)
     d["rang"] = pd.to_numeric(d["classement"], errors="coerce")
     d["hote"] = (d["region_hote"] == "oui").astype(int)
-    c = pd.read_csv(os.path.join(HIST, "candidates_2027.csv"))
+    c = pd.read_csv(os.path.join(HIST_DIR, "candidates_2027.csv"))
     c["region_key"] = c["region"].replace(ALIAS)
     c["hote"] = (c["region_hote"] == "oui").astype(int)
+    c["edition"] = 2027
+    HIST = d
     return d, c
 
 
@@ -62,8 +73,25 @@ def region_priors(train):
     return g[["reg_top5", "reg_demi"]], p5, pd_
 
 
+OUTREMER = {"Guadeloupe", "Martinique", "Guyane", "Réunion", "Mayotte", "Tahiti", "Nouvelle-Calédonie", "Saint-Martin et Saint-Barthélemy", "Saint-Martin"}
+HIST = None  # historique complet, pour les variables « forme récente »
+
+
+def recent_form(region, edition, window=5):
+    """Top 5 et demi-finales du comité sur les `window` éditions précédentes (lissé)."""
+    h = HIST[(HIST.region_key == region) & (HIST.edition < edition) & (HIST.edition >= edition - window)]
+    n = len(h)
+    return (h.top5.sum() + 0.16 * 2) / (n + 2), (h.demi.sum() + 0.42 * 2) / (n + 2)
+
+
 def featurize(df, priors, p5, pd_):
     x = pd.DataFrame(index=df.index)
+    rf = [recent_form(r, e) for r, e in zip(df["region_key"], df["edition"])]
+    x["recent_top5"] = [(a - 0.16) / 0.1 for a, _ in rf]
+    x["recent_demi"] = [(b - 0.42) / 0.15 for _, b in rf]
+    winners = HIST[HIST.rang == 1].set_index("edition")["region_key"].to_dict()
+    x["tenante"] = [float(winners.get(e - 1) == r) for r, e in zip(df["region_key"], df["edition"])]
+    x["outremer"] = df["region_key"].isin(OUTREMER).astype(float)
     grp = df["edition"]
     mu = df.groupby(grp)["taille_cm"].transform("mean")
     sd = df.groupby(grp)["taille_cm"].transform("std")
