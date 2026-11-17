@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useApp } from "../providers";
-import { cote } from "@/components/Bits";
 import { PHOTO_TYPES, TYPE_LABEL, photosOf } from "@/lib/photos";
 import { useTop5 } from "@/lib/top5";
 import { useCompare } from "@/lib/compare";
@@ -17,7 +16,6 @@ const ORDERS = {
 };
 // Teinte propre à chaque région (écharpe colorée du défilé)
 const hueOf = (id) => [...id].reduce((h, ch) => (h * 31 + ch.charCodeAt(0)) % 360, 7);
-const pct = (p) => (p != null ? `${Math.round(Number(p) * 100)} %` : "—");
 const I = ({ d, size = 22 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={d} /></svg>
 );
@@ -170,7 +168,6 @@ export default function Defile() {
             <span className="story-region">Miss {c.region}</span>
             <h1>{c.nom}</h1>
             <span className="story-meta">{[c.age && `${c.age} ans`, c.taille_cm && `${(c.taille_cm / 100).toFixed(2).replace(".", ",")} m`, c.ville].filter(Boolean).join(" · ")}</span>
-            <span className="story-pills"><span>Cote {cote(c)}</span><span>Top 5 : {pct(c.p_top5)}</span></span>
           </div>
 
           <div className="story-nav">
@@ -184,11 +181,7 @@ export default function Defile() {
         <aside className="story-side" aria-label="Fiche">
           <p className="region">Miss {c.region}</p>
           <h2>{c.nom}</h2>
-          <dl className="stats">
-            <div><dt>Cote</dt><dd>{cote(c)}</dd></div>
-            <div><dt>Top 5</dt><dd>{pct(c.p_top5)}</dd></div>
-            <div><dt>Victoire</dt><dd>{pct(c.p_victoire)}</dd></div>
-          </dl>
+          <p className="small muted" style={{ margin: 0 }}>{[c.age && `${c.age} ans`, c.taille_cm && `${(c.taille_cm / 100).toFixed(2).replace(".", ",")} m`, c.ville].filter(Boolean).join(" · ")}</p>
           {photos.length > 1 && (
             <div className="side-thumbs">
               {photos.map((p, j) => (
