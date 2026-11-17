@@ -170,3 +170,4 @@ body { padding-bottom: env(safe-area-inset-bottom); }
 .row.ig input { width: 150px; flex: none; padding: 6px 10px; }
 .row.ig input.num { width: 100px; text-align: right; }
 @media (max-width: 560px) { .row.ig { flex-wrap: wrap; } .row.ig .row-main { flex-basis: 100%; } .row.ig input { flex: 1; width: auto; } }
+.lightbox .hide { width: auto; height: 36px; padding: 0 14px; border-radius: 999px; font-size: 0.875rem; top: 12px; left: 12px; }

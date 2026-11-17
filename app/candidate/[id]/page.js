@@ -7,6 +7,7 @@ import { cote } from "@/components/Bits";
 import { useDraft } from "@/lib/draft";
 import profiles from "@/data/profiles.json";
 import { PHOTO_TYPES, TYPE_LABEL } from "@/lib/photos";
+import { supabase } from "@/lib/supabase";
 
 const FIELDS = [
   ["ville", "Ville"],
@@ -158,6 +159,16 @@ export default function Candidate() {
               <> · <a href={photos[open].source_page} target="_blank" rel="noreferrer">Source</a></>
             )}
           </p>
+          {app.me?.is_admin && (
+            <button className="hide" onClick={async (e) => {
+              e.stopPropagation();
+              if (!confirm("Masquer cette photo pour tout le monde (mauvaise personne, mauvaise qualité) ?")) return;
+              const { error } = await supabase.from("photos").update({ hidden: true }).eq("id", photos[open].id);
+              if (error) return alert("Impossible de masquer la photo : " + error.message);
+              setOpen(null);
+              app.reload();
+            }}>Masquer</button>
+          )}
           {photos.length > 1 && (
             <>
               <button className="nav prev" aria-label="Photo précédente" onClick={(e) => { e.stopPropagation(); setOpen((open - 1 + photos.length) % photos.length); }}>‹</button>
