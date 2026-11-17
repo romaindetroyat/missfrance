@@ -162,3 +162,8 @@ th { font-size: 0.75rem; font-weight: 600; color: var(--muted); white-space: now
 .chip .count { color: var(--muted); margin-left: 2px; }
 .chip.on .count { color: inherit; opacity: 0.7; }
 .badge.soft { left: auto; right: 8px; background: rgba(0, 0, 0, 0.55); color: #fff; font-weight: 500; }
+h3.sub { font-size: 0.9375rem; font-weight: 600; margin: 14px 0 8px; }
+
+/* Application installée : marges des zones sûres (encoche, barre d'accueil) */
+.top { padding-top: env(safe-area-inset-top); }
+body { padding-bottom: env(safe-area-inset-bottom); }

@@ -12,6 +12,10 @@ export default function Providers({ children }) {
   const [now, setNow] = useState(() => Date.now());
 
   useEffect(() => {
+    if ("serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("/sw.js").catch(() => {});
+  }, []);
+
+  useEffect(() => {
     supabase.auth.getSession().then(({ data }) => setSession(data.session));
     const { data: sub } = supabase.auth.onAuthStateChange((_e, s) => setSession(s));
     const t = setInterval(() => setNow(Date.now()), 30000);
@@ -25,15 +29,16 @@ export default function Providers({ children }) {
 
   const reload = useCallback(async () => {
     if (!email) return;
-    const [players, settings, candidates, photos, predictions, status] = await Promise.all([
+    const [players, settings, candidates, photos, predictions, status, adjustments] = await Promise.all([
       supabase.from("players").select("*"),
       supabase.from("settings").select("*").eq("id", 1).maybeSingle(),
       supabase.from("candidates").select("*").order("region"),
       supabase.from("photos").select("id,candidate_id,url,type,caption,credit,source_page,width,height,added_at").eq("hidden", false).order("added_at", { ascending: false }),
       supabase.from("predictions").select("*"),
       supabase.rpc("players_status"),
+      supabase.from("adjustments").select("*"),
     ]);
-    const err = [players, settings, candidates, photos, predictions, status].find((r) => r.error);
+    const err = [players, settings, candidates, photos, predictions, status, adjustments].find((r) => r.error);
     if (err) return setError(err.error.message);
     setError(null);
     setData({
@@ -43,6 +48,7 @@ export default function Providers({ children }) {
       photos: photos.data,
       predictions: predictions.data,
       status: status.data,
+      adjustments: adjustments.data,
     });
   }, [email]);
 
@@ -55,7 +61,9 @@ export default function Providers({ children }) {
     if (!data) return { session, email, loading: session === undefined || (!!email && !error), error, reload };
     const me = data.players.find((p) => p.email === email) || null;
     const ceremonyAt = data.settings ? new Date(data.settings.ceremony_at).getTime() : null;
-    const lockAt = ceremonyAt ? ceremonyAt - 2 * 3600 * 1000 : null;
+    // Phase 1 : Top 5 principal jusqu'au début de la cérémonie. Phase 2 : ajustements jusqu'à adjust_until.
+    const lockAt = ceremonyAt;
+    const adjustUntil = data.settings?.adjust_until ? new Date(data.settings.adjust_until).getTime() : null;
     const byId = Object.fromEntries(data.candidates.map((c) => [c.id, c]));
     const photosBy = {};
     const rank = { officiel: 0, election: 1, maillot: 2, voyage: 3, autre: 4 };
@@ -74,6 +82,9 @@ export default function Providers({ children }) {
       ceremonyAt,
       lockAt,
       locked: lockAt ? now >= lockAt : false,
+      adjustUntil,
+      adjustLocked: adjustUntil ? now >= adjustUntil : false,
+      myAdjustment: data.adjustments.find((p) => p.email === email) || null,
       results: data.settings?.results || null,
       myPrediction: data.predictions.find((p) => p.email === email) || null,
       now,

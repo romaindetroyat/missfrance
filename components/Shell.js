@@ -46,6 +46,7 @@ export default function Shell({ children }) {
     );
 
   const left = app.lockAt ? countdown(app.lockAt, app.now) : null;
+  const leftAdjust = app.adjustUntil ? countdown(app.adjustUntil, app.now) : null;
   const links = app.me.is_admin ? [...LINKS, ["/admin", "Résultats"]] : LINKS;
 
   return (
@@ -67,6 +68,8 @@ export default function Shell({ children }) {
               ? "Résultats publiés"
               : left
               ? `Pronostics ouverts — verrouillage dans ${left}`
+              : leftAdjust
+              ? `Cérémonie en cours — ajustements possibles encore ${leftAdjust}`
               : "Pronostics verrouillés"}
           </span>
           <span className="who">

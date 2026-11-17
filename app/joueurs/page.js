@@ -1,12 +1,26 @@
 "use client";
 import { useApp } from "../providers";
 import { CandidateRow } from "@/components/Bits";
-import { scorePrediction } from "@/lib/scoring";
+import { scoreFinal } from "@/lib/scoring";
+
+const hour = (t) => new Date(t).toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Paris" }).replace(":", " h ");
+
+function Picks({ picks, detail }) {
+  return (
+    <div className="list">
+      {picks.map((id, i) => (
+        <CandidateRow key={id} id={id} rank={i + 1}
+          right={detail ? <span className={`pts ${detail[i].status}`}>{detail[i].points > 0 ? `+${detail[i].points}` : "0"}</span> : null} />
+      ))}
+    </div>
+  );
+}
 
 export default function Joueurs() {
   const app = useApp();
   const coteById = Object.fromEntries(app.candidates.map((c) => [c.id, c.cote]));
-  const predBy = Object.fromEntries(app.predictions.map((p) => [p.email, p]));
+  const predBy = Object.fromEntries(app.predictions.map((p) => [p.email, p.picks]));
+  const adjBy = Object.fromEntries(app.adjustments.map((p) => [p.email, p.picks]));
 
   if (!app.locked) {
     const played = app.status.filter((s) => s.has_played).length;
@@ -14,7 +28,8 @@ export default function Joueurs() {
       <>
         <h1>Joueurs</h1>
         <p className="muted">
-          {played} sur {app.status.length} ont enregistré leur Top 5. Les pronostics de chacun seront visibles au verrouillage, 2 heures avant la cérémonie.
+          {played} sur {app.status.length} ont enregistré leur Top 5. Les pronostics de chacun seront visibles au début de la cérémonie
+          {app.lockAt ? `, à ${hour(app.lockAt)}` : ""}.
         </p>
         <div className="list">
           {app.status.map((s) => (
@@ -34,20 +49,28 @@ export default function Joueurs() {
 
   const rows = app.status
     .map((s) => {
-      const picks = predBy[s.email]?.picks || null;
-      const score = picks && app.results ? scorePrediction(picks, app.results, coteById) : null;
-      return { ...s, picks, score };
+      const main = predBy[s.email] || null;
+      const adj = app.adjustLocked ? adjBy[s.email] || null : null;
+      const score = main && app.results ? scoreFinal(main, adj, app.results, coteById) : null;
+      return { ...s, main, adj, score };
     })
     .sort((a, b) => (b.score?.total ?? -1) - (a.score?.total ?? -1) || a.display_name.localeCompare(b.display_name, "fr"));
 
   return (
     <>
       <h1>{app.results ? "Classement" : "Les pronostics"}</h1>
-      {!app.results && <p className="muted">Pronostics verrouillés. Les scores s'afficheront après la cérémonie.</p>}
+      {!app.results && (
+        <p className="muted">
+          {app.adjustLocked
+            ? "Top 5 et ajustements verrouillés. Les scores s'afficheront avec les résultats."
+            : `Top 5 principaux verrouillés. Les ajustements de chacun seront visibles à ${app.adjustUntil ? hour(app.adjustUntil) : "la fin des ajustements"}.`}
+        </p>
+      )}
       {app.results && (
         <section className="block">
           <h2>Résultat officiel</h2>
           <div className="list">{app.results.map((id, i) => <CandidateRow key={id} id={id} rank={i + 1} />)}</div>
+          <p className="muted small">Score final = 80 % du Top 5 principal + 20 % de l'ajustement.</p>
         </section>
       )}
       {rows.map((r, n) => (
@@ -56,19 +79,12 @@ export default function Joueurs() {
             {app.results && <span className="rank">{n + 1}</span>} {r.display_name}
             {r.score && <span className="pts"> {r.score.total} pts</span>}
           </h2>
-          {r.picks ? (
-            <div className="list">
-              {r.picks.map((id, i) => (
-                <CandidateRow key={id} id={id} rank={i + 1}
-                  right={r.score ? (
-                    <span className={`pts ${r.score.detail[i].status}`}>
-                      {r.score.detail[i].points > 0 ? `+${r.score.detail[i].points}` : "0"}
-                    </span>
-                  ) : null} />
-              ))}
-            </div>
-          ) : (
-            <p className="muted">Pas de pronostic.</p>
+          {r.main ? <Picks picks={r.main} detail={r.score?.main?.detail} /> : <p className="muted">Pas de Top 5 principal.</p>}
+          {app.adjustLocked && (
+            <>
+              <h3 className="sub">Ajustement <span className="muted small">(20 %)</span></h3>
+              {r.adj ? <Picks picks={r.adj} detail={r.score?.adjust?.detail} /> : <p className="muted small">Pas d'ajustement : le Top 5 principal compte pour cette part.</p>}
+            </>
           )}
         </section>
       ))}

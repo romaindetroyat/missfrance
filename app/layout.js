@@ -6,8 +6,20 @@ export const metadata = {
   title: "Miss France 2027 — Pronostics",
   description: "Pronostics entre amis pour l'élection de Miss France 2027.",
   robots: { index: false, follow: false },
+  applicationName: "Miss France 27",
+  appleWebApp: { capable: true, title: "Miss France 27", statusBarStyle: "black-translucent" },
+  icons: { apple: "/icons/apple-touch-icon.png" },
+  formatDetection: { telephone: false },
 };
-export const viewport = { width: "device-width", initialScale: 1 };
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#fbfaf8" },
+    { media: "(prefers-color-scheme: dark)", color: "#141312" },
+  ],
+};
 
 export default function RootLayout({ children }) {
   return (
