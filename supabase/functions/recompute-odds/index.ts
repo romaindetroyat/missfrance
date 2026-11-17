@@ -13,6 +13,9 @@ const IG_RANK_BONUS = [2.1, 0.7, 0.35]; // calé pour qu'une n° 1 isolée et mo
 const IG_MIN_FOR_RANK = 25;
 const MEDIA_WEIGHT = 0.22; // par écart-type de log(1 + sites distincts)
 const MEDIA_CAP = 0.35;
+// Atténuation globale des signaux de la saison (bruités, peu d'historique pour les caler) :
+// avec 0,8, la grande favorite garde ~6 chances sur 10 d'être dans le Top 5, l'ordre de grandeur observé pour les favorites passées.
+const SEASON_WEIGHT = 0.8;
 
 const zscores = (xs: (number | null)[]) => {
   const k = xs.filter((x): x is number => x !== null);
@@ -38,7 +41,7 @@ Deno.serve(async (req) => {
   const idx = new Map(cands!.map((c, i) => [c.id, i]));
   const bonus = new Array(n).fill(0);
   const notes: string[][] = cands!.map(() => []);
-  const add = (i: number, b: number, why: string) => { bonus[i] += b; if (Math.abs(b) >= 0.005) notes[i].push(`${why} (${fmt(b)})`); };
+  const add = (i: number, raw: number, why: string) => { const b = raw * SEASON_WEIGHT; bonus[i] += b; if (Math.abs(b) >= 0.005) notes[i].push(`${why} (${fmt(b)})`); };
 
   // 1. Signaux de la saison
   const { data: sig } = await sb.from("candidate_signals").select("candidate_id,key,bonus,note");
