@@ -3,6 +3,7 @@
 // regroupe les photos visuellement identiques (même image en plusieurs tailles ou compressions)
 // et ne garde que celle de meilleure résolution. Les doublons sont masqués (hidden) et leur
 // fichier supprimé du stockage ; la ligne reste pour que le collecteur ne les retélécharge pas.
+// Seules les photos acceptées par la vérification visuelle sont comparées.
 import { createClient } from "jsr:@supabase/supabase-js@2";
 
 const sb = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
@@ -77,8 +78,8 @@ Deno.serve(async (req) => {
   if (!cfg || req.headers.get("x-collect-key") !== cfg.secret) return new Response("forbidden", { status: 403 });
   const t0 = Date.now();
 
-  // 1. Empreintes manquantes
-  const { data: todo } = await sb.from("photos").select("id,candidate_id,url").is("phash", null).eq("hidden", false).order("id").limit(BATCH);
+  // 1. Empreintes manquantes (photos acceptées)
+  const { data: todo } = await sb.from("photos").select("id,candidate_id,url").is("phash", null).eq("hidden", false).eq("review", "ok").order("id").limit(BATCH);
   const touched = new Set<string>();
   let printed = 0, failed = 0;
   for (let i = 0; i < (todo || []).length; i += 6) {
@@ -101,7 +102,7 @@ Deno.serve(async (req) => {
   const body = await req.json().catch(() => ({}));
   const cands = body.all ? (await sb.from("candidates").select("id")).data!.map((c) => c.id) : [...touched];
   for (const cid of cands) {
-    const { data: photos } = await sb.from("photos").select("id,candidate_id,url,type,phash,width,height,bytes").eq("candidate_id", cid).eq("hidden", false).not("phash", "is", null).neq("phash", "erreur");
+    const { data: photos } = await sb.from("photos").select("id,candidate_id,url,type,phash,width,height,bytes").eq("candidate_id", cid).eq("hidden", false).eq("review", "ok").not("phash", "is", null).neq("phash", "erreur");
     const list = (photos || []) as Photo[];
     const quality = (p: Photo) => (p.width || 0) * (p.height || 0) * 1e3 + (p.bytes || 0) / 1e3;
     list.sort((a, b) => quality(b) - quality(a)); // la meilleure d'abord

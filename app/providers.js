@@ -66,9 +66,9 @@ export default function Providers({ children }) {
     const adjustUntil = data.settings?.adjust_until ? new Date(data.settings.adjust_until).getTime() : null;
     const byId = Object.fromEntries(data.candidates.map((c) => [c.id, c]));
     const photosBy = {};
-    const rank = { officiel: 0, election: 1, maillot: 2, voyage: 3, autre: 4 };
+    const rank = { officiel: 0, portrait: 1, election: 2, maillot: 3, voyage: 4, autre: 5 };
     for (const p of data.photos) (photosBy[p.candidate_id] ||= []).push(p);
-    for (const k in photosBy) photosBy[k].sort((a, b) => (rank[a.type] ?? 5) - (rank[b.type] ?? 5));
+    for (const k in photosBy) photosBy[k].sort((a, b) => (rank[a.type] ?? 6) - (rank[b.type] ?? 6));
     return {
       session,
       email,

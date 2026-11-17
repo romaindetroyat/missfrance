@@ -23,29 +23,30 @@ const BATCH = 24;
 const PARALLEL = Number(process.env.VERIFY_PARALLEL || 8);
 
 const Verdict = z.object({
+  content: z.enum(["candidate", "lieu_paysage", "nourriture_objet", "texte_graphique", "autre"]).describe("Ce que montre la photo 2 : une personne (candidate), un lieu ou paysage sans personne au premier plan, un plat ou un objet, du texte / affiche / capture d'écran, autre chose"),
   same_person: z.enum(["oui", "non", "incertain"]).describe("La personne principale de la photo 2 est-elle la même que sur le portrait officiel (photo 1) ?"),
-  main_subject: z.boolean().describe("Cette personne est-elle le sujet principal, bien visible (pas une silhouette lointaine dans un groupe) ?"),
-  others: z.enum(["aucun", "secondaires", "dominants"]).describe("Autres personnes : aucune, en second plan, ou au premier plan / aussi importantes"),
-  category: z.enum(["officiel", "election", "maillot", "voyage", "autre"]),
-  usable: z.boolean().describe("Photo exploitable : nette, pas un montage, pas une capture d'écran de texte, pas un logo"),
+  main_subject: z.boolean().describe("Cette personne est-elle le sujet principal, bien visible (pas une silhouette lointaine) ?"),
+  others: z.enum(["aucun", "arriere_plan", "accompagnee"]).describe("Autres personnes : aucune ; seulement au loin / floues en arrière-plan ; ou bien posant avec elle ou au premier plan (amis, famille, autres Miss, groupe)"),
+  sharp: z.boolean().describe("Photo nette (pas floue, pas bougée, pas trop sombre ni pixelisée)"),
+  well_framed: z.boolean().describe("Bien cadrée : la candidate est entière ou coupée proprement (visage complet, pas tête coupée, pas de cadrage de travers ou de gros plan sur un détail)"),
+  category: z.enum(["officiel", "portrait", "election", "maillot", "voyage", "autre"]),
   reason: z.string().describe("Une phrase courte en français"),
 });
 
-const PROMPT = (nom, region) => `Tu vérifies les photos d'une candidate à Miss France 2027 : ${nom}.
-Elle a été élue Miss ${region} 2026 (élection régionale de 2026, qualificative pour Miss France 2027) :
-une écharpe « Miss ${region} 2026 » ou « ${region} 2026 » est donc NORMALE et correspond à elle.
-Une écharpe d'une autre année (2025, 2024…) ou d'une autre région désigne une autre Miss.
-Photo 1 : son portrait officiel (référence). Photo 2 : photo trouvée sur internet.
-Compare les visages (traits, forme du visage, sourcils, nez, bouche), pas seulement la coiffure ou la tenue :
-le maquillage, la coiffure et l'éclairage changent beaucoup d'une photo à l'autre, ne conclus pas « non » pour ces seules raisons.
-Réponds "non" si la photo 2 montre un homme, un enfant, une autre Miss (autre année ou autre région), une dauphine, un membre du comité, une autre célébrité, ou si la candidate n'y est pas.
-Réponds "incertain" si le visage est trop petit, caché ou flou pour conclure.
+const PROMPT = (nom, region) => `Tu tries les photos d'une candidate à Miss France 2027 : ${nom}, Miss ${region} 2026.
+On ne garde QUE les photos où l'on voit bien la candidate, seule, nette et bien cadrée.
+Une écharpe « Miss ${region} 2026 » ou « ${region} 2026 » est NORMALE et correspond à elle ; une écharpe d'une autre année ou d'une autre région désigne une autre Miss.
+Photo 1 : son portrait officiel (référence). Photo 2 : photo à trier.
+Compare les visages (traits, forme du visage, sourcils, nez, bouche), pas la coiffure, le maquillage ou la tenue.
+same_person = "non" si la photo 2 montre un homme, un enfant, une autre femme, une autre Miss, ou si la candidate n'y est pas ; "incertain" si le visage est trop petit, caché ou de dos.
+À écarter : lieux, paysages, plats, objets, textes, captures d'écran ; photos avec ses amis, sa famille ou d'autres personnes posant avec elle ; photos floues, sombres, pixelisées, mal cadrées.
 Catégorie de la photo 2 :
-- officiel : portrait officiel ou photo studio normée de la candidate (fond uni, pose face caméra) ;
+- officiel : portrait officiel ou photo studio normée (fond uni, pose face caméra) ;
+- portrait : photo centrée sur son visage ou son buste, posée et soignée (hors studio officiel) ;
+- maillot : en maillot de bain ou bikini ;
 - election : soirée d'élection régionale, robe de soirée avec écharpe ou couronne ;
-- maillot : en maillot de bain ;
-- voyage : voyage de préparation Miss France (plage, séance photo de groupe des Miss 2027) ;
-- autre : tout le reste (vie quotidienne, presse, événements).`;
+- voyage : voyage de préparation Miss France 2027 ;
+- autre : le reste (en pied, tenue de ville, événements…).`;
 
 export async function GET(req) {
   const params = new URL(req.url).searchParams;
@@ -71,12 +72,14 @@ export async function GET(req) {
           content: [
             { type: "text", text: PROMPT(p.nom, p.region) },
             { type: "image", image: new URL(p.ref_url) },
-            { type: "image", image: new URL(p.url) },
+            // Photos du Drive : version allégée pour l'analyse
+            { type: "image", image: new URL(p.url.startsWith("https://lh3.googleusercontent.com/") ? p.url.replace(/=[^=/]*$/, "=w768") : p.url) },
           ],
         }],
       });
-      const ok = v.same_person === "oui" && v.main_subject && v.others !== "dominants" && v.usable;
-      await sb.rpc("review_set", { p_key: key, p_id: p.id, p_ok: ok, p_type: v.category, p_note: `${v.same_person} · ${v.others} · ${v.reason}` });
+      const ok = v.content === "candidate" && v.same_person === "oui" && v.main_subject && v.others !== "accompagnee" && v.sharp && v.well_framed;
+      const flags = [v.content !== "candidate" && v.content, !v.sharp && "floue", !v.well_framed && "mal cadrée"].filter(Boolean).join(", ");
+      await sb.rpc("review_set", { p_key: key, p_id: p.id, p_ok: ok, p_type: v.category, p_note: `${v.same_person} · ${v.others}${flags ? " · " + flags : ""} · ${v.category} · ${v.reason}` });
       ok ? out.ok++ : out.rejected++;
     } catch (e) {
       const msg = String(e?.message || e);
