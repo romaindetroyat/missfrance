@@ -1,13 +1,13 @@
 "use client";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useApp } from "@/app/providers";
 import { cote } from "@/components/Bits";
-import { useDraft } from "@/lib/draft";
 import profiles from "@/data/profiles.json";
 import { PHOTO_TYPES, TYPE_LABEL } from "@/lib/photos";
 import { supabase } from "@/lib/supabase";
+import { useTop5 } from "@/lib/top5";
 
 const FIELDS = [
   ["ville", "Ville"],
@@ -23,159 +23,234 @@ const FIELDS = [
   ["cause_defendue", "Cause défendue"],
 ];
 const show = (v) => (Array.isArray(v) ? v.join(", ") : String(v));
+const Chevron = ({ dir }) => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+    <path d={dir === "left" ? "M15 6l-6 6 6 6" : "M9 6l6 6-6 6"} />
+  </svg>
+);
 
 export default function Candidate() {
   const app = useApp();
+  const t = useTop5();
   const { id } = useParams();
   const c = app.byId[id];
   const all = app.photosBy[id] || [];
   const [ptype, setPtype] = useState("tout");
+  const [mode, setMode] = useState("slides"); // slides | mosaic
+  const [idx, setIdx] = useState(0);
+  const [zoom, setZoom] = useState(false);
   const photos = ptype === "tout" ? all : all.filter((p) => p.type === ptype);
-  const [open, setOpen] = useState(null);
-  const { picks, update } = useDraft(app.email, app.myPrediction);
+  const track = useRef(null);
+  const thumbs = useRef(null);
 
+  // Défilement du diaporama (glisser au doigt, flèches, vignettes, clavier)
+  const go = useCallback((i, smooth = true) => {
+    const el = track.current;
+    if (!el || !photos.length) return;
+    const n = Math.max(0, Math.min(photos.length - 1, i));
+    el.scrollTo({ left: n * el.clientWidth, behavior: smooth ? "smooth" : "auto" });
+    setIdx(n);
+  }, [photos.length]);
+  const onScroll = () => {
+    const el = track.current;
+    if (el) setIdx(Math.round(el.scrollLeft / el.clientWidth));
+  };
+  useEffect(() => { setIdx(0); track.current?.scrollTo({ left: 0 }); }, [ptype]);
   useEffect(() => {
-    if (open == null) return;
+    thumbs.current?.children[idx]?.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
+  }, [idx]);
+  useEffect(() => {
     const onKey = (e) => {
-      if (e.key === "Escape") setOpen(null);
-      if (e.key === "ArrowRight") setOpen((i) => (i + 1) % photos.length);
-      if (e.key === "ArrowLeft") setOpen((i) => (i - 1 + photos.length) % photos.length);
+      if (e.target.closest?.("input,textarea,select")) return;
+      if (e.key === "Escape") setZoom(false);
+      if (mode !== "slides" && !zoom) return;
+      if (e.key === "ArrowRight") { e.preventDefault(); zoom ? setIdx((i) => Math.min(photos.length - 1, i + 1)) : go(idx + 1); }
+      if (e.key === "ArrowLeft") { e.preventDefault(); zoom ? setIdx((i) => Math.max(0, i - 1)) : go(idx - 1); }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [open, photos.length]);
+  }, [go, idx, mode, zoom, photos.length]);
+  useEffect(() => { if (!zoom && mode === "slides") go(idx, false); /* eslint-disable-next-line react-hooks/exhaustive-deps */ }, [zoom, mode]);
 
   if (!c) return <p>Candidate introuvable. <Link href="/">Retour à la liste</Link></p>;
 
   const d = { ...(c.details || {}), ...(profiles[c.id] || {}) };
-  const pos = picks.indexOf(c.id);
+  const pos = t.picks.indexOf(c.id);
   const ig = d.instagram?.identifiant || (typeof d.instagram === "string" ? d.instagram : null);
   const pct = (p) => (p != null ? `${(Number(p) * 100).toFixed(1).replace(".", ",")} %` : "—");
+  const cur = photos[idx];
+
+  async function hide(p) {
+    if (!confirm("Masquer cette photo pour tout le monde (mauvaise personne, mauvaise qualité) ?")) return;
+    const { error } = await supabase.from("photos").update({ hidden: true }).eq("id", p.id);
+    if (error) return alert("Impossible de masquer la photo : " + error.message);
+    setZoom(false);
+    app.reload();
+  }
 
   return (
     <article className="profile">
       <Link href="/" className="back">← Toutes les candidates</Link>
-      <div className="profile-head">
-        <div>
+
+      <div className="profile-layout">
+        {/* Photos */}
+        <section className="viewer" aria-label={`Photos de ${c.nom}`}>
+          <div className="viewer-bar">
+            <div className="filters tight" role="group" aria-label="Type de photo">
+              <button className={`chip${ptype === "tout" ? " on" : ""}`} onClick={() => setPtype("tout")}>
+                Toutes <span className="count">{all.length}</span>
+              </button>
+              {PHOTO_TYPES.map(([k, label]) => {
+                const n = all.filter((p) => p.type === k).length;
+                return n ? (
+                  <button key={k} className={`chip${ptype === k ? " on" : ""}`} onClick={() => setPtype(k)}>
+                    {label} <span className="count">{n}</span>
+                  </button>
+                ) : null;
+              })}
+            </div>
+            {photos.length > 1 && (
+              <div className="seg small" role="group" aria-label="Affichage des photos">
+                <button className={mode === "slides" ? "on" : ""} onClick={() => setMode("slides")}>Diaporama</button>
+                <button className={mode === "mosaic" ? "on" : ""} onClick={() => setMode("mosaic")}>Toutes</button>
+              </div>
+            )}
+          </div>
+
+          {photos.length === 0 ? (
+            <div className="stage empty"><p className="muted">Pas encore de photo de ce type. La collecte tourne tous les 3 jours.</p></div>
+          ) : mode === "slides" ? (
+            <>
+              <div className="stage">
+                <div className="track" ref={track} onScroll={onScroll}>
+                  {photos.map((p, i) => (
+                    <button key={p.id} className="slide" onClick={() => { setIdx(i); setZoom(true); }} aria-label={`Agrandir la photo ${i + 1}`}>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={p.url} alt={p.caption || `${c.nom}, photo ${i + 1}`} loading={i < 2 ? "eager" : "lazy"} />
+                    </button>
+                  ))}
+                </div>
+                <span className="counter">{idx + 1} / {photos.length}</span>
+                {cur && TYPE_LABEL[cur.type] && <span className="tag">{TYPE_LABEL[cur.type]}</span>}
+                {photos.length > 1 && (
+                  <>
+                    <button className="arrow left" onClick={() => go(idx - 1)} disabled={idx === 0} aria-label="Photo précédente"><Chevron dir="left" /></button>
+                    <button className="arrow right" onClick={() => go(idx + 1)} disabled={idx === photos.length - 1} aria-label="Photo suivante"><Chevron dir="right" /></button>
+                  </>
+                )}
+              </div>
+              {photos.length > 1 && (
+                <div className="thumbs" ref={thumbs}>
+                  {photos.map((p, i) => (
+                    <button key={p.id} className={i === idx ? "on" : ""} onClick={() => go(i)} aria-label={`Voir la photo ${i + 1}`} aria-current={i === idx}>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={p.url} alt="" loading="lazy" />
+                    </button>
+                  ))}
+                </div>
+              )}
+              {cur && (
+                <p className="credit">
+                  {cur.credit ? `© ${cur.credit}` : ""}
+                  {cur.source_page && <> · <a href={cur.source_page} target="_blank" rel="noreferrer">source</a></>}
+                  {app.me?.is_admin && <> · <button className="link" onClick={() => hide(cur)}>masquer</button></>}
+                </p>
+              )}
+            </>
+          ) : (
+            <div className="mosaic">
+              {photos.map((p, i) => (
+                <button key={p.id} className="in" style={{ animationDelay: `${Math.min(i, 24) * 20}ms` }} onClick={() => { setIdx(i); setMode("slides"); }} aria-label={`Voir la photo ${i + 1} en grand`}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={p.url} alt="" loading="lazy" />
+                </button>
+              ))}
+            </div>
+          )}
+        </section>
+
+        {/* Infos */}
+        <section className="info">
           <p className="region">{c.region}</p>
           <h1>{c.nom}</h1>
           <p className="meta">
-            {[c.age && `${c.age} ans`, c.taille_cm && `${(c.taille_cm / 100).toFixed(2).replace(".", ",")} m`, c.ville].filter(Boolean).join(" · ")}
+            {[c.age && `${c.age} ans`, c.taille_cm && `${(c.taille_cm / 100).toFixed(2).replace(".", ",")} m`, c.ville, `${all.length} photos`].filter(Boolean).join(" · ")}
           </p>
-        </div>
-        {!app.locked &&
-          (pos >= 0 ? (
-            <button className="btn" onClick={() => update(picks.filter((p) => p !== c.id))}>
-              Retirer de mon Top 5 (n° {pos + 1})
-            </button>
-          ) : (
-            <button className="btn primary" disabled={picks.length >= 5} onClick={() => update([...picks, c.id])}>
-              {picks.length >= 5 ? "Top 5 complet" : "Ajouter à mon Top 5"}
-            </button>
-          ))}
-      </div>
-      {pos >= 0 && !app.locked && (
-        <p className="hint">Dans ton brouillon. <Link href="/prono">Ordonner et enregistrer mon Top 5</Link></p>
-      )}
 
-      <dl className="stats">
-        <div><dt>Cote</dt><dd>{cote(c)}</dd></div>
-        <div><dt>Top 5 (modèle)</dt><dd>{pct(c.p_top5)}</dd></div>
-        <div><dt>Victoire (modèle)</dt><dd>{pct(c.p_victoire)}</dd></div>
-      </dl>
+          <dl className="stats">
+            <div><dt>Cote</dt><dd>{cote(c)}</dd></div>
+            <div><dt>Top 5</dt><dd>{pct(c.p_top5)}</dd></div>
+            <div><dt>Victoire</dt><dd>{pct(c.p_victoire)}</dd></div>
+          </dl>
+          {c.bonus_note && <p className="hint">Pris en compte dans la cote : {c.bonus_note}.</p>}
 
-      {c.bonus_note && <p className="hint">Signaux pris en compte dans la cote : {c.bonus_note}.</p>}
-      {(d.bio || c.bio) && <p className="bio">{d.bio || c.bio}</p>}
+          {(d.bio || c.bio) && <p className="bio">{d.bio || c.bio}</p>}
 
-      <dl className="facts">
-        {FIELDS.filter(([k]) => d[k] != null && d[k] !== "" && !(Array.isArray(d[k]) && !d[k].length)).map(([k, label]) => (
-          <div key={k}><dt>{label}</dt><dd>{show(d[k])}</dd></div>
-        ))}
-        {ig && (
-          <div>
-            <dt>Instagram</dt>
-            <dd>
-              <a href={`https://www.instagram.com/${ig.replace(/^@/, "")}/`} target="_blank" rel="noreferrer">@{ig.replace(/^@/, "")}</a>
-              {d.instagram?.abonnes ? ` · ${Number(d.instagram.abonnes).toLocaleString("fr-FR")} abonnés` : ""}
-            </dd>
-          </div>
-        )}
-      </dl>
-
-      {d.faits_notables?.length > 0 && (
-        <>
-          <h2>À retenir</h2>
-          <ul className="notes">{d.faits_notables.map((f, i) => <li key={i}>{f}</li>)}</ul>
-        </>
-      )}
-
-      <h2>Photos {all.length > 0 && <span className="muted">({all.length})</span>}</h2>
-      {all.length > 0 && (
-        <div className="filters" role="group" aria-label="Type de photo">
-          <button className={`chip${ptype === "tout" ? " on" : ""}`} onClick={() => { setPtype("tout"); setOpen(null); }}>Toutes</button>
-          {PHOTO_TYPES.map(([k, label]) => {
-            const n = all.filter((p) => p.type === k).length;
-            return n ? (
-              <button key={k} className={`chip${ptype === k ? " on" : ""}`} onClick={() => { setPtype(k); setOpen(null); }}>
-                {label} <span className="count">{n}</span>
-              </button>
-            ) : null;
-          })}
-        </div>
-      )}
-      {photos.length === 0 ? (
-        <p className="muted">Pas encore de photo. La collecte tourne tous les 3 jours.</p>
-      ) : (
-        <div className="gallery">
-          {photos.map((p, i) => (
-            <button key={p.id} onClick={() => setOpen(i)} aria-label={`Agrandir la photo ${i + 1}`}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={p.url} alt={`${c.nom}, photo ${i + 1}`} loading="lazy" />
-            </button>
-          ))}
-        </div>
-      )}
-
-      {d.sources?.length > 0 && (
-        <p className="sources">
-          Sources :{" "}
-          {d.sources.map((s, i) => {
-            let host = s;
-            try { host = new URL(s).hostname.replace(/^www\./, ""); } catch {}
-            return <span key={i}>{i > 0 && ", "}<a href={s} target="_blank" rel="noreferrer">{host}</a></span>;
-          })}
-        </p>
-      )}
-
-      {open != null && photos[open] && (
-        <div className="lightbox" role="dialog" aria-modal="true" onClick={() => setOpen(null)}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={photos[open].url} alt={`${c.nom}, photo ${open + 1}`} onClick={(e) => e.stopPropagation()} />
-          <p onClick={(e) => e.stopPropagation()}>
-            {open + 1} / {photos.length}
-            {TYPE_LABEL[photos[open].type] ? ` · ${TYPE_LABEL[photos[open].type]}` : ""}
-            {photos[open].credit ? ` · © ${photos[open].credit}` : ""}
-            {photos[open].source_page && (
-              <> · <a href={photos[open].source_page} target="_blank" rel="noreferrer">Source</a></>
+          <dl className="facts">
+            {FIELDS.filter(([k]) => d[k] != null && d[k] !== "" && !(Array.isArray(d[k]) && !d[k].length)).map(([k, label]) => (
+              <div key={k}><dt>{label}</dt><dd>{show(d[k])}</dd></div>
+            ))}
+            {ig && (
+              <div>
+                <dt>Instagram</dt>
+                <dd><a href={`https://www.instagram.com/${ig.replace(/^@/, "")}/`} target="_blank" rel="noreferrer">@{ig.replace(/^@/, "")}</a></dd>
+              </div>
             )}
-          </p>
-          {app.me?.is_admin && (
-            <button className="hide" onClick={async (e) => {
-              e.stopPropagation();
-              if (!confirm("Masquer cette photo pour tout le monde (mauvaise personne, mauvaise qualité) ?")) return;
-              const { error } = await supabase.from("photos").update({ hidden: true }).eq("id", photos[open].id);
-              if (error) return alert("Impossible de masquer la photo : " + error.message);
-              setOpen(null);
-              app.reload();
-            }}>Masquer</button>
-          )}
-          {photos.length > 1 && (
+          </dl>
+
+          {d.faits_notables?.length > 0 && (
             <>
-              <button className="nav prev" aria-label="Photo précédente" onClick={(e) => { e.stopPropagation(); setOpen((open - 1 + photos.length) % photos.length); }}>‹</button>
-              <button className="nav next" aria-label="Photo suivante" onClick={(e) => { e.stopPropagation(); setOpen((open + 1) % photos.length); }}>›</button>
+              <h2>À retenir</h2>
+              <ul className="notes">{d.faits_notables.map((f, i) => <li key={i}>{f}</li>)}</ul>
             </>
           )}
-          <button className="close" aria-label="Fermer" onClick={() => setOpen(null)}>×</button>
+
+          {d.sources?.length > 0 && (
+            <p className="sources">
+              Sources :{" "}
+              {d.sources.map((s, i) => {
+                let host = s;
+                try { host = new URL(s).hostname.replace(/^www\./, ""); } catch {}
+                return <span key={i}>{i > 0 && ", "}<a href={s} target="_blank" rel="noreferrer">{host}</a></span>;
+              })}
+            </p>
+          )}
+        </section>
+      </div>
+
+      {/* Bouton Top 5, toujours à portée de pouce */}
+      {t.editable && (
+        <div className="cta-bar">
+          {pos >= 0 ? (
+            <button key="in" className="btn block outline pop" onClick={() => t.toggle(c.id)}>
+              N° {pos + 1} de {t.phase === "adjust" ? "mes ajustements" : "mon Top 5"} · Retirer
+            </button>
+          ) : (
+            <button key="out" className="btn block primary" onClick={() => t.toggle(c.id)} disabled={t.full}>
+              {t.full ? "Top 5 complet" : `Ajouter à ${t.phase === "adjust" ? "mes ajustements" : "mon Top 5"} (n° ${t.picks.length + 1})`}
+            </button>
+          )}
+        </div>
+      )}
+
+      {zoom && cur && (
+        <div className="lightbox" role="dialog" aria-modal="true" onClick={() => setZoom(false)}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img key={cur.id} className="fadein" src={cur.url} alt={cur.caption || `${c.nom}, photo ${idx + 1}`} onClick={(e) => e.stopPropagation()} />
+          <p onClick={(e) => e.stopPropagation()}>
+            {idx + 1} / {photos.length}
+            {TYPE_LABEL[cur.type] ? ` · ${TYPE_LABEL[cur.type]}` : ""}
+            {cur.credit ? ` · © ${cur.credit}` : ""}
+            {cur.source_page && <> · <a href={cur.source_page} target="_blank" rel="noreferrer">Source</a></>}
+          </p>
+          {app.me?.is_admin && <button className="hide" onClick={(e) => { e.stopPropagation(); hide(cur); }}>Masquer</button>}
+          {photos.length > 1 && (
+            <>
+              <button className="nav prev" aria-label="Photo précédente" disabled={idx === 0} onClick={(e) => { e.stopPropagation(); setIdx(idx - 1); }}><Chevron dir="left" /></button>
+              <button className="nav next" aria-label="Photo suivante" disabled={idx === photos.length - 1} onClick={(e) => { e.stopPropagation(); setIdx(idx + 1); }}><Chevron dir="right" /></button>
+            </>
+          )}
+          <button className="close" aria-label="Fermer" onClick={() => setZoom(false)}>×</button>
         </div>
       )}
     </article>

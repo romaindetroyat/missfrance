@@ -4,6 +4,8 @@ import { usePathname } from "next/navigation";
 import { useApp } from "@/app/providers";
 import { supabase } from "@/lib/supabase";
 import Login from "./Login";
+import ToastProvider from "./Toast";
+import Top5Dock from "./Top5Dock";
 
 const LINKS = [
   ["/", "Candidates"],
@@ -78,7 +80,10 @@ export default function Shell({ children }) {
           </span>
         </div>
       </header>
-      <main className="wrap page">{children}</main>
+      <ToastProvider>
+        <main className="wrap page">{children}</main>
+        {path !== "/prono" && path !== "/admin" && path !== "/admin/instagram" && <Top5Dock />}
+      </ToastProvider>
     </>
   );
 }
