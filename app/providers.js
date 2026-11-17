@@ -33,7 +33,7 @@ export default function Providers({ children }) {
       supabase.from("players").select("*"),
       supabase.from("settings").select("*").eq("id", 1).maybeSingle(),
       supabase.from("candidates").select("*").order("region"),
-      supabase.from("photos").select("id,candidate_id,url,type,caption,credit,source_page,width,height,added_at").eq("hidden", false).order("added_at", { ascending: false }),
+      supabase.from("photos").select("id,candidate_id,url,type,caption,credit,source_page,width,height,added_at").eq("hidden", false).eq("review", "ok").order("added_at", { ascending: false }),
       supabase.from("predictions").select("*"),
       supabase.rpc("players_status"),
       supabase.from("adjustments").select("*"),
