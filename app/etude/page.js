@@ -59,7 +59,7 @@ export default function Etude() {
               <tr key={o.region}>
                 <td>
                   <span className="region">{o.region}</span><br />{link(o)}
-                  <span className="bar"><span style={{ width: `${(o.p_top5 / max) * 100}%` }} /></span>
+                  <span className="meter"><span style={{ width: `${(o.p_top5 / max) * 100}%` }} /></span>
                 </td>
                 <td className="n">{pct(o.p_top5)}</td>
                 <td className="n">{pct(o.p_victoire)}</td>
