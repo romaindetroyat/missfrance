@@ -476,3 +476,11 @@ html.dragging-active, html.dragging-active * { cursor: grabbing !important; user
 .dock.drop-ready { transform: translateY(-6px) scale(1.02); box-shadow: 0 0 0 3px var(--gold), 0 14px 34px rgba(27,26,24,.35); }
 .slot.over { border-color: #fff !important; transform: scale(1.25); background: var(--gold); color: #fff; transition: transform .15s ease; }
 .card-link, .card-img a { -webkit-user-drag: none; }
+.trend { display: inline-block; font-size: .75rem; font-weight: 600; padding: 0 5px; border-radius: 6px; margin-left: 4px; font-variant-numeric: tabular-nums; }
+.trend.up { color: #1d6b3f; background: #dff1e6; }
+.trend.down { color: #8a2b1f; background: #f7e1dd; }
+@media (prefers-color-scheme: dark) { .trend.up { color: #8fd6aa; background: #1d3a29; } .trend.down { color: #f0a597; background: #3d1f1a; } }
+.why { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; font-size: .875rem; }
+.why summary { cursor: pointer; font-weight: 600; }
+.why ul { margin: 8px 0 0; padding-left: 1.1rem; color: var(--muted); }
+.why li { margin-bottom: 3px; }

@@ -35,3 +35,15 @@ export function CandidateRow({ id, rank, right }) {
     </div>
   );
 }
+
+// Évolution des chances de Top 5 depuis le dernier recalcul (collecte tous les 3 jours)
+export function Trend({ c }) {
+  const t = Number(c?.trend);
+  if (!t || Math.abs(t) < 0.01) return null;
+  const up = t > 0;
+  return (
+    <span className={`trend ${up ? "up" : "down"}`} title={`Chances de Top 5 ${up ? "en hausse" : "en baisse"} de ${Math.abs(Math.round(t * 100))} points depuis le dernier calcul`}>
+      {up ? "↑" : "↓"} {Math.abs(Math.round(t * 100))}
+    </span>
+  );
+}

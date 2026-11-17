@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useApp } from "@/app/providers";
-import { cote } from "@/components/Bits";
+import { cote, Trend } from "@/components/Bits";
 import profiles from "@/data/profiles.json";
 import { PHOTO_TYPES, TYPE_LABEL } from "@/lib/photos";
 import { supabase } from "@/lib/supabase";
@@ -179,10 +179,18 @@ export default function Candidate() {
 
           <dl className="stats">
             <div><dt>Cote</dt><dd>{cote(c)}</dd></div>
-            <div><dt>Top 5</dt><dd>{pct(c.p_top5)}</dd></div>
+            <div><dt>Top 5</dt><dd>{pct(c.p_top5)} <Trend c={c} /></dd></div>
             <div><dt>Victoire</dt><dd>{pct(c.p_victoire)}</dd></div>
           </dl>
-          {c.bonus_note && <p className="hint">Pris en compte dans la cote : {c.bonus_note}.</p>}
+          {c.bonus_note && (
+            <details className="why" open>
+              <summary>Pourquoi cette cote ?</summary>
+              <ul>
+                <li>Base historique (taille, résultats du comité régional, région hôte) : score {Number(c.score_base ?? 0).toFixed(2).replace(".", ",")}</li>
+                {c.bonus_note.split(" ; ").map((n, i) => <li key={i}>{n}</li>)}
+              </ul>
+            </details>
+          )}
 
           {(d.bio || c.bio) && <p className="bio">{d.bio || c.bio}</p>}
 

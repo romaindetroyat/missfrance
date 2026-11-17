@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useApp } from "./providers";
-import { cote } from "@/components/Bits";
+import { cote, Trend } from "@/components/Bits";
 import Top5Panel from "@/components/Top5Panel";
 import { PHOTO_TYPES, featured } from "@/lib/photos";
 import { useTop5 } from "@/lib/top5";
@@ -85,7 +85,7 @@ export default function Home() {
                   <span className="region">{c.region}</span>
                   <span className="name">{c.nom}</span>
                   <span className="meta">
-                    Cote {cote(c)}
+                    Cote {cote(c)} <Trend c={c} />
                     {c.age ? ` · ${c.age} ans` : ""}
                     {c.taille_cm ? ` · ${(c.taille_cm / 100).toFixed(2).replace(".", ",")} m` : ""}
                   </span>
