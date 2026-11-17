@@ -8,7 +8,7 @@ insert into public.candidates (id,region,nom,age,taille_cm,ville,p_victoire,p_to
 ('champagne-ardenne','Champagne-Ardenne','Céline Leduc',23,183,'Tagnon',0.0214,0.1121,8.9),
 ('corse','Corse','Satine Nomary',19,176,'Porticcio (commune de Grosseto-Prugna)',0.0258,0.1373,7.3),
 ('cote-d-azur','Côte d''Azur','May Haoues',19,174,'Cagnes-sur-Mer',0.0626,0.3042,3.3),
-('franche-comte','Franche-Comté','Emma Ninot',21,173,'Laire',0.015,0.0815,12.3),
+('franche-comte','Franche-Comté','Emma Ninot',21,174,'Laire',0.015,0.0815,12.3),
 ('guadeloupe','Guadeloupe','Julia Désirée',20,181,'Les Abymes',0.0876,0.3979,2.5),
 ('guyane','Guyane','Sandra Justine',23,177,'Kourou',0.0265,0.1384,7.2),
 ('ile-de-france','Île-de-France','Camilla Alash',23,181,'Clichy-la-Garenne',0.0396,0.2008,5.0),

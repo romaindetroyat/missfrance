@@ -1,2001 +1,2002 @@
 [
-  {
-    "id": "alsace",
-    "region": "Miss Alsace 2026",
-    "nom": "Chiara Blazevic",
-    "age": 24,
-    "date_naissance": null,
-    "taille_cm": 176,
-    "ville": "Rantzwiller",
-    "departement": "Haut-Rhin",
-    "etudes_profession": "Diplômée en management et marketing événementiel ; travaille dans l'événementiel",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-06-14",
-    "lieu_election_regionale": "Royal Palace, Kirrwiller (Bas-Rhin)",
-    "dauphine_ou_titres_precedents": "4e dauphine de Miss Alsace 2021",
-    "passions": null,
-    "cause_defendue": null,
-    "bio": "Chiara Blazevic, 24 ans, est originaire de Rantzwiller, au sud de Mulhouse. Diplômée en management et marketing événementiel, elle a été élue Miss Alsace 2026 le 14 juin 2026 au Royal Palace de Kirrwiller. Elle avait déjà tenté sa chance en 2021, terminant 4e dauphine. Elle a déclaré viser au moins le top 5 à Miss France.",
-    "instagram": {
-      "identifiant": "chiarablazevic.off",
-      "abonnes": null,
-      "date_releve": null,
-      "note": "identifiant relevé via un extrait d'article (CNews/Planet), non vérifié sur Instagram"
-    },
-    "faits_notables": [
-      "Deuxième tentative régionale (4e dauphine en 2021)",
-      "Objectif affiché : top 5 à Miss France",
-      "Âge : 24 ans selon France 3 et DKL, 23 ans selon universdesmiss.fr",
-      "1re dauphine régionale : Alexia Cordier"
-    ],
-    "sources": [
-      "https://france3-regions.franceinfo.fr/grand-est/alsace/chiara-blazevic-elue-miss-alsace-2026-je-suis-fiere-de-ce-nouveau-role-et-heureuse-d-etre-la-nouvelle-ambassadrice-de-notre-region-3368947.html",
-      "https://www.radiodkl.com/chiara-blazevic-elue-miss-alsace-2026-au-terme-d-une-soiree-haute-en-couleurs",
-      "https://universdesmiss.fr/2026/06/15/miss-alsace-2026-6/",
-      "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://france3-regions.franceinfo.fr/grand-est/alsace/chiara-blazevic-elue-miss-alsace-2026-je-suis-fiere-de-ce-nouveau-role-et-heureuse-d-etre-la-nouvelle-ambassadrice-de-notre-region-3368947.html",
-        "credit": null,
-        "type": "election_regionale"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.radiodkl.com/chiara-blazevic-elue-miss-alsace-2026-au-terme-d-une-soiree-haute-en-couleurs",
-        "credit": null,
-        "type": "election_regionale"
-      }
-    ]
+ {
+  "id": "alsace",
+  "region": "Miss Alsace 2026",
+  "nom": "Chiara Blazevic",
+  "age": 24,
+  "date_naissance": null,
+  "taille_cm": 176,
+  "ville": "Rantzwiller",
+  "departement": "Haut-Rhin",
+  "etudes_profession": "Diplômée en management et marketing événementiel ; travaille dans l'événementiel",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-06-14",
+  "lieu_election_regionale": "Royal Palace, Kirrwiller (Bas-Rhin)",
+  "dauphine_ou_titres_precedents": "4e dauphine de Miss Alsace 2021",
+  "passions": null,
+  "cause_defendue": null,
+  "bio": "Chiara Blazevic, 24 ans, est originaire de Rantzwiller, au sud de Mulhouse. Diplômée en management et marketing événementiel, elle a été élue Miss Alsace 2026 le 14 juin 2026 au Royal Palace de Kirrwiller. Elle avait déjà tenté sa chance en 2021, terminant 4e dauphine. Elle a déclaré viser au moins le top 5 à Miss France.",
+  "instagram": {
+   "identifiant": "chiarablazevic.off",
+   "abonnes": null,
+   "date_releve": null,
+   "note": "identifiant relevé via un extrait d'article (CNews/Planet), non vérifié sur Instagram"
   },
-  {
-    "id": "aquitaine",
-    "region": "Miss Aquitaine 2026",
-    "nom": "Solène Videau",
-    "age": 22,
-    "date_naissance": null,
-    "taille_cm": 173,
-    "ville": "Mérignac",
-    "departement": "Gironde",
-    "etudes_profession": "Bachelor stylisme mode et luxe (école de mode)",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-05-15",
-    "lieu_election_regionale": "Cabaret L'Ange Bleu, Gauriaguet (Gironde)",
-    "dauphine_ou_titres_precedents": "Miss Bordeaux 2025 ; 1re dauphine de Miss Bordeaux 2023 (WIT FM) ou 1re dauphine d'une précédente Miss Aquitaine (Bouger à Bordeaux) — sources divergentes",
-    "passions": null,
-    "cause_defendue": null,
-    "bio": "Solène Videau, 22 ans, vient de Mérignac en Gironde. Formée dans une école de mode (bachelor stylisme mode et luxe), elle a été élue Miss Aquitaine 2026 le 15 mai 2026 au cabaret L'Ange Bleu de Gauriaguet. Elle portait auparavant l'écharpe de Miss Bordeaux 2025.",
-    "instagram": null,
-    "faits_notables": [
-      "Taille : 1,73 m (Wikipédia, CGTV) mais 1,75 m selon Planet.fr",
-      "Candidate de la grande région hôte (Nouvelle-Aquitaine)"
-    ],
-    "sources": [
-      "https://www.witfm.fr/solene-videau-elue-miss-aquitaine-2026-en-route-pour-miss-france-2027",
-      "https://www.aquitaineonline.com/actualites-en-aquitaine/sud-ouest/13179-solene-videau-miss-aquitaine-2026-bordeaux.html",
-      "https://www.bougerabordeaux.com/actu/news/solene-videau-elue-miss-aquitaine-2026/",
-      "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.witfm.fr/solene-videau-elue-miss-aquitaine-2026-en-route-pour-miss-france-2027",
-        "credit": null,
-        "type": "election_regionale"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.aquitaineonline.com/actualites-en-aquitaine/sud-ouest/13179-solene-videau-miss-aquitaine-2026-bordeaux.html",
-        "credit": null,
-        "type": "presse"
-      }
-    ]
+  "faits_notables": [
+   "Deuxième tentative régionale (4e dauphine en 2021)",
+   "Objectif affiché : top 5 à Miss France",
+   "Âge : 24 ans selon France 3 et DKL, 23 ans selon universdesmiss.fr",
+   "1re dauphine régionale : Alexia Cordier"
+  ],
+  "sources": [
+   "https://france3-regions.franceinfo.fr/grand-est/alsace/chiara-blazevic-elue-miss-alsace-2026-je-suis-fiere-de-ce-nouveau-role-et-heureuse-d-etre-la-nouvelle-ambassadrice-de-notre-region-3368947.html",
+   "https://www.radiodkl.com/chiara-blazevic-elue-miss-alsace-2026-au-terme-d-une-soiree-haute-en-couleurs",
+   "https://universdesmiss.fr/2026/06/15/miss-alsace-2026-6/",
+   "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://france3-regions.franceinfo.fr/grand-est/alsace/chiara-blazevic-elue-miss-alsace-2026-je-suis-fiere-de-ce-nouveau-role-et-heureuse-d-etre-la-nouvelle-ambassadrice-de-notre-region-3368947.html",
+    "credit": null,
+    "type": "election_regionale"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.radiodkl.com/chiara-blazevic-elue-miss-alsace-2026-au-terme-d-une-soiree-haute-en-couleurs",
+    "credit": null,
+    "type": "election_regionale"
+   }
+  ]
+ },
+ {
+  "id": "aquitaine",
+  "region": "Miss Aquitaine 2026",
+  "nom": "Solène Videau",
+  "age": 22,
+  "date_naissance": null,
+  "taille_cm": 173,
+  "ville": "Mérignac",
+  "departement": "Gironde",
+  "etudes_profession": "Bachelor stylisme mode et luxe (école de mode)",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-05-15",
+  "lieu_election_regionale": "Cabaret L'Ange Bleu, Gauriaguet (Gironde)",
+  "dauphine_ou_titres_precedents": "Miss Bordeaux 2025 ; 1re dauphine de Miss Bordeaux 2023 (WIT FM) ou 1re dauphine d'une précédente Miss Aquitaine (Bouger à Bordeaux) — sources divergentes",
+  "passions": null,
+  "cause_defendue": null,
+  "bio": "Solène Videau, 22 ans, vient de Mérignac en Gironde. Formée dans une école de mode (bachelor stylisme mode et luxe), elle a été élue Miss Aquitaine 2026 le 15 mai 2026 au cabaret L'Ange Bleu de Gauriaguet. Elle portait auparavant l'écharpe de Miss Bordeaux 2025.",
+  "instagram": null,
+  "faits_notables": [
+   "Taille : 1,73 m (Wikipédia, CGTV) mais 1,75 m selon Planet.fr",
+   "Candidate de la grande région hôte (Nouvelle-Aquitaine)"
+  ],
+  "sources": [
+   "https://www.witfm.fr/solene-videau-elue-miss-aquitaine-2026-en-route-pour-miss-france-2027",
+   "https://www.aquitaineonline.com/actualites-en-aquitaine/sud-ouest/13179-solene-videau-miss-aquitaine-2026-bordeaux.html",
+   "https://www.bougerabordeaux.com/actu/news/solene-videau-elue-miss-aquitaine-2026/",
+   "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.witfm.fr/solene-videau-elue-miss-aquitaine-2026-en-route-pour-miss-france-2027",
+    "credit": null,
+    "type": "election_regionale"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.aquitaineonline.com/actualites-en-aquitaine/sud-ouest/13179-solene-videau-miss-aquitaine-2026-bordeaux.html",
+    "credit": null,
+    "type": "presse"
+   }
+  ]
+ },
+ {
+  "id": "auvergne",
+  "region": "Miss Auvergne 2026",
+  "nom": "Lina Berthelier",
+  "age": 24,
+  "date_naissance": null,
+  "taille_cm": 173,
+  "ville": "Commentry",
+  "departement": "Allier",
+  "etudes_profession": "Ingénieure commerciale, diplômée d'école de commerce",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-09-18",
+  "lieu_election_regionale": "Opéra de Vichy (Allier)",
+  "dauphine_ou_titres_precedents": "Miss Allier",
+  "passions": null,
+  "cause_defendue": null,
+  "bio": "Lina Berthelier, 24 ans, habite Commentry dans l'Allier. Diplômée d'école de commerce, elle travaille comme ingénieure commerciale. Ancienne Miss Allier, elle a été couronnée Miss Auvergne 2026 le 18 septembre 2026 à l'Opéra de Vichy, succédant à Alice de Lima Guimaraes.",
+  "instagram": null,
+  "faits_notables": [
+   "1re dauphine régionale : Kadidja Touré"
+  ],
+  "sources": [
+   "https://france3-regions.franceinfo.fr/auvergne-rhone-alpes/allier/vichy/miss-auvergne-2026-je-suis-encore-sur-mon-petit-nuage-j-ai-du-mal-a-realiser-les-premieres-confidences-de-lina-berthelier-3419855.html",
+   "https://www.radioscoop.com/infos/lina-berthelier-elue-miss-auvergne-2026_363980",
+   "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+   "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://france3-regions.franceinfo.fr/auvergne-rhone-alpes/allier/vichy/miss-auvergne-2026-je-suis-encore-sur-mon-petit-nuage-j-ai-du-mal-a-realiser-les-premieres-confidences-de-lina-berthelier-3419855.html",
+    "credit": null,
+    "type": "presse"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.radioscoop.com/infos/lina-berthelier-elue-miss-auvergne-2026_363980",
+    "credit": null,
+    "type": "election_regionale"
+   }
+  ]
+ },
+ {
+  "id": "bourgogne",
+  "region": "Miss Bourgogne 2026",
+  "nom": "Ilona Perrot",
+  "age": 23,
+  "date_naissance": null,
+  "taille_cm": 176,
+  "ville": "La Fermeté",
+  "departement": "Nièvre",
+  "etudes_profession": "Infirmière en service de psychiatrie",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-05-31",
+  "lieu_election_regionale": "Parc des expositions L'Éduen, Autun (Saône-et-Loire)",
+  "dauphine_ou_titres_precedents": "Miss Nièvre 2024",
+  "passions": null,
+  "cause_defendue": null,
+  "bio": "Ilona Perrot, 23 ans, est originaire de La Fermeté dans la Nièvre. Infirmière en soins psychiatriques, elle a été élue Miss Bourgogne 2026 le 31 mai 2026 à Autun devant près de 1 000 spectateurs. Elle avait été élue Miss Nièvre en 2024 et succède à Charlène Laurin.",
+  "instagram": null,
+  "faits_notables": [
+   "Exerce en psychiatrie",
+   "Taille (1,76 m) relevée uniquement sur Wikipédia EN"
+  ],
+  "sources": [
+   "https://france3-regions.franceinfo.fr/bourgogne-franche-comte/bourgogne/c-etait-mon-objectif-ilona-perrot-infirmiere-en-soins-psychiatriques-est-elue-miss-bourgogne-2026-3360244.html",
+   "https://www.ici.fr/bourgogne-franche-comte/saone-et-loire-71/autun/miss-bourgogne-2026-ilona-perrot-succede-a-charlene-laurin-4903507",
+   "https://independantdelyonne.com/concours-ilona-perrot-decroche-la-couronne-de-miss-bourgogne-2026-a-autun/",
+   "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://france3-regions.franceinfo.fr/bourgogne-franche-comte/bourgogne/c-etait-mon-objectif-ilona-perrot-infirmiere-en-soins-psychiatriques-est-elue-miss-bourgogne-2026-3360244.html",
+    "credit": null,
+    "type": "election_regionale"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.ici.fr/bourgogne-franche-comte/saone-et-loire-71/autun/miss-bourgogne-2026-ilona-perrot-succede-a-charlene-laurin-4903507",
+    "credit": null,
+    "type": "election_regionale"
+   }
+  ]
+ },
+ {
+  "id": "bretagne",
+  "region": "Miss Bretagne 2026",
+  "nom": "Margot Ferré-Bernard",
+  "age": 20,
+  "date_naissance": null,
+  "taille_cm": 171,
+  "ville": "Guipavas",
+  "departement": "Finistère",
+  "etudes_profession": "Étudiante en 3e année de droit à l'UBO (Brest) ; souhaite devenir juge des enfants",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-09-25",
+  "lieu_election_regionale": "Brest (Finistère)",
+  "dauphine_ou_titres_precedents": null,
+  "passions": null,
+  "cause_defendue": null,
+  "bio": "Margot Ferré-Bernard, 20 ans, est originaire de Guipavas, près de Brest. Étudiante en troisième année de droit à l'Université de Bretagne occidentale, elle souhaite devenir juge des enfants. Elle a été élue Miss Bretagne 2026 le 25 septembre 2026 à Brest parmi seize candidates.",
+  "instagram": null,
+  "faits_notables": [
+   "Élue à domicile, à Brest",
+   "Lieu exact (salle) de l'élection non relevé"
+  ],
+  "sources": [
+   "https://www.ouest-france.fr/culture/people/miss-france/margot-ferre-bernard-elue-miss-bretagne-ce-vendredi-soir-elle-participera-au-concours-de-miss-france-le-12-decembre-38750ebe-b8de-11f1-bf2b-20ac402d7e60",
+   "https://en.wikipedia.org/wiki/Miss_Brittany",
+   "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.ouest-france.fr/culture/people/miss-france/margot-ferre-bernard-elue-miss-bretagne-ce-vendredi-soir-elle-participera-au-concours-de-miss-france-le-12-decembre-38750ebe-b8de-11f1-bf2b-20ac402d7e60",
+    "credit": null,
+    "type": "election_regionale"
+   }
+  ]
+ },
+ {
+  "id": "centre-val-de-loire",
+  "region": "Miss Centre-Val de Loire 2026",
+  "nom": "Justine Bourrelier",
+  "age": 25,
+  "date_naissance": null,
+  "taille_cm": 176,
+  "ville": "Dammarie",
+  "departement": "Eure-et-Loir",
+  "etudes_profession": "BTS Management des unités commerciales ; travaille dans le marketing chez Burger King (source unique : pronomiss.com)",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-04-26",
+  "lieu_election_regionale": "Dreux (Eure-et-Loir)",
+  "dauphine_ou_titres_precedents": "3e participation régionale ; 3e dauphine en 2023 (pronomiss.com)",
+  "passions": null,
+  "cause_defendue": null,
+  "bio": "Justine Bourrelier est originaire de Dammarie, en Eure-et-Loir. Elle a été élue Miss Centre-Val de Loire 2026 le 26 avril 2026 à Dreux, devant environ 850 spectateurs, lors de sa troisième tentative. Le jury régional était présidé par Camille Cerf, Miss France 2015. Selon un site spécialisé, elle est titulaire d'un BTS et travaille dans le marketing.",
+  "instagram": null,
+  "faits_notables": [
+   "Première Miss régionale élue de la promotion (avril 2026)",
+   "Âge : 25 ans à l'élection, 26 ans selon le tableau Wikipédia Miss France 2027",
+   "Profession issue d'une seule source non officielle (pronomiss.com)"
+  ],
+  "sources": [
+   "https://www.intensite.net/justine-bourrelier-elue-miss-centre-val-de-loire-2026",
+   "https://pronomiss.com/miss-centre-val-de-loire-2026-justine-bourrelier/",
+   "https://la-vie-en-miss.forumactif.com/t898-miss-centre-val-de-loire-2026-justine-bourrelier",
+   "https://en.wikipedia.org/wiki/Miss_Centre-Val_de_Loire",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://pronomiss.com/miss-centre-val-de-loire-2026-justine-bourrelier/",
+    "credit": null,
+    "type": "autre"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.intensite.net/justine-bourrelier-elue-miss-centre-val-de-loire-2026",
+    "credit": null,
+    "type": "election_regionale"
+   }
+  ]
+ },
+ {
+  "id": "champagne-ardenne",
+  "region": "Miss Champagne-Ardenne 2026",
+  "nom": "Céline Leduc",
+  "age": 23,
+  "date_naissance": null,
+  "taille_cm": 183,
+  "ville": "Tagnon",
+  "departement": "Ardennes",
+  "etudes_profession": null,
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-09-27",
+  "lieu_election_regionale": "Cabaret Le K, Reims (Marne)",
+  "dauphine_ou_titres_precedents": "1re dauphine de Miss Ardennes",
+  "passions": null,
+  "cause_defendue": null,
+  "bio": "Céline Leduc, Ardennaise de 23 ans, a été élue Miss Champagne-Ardenne 2026 le 27 septembre 2026 au cabaret Le K à Reims. Le jury régional était présidé par l'animatrice Karima Charni. Elle s'était qualifiée comme première dauphine de Miss Ardennes. Avec 1,83 m, elle serait la plus grande candidate de la promotion.",
+  "instagram": null,
+  "faits_notables": [
+   "Dernière Miss régionale élue (27 septembre 2026)",
+   "Âge, taille et commune relevés uniquement sur Wikipédia EN",
+   "Dauphines régionales : Romane Renaud (1re), Aïcha Moumin (2e)"
+  ],
+  "sources": [
+   "https://jhm.fr/miss-champagne-ardenne-2026-lardennaise-celine-leduc-sacree/",
+   "https://en.wikipedia.org/wiki/Miss_Champagne-Ardenne",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://jhm.fr/miss-champagne-ardenne-2026-lardennaise-celine-leduc-sacree/",
+    "credit": null,
+    "type": "election_regionale"
+   }
+  ]
+ },
+ {
+  "id": "corse",
+  "region": "Miss Corse 2026",
+  "nom": "Satine Nomary",
+  "age": 19,
+  "date_naissance": null,
+  "taille_cm": 176,
+  "ville": "Porticcio (commune de Grosseto-Prugna)",
+  "departement": "Corse-du-Sud",
+  "etudes_profession": "Hôtesse de l'air",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-07-23",
+  "lieu_election_regionale": "Place Saint-Laurent, Porticcio (Corse-du-Sud)",
+  "dauphine_ou_titres_precedents": null,
+  "passions": [
+   "voyages",
+   "volley-ball"
+  ],
+  "cause_defendue": null,
+  "bio": "Satine Nomary, 19 ans, a grandi et vit à Porticcio, en Corse-du-Sud. Hôtesse de l'air, elle est passionnée de voyages et pratique le volley-ball. Elle a été élue Miss Corse 2026 en juillet 2026 sur la place Saint-Laurent de Porticcio, face à huit autres candidates.",
+  "instagram": {
+   "identifiant": "satinenomary",
+   "abonnes": null,
+   "date_releve": null,
+   "note": "identifiant relevé via un extrait d'article (CNews/Planet), non vérifié sur Instagram"
   },
-  {
-    "id": "auvergne",
-    "region": "Miss Auvergne 2026",
-    "nom": "Lina Berthelier",
-    "age": 24,
-    "date_naissance": null,
-    "taille_cm": 173,
-    "ville": "Commentry",
-    "departement": "Allier",
-    "etudes_profession": "Ingénieure commerciale, diplômée d'école de commerce",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-09-18",
-    "lieu_election_regionale": "Opéra de Vichy (Allier)",
-    "dauphine_ou_titres_precedents": "Miss Allier",
-    "passions": null,
-    "cause_defendue": null,
-    "bio": "Lina Berthelier, 24 ans, habite Commentry dans l'Allier. Diplômée d'école de commerce, elle travaille comme ingénieure commerciale. Ancienne Miss Allier, elle a été couronnée Miss Auvergne 2026 le 18 septembre 2026 à l'Opéra de Vichy, succédant à Alice de Lima Guimaraes.",
-    "instagram": null,
-    "faits_notables": [
-      "1re dauphine régionale : Kadidja Touré"
-    ],
-    "sources": [
-      "https://france3-regions.franceinfo.fr/auvergne-rhone-alpes/allier/vichy/miss-auvergne-2026-je-suis-encore-sur-mon-petit-nuage-j-ai-du-mal-a-realiser-les-premieres-confidences-de-lina-berthelier-3419855.html",
-      "https://www.radioscoop.com/infos/lina-berthelier-elue-miss-auvergne-2026_363980",
-      "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-      "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://france3-regions.franceinfo.fr/auvergne-rhone-alpes/allier/vichy/miss-auvergne-2026-je-suis-encore-sur-mon-petit-nuage-j-ai-du-mal-a-realiser-les-premieres-confidences-de-lina-berthelier-3419855.html",
-        "credit": null,
-        "type": "presse"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.radioscoop.com/infos/lina-berthelier-elue-miss-auvergne-2026_363980",
-        "credit": null,
-        "type": "election_regionale"
-      }
-    ]
+  "faits_notables": [
+   "Élue dans sa propre commune",
+   "Date d'élection : 23 juillet 2026 selon Wikipédia ; les médias locaux divergent sur le jour (mercredi ou jeudi soir)"
+  ],
+  "sources": [
+   "https://www.corsenetinfos.corsica/Satine-Nomary-est-la-nouvelle-Miss-Corse-2026_a91847.html",
+   "https://www.ici.fr/corse/satine-nomary-miss-corse-2026-je-vais-tout-faire-pour-porter-mon-ile-jusqu-a-la-couronne-8977422",
+   "https://en.wikipedia.org/wiki/Miss_Corsica",
+   "https://www.cnews.fr/beaute/2026-10-07/miss-france-2027-voici-les-31-candidates-regionales-1925646",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.corsenetinfos.corsica/Satine-Nomary-est-la-nouvelle-Miss-Corse-2026_a91847.html",
+    "credit": null,
+    "type": "election_regionale"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.ici.fr/corse/satine-nomary-miss-corse-2026-je-vais-tout-faire-pour-porter-mon-ile-jusqu-a-la-couronne-8977422",
+    "credit": null,
+    "type": "presse"
+   }
+  ]
+ },
+ {
+  "id": "cote-d-azur",
+  "region": "Miss Côte d'Azur 2026",
+  "nom": "May Haoues",
+  "age": 19,
+  "date_naissance": null,
+  "taille_cm": 174,
+  "ville": "Cagnes-sur-Mer",
+  "departement": "Alpes-Maritimes",
+  "etudes_profession": "Étudiante en école de commerce",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-07-26",
+  "lieu_election_regionale": "Fréjus (Var)",
+  "dauphine_ou_titres_precedents": null,
+  "passions": null,
+  "cause_defendue": "Cause animale",
+  "bio": "May Haoues, 19 ans, est originaire de Cagnes-sur-Mer. Étudiante en école de commerce, elle se dit particulièrement engagée pour la cause animale. Elle a été élue Miss Côte d'Azur 2026 le 26 juillet 2026 à Fréjus.",
+  "instagram": null,
+  "faits_notables": [
+   "Citée 2e favorite par un article d'opinion (viralmag.fr, source peu fiable)"
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Miss_C%C3%B4te_d%27Azur",
+   "https://www.titrespresse.com/29081392603/may-haoues-miss",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.titrespresse.com/29081392603/may-haoues-miss",
+    "credit": null,
+    "type": "presse"
+   }
+  ]
+ },
+ {
+  "id": "franche-comte",
+  "region": "Miss Franche-Comté 2026",
+  "nom": "Emma Ninot",
+  "age": 21,
+  "date_naissance": null,
+  "taille_cm": 174,
+  "ville": "Laire",
+  "departement": "Doubs",
+  "etudes_profession": "Vient d'achever ses études d'infirmière ; sauveteuse en mer",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-09-11",
+  "lieu_election_regionale": "Port-sur-Saône (Haute-Saône)",
+  "dauphine_ou_titres_precedents": "Miss Pays de Belfort-Montbéliard 2026",
+  "passions": null,
+  "cause_defendue": null,
+  "bio": "Emma Ninot, 21 ans, vient de Laire dans le Doubs. Elle vient d'achever ses études d'infirmière et est également sauveteuse en mer. Miss Pays de Belfort-Montbéliard 2026, elle a été élue Miss Franche-Comté 2026 le 11 septembre 2026 à Port-sur-Saône, face à treize autres candidates, succédant à Jade Cholley.",
+  "instagram": null,
+  "faits_notables": [
+   "Sauveteuse en mer",
+   "Dauphines régionales : Theodora Dragomir Perrodin (1re), Lila Monsaco Donas, Coline Bouvier",
+   "Taille : 1,73 m ou 1,75 m selon les sources ; 1,74 m retenu"
+  ],
+  "sources": [
+   "https://www.pleinair.net/actualites/item/21235-emma-ninot-elue-miss-franche-comte-2026",
+   "https://en.wikipedia.org/wiki/Miss_Franche-Comt%C3%A9",
+   "https://www.cnews.fr/beaute/2026-10-07/miss-france-2027-voici-les-31-candidates-regionales-1925646",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.pleinair.net/actualites/item/21235-emma-ninot-elue-miss-franche-comte-2026",
+    "credit": null,
+    "type": "election_regionale"
+   }
+  ]
+ },
+ {
+  "id": "guadeloupe",
+  "region": "Miss Guadeloupe 2026",
+  "nom": "Julia Désirée",
+  "age": 20,
+  "date_naissance": null,
+  "taille_cm": 181,
+  "ville": "Les Abymes",
+  "departement": "Guadeloupe",
+  "etudes_profession": "Conseillère en parfumerie et cosmétique",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-07-16",
+  "lieu_election_regionale": "Palais des sports du Gosier (Guadeloupe)",
+  "dauphine_ou_titres_precedents": null,
+  "passions": [
+   "mode",
+   "plongée sous-marine"
+  ],
+  "cause_defendue": "Lutte contre les violences faites aux femmes",
+  "bio": "Julia Désirée, 20 ans, est originaire des Abymes. Conseillère en parfumerie, elle est passionnée de mode et de plongée sous-marine. Élue Miss Guadeloupe 2026 le 16 juillet 2026 au Palais des sports du Gosier, elle succède à Naomi Torrent. Elle a également été nommée ambassadrice officielle des Îles de Guadeloupe par le comité du tourisme.",
+  "instagram": null,
+  "faits_notables": [
+   "Ambassadrice officielle des Îles de Guadeloupe (CTIG)",
+   "Engagée contre les violences faites aux femmes"
+  ],
+  "sources": [
+   "https://rci.fm/guadeloupe/infos/People/Julia-Desire-est-Miss-Guadeloupe-2026",
+   "https://rci.fm/guadeloupe/infos/Societe/Miss-Guadeloupe-2026-je-nai-pas-encore-realise-confie-Julia-Desiree-au-lendemain-de",
+   "https://www.karibinfo.com/news/guadeloupe-julia-desiree-ambassadrice-des-iles/",
+   "https://info.fr/julia-desiree-20-ans-elue-miss-guadeloupe-2026-gosier/",
+   "https://en.wikipedia.org/wiki/Miss_Guadeloupe",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://rci.fm/guadeloupe/infos/People/Julia-Desire-est-Miss-Guadeloupe-2026",
+    "credit": null,
+    "type": "election_regionale"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.karibinfo.com/news/guadeloupe-julia-desiree-ambassadrice-des-iles/",
+    "credit": null,
+    "type": "presse"
+   }
+  ]
+ },
+ {
+  "id": "guyane",
+  "region": "Miss Guyane 2026",
+  "nom": "Sandra Justine",
+  "age": 23,
+  "date_naissance": null,
+  "taille_cm": 177,
+  "ville": "Kourou",
+  "departement": "Guyane",
+  "etudes_profession": "Infirmière (source unique : stephanelarue.com)",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-07-11",
+  "lieu_election_regionale": "PROGT, Matoury (Guyane)",
+  "dauphine_ou_titres_precedents": null,
+  "passions": null,
+  "cause_defendue": "Sensibilisation aux troubles de l'apprentissage (elle est dyslexique)",
+  "bio": "Sandra Justine, 23 ans, est originaire de Kourou. Candidate n° 8, elle a été élue Miss Guyane 2026 le 11 juillet 2026 au PROGT de Matoury. Dyslexique, elle souhaite sensibiliser aux troubles de l'apprentissage. Elle a quitté la Guyane début novembre pour poursuivre sa préparation à Paris.",
+  "instagram": null,
+  "faits_notables": [
+   "Dyslexique, en fait sa cause",
+   "Profession d'infirmière issue d'une seule source (blog stephanelarue.com)"
+  ],
+  "sources": [
+   "https://www.franceguyane.fr/actualite/culture-et-patrimoine/un-reve-de-petite-fille-sandra-justine-miss-guyane-2026-1086850.php",
+   "https://www.franceguyane.fr/miss-guyane-2026-quelle-candidate-repartira-avec-la-couronne-ce-soir-1086043.php",
+   "https://la1ere.franceinfo.fr/guyane/en-route-pour-miss-france-2027-sandra-justine-s-est-envolee-ce-dimanche-pour-paris-pour-poursuivre-sa-preparation-1753707.html",
+   "https://stephanelarue.com/miss-france-2027-31-candidates-en-portrait-officiel-miss-poitou-charentes-a-38-ans/",
+   "https://en.wikipedia.org/wiki/Miss_French_Guiana",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.franceguyane.fr/actualite/culture-et-patrimoine/un-reve-de-petite-fille-sandra-justine-miss-guyane-2026-1086850.php",
+    "credit": null,
+    "type": "presse"
+   },
+   {
+    "url": null,
+    "source_page": "https://la1ere.franceinfo.fr/guyane/depuis-toute-petite-elle-voulait-etre-miss-les-premiers-pas-de-sandra-justine-miss-guyane-2026-sous-le-regard-emu-de-sa-famille-1719424.html",
+    "credit": null,
+    "type": "presse"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.franceguyane.fr/actualite/culture-et-patrimoine/dix-ans-apres-alicia-sandra-justine-prete-pour-la-couronne-1097148.php",
+    "credit": null,
+    "type": "presse"
+   }
+  ]
+ },
+ {
+  "id": "ile-de-france",
+  "region": "Miss Île-de-France 2026",
+  "nom": "Camilla Alash",
+  "age": 23,
+  "date_naissance": null,
+  "taille_cm": 181,
+  "ville": "Clichy-la-Garenne",
+  "departement": "Hauts-de-Seine",
+  "etudes_profession": "Ancienne étudiante en journalisme",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-09-20",
+  "lieu_election_regionale": "Espace Pierre-Bachelet, Dammarie-lès-Lys (Seine-et-Marne)",
+  "dauphine_ou_titres_precedents": "Miss Hauts-de-Seine 2023 ; 3e participation à Miss Île-de-France",
+  "passions": [
+   "tennis"
+  ],
+  "cause_defendue": null,
+  "bio": "Camilla Alash, 23 ans, est originaire de Clichy-la-Garenne dans les Hauts-de-Seine. Ancienne étudiante en journalisme et passionnée de tennis, elle a remporté Miss Île-de-France 2026 le 20 septembre 2026 à Dammarie-lès-Lys, à sa troisième tentative. Elle avait été Miss Hauts-de-Seine en 2023.",
+  "instagram": null,
+  "faits_notables": [
+   "1,81 m",
+   "Âge : 23 ans (presse régionale, CNews) ; 24 ans selon le tableau Wikipédia Miss France 2027",
+   "Citée 4e favorite par viralmag.fr (source peu fiable)"
+  ],
+  "sources": [
+   "https://mesinfos.fr/77190-dammarie-les-lys/camilla-alash-sacree-miss-ile-de-france-2026-a-dammarie-les-lys-339353.html",
+   "https://en.wikipedia.org/wiki/Miss_%C3%8Ele-de-France",
+   "https://www.cnews.fr/beaute/2026-10-07/miss-france-2027-voici-les-31-candidates-regionales-1925646",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://mesinfos.fr/77190-dammarie-les-lys/camilla-alash-sacree-miss-ile-de-france-2026-a-dammarie-les-lys-339353.html",
+    "credit": null,
+    "type": "election_regionale"
+   }
+  ]
+ },
+ {
+  "id": "languedoc",
+  "region": "Miss Languedoc 2026",
+  "nom": "Candice Gauch",
+  "age": 29,
+  "date_naissance": null,
+  "taille_cm": 177,
+  "ville": "Mende",
+  "departement": "Lozère",
+  "etudes_profession": "Consultante dans un cabinet de conseil",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-08-07",
+  "lieu_election_regionale": "Beaucaire (Gard)",
+  "dauphine_ou_titres_precedents": "Miss Lozère",
+  "passions": null,
+  "cause_defendue": null,
+  "bio": "Candice Gauch, 29 ans, est originaire de Mende en Lozère. Consultante dans un cabinet de conseil, elle a été élue Miss Languedoc 2026 le 7 août 2026 à Beaucaire, le jour même de ses 29 ans. Elle est la première Miss Lozère à remporter le titre de Miss Languedoc.",
+  "instagram": null,
+  "faits_notables": [
+   "Élue le jour de son 29e anniversaire (née un 7 août, vraisemblablement 1997 — déduction, non confirmée)",
+   "Première Miss Lozère élue Miss Languedoc",
+   "2e candidate la plus âgée de la promotion"
+  ],
+  "sources": [
+   "https://www.ici.fr/occitanie/gard-30/beaucaire/la-lozerienne-candice-gauch-elue-miss-languedoc-5389967",
+   "https://echo-des-tribunes.com/aude-tribune/articles/je-vais-simplement-essayer-de-rester-moimeme-les-premiers-mots-de-candice-gauch-miss-languedoc-2026",
+   "https://en.wikipedia.org/wiki/Miss_Languedoc",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.ici.fr/occitanie/gard-30/beaucaire/la-lozerienne-candice-gauch-elue-miss-languedoc-5389967",
+    "credit": null,
+    "type": "election_regionale"
+   }
+  ]
+ },
+ {
+  "id": "limousin",
+  "region": "Miss Limousin 2026",
+  "nom": "Élise Escuriol",
+  "age": 22,
+  "date_naissance": null,
+  "taille_cm": 174,
+  "ville": "Brive-la-Gaillarde",
+  "departement": "Corrèze",
+  "etudes_profession": "Étudiante en BUT Gestion des entreprises et des administrations (GEA)",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-09-06",
+  "lieu_election_regionale": "Aubusson (Creuse)",
+  "dauphine_ou_titres_precedents": "2e dauphine de Miss Corrèze 2026",
+  "passions": null,
+  "cause_defendue": null,
+  "bio": "Élise Escuriol, 22 ans, est originaire de Brive-la-Gaillarde en Corrèze. Étudiante en BUT Gestion des entreprises et des administrations, elle a été élue Miss Limousin 2026 le 6 septembre 2026 à Aubusson, lors de la 21e édition du concours. Elle s'était qualifiée comme 2e dauphine de Miss Corrèze 2026.",
+  "instagram": {
+   "identifiant": "elise_.escuriol",
+   "abonnes": null,
+   "date_releve": null,
+   "note": "identifiant relevé via un extrait d'article (CNews/Planet), non vérifié sur Instagram"
   },
-  {
-    "id": "bourgogne",
-    "region": "Miss Bourgogne 2026",
-    "nom": "Ilona Perrot",
-    "age": 23,
-    "date_naissance": null,
-    "taille_cm": 176,
-    "ville": "La Fermeté",
-    "departement": "Nièvre",
-    "etudes_profession": "Infirmière en service de psychiatrie",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-05-31",
-    "lieu_election_regionale": "Parc des expositions L'Éduen, Autun (Saône-et-Loire)",
-    "dauphine_ou_titres_precedents": "Miss Nièvre 2024",
-    "passions": null,
-    "cause_defendue": null,
-    "bio": "Ilona Perrot, 23 ans, est originaire de La Fermeté dans la Nièvre. Infirmière en soins psychiatriques, elle a été élue Miss Bourgogne 2026 le 31 mai 2026 à Autun devant près de 1 000 spectateurs. Elle avait été élue Miss Nièvre en 2024 et succède à Charlène Laurin.",
-    "instagram": null,
-    "faits_notables": [
-      "Exerce en psychiatrie",
-      "Taille (1,76 m) relevée uniquement sur Wikipédia EN"
-    ],
-    "sources": [
-      "https://france3-regions.franceinfo.fr/bourgogne-franche-comte/bourgogne/c-etait-mon-objectif-ilona-perrot-infirmiere-en-soins-psychiatriques-est-elue-miss-bourgogne-2026-3360244.html",
-      "https://www.ici.fr/bourgogne-franche-comte/saone-et-loire-71/autun/miss-bourgogne-2026-ilona-perrot-succede-a-charlene-laurin-4903507",
-      "https://independantdelyonne.com/concours-ilona-perrot-decroche-la-couronne-de-miss-bourgogne-2026-a-autun/",
-      "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://france3-regions.franceinfo.fr/bourgogne-franche-comte/bourgogne/c-etait-mon-objectif-ilona-perrot-infirmiere-en-soins-psychiatriques-est-elue-miss-bourgogne-2026-3360244.html",
-        "credit": null,
-        "type": "election_regionale"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.ici.fr/bourgogne-franche-comte/saone-et-loire-71/autun/miss-bourgogne-2026-ilona-perrot-succede-a-charlene-laurin-4903507",
-        "credit": null,
-        "type": "election_regionale"
-      }
-    ]
-  },
-  {
-    "id": "bretagne",
-    "region": "Miss Bretagne 2026",
-    "nom": "Margot Ferré-Bernard",
-    "age": 20,
-    "date_naissance": null,
-    "taille_cm": 171,
-    "ville": "Guipavas",
-    "departement": "Finistère",
-    "etudes_profession": "Étudiante en 3e année de droit à l'UBO (Brest) ; souhaite devenir juge des enfants",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-09-25",
-    "lieu_election_regionale": "Brest (Finistère)",
-    "dauphine_ou_titres_precedents": null,
-    "passions": null,
-    "cause_defendue": null,
-    "bio": "Margot Ferré-Bernard, 20 ans, est originaire de Guipavas, près de Brest. Étudiante en troisième année de droit à l'Université de Bretagne occidentale, elle souhaite devenir juge des enfants. Elle a été élue Miss Bretagne 2026 le 25 septembre 2026 à Brest parmi seize candidates.",
-    "instagram": null,
-    "faits_notables": [
-      "Élue à domicile, à Brest",
-      "Lieu exact (salle) de l'élection non relevé"
-    ],
-    "sources": [
-      "https://www.ouest-france.fr/culture/people/miss-france/margot-ferre-bernard-elue-miss-bretagne-ce-vendredi-soir-elle-participera-au-concours-de-miss-france-le-12-decembre-38750ebe-b8de-11f1-bf2b-20ac402d7e60",
-      "https://en.wikipedia.org/wiki/Miss_Brittany",
-      "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.ouest-france.fr/culture/people/miss-france/margot-ferre-bernard-elue-miss-bretagne-ce-vendredi-soir-elle-participera-au-concours-de-miss-france-le-12-decembre-38750ebe-b8de-11f1-bf2b-20ac402d7e60",
-        "credit": null,
-        "type": "election_regionale"
-      }
-    ]
-  },
-  {
-    "id": "centre-val-de-loire",
-    "region": "Miss Centre-Val de Loire 2026",
-    "nom": "Justine Bourrelier",
-    "age": 25,
-    "date_naissance": null,
-    "taille_cm": 176,
-    "ville": "Dammarie",
-    "departement": "Eure-et-Loir",
-    "etudes_profession": "BTS Management des unités commerciales ; travaille dans le marketing chez Burger King (source unique : pronomiss.com)",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-04-26",
-    "lieu_election_regionale": "Dreux (Eure-et-Loir)",
-    "dauphine_ou_titres_precedents": "3e participation régionale ; 3e dauphine en 2023 (pronomiss.com)",
-    "passions": null,
-    "cause_defendue": null,
-    "bio": "Justine Bourrelier est originaire de Dammarie, en Eure-et-Loir. Elle a été élue Miss Centre-Val de Loire 2026 le 26 avril 2026 à Dreux, devant environ 850 spectateurs, lors de sa troisième tentative. Le jury régional était présidé par Camille Cerf, Miss France 2015. Selon un site spécialisé, elle est titulaire d'un BTS et travaille dans le marketing.",
-    "instagram": null,
-    "faits_notables": [
-      "Première Miss régionale élue de la promotion (avril 2026)",
-      "Âge : 25 ans à l'élection, 26 ans selon le tableau Wikipédia Miss France 2027",
-      "Profession issue d'une seule source non officielle (pronomiss.com)"
-    ],
-    "sources": [
-      "https://www.intensite.net/justine-bourrelier-elue-miss-centre-val-de-loire-2026",
-      "https://pronomiss.com/miss-centre-val-de-loire-2026-justine-bourrelier/",
-      "https://la-vie-en-miss.forumactif.com/t898-miss-centre-val-de-loire-2026-justine-bourrelier",
-      "https://en.wikipedia.org/wiki/Miss_Centre-Val_de_Loire",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://pronomiss.com/miss-centre-val-de-loire-2026-justine-bourrelier/",
-        "credit": null,
-        "type": "autre"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.intensite.net/justine-bourrelier-elue-miss-centre-val-de-loire-2026",
-        "credit": null,
-        "type": "election_regionale"
-      }
-    ]
-  },
-  {
-    "id": "champagne-ardenne",
-    "region": "Miss Champagne-Ardenne 2026",
-    "nom": "Céline Leduc",
-    "age": 23,
-    "date_naissance": null,
-    "taille_cm": 183,
-    "ville": "Tagnon",
-    "departement": "Ardennes",
-    "etudes_profession": null,
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-09-27",
-    "lieu_election_regionale": "Cabaret Le K, Reims (Marne)",
-    "dauphine_ou_titres_precedents": "1re dauphine de Miss Ardennes",
-    "passions": null,
-    "cause_defendue": null,
-    "bio": "Céline Leduc, Ardennaise de 23 ans, a été élue Miss Champagne-Ardenne 2026 le 27 septembre 2026 au cabaret Le K à Reims. Le jury régional était présidé par l'animatrice Karima Charni. Elle s'était qualifiée comme première dauphine de Miss Ardennes. Avec 1,83 m, elle serait la plus grande candidate de la promotion.",
-    "instagram": null,
-    "faits_notables": [
-      "Dernière Miss régionale élue (27 septembre 2026)",
-      "Âge, taille et commune relevés uniquement sur Wikipédia EN",
-      "Dauphines régionales : Romane Renaud (1re), Aïcha Moumin (2e)"
-    ],
-    "sources": [
-      "https://jhm.fr/miss-champagne-ardenne-2026-lardennaise-celine-leduc-sacree/",
-      "https://en.wikipedia.org/wiki/Miss_Champagne-Ardenne",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://jhm.fr/miss-champagne-ardenne-2026-lardennaise-celine-leduc-sacree/",
-        "credit": null,
-        "type": "election_regionale"
-      }
-    ]
-  },
-  {
-    "id": "corse",
-    "region": "Miss Corse 2026",
-    "nom": "Satine Nomary",
-    "age": 19,
-    "date_naissance": null,
-    "taille_cm": 176,
-    "ville": "Porticcio (commune de Grosseto-Prugna)",
-    "departement": "Corse-du-Sud",
-    "etudes_profession": "Hôtesse de l'air",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-07-23",
-    "lieu_election_regionale": "Place Saint-Laurent, Porticcio (Corse-du-Sud)",
-    "dauphine_ou_titres_precedents": null,
-    "passions": [
-      "voyages",
-      "volley-ball"
-    ],
-    "cause_defendue": null,
-    "bio": "Satine Nomary, 19 ans, a grandi et vit à Porticcio, en Corse-du-Sud. Hôtesse de l'air, elle est passionnée de voyages et pratique le volley-ball. Elle a été élue Miss Corse 2026 en juillet 2026 sur la place Saint-Laurent de Porticcio, face à huit autres candidates.",
-    "instagram": {
-      "identifiant": "satinenomary",
-      "abonnes": null,
-      "date_releve": null,
-      "note": "identifiant relevé via un extrait d'article (CNews/Planet), non vérifié sur Instagram"
-    },
-    "faits_notables": [
-      "Élue dans sa propre commune",
-      "Date d'élection : 23 juillet 2026 selon Wikipédia ; les médias locaux divergent sur le jour (mercredi ou jeudi soir)"
-    ],
-    "sources": [
-      "https://www.corsenetinfos.corsica/Satine-Nomary-est-la-nouvelle-Miss-Corse-2026_a91847.html",
-      "https://www.ici.fr/corse/satine-nomary-miss-corse-2026-je-vais-tout-faire-pour-porter-mon-ile-jusqu-a-la-couronne-8977422",
-      "https://en.wikipedia.org/wiki/Miss_Corsica",
-      "https://www.cnews.fr/beaute/2026-10-07/miss-france-2027-voici-les-31-candidates-regionales-1925646",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.corsenetinfos.corsica/Satine-Nomary-est-la-nouvelle-Miss-Corse-2026_a91847.html",
-        "credit": null,
-        "type": "election_regionale"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.ici.fr/corse/satine-nomary-miss-corse-2026-je-vais-tout-faire-pour-porter-mon-ile-jusqu-a-la-couronne-8977422",
-        "credit": null,
-        "type": "presse"
-      }
-    ]
-  },
-  {
-    "id": "cote-d-azur",
-    "region": "Miss Côte d'Azur 2026",
-    "nom": "May Haoues",
-    "age": 19,
-    "date_naissance": null,
-    "taille_cm": 174,
-    "ville": "Cagnes-sur-Mer",
-    "departement": "Alpes-Maritimes",
-    "etudes_profession": "Étudiante en école de commerce",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-07-26",
-    "lieu_election_regionale": "Fréjus (Var)",
-    "dauphine_ou_titres_precedents": null,
-    "passions": null,
-    "cause_defendue": "Cause animale",
-    "bio": "May Haoues, 19 ans, est originaire de Cagnes-sur-Mer. Étudiante en école de commerce, elle se dit particulièrement engagée pour la cause animale. Elle a été élue Miss Côte d'Azur 2026 le 26 juillet 2026 à Fréjus.",
-    "instagram": null,
-    "faits_notables": [
-      "Citée 2e favorite par un article d'opinion (viralmag.fr, source peu fiable)"
-    ],
-    "sources": [
-      "https://en.wikipedia.org/wiki/Miss_C%C3%B4te_d%27Azur",
-      "https://www.titrespresse.com/29081392603/may-haoues-miss",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.titrespresse.com/29081392603/may-haoues-miss",
-        "credit": null,
-        "type": "presse"
-      }
-    ]
-  },
-  {
-    "id": "franche-comte",
-    "region": "Miss Franche-Comté 2026",
-    "nom": "Emma Ninot",
-    "age": 21,
-    "date_naissance": null,
-    "taille_cm": 175,
-    "ville": "Laire",
-    "departement": "Doubs",
-    "etudes_profession": "Vient d'achever ses études d'infirmière ; sauveteuse en mer",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-09-11",
-    "lieu_election_regionale": "Port-sur-Saône (Haute-Saône)",
-    "dauphine_ou_titres_precedents": "Miss Pays de Belfort-Montbéliard 2026",
-    "passions": null,
-    "cause_defendue": null,
-    "bio": "Emma Ninot, 21 ans, vient de Laire dans le Doubs. Elle vient d'achever ses études d'infirmière et est également sauveteuse en mer. Miss Pays de Belfort-Montbéliard 2026, elle a été élue Miss Franche-Comté 2026 le 11 septembre 2026 à Port-sur-Saône, face à treize autres candidates, succédant à Jade Cholley.",
-    "instagram": null,
-    "faits_notables": [
-      "Sauveteuse en mer",
-      "Dauphines régionales : Theodora Dragomir Perrodin (1re), Lila Monsaco Donas, Coline Bouvier"
-    ],
-    "sources": [
-      "https://www.pleinair.net/actualites/item/21235-emma-ninot-elue-miss-franche-comte-2026",
-      "https://en.wikipedia.org/wiki/Miss_Franche-Comt%C3%A9",
-      "https://www.cnews.fr/beaute/2026-10-07/miss-france-2027-voici-les-31-candidates-regionales-1925646",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.pleinair.net/actualites/item/21235-emma-ninot-elue-miss-franche-comte-2026",
-        "credit": null,
-        "type": "election_regionale"
-      }
-    ]
-  },
-  {
-    "id": "guadeloupe",
-    "region": "Miss Guadeloupe 2026",
-    "nom": "Julia Désirée",
-    "age": 20,
-    "date_naissance": null,
-    "taille_cm": 181,
-    "ville": "Les Abymes",
-    "departement": "Guadeloupe",
-    "etudes_profession": "Conseillère en parfumerie et cosmétique",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-07-16",
-    "lieu_election_regionale": "Palais des sports du Gosier (Guadeloupe)",
-    "dauphine_ou_titres_precedents": null,
-    "passions": [
-      "mode",
-      "plongée sous-marine"
-    ],
-    "cause_defendue": "Lutte contre les violences faites aux femmes",
-    "bio": "Julia Désirée, 20 ans, est originaire des Abymes. Conseillère en parfumerie, elle est passionnée de mode et de plongée sous-marine. Élue Miss Guadeloupe 2026 le 16 juillet 2026 au Palais des sports du Gosier, elle succède à Naomi Torrent. Elle a également été nommée ambassadrice officielle des Îles de Guadeloupe par le comité du tourisme.",
-    "instagram": null,
-    "faits_notables": [
-      "Ambassadrice officielle des Îles de Guadeloupe (CTIG)",
-      "Engagée contre les violences faites aux femmes"
-    ],
-    "sources": [
-      "https://rci.fm/guadeloupe/infos/People/Julia-Desire-est-Miss-Guadeloupe-2026",
-      "https://rci.fm/guadeloupe/infos/Societe/Miss-Guadeloupe-2026-je-nai-pas-encore-realise-confie-Julia-Desiree-au-lendemain-de",
-      "https://www.karibinfo.com/news/guadeloupe-julia-desiree-ambassadrice-des-iles/",
-      "https://info.fr/julia-desiree-20-ans-elue-miss-guadeloupe-2026-gosier/",
-      "https://en.wikipedia.org/wiki/Miss_Guadeloupe",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://rci.fm/guadeloupe/infos/People/Julia-Desire-est-Miss-Guadeloupe-2026",
-        "credit": null,
-        "type": "election_regionale"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.karibinfo.com/news/guadeloupe-julia-desiree-ambassadrice-des-iles/",
-        "credit": null,
-        "type": "presse"
-      }
-    ]
-  },
-  {
-    "id": "guyane",
-    "region": "Miss Guyane 2026",
-    "nom": "Sandra Justine",
-    "age": 23,
-    "date_naissance": null,
-    "taille_cm": 177,
-    "ville": "Kourou",
-    "departement": "Guyane",
-    "etudes_profession": "Infirmière (source unique : stephanelarue.com)",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-07-11",
-    "lieu_election_regionale": "PROGT, Matoury (Guyane)",
-    "dauphine_ou_titres_precedents": null,
-    "passions": null,
-    "cause_defendue": "Sensibilisation aux troubles de l'apprentissage (elle est dyslexique)",
-    "bio": "Sandra Justine, 23 ans, est originaire de Kourou. Candidate n° 8, elle a été élue Miss Guyane 2026 le 11 juillet 2026 au PROGT de Matoury. Dyslexique, elle souhaite sensibiliser aux troubles de l'apprentissage. Elle a quitté la Guyane début novembre pour poursuivre sa préparation à Paris.",
-    "instagram": null,
-    "faits_notables": [
-      "Dyslexique, en fait sa cause",
-      "Profession d'infirmière issue d'une seule source (blog stephanelarue.com)"
-    ],
-    "sources": [
-      "https://www.franceguyane.fr/actualite/culture-et-patrimoine/un-reve-de-petite-fille-sandra-justine-miss-guyane-2026-1086850.php",
-      "https://www.franceguyane.fr/miss-guyane-2026-quelle-candidate-repartira-avec-la-couronne-ce-soir-1086043.php",
-      "https://la1ere.franceinfo.fr/guyane/en-route-pour-miss-france-2027-sandra-justine-s-est-envolee-ce-dimanche-pour-paris-pour-poursuivre-sa-preparation-1753707.html",
-      "https://stephanelarue.com/miss-france-2027-31-candidates-en-portrait-officiel-miss-poitou-charentes-a-38-ans/",
-      "https://en.wikipedia.org/wiki/Miss_French_Guiana",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.franceguyane.fr/actualite/culture-et-patrimoine/un-reve-de-petite-fille-sandra-justine-miss-guyane-2026-1086850.php",
-        "credit": null,
-        "type": "presse"
-      },
-      {
-        "url": null,
-        "source_page": "https://la1ere.franceinfo.fr/guyane/depuis-toute-petite-elle-voulait-etre-miss-les-premiers-pas-de-sandra-justine-miss-guyane-2026-sous-le-regard-emu-de-sa-famille-1719424.html",
-        "credit": null,
-        "type": "presse"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.franceguyane.fr/actualite/culture-et-patrimoine/dix-ans-apres-alicia-sandra-justine-prete-pour-la-couronne-1097148.php",
-        "credit": null,
-        "type": "presse"
-      }
-    ]
-  },
-  {
-    "id": "ile-de-france",
-    "region": "Miss Île-de-France 2026",
-    "nom": "Camilla Alash",
-    "age": 23,
-    "date_naissance": null,
-    "taille_cm": 181,
-    "ville": "Clichy-la-Garenne",
-    "departement": "Hauts-de-Seine",
-    "etudes_profession": "Ancienne étudiante en journalisme",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-09-20",
-    "lieu_election_regionale": "Espace Pierre-Bachelet, Dammarie-lès-Lys (Seine-et-Marne)",
-    "dauphine_ou_titres_precedents": "Miss Hauts-de-Seine 2023 ; 3e participation à Miss Île-de-France",
-    "passions": [
-      "tennis"
-    ],
-    "cause_defendue": null,
-    "bio": "Camilla Alash, 23 ans, est originaire de Clichy-la-Garenne dans les Hauts-de-Seine. Ancienne étudiante en journalisme et passionnée de tennis, elle a remporté Miss Île-de-France 2026 le 20 septembre 2026 à Dammarie-lès-Lys, à sa troisième tentative. Elle avait été Miss Hauts-de-Seine en 2023.",
-    "instagram": null,
-    "faits_notables": [
-      "1,81 m",
-      "Âge : 23 ans (presse régionale, CNews) ; 24 ans selon le tableau Wikipédia Miss France 2027",
-      "Citée 4e favorite par viralmag.fr (source peu fiable)"
-    ],
-    "sources": [
-      "https://mesinfos.fr/77190-dammarie-les-lys/camilla-alash-sacree-miss-ile-de-france-2026-a-dammarie-les-lys-339353.html",
-      "https://en.wikipedia.org/wiki/Miss_%C3%8Ele-de-France",
-      "https://www.cnews.fr/beaute/2026-10-07/miss-france-2027-voici-les-31-candidates-regionales-1925646",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://mesinfos.fr/77190-dammarie-les-lys/camilla-alash-sacree-miss-ile-de-france-2026-a-dammarie-les-lys-339353.html",
-        "credit": null,
-        "type": "election_regionale"
-      }
-    ]
-  },
-  {
-    "id": "languedoc",
-    "region": "Miss Languedoc 2026",
-    "nom": "Candice Gauch",
-    "age": 29,
-    "date_naissance": null,
-    "taille_cm": 177,
-    "ville": "Mende",
-    "departement": "Lozère",
-    "etudes_profession": "Consultante dans un cabinet de conseil",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-08-07",
-    "lieu_election_regionale": "Beaucaire (Gard)",
-    "dauphine_ou_titres_precedents": "Miss Lozère",
-    "passions": null,
-    "cause_defendue": null,
-    "bio": "Candice Gauch, 29 ans, est originaire de Mende en Lozère. Consultante dans un cabinet de conseil, elle a été élue Miss Languedoc 2026 le 7 août 2026 à Beaucaire, le jour même de ses 29 ans. Elle est la première Miss Lozère à remporter le titre de Miss Languedoc.",
-    "instagram": null,
-    "faits_notables": [
-      "Élue le jour de son 29e anniversaire (née un 7 août, vraisemblablement 1997 — déduction, non confirmée)",
-      "Première Miss Lozère élue Miss Languedoc",
-      "2e candidate la plus âgée de la promotion"
-    ],
-    "sources": [
-      "https://www.ici.fr/occitanie/gard-30/beaucaire/la-lozerienne-candice-gauch-elue-miss-languedoc-5389967",
-      "https://echo-des-tribunes.com/aude-tribune/articles/je-vais-simplement-essayer-de-rester-moimeme-les-premiers-mots-de-candice-gauch-miss-languedoc-2026",
-      "https://en.wikipedia.org/wiki/Miss_Languedoc",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.ici.fr/occitanie/gard-30/beaucaire/la-lozerienne-candice-gauch-elue-miss-languedoc-5389967",
-        "credit": null,
-        "type": "election_regionale"
-      }
-    ]
-  },
-  {
-    "id": "limousin",
-    "region": "Miss Limousin 2026",
-    "nom": "Élise Escuriol",
-    "age": 22,
-    "date_naissance": null,
-    "taille_cm": 174,
-    "ville": "Brive-la-Gaillarde",
-    "departement": "Corrèze",
-    "etudes_profession": "Étudiante en BUT Gestion des entreprises et des administrations (GEA)",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-09-06",
-    "lieu_election_regionale": "Aubusson (Creuse)",
-    "dauphine_ou_titres_precedents": "2e dauphine de Miss Corrèze 2026",
-    "passions": null,
-    "cause_defendue": null,
-    "bio": "Élise Escuriol, 22 ans, est originaire de Brive-la-Gaillarde en Corrèze. Étudiante en BUT Gestion des entreprises et des administrations, elle a été élue Miss Limousin 2026 le 6 septembre 2026 à Aubusson, lors de la 21e édition du concours. Elle s'était qualifiée comme 2e dauphine de Miss Corrèze 2026.",
-    "instagram": {
-      "identifiant": "elise_.escuriol",
-      "abonnes": null,
-      "date_releve": null,
-      "note": "identifiant relevé via un extrait d'article (CNews/Planet), non vérifié sur Instagram"
-    },
-    "faits_notables": [
-      "Élue régionale alors qu'elle n'était que 2e dauphine départementale",
-      "1re dauphine régionale : Maëva Walek"
-    ],
-    "sources": [
-      "https://www.ici.fr/nouvelle-aquitaine/creuse-23/aubusson/en-images-miss-france-2027-elise-escuriol-22-ans-a-ete-elue-miss-limousin-a-aubusson-en-creuse-8654706",
-      "https://www.correze.fr/actualites/la-correzienne-elise-escuriol-devient-miss-limousin-2026",
-      "https://www.comitemisscorreze.fr/nos-miss/",
-      "https://en.wikipedia.org/wiki/Miss_Limousin",
-      "https://www.cnews.fr/beaute/2026-10-07/miss-france-2027-voici-les-31-candidates-regionales-1925646",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.ici.fr/nouvelle-aquitaine/creuse-23/aubusson/en-images-miss-france-2027-elise-escuriol-22-ans-a-ete-elue-miss-limousin-a-aubusson-en-creuse-8654706",
-        "credit": null,
-        "type": "election_regionale"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.correze.fr/actualites/la-correzienne-elise-escuriol-devient-miss-limousin-2026",
-        "credit": null,
-        "type": "presse"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.comitemisscorreze.fr/nos-miss/",
-        "credit": null,
-        "type": "autre"
-      }
-    ]
-  },
-  {
-    "id": "lorraine",
-    "region": "Miss Lorraine 2026",
-    "nom": "Léane Froment",
-    "age": 21,
-    "date_naissance": null,
-    "taille_cm": 172,
-    "ville": "Gondreville",
-    "departement": "Meurthe-et-Moselle",
-    "etudes_profession": null,
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-09-12",
-    "lieu_election_regionale": "Salle de spectacle du Zoo d'Amnéville (Moselle)",
-    "dauphine_ou_titres_precedents": "2e participation à Miss Lorraine",
-    "passions": null,
-    "cause_defendue": null,
-    "bio": "Léane Froment, 21 ans, vient de Gondreville en Meurthe-et-Moselle. Elle a été élue Miss Lorraine 2026 le 12 septembre 2026 au zoo d'Amnéville devant 1 800 personnes, pour les dix ans de la délégation. Le jury était présidé par Sophie Thalmann, Miss France 1998 et marraine de la promotion 2027. Elle succède à Camille L'Etang.",
-    "instagram": null,
-    "faits_notables": [
-      "Élue par un jury présidé par Sophie Thalmann, qui siégera aussi au jury national",
-      "1re dauphine régionale : Celia Lory (Yutz)"
-    ],
-    "sources": [
-      "https://www.radiomelodie.com/a/flash/18910-leane-froment-est-elue-miss-lorraine-2026",
-      "https://www.lorfm.com/miss-lorraine-2026-est-leane-froment",
-      "https://en.wikipedia.org/wiki/Miss_Lorraine",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.radiomelodie.com/a/flash/18910-leane-froment-est-elue-miss-lorraine-2026",
-        "credit": null,
-        "type": "election_regionale"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.lorfm.com/miss-lorraine-2026-est-leane-froment",
-        "credit": null,
-        "type": "election_regionale"
-      }
-    ]
-  },
-  {
-    "id": "martinique",
-    "region": "Miss Martinique 2026",
-    "nom": "Maureen-Alycia Lucéa-Merlin",
-    "age": 24,
-    "date_naissance": null,
-    "taille_cm": 176,
-    "ville": "Fort-de-France",
-    "departement": "Martinique",
-    "etudes_profession": null,
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-06-13",
-    "lieu_election_regionale": "Grand Carbet du parc Aimé-Césaire, Fort-de-France (Martinique)",
-    "dauphine_ou_titres_precedents": "1re dauphine de Miss Martinique 2020",
-    "passions": null,
-    "cause_defendue": null,
-    "bio": "Maureen-Alycia Lucéa-Merlin, 24 ans, est originaire de Fort-de-France. Candidate n° 6, elle a été élue Miss Martinique 2026 le 13 juin 2026 au Grand Carbet du parc Aimé-Césaire, par le jury et le public. Elle avait terminé première dauphine lors d'une première participation en 2020. Elle succède à Léaline Patry.",
-    "instagram": null,
-    "faits_notables": [
-      "Revient six ans après une place de 1re dauphine",
-      "Date d'élection : 13 juin (majorité des sources) ; un article La 1ère indique le 14 juin"
-    ],
-    "sources": [
-      "https://la1ere.franceinfo.fr/martinique/miss-france-2027-qui-est-maureen-alycia-lucea-merlin-miss-martinique-2026-1710502.html",
-      "https://la1ere.franceinfo.fr/martinique/miss-martinique-2026-maureen-alycia-lucea-merlin-representera-la-martinique-a-miss-france-2027-1710355.html",
-      "https://rci.fm/martinique/infos/People/Maureen-Alycia-Lucea-Merlin-est-Miss-Martinique-2026-et-representera-lile-Miss-France",
-      "https://rci.fm/martinique/infos/Culture/Miss-France-2027-Maureen-Alycia-Lucea-Merlin-quitte-la-Martinique-pour-la-derniere",
-      "https://en.wikipedia.org/wiki/Miss_Martinique",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://la1ere.franceinfo.fr/martinique/miss-france-2027-qui-est-maureen-alycia-lucea-merlin-miss-martinique-2026-1710502.html",
-        "credit": null,
-        "type": "presse"
-      },
-      {
-        "url": null,
-        "source_page": "https://rci.fm/martinique/infos/People/Maureen-Alycia-Lucea-Merlin-est-Miss-Martinique-2026-et-representera-lile-Miss-France",
-        "credit": null,
-        "type": "election_regionale"
-      }
-    ]
-  },
-  {
-    "id": "mayotte",
-    "region": "Miss Mayotte 2026",
-    "nom": "Emma Saïd Issouf",
-    "age": 24,
-    "date_naissance": null,
-    "taille_cm": 176,
-    "ville": "Mamoudzou (Kawéni)",
-    "departement": "Mayotte",
-    "etudes_profession": "Licence de lettres modernes ; souhaite devenir professeure des écoles",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-08-29",
-    "lieu_election_regionale": "Hôtel Ibis Styles, Dzaoudzi, Petite-Terre (Mayotte)",
-    "dauphine_ou_titres_precedents": null,
-    "passions": null,
-    "cause_defendue": null,
-    "bio": "Emma Saïd Issouf, 24 ans, vient du quartier de Kawéni à Mamoudzou. Diplômée en lettres modernes, elle souhaite devenir professeure des écoles. Elle a été élue Miss Mayotte 2026 le 29 août 2026 à l'hôtel Ibis Styles de Petite-Terre, parmi sept candidates, succédant à Kamillat Hervian.",
-    "instagram": null,
-    "faits_notables": [
-      "Taille : 1,76 m (Wikipédia, CGTV) ; 1,74 m selon Linfo.re",
-      "Dauphines régionales : Solénna Songné (1re), Rachima Galfane (2e)"
-    ],
-    "sources": [
-      "https://la1ere.franceinfo.fr/mayotte/emma-said-issouf-sacree-miss-mayotte-2026-1733441.html",
-      "https://www.linfo.re/ocean-indien/mayotte/emma-said-issouf-24-ans-elue-miss-mayotte-2026",
-      "https://la1ere.franceinfo.fr/mayotte/miss-mayotte-2026-emma-said-issouf-s-est-envolee-pour-l-aventure-miss-france-1755192.html",
-      "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://la1ere.franceinfo.fr/mayotte/emma-said-issouf-sacree-miss-mayotte-2026-1733441.html",
-        "credit": null,
-        "type": "election_regionale"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.linfo.re/ocean-indien/mayotte/emma-said-issouf-24-ans-elue-miss-mayotte-2026",
-        "credit": null,
-        "type": "election_regionale"
-      }
-    ]
-  },
-  {
-    "id": "midi-pyrenees",
-    "region": "Miss Midi-Pyrénées 2026",
-    "nom": "Carla Rachail",
-    "age": 23,
-    "date_naissance": null,
-    "taille_cm": 174,
-    "ville": "Toulouse",
-    "departement": "Haute-Garonne",
-    "etudes_profession": "Licence en management du sport ; vient de réussir le concours de sous-officier de gendarmerie",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-09-05",
-    "lieu_election_regionale": "Château de la Garrigue, Villemur-sur-Tarn (Haute-Garonne)",
-    "dauphine_ou_titres_precedents": "Miss Toulouse 2026",
-    "passions": [
-      "rugby (joueuse au Stade Toulousain)"
-    ],
-    "cause_defendue": "Égalité femmes-hommes, notamment dans le sport",
-    "bio": "Carla Rachail, 23 ans, est toulousaine. Titulaire d'une licence en management du sport, elle vient de réussir le concours de sous-officier de gendarmerie. Passionnée de rugby, elle joue au Stade Toulousain. Miss Toulouse 2026, elle a été élue Miss Midi-Pyrénées 2026 le 5 septembre 2026 au château de la Garrigue à Villemur-sur-Tarn.",
-    "instagram": null,
-    "faits_notables": [
-      "Joueuse de rugby au Stade Toulousain",
-      "Future sous-officier de gendarmerie"
-    ],
-    "sources": [
-      "https://www.lasemainedespyrenees.fr/carla-rachail-decroche-le-titre-de-miss-midi-pyrenees-2026-et-se-dirige-vers-miss-france/",
-      "https://fr.headtopics.com/news/miss-france-2027-qui-est-carla-rachail-miss-87967144",
-      "https://en.wikipedia.org/wiki/Miss_Midi-Pyr%C3%A9n%C3%A9es",
-      "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.lasemainedespyrenees.fr/carla-rachail-decroche-le-titre-de-miss-midi-pyrenees-2026-et-se-dirige-vers-miss-france/",
-        "credit": null,
-        "type": "election_regionale"
-      }
-    ]
-  },
-  {
-    "id": "nord-pas-de-calais",
-    "region": "Miss Nord-Pas-de-Calais 2026",
-    "nom": "Shana Mendes",
-    "age": 18,
-    "date_naissance": null,
-    "taille_cm": 175,
-    "ville": "Hem",
-    "departement": "Nord",
-    "etudes_profession": "Étudiante en licence de langues étrangères appliquées (dont portugais)",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-09-26",
-    "lieu_election_regionale": "Arena Stade Couvert, Liévin (Pas-de-Calais)",
-    "dauphine_ou_titres_precedents": "Miss Noyelles-sous-Lens",
-    "passions": null,
-    "cause_defendue": null,
-    "bio": "Shana Mendes, 18 ans, est originaire de Hem, dans la métropole lilloise. Étudiante en licence de langues étrangères appliquées, elle portait l'écharpe de Miss Noyelles-sous-Lens. Elle a été élue Miss Nord-Pas-de-Calais 2026 le 26 septembre 2026 à l'Arena Stade Couvert de Liévin, succédant à Lola Lachère.",
-    "instagram": null,
-    "faits_notables": [
-      "L'une des plus jeunes candidates (18 ans)",
-      "Région la plus titrée de la dernière décennie à Miss France"
-    ],
-    "sources": [
-      "https://www.deltafm.fr/shana-mendes-elue-miss-nord-pas-de-calais-2026",
-      "https://www.radio6.fr/article-78796-shana-mendes-de-noyelles-sous-lens-elue-miss-nord-pas-de-calais-2026-a-lievin.html",
-      "https://en.wikipedia.org/wiki/Miss_Nord-Pas-de-Calais",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.deltafm.fr/shana-mendes-elue-miss-nord-pas-de-calais-2026",
-        "credit": null,
-        "type": "election_regionale"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.radio6.fr/article-78796-shana-mendes-de-noyelles-sous-lens-elue-miss-nord-pas-de-calais-2026-a-lievin.html",
-        "credit": null,
-        "type": "election_regionale"
-      }
-    ]
-  },
-  {
-    "id": "normandie",
-    "region": "Miss Normandie 2026",
-    "nom": "Pauline Gourlez",
-    "age": 21,
-    "date_naissance": null,
-    "taille_cm": 171,
-    "ville": "Giberville",
-    "departement": "Calvados",
-    "etudes_profession": "Comptable (études de comptabilité)",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-05-22",
-    "lieu_election_regionale": "Zénith de Caen (Calvados)",
-    "dauphine_ou_titres_precedents": "Miss Calvados 2026 (élue le 3 avril 2026 à Saint-Lô)",
-    "passions": null,
-    "cause_defendue": null,
-    "bio": "Pauline Gourlez, 21 ans, est comptable et vit à Giberville, près de Caen, depuis l'enfance ; elle est née dans le Nord-Pas-de-Calais. Élue Miss Calvados le 3 avril 2026, elle a remporté le titre de Miss Normandie 2026 le 22 mai 2026 au Zénith de Caen parmi 17 candidates. Elle succède à Victoire Dupuis, 2e dauphine de Miss France 2026.",
-    "instagram": null,
-    "faits_notables": [
-      "Succède à une 2e dauphine de Miss France",
-      "Âge : 21 ans (Ouest-France) ; 22 ans selon le tableau Wikipédia Miss France 2027",
-      "Date : 22 mai (Tendance Ouest) ; un article Ouest-France évoque le 21 mai"
-    ],
-    "sources": [
-      "https://www.tendanceouest.com/actualite-439294-miss-france-qui-est-pauline-gourlez-elue-miss-normandie-2026",
-      "https://www.ouest-france.fr/culture/people/miss-france/entretien-une-lumiere-dans-un-monde-dobscurite-pauline-gourlez-elue-miss-normandie-2026-8c3aaf00-56b3-11f1-a4a7-f780c203d7d6",
-      "https://gnigrandouest.fr/miss-normandie-2026-pauline-gourlez/",
-      "https://www.organisationmissnormandie.fr/",
-      "https://en.wikipedia.org/wiki/Miss_Normandy",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.tendanceouest.com/actualite-439294-miss-france-qui-est-pauline-gourlez-elue-miss-normandie-2026",
-        "credit": null,
-        "type": "presse"
-      },
-      {
-        "url": null,
-        "source_page": "https://gnigrandouest.fr/miss-normandie-2026-pauline-gourlez/",
-        "credit": null,
-        "type": "election_regionale"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.organisationmissnormandie.fr/",
-        "credit": null,
-        "type": "autre"
-      }
-    ]
-  },
-  {
-    "id": "nouvelle-caledonie",
-    "region": "Miss Nouvelle-Calédonie 2026",
-    "nom": "Lana Prost",
-    "age": 17,
-    "date_naissance": null,
-    "taille_cm": 175,
-    "ville": "Le Mont-Dore",
-    "departement": "Nouvelle-Calédonie",
-    "etudes_profession": "Lycéenne en terminale",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-07-25",
-    "lieu_election_regionale": "Nouméa (hôtel Nouméa Beach Resort & Spa / jardins du resort)",
-    "dauphine_ou_titres_precedents": null,
-    "passions": null,
-    "cause_defendue": null,
-    "bio": "Lana Prost est la benjamine de la promotion. Lycéenne en terminale, elle a été élue Miss Nouvelle-Calédonie 2026 le 25 juillet 2026 à Nouméa, sous le numéro 5, lors d'une soirée sur le thème « Voyage en beauté ». Elle succède à Juliette Collet. Selon Wikipédia, elle vient du Mont-Dore.",
-    "instagram": null,
-    "faits_notables": [
-      "Benjamine de la promotion",
-      "Âge : 17 ans (Radio1, Planet.fr) ; 18 ans selon Lavoixdefrance et Wikipédia",
-      "Taille et commune relevées uniquement sur Wikipédia EN",
-      "Dauphines : Estelle Talatini (1re), Havaïki Berteau (2e)"
-    ],
-    "sources": [
-      "https://www.radio1.pf/lana-prost-couronnee-miss-nouvelle-caledonie-2026/",
-      "https://voixducaillou.nc/2026/07/26/miss-nouvelle-caledonie-retour-en-images-sur-le-sacre-de-lana-prost/",
-      "https://www.drom-com.fr/articles/lana-prost-elue-miss-nouvelle-caledonie-2026-86373.htm",
-      "https://www.lavoixdefrance.fr/actualites/lana-prost-18-ans-couronnee-miss-nouvelle-caledonie-2026-11019/",
-      "https://en.wikipedia.org/wiki/Miss_New_Caledonia",
-      "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://voixducaillou.nc/2026/07/26/miss-nouvelle-caledonie-retour-en-images-sur-le-sacre-de-lana-prost/",
-        "credit": null,
-        "type": "election_regionale"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.radio1.pf/lana-prost-couronnee-miss-nouvelle-caledonie-2026/",
-        "credit": null,
-        "type": "election_regionale"
-      }
-    ]
-  },
-  {
-    "id": "pays-de-la-loire",
-    "region": "Miss Pays de la Loire 2026",
-    "nom": "Maëlle Hamon",
-    "age": 23,
-    "date_naissance": null,
-    "taille_cm": 172,
-    "ville": "Nantes (Les Sorinières selon Wikipédia ; née à Saint-Herblain)",
-    "departement": "Loire-Atlantique",
-    "etudes_profession": "Éducatrice scolaire et accompagnante d'élèves en situation de handicap (AESH)",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-09-10",
-    "lieu_election_regionale": "Vallet (Loire-Atlantique)",
-    "dauphine_ou_titres_precedents": "3e participation à Miss Pays de la Loire",
-    "passions": null,
-    "cause_defendue": null,
-    "bio": "Maëlle Hamon, 23 ans, est née à Saint-Herblain et vit dans l'agglomération nantaise. Éducatrice scolaire, elle accompagne des élèves en situation de handicap. Elle a été élue Miss Pays de la Loire 2026 le 10 septembre 2026 à Vallet parmi 14 candidates, à sa troisième participation.",
-    "instagram": null,
-    "faits_notables": [
-      "Une URL Ouest-France mentionne « 27 ans » mais le corps de l'article indique 23 ans",
-      "Dauphines : Lyse De Oliveira (1re), Mareen Jumelais, Lilou Pradet, Mélissa Billard"
-    ],
-    "sources": [
-      "https://www.ouest-france.fr/pays-de-la-loire/video-maelle-hamon-elue-miss-pays-de-la-loire-2026-decouvrez-le-classement-des-dauphines-fb18b1c5-b4e5-3e34-954d-d450652ae62a",
-      "https://www.ouest-france.fr/culture/people/miss-france/maelle-hamon-une-nantaise-de-27-ans-elue-miss-pays-de-la-loire-hier-soir-a-vallet-a9bfca0e-ad18-11f1-8346-c9d5c99462af",
-      "https://en.wikipedia.org/wiki/Miss_Pays_de_la_Loire",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.ouest-france.fr/pays-de-la-loire/video-maelle-hamon-elue-miss-pays-de-la-loire-2026-decouvrez-le-classement-des-dauphines-fb18b1c5-b4e5-3e34-954d-d450652ae62a",
-        "credit": null,
-        "type": "election_regionale"
-      }
-    ]
-  },
-  {
-    "id": "picardie",
-    "region": "Miss Picardie 2026",
-    "nom": "Marie Villez",
-    "age": 26,
-    "date_naissance": null,
-    "taille_cm": 173,
-    "ville": "Amiens",
-    "departement": "Somme",
-    "etudes_profession": "En alternance dans la communication, poursuit ses études dans ce domaine",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-09-13",
-    "lieu_election_regionale": "Elispace, Beauvais (Oise)",
-    "dauphine_ou_titres_precedents": null,
-    "passions": null,
-    "cause_defendue": null,
-    "bio": "Marie Villez, 26 ans, vient d'Amiens. En contrat d'alternance dans la communication, elle poursuit ses études dans ce domaine. Elle a été élue Miss Picardie 2026 le 13 septembre 2026 à l'Elispace de Beauvais parmi quinze candidates. Le jury était présidé par Rachel Legrain-Trapani, Miss France 2007 ; elle succède à Emma Boivin.",
-    "instagram": null,
-    "faits_notables": [
-      "Jury régional présidé par Rachel Legrain-Trapani"
-    ],
-    "sources": [
-      "https://www.ici.fr/hauts-de-france/oise-60/beauvais/marie-villez-elue-miss-picardie-2026-a-beauvais-4156195",
-      "https://www.ici.fr/emissions/t-es-d-min-coin/decouvrez-marie-villez-notre-nouvelle-miss-picardie-2026-qui-a-ete-elue-a-l-elispace-de-beauvais-5939327",
-      "https://en.wikipedia.org/wiki/Miss_Picardy",
-      "https://www.cnews.fr/beaute/2026-10-07/miss-france-2027-voici-les-31-candidates-regionales-1925646",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.ici.fr/hauts-de-france/oise-60/beauvais/marie-villez-elue-miss-picardie-2026-a-beauvais-4156195",
-        "credit": null,
-        "type": "election_regionale"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.ici.fr/emissions/t-es-d-min-coin/marie-villez-notre-nouvelle-miss-picardie-2026-se-prepare-a-l-election-de-miss-france-9919910",
-        "credit": null,
-        "type": "presse"
-      }
-    ]
-  },
-  {
-    "id": "poitou-charentes",
-    "region": "Miss Poitou-Charentes 2026",
-    "nom": "Mandy Goudal",
-    "age": 38,
-    "date_naissance": null,
-    "taille_cm": 174,
-    "ville": "Saintes",
-    "departement": "Charente-Maritime",
-    "etudes_profession": "Cheffe d'entreprise / commerçante",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-09-04",
-    "lieu_election_regionale": "Salle du Kube, Futuroscope, Jaunay-Marigny (Vienne)",
-    "dauphine_ou_titres_precedents": null,
-    "passions": null,
-    "cause_defendue": null,
-    "bio": "Mandy Goudal, 38 ans, vit à Saintes en Charente-Maritime. Cheffe d'entreprise, mariée et mère de deux enfants, elle est la doyenne de la promotion et la première mère de famille à concourir au niveau national. Elle a été élue Miss Poitou-Charentes 2026 le 4 septembre 2026 au Futuroscope, où se tiendra aussi la finale nationale.",
-    "instagram": null,
-    "faits_notables": [
-      "Doyenne de la promotion (38 ans ; 37 ans au moment de son élection)",
-      "Première mère de famille candidate à Miss France (deux enfants), mariée",
-      "Candidate de la région hôte"
-    ],
-    "sources": [
-      "https://www.ici.fr/nouvelle-aquitaine/vienne-86/jaunay-marigny/video-mandy-goudal-37-ans-elue-miss-poitou-charentes-2026-au-futuroscope-9871230",
-      "https://www.ici.fr/emissions/l-invite-de-la-redaction-de-ici-la-rochelle/miss-france-la-beaute-n-a-pas-d-age-a-38-ans-mandy-goudal-va-representer-la-region-poitou-charentes-a-l-election-3219414",
-      "https://stephanelarue.com/miss-france-2027-31-candidates-en-portrait-officiel-miss-poitou-charentes-a-38-ans/",
-      "https://en.wikipedia.org/wiki/Miss_Poitou-Charentes",
-      "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.ici.fr/nouvelle-aquitaine/vienne-86/jaunay-marigny/video-mandy-goudal-37-ans-elue-miss-poitou-charentes-2026-au-futuroscope-9871230",
-        "credit": null,
-        "type": "election_regionale"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.ici.fr/emissions/l-invite-de-la-redaction-de-ici-la-rochelle/miss-france-la-beaute-n-a-pas-d-age-a-38-ans-mandy-goudal-va-representer-la-region-poitou-charentes-a-l-election-3219414",
-        "credit": null,
-        "type": "presse"
-      }
-    ]
-  },
-  {
-    "id": "provence",
-    "region": "Miss Provence 2026",
-    "nom": "Ophélie Vitalbo",
-    "age": 28,
-    "date_naissance": null,
-    "taille_cm": 171,
-    "ville": "Velleron",
-    "departement": "Vaucluse",
-    "etudes_profession": null,
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-07-24",
-    "lieu_election_regionale": "Agora du Palais des congrès, Saint-Raphaël (Var)",
-    "dauphine_ou_titres_precedents": null,
-    "passions": null,
-    "cause_defendue": null,
-    "bio": "Ophélie Vitalbo, 28 ans, est originaire de Velleron dans le Vaucluse. Elle a été élue Miss Provence 2026 le 24 juillet 2026 à l'Agora du Palais des congrès de Saint-Raphaël, devant près de 1 000 spectateurs. Elle succède à Julie Zitouni, destituée de son titre après des propos injurieux visant d'autres candidates de Miss France 2026.",
-    "instagram": null,
-    "faits_notables": [
-      "Succède à une Miss Provence destituée (Julie Zitouni)",
-      "Âge : 28 ans (CGTV, Wikipédia Miss France 2027) ; 27 ans sur la page Wikipédia Miss Provence",
-      "Profession non trouvée"
-    ],
-    "sources": [
-      "https://www.varactu.fr/ophelie-vitalbo-elue-miss-provence-2026-devant-pres-de-1-000-spectateurs-a-saint-raphael/",
-      "https://actu.orange.fr/videos/actu-locale/miss-provence-2026-ophelie-vitalbo-representera-la-provence-au-concours-miss-france-CNT000002qFOhN.html",
-      "https://fr.headtopics.com/news/decouvrez-qui-est-miss-provence-2026-ophelie-vitalbo-85922982",
-      "https://en.wikipedia.org/wiki/Miss_Provence",
-      "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.varactu.fr/ophelie-vitalbo-elue-miss-provence-2026-devant-pres-de-1-000-spectateurs-a-saint-raphael/",
-        "credit": null,
-        "type": "election_regionale"
-      }
-    ]
-  },
-  {
-    "id": "reunion",
-    "region": "Miss Réunion 2026",
-    "nom": "Laetitia Roguet",
-    "age": 20,
-    "date_naissance": null,
-    "taille_cm": 172,
-    "ville": "Sainte-Anne (commune de Saint-Benoît)",
-    "departement": "La Réunion",
-    "etudes_profession": "Étudiante, préparatrice en pharmacie en formation",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-08-22",
-    "lieu_election_regionale": "Théâtre de Champ Fleuri, Saint-Denis (La Réunion)",
-    "dauphine_ou_titres_precedents": "Miss Saint-Joseph",
-    "passions": null,
-    "cause_defendue": "Santé mentale",
-    "bio": "Laetitia Roguet, 20 ans, est originaire de Sainte-Anne, dans l'est de La Réunion. Elle suit une formation de préparatrice en pharmacie. Candidate n° 7, elle a été élue Miss Réunion 2026 le 22 août 2026 au Théâtre de Champ Fleuri à Saint-Denis et couronnée par Hinaupoko Devèze, Miss France 2026. Elle souhaite défendre la cause de la santé mentale.",
-    "instagram": null,
-    "faits_notables": [
-      "Couronnée par la Miss France en titre",
-      "Âge : 20 ans (Linfo.re, Zinfos974) ; 21 ans sur Wikipédia",
-      "Taille relevée uniquement sur Wikipédia EN",
-      "Podium régional : Alycia Taochy, Stéphanie Lebreton"
-    ],
-    "sources": [
-      "https://www.linfo.re/la-reunion/societe/laetitia-roguet-elue-miss-reunion-2026-merci-mon-ti-pei-merci-zot-toute",
-      "https://la1ere.franceinfo.fr/reunion/laetitia-roguet-decroche-la-couronne-de-miss-reunion-2026-c-etait-l-annee-ou-il-fallait-que-j-ose-et-que-je-sorte-de-ma-coquille-1730257.html",
-      "https://www.zinfos974.com/laetitia-roguet-20-ans-sacree-miss-reunion-2026/",
-      "https://imazpress.com/selection-de-la-redaction/miss-reunion-elue",
-      "https://en.wikipedia.org/wiki/Miss_R%C3%A9union",
-      "https://www.cnews.fr/beaute/2026-10-07/miss-france-2027-voici-les-31-candidates-regionales-1925646",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://imazpress.com/selection-de-la-redaction/miss-reunion-elue",
-        "credit": null,
-        "type": "election_regionale"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.zinfos974.com/laetitia-roguet-20-ans-sacree-miss-reunion-2026/",
-        "credit": null,
-        "type": "election_regionale"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.linfo.re/la-reunion/societe/miss-reunion-2026-laetitia-roguet-en-toute-simplicite",
-        "credit": null,
-        "type": "presse"
-      }
-    ]
-  },
-  {
-    "id": "rhone-alpes",
-    "region": "Miss Rhône-Alpes 2026",
-    "nom": "Julia Grid-Costantino",
-    "age": 23,
-    "date_naissance": null,
-    "taille_cm": 174,
-    "ville": "Lyon",
-    "departement": "Rhône",
-    "etudes_profession": "Chargée de projet marketing dans un laboratoire dermocosmétique ; master marketing (IAE Lyon, source unique)",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-09-19",
-    "lieu_election_regionale": "Parc des expositions, Villefranche-sur-Saône (Rhône)",
-    "dauphine_ou_titres_precedents": "Miss Grand Lyon 2026 (mars), Miss Rhône 2026 (juin) ; déjà candidate en 2023",
-    "passions": null,
-    "cause_defendue": null,
-    "bio": "Julia Grid-Costantino, 23 ans, est lyonnaise. Titulaire d'un master en marketing, elle est chargée de projet marketing dans un laboratoire dermocosmétique. Élue Miss Grand Lyon en mars puis Miss Rhône en juin, elle a remporté Miss Rhône-Alpes 2026 le 19 septembre 2026 à Villefranche-sur-Saône. Elle succède à Noémie Baiamonte.",
-    "instagram": null,
-    "faits_notables": [
-      "Trois titres en 2026 (Grand Lyon, Rhône, Rhône-Alpes)",
-      "Taille : 1,74 m (Wikipédia, CGTV) ; 1,75 m selon une source",
-      "Certains médias orthographient « Grid-Constantino »",
-      "Dauphines : Margaux Bescond (1re), Angélina Valetic, Ombeline Chevalier, Clémentine Laclais"
-    ],
-    "sources": [
-      "https://www.lyoncapitale.fr/actualite/elue-miss-rhone-alpes-julia-grid-constantino-representera-la-region-a-miss-france-2027",
-      "https://www.radioscoop.com/infos/la-lyonnaise-julia-grid-costantino-couronnee-miss-rhone-alpes-2026_363973",
-      "https://www.lyonfemmes.com/article/252433/julia-grid-costantino-miss-rhone-2026-a-nous-de-montrer-que-l-on-peut-rester-des-femmes-authentiques-et-simples",
-      "https://www.lyonpremiere.fr/autres/voici-la-nouvelle-miss-rhone-alpes/",
-      "https://en.wikipedia.org/wiki/Miss_Rh%C3%B4ne-Alpes",
-      "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.lyoncapitale.fr/actualite/elue-miss-rhone-alpes-julia-grid-constantino-representera-la-region-a-miss-france-2027",
-        "credit": null,
-        "type": "election_regionale"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.radioscoop.com/infos/la-lyonnaise-julia-grid-costantino-couronnee-miss-rhone-alpes-2026_363973",
-        "credit": null,
-        "type": "election_regionale"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.lyonfemmes.com/article/252433/julia-grid-costantino-miss-rhone-2026-a-nous-de-montrer-que-l-on-peut-rester-des-femmes-authentiques-et-simples",
-        "credit": null,
-        "type": "presse"
-      }
-    ]
-  },
-  {
-    "id": "roussillon",
-    "region": "Miss Roussillon 2026",
-    "nom": "Juliette Gauthier",
-    "age": 23,
-    "date_naissance": null,
-    "taille_cm": 174,
-    "ville": "Le Boulou",
-    "departement": "Pyrénées-Orientales",
-    "etudes_profession": "Kinésithérapeute",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-07-05",
-    "lieu_election_regionale": "Théâtre de la Mer, Canet-en-Roussillon (Pyrénées-Orientales)",
-    "dauphine_ou_titres_precedents": null,
-    "passions": null,
-    "cause_defendue": null,
-    "bio": "Juliette Gauthier est kinésithérapeute et vient du Boulou, dans les Pyrénées-Orientales. Elle a été élue Miss Roussillon 2026 le 5 juillet 2026 au Théâtre de la Mer de Canet-en-Roussillon parmi douze candidates. Selon un média, elle a surmonté une affection de naissance qui l'avait contrainte un temps au fauteuil roulant. Son portrait officiel la montre en robe vichy jaune devant la mer.",
-    "instagram": null,
-    "faits_notables": [
-      "Désignée « grande favorite » par un article d'opinion (viralmag.fr, source peu fiable)",
-      "Passage par le fauteuil roulant rapporté par une seule source (beninwebtv.bj) — à confirmer",
-      "Âge : 22 ans à l'élection, 23 ans selon CGTV et Wikipédia Miss France 2027"
-    ],
-    "sources": [
-      "https://www.ici.fr/occitanie/pyrenees-orientales-66/perpignan/miss-france-2027-la-photo-officielle-de-miss-roussillon-devoilee-1985361",
-      "https://beninwebtv.bj/miss-france-2027-juliette-gauthier-elue-miss-roussillon-apres-avoir-ete-en-fauteuil-roulant-il-y-a-quelques-annees/",
-      "https://en.wikipedia.org/wiki/Miss_Roussillon",
-      "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.ici.fr/occitanie/pyrenees-orientales-66/perpignan/miss-france-2027-la-photo-officielle-de-miss-roussillon-devoilee-1985361",
-        "credit": null,
-        "type": "portrait_officiel"
-      }
-    ]
-  },
-  {
-    "id": "saint-martin-saint-barthelemy",
-    "region": "Miss Saint-Martin et Saint-Barthélemy 2026",
-    "nom": "Naïla Parotte",
-    "age": 22,
-    "date_naissance": null,
-    "taille_cm": 182,
-    "ville": "Marigot",
-    "departement": "Saint-Martin",
-    "etudes_profession": null,
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-08-01",
-    "lieu_election_regionale": null,
-    "dauphine_ou_titres_precedents": null,
-    "passions": null,
-    "cause_defendue": null,
-    "bio": "Naïla Parotte, 22 ans, originaire de Marigot, a été couronnée Miss Saint-Martin et Saint-Barthélemy 2026 le 1er août 2026. Elle marque le retour de cette délégation au concours national. Son île accueille cette année, pour la première fois, le voyage de préparation des 31 candidates. Les informations disponibles sur elle proviennent essentiellement de Wikipédia.",
-    "instagram": null,
-    "faits_notables": [
-      "Représente le territoire hôte du voyage de préparation",
-      "Retour de Saint-Martin/Saint-Barthélemy au concours",
-      "Fiche très lacunaire : âge, taille, commune et date d'élection relevés uniquement sur Wikipédia"
-    ],
-    "sources": [
-      "https://en.wikipedia.org/wiki/Miss_Saint_Martin_and_Saint_Barth%C3%A9lemy",
-      "https://fr.wikipedia.org/wiki/Miss_Saint-Martin_et_Saint-Barth%C3%A9lemy",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      }
-    ]
-  },
-  {
-    "id": "tahiti",
-    "region": "Miss Tahiti 2026",
-    "nom": "Leia Diard",
-    "age": 22,
-    "date_naissance": null,
-    "taille_cm": 172,
-    "ville": "Arue",
-    "departement": "Polynésie française",
-    "etudes_profession": "Diplômée en gestion ; professeure de ʻori Tahiti (danse tahitienne)",
-    "couleur_cheveux": null,
-    "couleur_yeux": null,
-    "date_election_regionale": "2026-06-26",
-    "lieu_election_regionale": "Jardins de la mairie de Pirae (Tahiti)",
-    "dauphine_ou_titres_precedents": null,
-    "passions": [
-      "ʻori Tahiti (danse tahitienne)"
-    ],
-    "cause_defendue": "Sensibilisation à l'endométriose (maladie dont souffre sa mère)",
-    "bio": "Leia Diard, 22 ans, est diplômée en gestion et professeure de ʻori Tahiti. Elle a été élue Miss Tahiti 2026 le 26 juin 2026 dans les jardins de la mairie de Pirae, parmi dix candidates, succédant à Hinaupoko Devèze, Miss France 2026. Elle a choisi l'endométriose comme cause, maladie dont souffre sa mère. Selon Wikipédia, elle vient d'Arue.",
-    "instagram": null,
-    "faits_notables": [
-      "Représente la région de la Miss France sortante",
-      "Taille et commune relevées uniquement sur Wikipédia EN",
-      "Dauphines : Turama Tapi (1re), Heimiri Huri (2e) ; Miss Heiva : Orama Mollimard"
-    ],
-    "sources": [
-      "https://www.tntvnews.pf/polynesie/societe/miss-tahiti-2026-est-leia-diard/",
-      "https://www.tahiti-infos.com/Leia-Diard-sacree-Miss-Tahiti-2026_a238583.html",
-      "https://la1ere.franceinfo.fr/polynesie/miss-tahiti-2026-leia-diard-profite-d-un-dimanche-en-famille-avant-d-enchainer-les-rendez-vous-officiels-1715050.html",
-      "https://www.lnc.nc/article/leia-diard-miss-tahiti-2026-je-le-prends-un-peu-comme-une-destinee",
-      "https://misstahiti.com/election-2026/",
-      "https://www.tntvnews.pf/polynesie/societe/miss-france-2027-les-photos-officielles-des-31-candidates-devoilees/",
-      "https://en.wikipedia.org/wiki/Miss_Tahiti",
-      "https://en.wikipedia.org/wiki/Miss_France_2027",
-      "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
-    ],
-    "photos": [
-      {
-        "url": null,
-        "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
-        "credit": null,
-        "type": "portrait_officiel"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.tntvnews.pf/polynesie/societe/miss-tahiti-2026-est-leia-diard/",
-        "credit": null,
-        "type": "election_regionale"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.tahiti-infos.com/Leia-Diard-sacree-Miss-Tahiti-2026_a238583.html",
-        "credit": null,
-        "type": "election_regionale"
-      },
-      {
-        "url": null,
-        "source_page": "https://misstahiti.com/election-2026/",
-        "credit": null,
-        "type": "autre"
-      },
-      {
-        "url": null,
-        "source_page": "https://www.tntvnews.pf/polynesie/societe/miss-france-2027-les-photos-officielles-des-31-candidates-devoilees/",
-        "credit": null,
-        "type": "portrait_officiel"
-      }
-    ]
-  }
+  "faits_notables": [
+   "Élue régionale alors qu'elle n'était que 2e dauphine départementale",
+   "1re dauphine régionale : Maëva Walek"
+  ],
+  "sources": [
+   "https://www.ici.fr/nouvelle-aquitaine/creuse-23/aubusson/en-images-miss-france-2027-elise-escuriol-22-ans-a-ete-elue-miss-limousin-a-aubusson-en-creuse-8654706",
+   "https://www.correze.fr/actualites/la-correzienne-elise-escuriol-devient-miss-limousin-2026",
+   "https://www.comitemisscorreze.fr/nos-miss/",
+   "https://en.wikipedia.org/wiki/Miss_Limousin",
+   "https://www.cnews.fr/beaute/2026-10-07/miss-france-2027-voici-les-31-candidates-regionales-1925646",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.ici.fr/nouvelle-aquitaine/creuse-23/aubusson/en-images-miss-france-2027-elise-escuriol-22-ans-a-ete-elue-miss-limousin-a-aubusson-en-creuse-8654706",
+    "credit": null,
+    "type": "election_regionale"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.correze.fr/actualites/la-correzienne-elise-escuriol-devient-miss-limousin-2026",
+    "credit": null,
+    "type": "presse"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.comitemisscorreze.fr/nos-miss/",
+    "credit": null,
+    "type": "autre"
+   }
+  ]
+ },
+ {
+  "id": "lorraine",
+  "region": "Miss Lorraine 2026",
+  "nom": "Léane Froment",
+  "age": 21,
+  "date_naissance": null,
+  "taille_cm": 172,
+  "ville": "Gondreville",
+  "departement": "Meurthe-et-Moselle",
+  "etudes_profession": null,
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-09-12",
+  "lieu_election_regionale": "Salle de spectacle du Zoo d'Amnéville (Moselle)",
+  "dauphine_ou_titres_precedents": "2e participation à Miss Lorraine",
+  "passions": null,
+  "cause_defendue": null,
+  "bio": "Léane Froment, 21 ans, vient de Gondreville en Meurthe-et-Moselle. Elle a été élue Miss Lorraine 2026 le 12 septembre 2026 au zoo d'Amnéville devant 1 800 personnes, pour les dix ans de la délégation. Le jury était présidé par Sophie Thalmann, Miss France 1998 et marraine de la promotion 2027. Elle succède à Camille L'Etang.",
+  "instagram": null,
+  "faits_notables": [
+   "Élue par un jury présidé par Sophie Thalmann, qui siégera aussi au jury national",
+   "1re dauphine régionale : Celia Lory (Yutz)"
+  ],
+  "sources": [
+   "https://www.radiomelodie.com/a/flash/18910-leane-froment-est-elue-miss-lorraine-2026",
+   "https://www.lorfm.com/miss-lorraine-2026-est-leane-froment",
+   "https://en.wikipedia.org/wiki/Miss_Lorraine",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.radiomelodie.com/a/flash/18910-leane-froment-est-elue-miss-lorraine-2026",
+    "credit": null,
+    "type": "election_regionale"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.lorfm.com/miss-lorraine-2026-est-leane-froment",
+    "credit": null,
+    "type": "election_regionale"
+   }
+  ]
+ },
+ {
+  "id": "martinique",
+  "region": "Miss Martinique 2026",
+  "nom": "Maureen-Alycia Lucéa-Merlin",
+  "age": 24,
+  "date_naissance": null,
+  "taille_cm": 176,
+  "ville": "Fort-de-France",
+  "departement": "Martinique",
+  "etudes_profession": null,
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-06-13",
+  "lieu_election_regionale": "Grand Carbet du parc Aimé-Césaire, Fort-de-France (Martinique)",
+  "dauphine_ou_titres_precedents": "1re dauphine de Miss Martinique 2020",
+  "passions": null,
+  "cause_defendue": null,
+  "bio": "Maureen-Alycia Lucéa-Merlin, 24 ans, est originaire de Fort-de-France. Candidate n° 6, elle a été élue Miss Martinique 2026 le 13 juin 2026 au Grand Carbet du parc Aimé-Césaire, par le jury et le public. Elle avait terminé première dauphine lors d'une première participation en 2020. Elle succède à Léaline Patry.",
+  "instagram": null,
+  "faits_notables": [
+   "Revient six ans après une place de 1re dauphine",
+   "Date d'élection : 13 juin (majorité des sources) ; un article La 1ère indique le 14 juin"
+  ],
+  "sources": [
+   "https://la1ere.franceinfo.fr/martinique/miss-france-2027-qui-est-maureen-alycia-lucea-merlin-miss-martinique-2026-1710502.html",
+   "https://la1ere.franceinfo.fr/martinique/miss-martinique-2026-maureen-alycia-lucea-merlin-representera-la-martinique-a-miss-france-2027-1710355.html",
+   "https://rci.fm/martinique/infos/People/Maureen-Alycia-Lucea-Merlin-est-Miss-Martinique-2026-et-representera-lile-Miss-France",
+   "https://rci.fm/martinique/infos/Culture/Miss-France-2027-Maureen-Alycia-Lucea-Merlin-quitte-la-Martinique-pour-la-derniere",
+   "https://en.wikipedia.org/wiki/Miss_Martinique",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://la1ere.franceinfo.fr/martinique/miss-france-2027-qui-est-maureen-alycia-lucea-merlin-miss-martinique-2026-1710502.html",
+    "credit": null,
+    "type": "presse"
+   },
+   {
+    "url": null,
+    "source_page": "https://rci.fm/martinique/infos/People/Maureen-Alycia-Lucea-Merlin-est-Miss-Martinique-2026-et-representera-lile-Miss-France",
+    "credit": null,
+    "type": "election_regionale"
+   }
+  ]
+ },
+ {
+  "id": "mayotte",
+  "region": "Miss Mayotte 2026",
+  "nom": "Emma Saïd Issouf",
+  "age": 24,
+  "date_naissance": null,
+  "taille_cm": 176,
+  "ville": "Mamoudzou (Kawéni)",
+  "departement": "Mayotte",
+  "etudes_profession": "Licence de lettres modernes ; souhaite devenir professeure des écoles",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-08-29",
+  "lieu_election_regionale": "Hôtel Ibis Styles, Dzaoudzi, Petite-Terre (Mayotte)",
+  "dauphine_ou_titres_precedents": null,
+  "passions": null,
+  "cause_defendue": null,
+  "bio": "Emma Saïd Issouf, 24 ans, vient du quartier de Kawéni à Mamoudzou. Diplômée en lettres modernes, elle souhaite devenir professeure des écoles. Elle a été élue Miss Mayotte 2026 le 29 août 2026 à l'hôtel Ibis Styles de Petite-Terre, parmi sept candidates, succédant à Kamillat Hervian.",
+  "instagram": null,
+  "faits_notables": [
+   "Taille : 1,76 m (Wikipédia, CGTV) ; 1,74 m selon Linfo.re",
+   "Dauphines régionales : Solénna Songné (1re), Rachima Galfane (2e)"
+  ],
+  "sources": [
+   "https://la1ere.franceinfo.fr/mayotte/emma-said-issouf-sacree-miss-mayotte-2026-1733441.html",
+   "https://www.linfo.re/ocean-indien/mayotte/emma-said-issouf-24-ans-elue-miss-mayotte-2026",
+   "https://la1ere.franceinfo.fr/mayotte/miss-mayotte-2026-emma-said-issouf-s-est-envolee-pour-l-aventure-miss-france-1755192.html",
+   "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://la1ere.franceinfo.fr/mayotte/emma-said-issouf-sacree-miss-mayotte-2026-1733441.html",
+    "credit": null,
+    "type": "election_regionale"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.linfo.re/ocean-indien/mayotte/emma-said-issouf-24-ans-elue-miss-mayotte-2026",
+    "credit": null,
+    "type": "election_regionale"
+   }
+  ]
+ },
+ {
+  "id": "midi-pyrenees",
+  "region": "Miss Midi-Pyrénées 2026",
+  "nom": "Carla Rachail",
+  "age": 23,
+  "date_naissance": null,
+  "taille_cm": 174,
+  "ville": "Toulouse",
+  "departement": "Haute-Garonne",
+  "etudes_profession": "Licence en management du sport ; vient de réussir le concours de sous-officier de gendarmerie",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-09-05",
+  "lieu_election_regionale": "Château de la Garrigue, Villemur-sur-Tarn (Haute-Garonne)",
+  "dauphine_ou_titres_precedents": "Miss Toulouse 2026",
+  "passions": [
+   "rugby (joueuse au Stade Toulousain)"
+  ],
+  "cause_defendue": "Égalité femmes-hommes, notamment dans le sport",
+  "bio": "Carla Rachail, 23 ans, est toulousaine. Titulaire d'une licence en management du sport, elle vient de réussir le concours de sous-officier de gendarmerie. Passionnée de rugby, elle joue au Stade Toulousain. Miss Toulouse 2026, elle a été élue Miss Midi-Pyrénées 2026 le 5 septembre 2026 au château de la Garrigue à Villemur-sur-Tarn.",
+  "instagram": null,
+  "faits_notables": [
+   "Joueuse de rugby au Stade Toulousain",
+   "Future sous-officier de gendarmerie"
+  ],
+  "sources": [
+   "https://www.lasemainedespyrenees.fr/carla-rachail-decroche-le-titre-de-miss-midi-pyrenees-2026-et-se-dirige-vers-miss-france/",
+   "https://fr.headtopics.com/news/miss-france-2027-qui-est-carla-rachail-miss-87967144",
+   "https://en.wikipedia.org/wiki/Miss_Midi-Pyr%C3%A9n%C3%A9es",
+   "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.lasemainedespyrenees.fr/carla-rachail-decroche-le-titre-de-miss-midi-pyrenees-2026-et-se-dirige-vers-miss-france/",
+    "credit": null,
+    "type": "election_regionale"
+   }
+  ]
+ },
+ {
+  "id": "nord-pas-de-calais",
+  "region": "Miss Nord-Pas-de-Calais 2026",
+  "nom": "Shana Mendes",
+  "age": 18,
+  "date_naissance": null,
+  "taille_cm": 175,
+  "ville": "Hem",
+  "departement": "Nord",
+  "etudes_profession": "Étudiante en licence de langues étrangères appliquées (dont portugais)",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-09-26",
+  "lieu_election_regionale": "Arena Stade Couvert, Liévin (Pas-de-Calais)",
+  "dauphine_ou_titres_precedents": "Miss Noyelles-sous-Lens",
+  "passions": null,
+  "cause_defendue": null,
+  "bio": "Shana Mendes, 18 ans, est originaire de Hem, dans la métropole lilloise. Étudiante en licence de langues étrangères appliquées, elle portait l'écharpe de Miss Noyelles-sous-Lens. Elle a été élue Miss Nord-Pas-de-Calais 2026 le 26 septembre 2026 à l'Arena Stade Couvert de Liévin, succédant à Lola Lachère.",
+  "instagram": null,
+  "faits_notables": [
+   "L'une des plus jeunes candidates (18 ans)",
+   "Région la plus titrée de la dernière décennie à Miss France"
+  ],
+  "sources": [
+   "https://www.deltafm.fr/shana-mendes-elue-miss-nord-pas-de-calais-2026",
+   "https://www.radio6.fr/article-78796-shana-mendes-de-noyelles-sous-lens-elue-miss-nord-pas-de-calais-2026-a-lievin.html",
+   "https://en.wikipedia.org/wiki/Miss_Nord-Pas-de-Calais",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.deltafm.fr/shana-mendes-elue-miss-nord-pas-de-calais-2026",
+    "credit": null,
+    "type": "election_regionale"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.radio6.fr/article-78796-shana-mendes-de-noyelles-sous-lens-elue-miss-nord-pas-de-calais-2026-a-lievin.html",
+    "credit": null,
+    "type": "election_regionale"
+   }
+  ]
+ },
+ {
+  "id": "normandie",
+  "region": "Miss Normandie 2026",
+  "nom": "Pauline Gourlez",
+  "age": 21,
+  "date_naissance": null,
+  "taille_cm": 171,
+  "ville": "Giberville",
+  "departement": "Calvados",
+  "etudes_profession": "Comptable (études de comptabilité)",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-05-22",
+  "lieu_election_regionale": "Zénith de Caen (Calvados)",
+  "dauphine_ou_titres_precedents": "Miss Calvados 2026 (élue le 3 avril 2026 à Saint-Lô)",
+  "passions": null,
+  "cause_defendue": null,
+  "bio": "Pauline Gourlez, 21 ans, est comptable et vit à Giberville, près de Caen, depuis l'enfance ; elle est née dans le Nord-Pas-de-Calais. Élue Miss Calvados le 3 avril 2026, elle a remporté le titre de Miss Normandie 2026 le 22 mai 2026 au Zénith de Caen parmi 17 candidates. Elle succède à Victoire Dupuis, 2e dauphine de Miss France 2026.",
+  "instagram": null,
+  "faits_notables": [
+   "Succède à une 2e dauphine de Miss France",
+   "Âge : 21 ans (Ouest-France) ; 22 ans selon le tableau Wikipédia Miss France 2027",
+   "Date : 22 mai (Tendance Ouest) ; un article Ouest-France évoque le 21 mai"
+  ],
+  "sources": [
+   "https://www.tendanceouest.com/actualite-439294-miss-france-qui-est-pauline-gourlez-elue-miss-normandie-2026",
+   "https://www.ouest-france.fr/culture/people/miss-france/entretien-une-lumiere-dans-un-monde-dobscurite-pauline-gourlez-elue-miss-normandie-2026-8c3aaf00-56b3-11f1-a4a7-f780c203d7d6",
+   "https://gnigrandouest.fr/miss-normandie-2026-pauline-gourlez/",
+   "https://www.organisationmissnormandie.fr/",
+   "https://en.wikipedia.org/wiki/Miss_Normandy",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.tendanceouest.com/actualite-439294-miss-france-qui-est-pauline-gourlez-elue-miss-normandie-2026",
+    "credit": null,
+    "type": "presse"
+   },
+   {
+    "url": null,
+    "source_page": "https://gnigrandouest.fr/miss-normandie-2026-pauline-gourlez/",
+    "credit": null,
+    "type": "election_regionale"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.organisationmissnormandie.fr/",
+    "credit": null,
+    "type": "autre"
+   }
+  ]
+ },
+ {
+  "id": "nouvelle-caledonie",
+  "region": "Miss Nouvelle-Calédonie 2026",
+  "nom": "Lana Prost",
+  "age": 17,
+  "date_naissance": null,
+  "taille_cm": 175,
+  "ville": "Le Mont-Dore",
+  "departement": "Nouvelle-Calédonie",
+  "etudes_profession": "Lycéenne en terminale",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-07-25",
+  "lieu_election_regionale": "Nouméa (hôtel Nouméa Beach Resort & Spa / jardins du resort)",
+  "dauphine_ou_titres_precedents": null,
+  "passions": null,
+  "cause_defendue": null,
+  "bio": "Lana Prost est la benjamine de la promotion. Lycéenne en terminale, elle a été élue Miss Nouvelle-Calédonie 2026 le 25 juillet 2026 à Nouméa, sous le numéro 5, lors d'une soirée sur le thème « Voyage en beauté ». Elle succède à Juliette Collet. Selon Wikipédia, elle vient du Mont-Dore.",
+  "instagram": null,
+  "faits_notables": [
+   "Benjamine de la promotion",
+   "Âge : 17 ans (Radio1, Planet.fr) ; 18 ans selon Lavoixdefrance et Wikipédia",
+   "Taille et commune relevées uniquement sur Wikipédia EN",
+   "Dauphines : Estelle Talatini (1re), Havaïki Berteau (2e)"
+  ],
+  "sources": [
+   "https://www.radio1.pf/lana-prost-couronnee-miss-nouvelle-caledonie-2026/",
+   "https://voixducaillou.nc/2026/07/26/miss-nouvelle-caledonie-retour-en-images-sur-le-sacre-de-lana-prost/",
+   "https://www.drom-com.fr/articles/lana-prost-elue-miss-nouvelle-caledonie-2026-86373.htm",
+   "https://www.lavoixdefrance.fr/actualites/lana-prost-18-ans-couronnee-miss-nouvelle-caledonie-2026-11019/",
+   "https://en.wikipedia.org/wiki/Miss_New_Caledonia",
+   "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://voixducaillou.nc/2026/07/26/miss-nouvelle-caledonie-retour-en-images-sur-le-sacre-de-lana-prost/",
+    "credit": null,
+    "type": "election_regionale"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.radio1.pf/lana-prost-couronnee-miss-nouvelle-caledonie-2026/",
+    "credit": null,
+    "type": "election_regionale"
+   }
+  ]
+ },
+ {
+  "id": "pays-de-la-loire",
+  "region": "Miss Pays de la Loire 2026",
+  "nom": "Maëlle Hamon",
+  "age": 23,
+  "date_naissance": null,
+  "taille_cm": 172,
+  "ville": "Nantes (Les Sorinières selon Wikipédia ; née à Saint-Herblain)",
+  "departement": "Loire-Atlantique",
+  "etudes_profession": "Éducatrice scolaire et accompagnante d'élèves en situation de handicap (AESH)",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-09-10",
+  "lieu_election_regionale": "Vallet (Loire-Atlantique)",
+  "dauphine_ou_titres_precedents": "3e participation à Miss Pays de la Loire",
+  "passions": null,
+  "cause_defendue": null,
+  "bio": "Maëlle Hamon, 23 ans, est née à Saint-Herblain et vit dans l'agglomération nantaise. Éducatrice scolaire, elle accompagne des élèves en situation de handicap. Elle a été élue Miss Pays de la Loire 2026 le 10 septembre 2026 à Vallet parmi 14 candidates, à sa troisième participation.",
+  "instagram": null,
+  "faits_notables": [
+   "Une URL Ouest-France mentionne « 27 ans » mais le corps de l'article indique 23 ans",
+   "Dauphines : Lyse De Oliveira (1re), Mareen Jumelais, Lilou Pradet, Mélissa Billard"
+  ],
+  "sources": [
+   "https://www.ouest-france.fr/pays-de-la-loire/video-maelle-hamon-elue-miss-pays-de-la-loire-2026-decouvrez-le-classement-des-dauphines-fb18b1c5-b4e5-3e34-954d-d450652ae62a",
+   "https://www.ouest-france.fr/culture/people/miss-france/maelle-hamon-une-nantaise-de-27-ans-elue-miss-pays-de-la-loire-hier-soir-a-vallet-a9bfca0e-ad18-11f1-8346-c9d5c99462af",
+   "https://en.wikipedia.org/wiki/Miss_Pays_de_la_Loire",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.ouest-france.fr/pays-de-la-loire/video-maelle-hamon-elue-miss-pays-de-la-loire-2026-decouvrez-le-classement-des-dauphines-fb18b1c5-b4e5-3e34-954d-d450652ae62a",
+    "credit": null,
+    "type": "election_regionale"
+   }
+  ]
+ },
+ {
+  "id": "picardie",
+  "region": "Miss Picardie 2026",
+  "nom": "Marie Villez",
+  "age": 26,
+  "date_naissance": null,
+  "taille_cm": 173,
+  "ville": "Amiens",
+  "departement": "Somme",
+  "etudes_profession": "En alternance dans la communication, poursuit ses études dans ce domaine",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-09-13",
+  "lieu_election_regionale": "Elispace, Beauvais (Oise)",
+  "dauphine_ou_titres_precedents": null,
+  "passions": null,
+  "cause_defendue": null,
+  "bio": "Marie Villez, 26 ans, vient d'Amiens. En contrat d'alternance dans la communication, elle poursuit ses études dans ce domaine. Elle a été élue Miss Picardie 2026 le 13 septembre 2026 à l'Elispace de Beauvais parmi quinze candidates. Le jury était présidé par Rachel Legrain-Trapani, Miss France 2007 ; elle succède à Emma Boivin.",
+  "instagram": null,
+  "faits_notables": [
+   "Jury régional présidé par Rachel Legrain-Trapani"
+  ],
+  "sources": [
+   "https://www.ici.fr/hauts-de-france/oise-60/beauvais/marie-villez-elue-miss-picardie-2026-a-beauvais-4156195",
+   "https://www.ici.fr/emissions/t-es-d-min-coin/decouvrez-marie-villez-notre-nouvelle-miss-picardie-2026-qui-a-ete-elue-a-l-elispace-de-beauvais-5939327",
+   "https://en.wikipedia.org/wiki/Miss_Picardy",
+   "https://www.cnews.fr/beaute/2026-10-07/miss-france-2027-voici-les-31-candidates-regionales-1925646",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.ici.fr/hauts-de-france/oise-60/beauvais/marie-villez-elue-miss-picardie-2026-a-beauvais-4156195",
+    "credit": null,
+    "type": "election_regionale"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.ici.fr/emissions/t-es-d-min-coin/marie-villez-notre-nouvelle-miss-picardie-2026-se-prepare-a-l-election-de-miss-france-9919910",
+    "credit": null,
+    "type": "presse"
+   }
+  ]
+ },
+ {
+  "id": "poitou-charentes",
+  "region": "Miss Poitou-Charentes 2026",
+  "nom": "Mandy Goudal",
+  "age": 38,
+  "date_naissance": null,
+  "taille_cm": 174,
+  "ville": "Saintes",
+  "departement": "Charente-Maritime",
+  "etudes_profession": "Cheffe d'entreprise / commerçante",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-09-04",
+  "lieu_election_regionale": "Salle du Kube, Futuroscope, Jaunay-Marigny (Vienne)",
+  "dauphine_ou_titres_precedents": null,
+  "passions": null,
+  "cause_defendue": null,
+  "bio": "Mandy Goudal, 38 ans, vit à Saintes en Charente-Maritime. Cheffe d'entreprise, mariée et mère de deux enfants, elle est la doyenne de la promotion et la première mère de famille à concourir au niveau national. Elle a été élue Miss Poitou-Charentes 2026 le 4 septembre 2026 au Futuroscope, où se tiendra aussi la finale nationale.",
+  "instagram": null,
+  "faits_notables": [
+   "Doyenne de la promotion (38 ans ; 37 ans au moment de son élection)",
+   "Première mère de famille candidate à Miss France (deux enfants), mariée",
+   "Candidate de la région hôte"
+  ],
+  "sources": [
+   "https://www.ici.fr/nouvelle-aquitaine/vienne-86/jaunay-marigny/video-mandy-goudal-37-ans-elue-miss-poitou-charentes-2026-au-futuroscope-9871230",
+   "https://www.ici.fr/emissions/l-invite-de-la-redaction-de-ici-la-rochelle/miss-france-la-beaute-n-a-pas-d-age-a-38-ans-mandy-goudal-va-representer-la-region-poitou-charentes-a-l-election-3219414",
+   "https://stephanelarue.com/miss-france-2027-31-candidates-en-portrait-officiel-miss-poitou-charentes-a-38-ans/",
+   "https://en.wikipedia.org/wiki/Miss_Poitou-Charentes",
+   "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.ici.fr/nouvelle-aquitaine/vienne-86/jaunay-marigny/video-mandy-goudal-37-ans-elue-miss-poitou-charentes-2026-au-futuroscope-9871230",
+    "credit": null,
+    "type": "election_regionale"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.ici.fr/emissions/l-invite-de-la-redaction-de-ici-la-rochelle/miss-france-la-beaute-n-a-pas-d-age-a-38-ans-mandy-goudal-va-representer-la-region-poitou-charentes-a-l-election-3219414",
+    "credit": null,
+    "type": "presse"
+   }
+  ]
+ },
+ {
+  "id": "provence",
+  "region": "Miss Provence 2026",
+  "nom": "Ophélie Vitalbo",
+  "age": 28,
+  "date_naissance": null,
+  "taille_cm": 171,
+  "ville": "Velleron",
+  "departement": "Vaucluse",
+  "etudes_profession": null,
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-07-24",
+  "lieu_election_regionale": "Agora du Palais des congrès, Saint-Raphaël (Var)",
+  "dauphine_ou_titres_precedents": null,
+  "passions": null,
+  "cause_defendue": null,
+  "bio": "Ophélie Vitalbo, 28 ans, est originaire de Velleron dans le Vaucluse. Elle a été élue Miss Provence 2026 le 24 juillet 2026 à l'Agora du Palais des congrès de Saint-Raphaël, devant près de 1 000 spectateurs. Elle succède à Julie Zitouni, destituée de son titre après des propos injurieux visant d'autres candidates de Miss France 2026.",
+  "instagram": null,
+  "faits_notables": [
+   "Succède à une Miss Provence destituée (Julie Zitouni)",
+   "Âge : 28 ans (CGTV, Wikipédia Miss France 2027) ; 27 ans sur la page Wikipédia Miss Provence",
+   "Profession non trouvée"
+  ],
+  "sources": [
+   "https://www.varactu.fr/ophelie-vitalbo-elue-miss-provence-2026-devant-pres-de-1-000-spectateurs-a-saint-raphael/",
+   "https://actu.orange.fr/videos/actu-locale/miss-provence-2026-ophelie-vitalbo-representera-la-provence-au-concours-miss-france-CNT000002qFOhN.html",
+   "https://fr.headtopics.com/news/decouvrez-qui-est-miss-provence-2026-ophelie-vitalbo-85922982",
+   "https://en.wikipedia.org/wiki/Miss_Provence",
+   "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.varactu.fr/ophelie-vitalbo-elue-miss-provence-2026-devant-pres-de-1-000-spectateurs-a-saint-raphael/",
+    "credit": null,
+    "type": "election_regionale"
+   }
+  ]
+ },
+ {
+  "id": "reunion",
+  "region": "Miss Réunion 2026",
+  "nom": "Laetitia Roguet",
+  "age": 20,
+  "date_naissance": null,
+  "taille_cm": 172,
+  "ville": "Sainte-Anne (commune de Saint-Benoît)",
+  "departement": "La Réunion",
+  "etudes_profession": "Étudiante, préparatrice en pharmacie en formation",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-08-22",
+  "lieu_election_regionale": "Théâtre de Champ Fleuri, Saint-Denis (La Réunion)",
+  "dauphine_ou_titres_precedents": "Miss Saint-Joseph",
+  "passions": null,
+  "cause_defendue": "Santé mentale",
+  "bio": "Laetitia Roguet, 20 ans, est originaire de Sainte-Anne, dans l'est de La Réunion. Elle suit une formation de préparatrice en pharmacie. Candidate n° 7, elle a été élue Miss Réunion 2026 le 22 août 2026 au Théâtre de Champ Fleuri à Saint-Denis et couronnée par Hinaupoko Devèze, Miss France 2026. Elle souhaite défendre la cause de la santé mentale.",
+  "instagram": null,
+  "faits_notables": [
+   "Couronnée par la Miss France en titre",
+   "Âge : 20 ans (Linfo.re, Zinfos974) ; 21 ans sur Wikipédia",
+   "Taille relevée uniquement sur Wikipédia EN",
+   "Podium régional : Alycia Taochy, Stéphanie Lebreton"
+  ],
+  "sources": [
+   "https://www.linfo.re/la-reunion/societe/laetitia-roguet-elue-miss-reunion-2026-merci-mon-ti-pei-merci-zot-toute",
+   "https://la1ere.franceinfo.fr/reunion/laetitia-roguet-decroche-la-couronne-de-miss-reunion-2026-c-etait-l-annee-ou-il-fallait-que-j-ose-et-que-je-sorte-de-ma-coquille-1730257.html",
+   "https://www.zinfos974.com/laetitia-roguet-20-ans-sacree-miss-reunion-2026/",
+   "https://imazpress.com/selection-de-la-redaction/miss-reunion-elue",
+   "https://en.wikipedia.org/wiki/Miss_R%C3%A9union",
+   "https://www.cnews.fr/beaute/2026-10-07/miss-france-2027-voici-les-31-candidates-regionales-1925646",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://imazpress.com/selection-de-la-redaction/miss-reunion-elue",
+    "credit": null,
+    "type": "election_regionale"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.zinfos974.com/laetitia-roguet-20-ans-sacree-miss-reunion-2026/",
+    "credit": null,
+    "type": "election_regionale"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.linfo.re/la-reunion/societe/miss-reunion-2026-laetitia-roguet-en-toute-simplicite",
+    "credit": null,
+    "type": "presse"
+   }
+  ]
+ },
+ {
+  "id": "rhone-alpes",
+  "region": "Miss Rhône-Alpes 2026",
+  "nom": "Julia Grid-Costantino",
+  "age": 23,
+  "date_naissance": null,
+  "taille_cm": 174,
+  "ville": "Lyon",
+  "departement": "Rhône",
+  "etudes_profession": "Chargée de projet marketing dans un laboratoire dermocosmétique ; master marketing (IAE Lyon, source unique)",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-09-19",
+  "lieu_election_regionale": "Parc des expositions, Villefranche-sur-Saône (Rhône)",
+  "dauphine_ou_titres_precedents": "Miss Grand Lyon 2026 (mars), Miss Rhône 2026 (juin) ; déjà candidate en 2023",
+  "passions": null,
+  "cause_defendue": null,
+  "bio": "Julia Grid-Costantino, 23 ans, est lyonnaise. Titulaire d'un master en marketing, elle est chargée de projet marketing dans un laboratoire dermocosmétique. Élue Miss Grand Lyon en mars puis Miss Rhône en juin, elle a remporté Miss Rhône-Alpes 2026 le 19 septembre 2026 à Villefranche-sur-Saône. Elle succède à Noémie Baiamonte.",
+  "instagram": null,
+  "faits_notables": [
+   "Trois titres en 2026 (Grand Lyon, Rhône, Rhône-Alpes)",
+   "Taille : 1,74 m (Wikipédia, CGTV) ; 1,75 m selon une source",
+   "Certains médias orthographient « Grid-Constantino »",
+   "Dauphines : Margaux Bescond (1re), Angélina Valetic, Ombeline Chevalier, Clémentine Laclais"
+  ],
+  "sources": [
+   "https://www.lyoncapitale.fr/actualite/elue-miss-rhone-alpes-julia-grid-constantino-representera-la-region-a-miss-france-2027",
+   "https://www.radioscoop.com/infos/la-lyonnaise-julia-grid-costantino-couronnee-miss-rhone-alpes-2026_363973",
+   "https://www.lyonfemmes.com/article/252433/julia-grid-costantino-miss-rhone-2026-a-nous-de-montrer-que-l-on-peut-rester-des-femmes-authentiques-et-simples",
+   "https://www.lyonpremiere.fr/autres/voici-la-nouvelle-miss-rhone-alpes/",
+   "https://en.wikipedia.org/wiki/Miss_Rh%C3%B4ne-Alpes",
+   "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.lyoncapitale.fr/actualite/elue-miss-rhone-alpes-julia-grid-constantino-representera-la-region-a-miss-france-2027",
+    "credit": null,
+    "type": "election_regionale"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.radioscoop.com/infos/la-lyonnaise-julia-grid-costantino-couronnee-miss-rhone-alpes-2026_363973",
+    "credit": null,
+    "type": "election_regionale"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.lyonfemmes.com/article/252433/julia-grid-costantino-miss-rhone-2026-a-nous-de-montrer-que-l-on-peut-rester-des-femmes-authentiques-et-simples",
+    "credit": null,
+    "type": "presse"
+   }
+  ]
+ },
+ {
+  "id": "roussillon",
+  "region": "Miss Roussillon 2026",
+  "nom": "Juliette Gauthier",
+  "age": 23,
+  "date_naissance": null,
+  "taille_cm": 174,
+  "ville": "Le Boulou",
+  "departement": "Pyrénées-Orientales",
+  "etudes_profession": "Kinésithérapeute",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-07-05",
+  "lieu_election_regionale": "Théâtre de la Mer, Canet-en-Roussillon (Pyrénées-Orientales)",
+  "dauphine_ou_titres_precedents": null,
+  "passions": null,
+  "cause_defendue": null,
+  "bio": "Juliette Gauthier est kinésithérapeute et vient du Boulou, dans les Pyrénées-Orientales. Elle a été élue Miss Roussillon 2026 le 5 juillet 2026 au Théâtre de la Mer de Canet-en-Roussillon parmi douze candidates. Selon un média, elle a surmonté une affection de naissance qui l'avait contrainte un temps au fauteuil roulant. Son portrait officiel la montre en robe vichy jaune devant la mer.",
+  "instagram": null,
+  "faits_notables": [
+   "Désignée « grande favorite » par un article d'opinion (viralmag.fr, source peu fiable)",
+   "Passage par le fauteuil roulant rapporté par une seule source (beninwebtv.bj) — à confirmer",
+   "Âge : 22 ans à l'élection, 23 ans selon CGTV et Wikipédia Miss France 2027"
+  ],
+  "sources": [
+   "https://www.ici.fr/occitanie/pyrenees-orientales-66/perpignan/miss-france-2027-la-photo-officielle-de-miss-roussillon-devoilee-1985361",
+   "https://beninwebtv.bj/miss-france-2027-juliette-gauthier-elue-miss-roussillon-apres-avoir-ete-en-fauteuil-roulant-il-y-a-quelques-annees/",
+   "https://en.wikipedia.org/wiki/Miss_Roussillon",
+   "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.ici.fr/occitanie/pyrenees-orientales-66/perpignan/miss-france-2027-la-photo-officielle-de-miss-roussillon-devoilee-1985361",
+    "credit": null,
+    "type": "portrait_officiel"
+   }
+  ]
+ },
+ {
+  "id": "saint-martin-saint-barthelemy",
+  "region": "Miss Saint-Martin et Saint-Barthélemy 2026",
+  "nom": "Naïla Parotte",
+  "age": 22,
+  "date_naissance": null,
+  "taille_cm": 182,
+  "ville": "Marigot",
+  "departement": "Saint-Martin",
+  "etudes_profession": null,
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-08-01",
+  "lieu_election_regionale": null,
+  "dauphine_ou_titres_precedents": null,
+  "passions": null,
+  "cause_defendue": null,
+  "bio": "Naïla Parotte, 22 ans, originaire de Marigot, a été couronnée Miss Saint-Martin et Saint-Barthélemy 2026 le 1er août 2026. Elle marque le retour de cette délégation au concours national. Son île accueille cette année, pour la première fois, le voyage de préparation des 31 candidates. Les informations disponibles sur elle proviennent essentiellement de Wikipédia.",
+  "instagram": null,
+  "faits_notables": [
+   "Représente le territoire hôte du voyage de préparation",
+   "Retour de Saint-Martin/Saint-Barthélemy au concours",
+   "Fiche très lacunaire : âge, taille, commune et date d'élection relevés uniquement sur Wikipédia"
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Miss_Saint_Martin_and_Saint_Barth%C3%A9lemy",
+   "https://fr.wikipedia.org/wiki/Miss_Saint-Martin_et_Saint-Barth%C3%A9lemy",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   }
+  ]
+ },
+ {
+  "id": "tahiti",
+  "region": "Miss Tahiti 2026",
+  "nom": "Leia Diard",
+  "age": 22,
+  "date_naissance": null,
+  "taille_cm": 172,
+  "ville": "Arue",
+  "departement": "Polynésie française",
+  "etudes_profession": "Diplômée en gestion ; professeure de ʻori Tahiti (danse tahitienne)",
+  "couleur_cheveux": null,
+  "couleur_yeux": null,
+  "date_election_regionale": "2026-06-26",
+  "lieu_election_regionale": "Jardins de la mairie de Pirae (Tahiti)",
+  "dauphine_ou_titres_precedents": null,
+  "passions": [
+   "ʻori Tahiti (danse tahitienne)"
+  ],
+  "cause_defendue": "Sensibilisation à l'endométriose (maladie dont souffre sa mère)",
+  "bio": "Leia Diard, 22 ans, est diplômée en gestion et professeure de ʻori Tahiti. Elle a été élue Miss Tahiti 2026 le 26 juin 2026 dans les jardins de la mairie de Pirae, parmi dix candidates, succédant à Hinaupoko Devèze, Miss France 2026. Elle a choisi l'endométriose comme cause, maladie dont souffre sa mère. Selon Wikipédia, elle vient d'Arue.",
+  "instagram": null,
+  "faits_notables": [
+   "Représente la région de la Miss France sortante",
+   "Taille et commune relevées uniquement sur Wikipédia EN",
+   "Dauphines : Turama Tapi (1re), Heimiri Huri (2e) ; Miss Heiva : Orama Mollimard"
+  ],
+  "sources": [
+   "https://www.tntvnews.pf/polynesie/societe/miss-tahiti-2026-est-leia-diard/",
+   "https://www.tahiti-infos.com/Leia-Diard-sacree-Miss-Tahiti-2026_a238583.html",
+   "https://la1ere.franceinfo.fr/polynesie/miss-tahiti-2026-leia-diard-profite-d-un-dimanche-en-famille-avant-d-enchainer-les-rendez-vous-officiels-1715050.html",
+   "https://www.lnc.nc/article/leia-diard-miss-tahiti-2026-je-le-prends-un-peu-comme-une-destinee",
+   "https://misstahiti.com/election-2026/",
+   "https://www.tntvnews.pf/polynesie/societe/miss-france-2027-les-photos-officielles-des-31-candidates-devoilees/",
+   "https://en.wikipedia.org/wiki/Miss_Tahiti",
+   "https://en.wikipedia.org/wiki/Miss_France_2027",
+   "https://fr.news.yahoo.com/miss-france-2027-decouvrez-visage-123819920.html"
+  ],
+  "photos": [
+   {
+    "url": null,
+    "source_page": "https://www.sudouest.fr/culture/programmes-tv/miss-france/miss-france-2027-les-portraits-officiels-des-31-candidates-devoiles-31550235.php",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.planet.fr/miss-france-2027-decouvrez-en-images-les-portraits-des-31-pretendantes.3000390.817036.html",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.cg-tv.com/articles/miss-france-2027-les-portraits-des-31-candidates-devoiles-votez-pour-vos-favorites",
+    "credit": null,
+    "type": "portrait_officiel"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.tntvnews.pf/polynesie/societe/miss-tahiti-2026-est-leia-diard/",
+    "credit": null,
+    "type": "election_regionale"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.tahiti-infos.com/Leia-Diard-sacree-Miss-Tahiti-2026_a238583.html",
+    "credit": null,
+    "type": "election_regionale"
+   },
+   {
+    "url": null,
+    "source_page": "https://misstahiti.com/election-2026/",
+    "credit": null,
+    "type": "autre"
+   },
+   {
+    "url": null,
+    "source_page": "https://www.tntvnews.pf/polynesie/societe/miss-france-2027-les-photos-officielles-des-31-candidates-devoilees/",
+    "credit": null,
+    "type": "portrait_officiel"
+   }
+  ]
+ }
 ]
