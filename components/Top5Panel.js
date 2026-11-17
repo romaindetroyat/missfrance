@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useApp } from "@/app/providers";
 import { Thumb } from "@/components/Bits";
 import { RANKS } from "@/lib/scoring";
+import { useDrag } from "@/components/Drag";
 
 const SHORT = ["Miss France", "1re dauphine", "2e dauphine", "3e dauphine", "4e dauphine"];
 const Icon = ({ d }) => (
@@ -12,9 +13,11 @@ const Icon = ({ d }) => (
 // Liste ordonnable du Top 5 + bouton d'enregistrement. Utilisée dans le panneau latéral et la feuille mobile.
 export default function Top5Panel({ t, onNavigate }) {
   const app = useApp();
+  const dnd = useDrag();
+  const over = (i) => dnd?.drag && dnd.drag.slot === i;
   const title = t.phase === "adjust" ? "Mes ajustements" : "Mon Top 5";
   return (
-    <div className="t5">
+    <div className={`t5${dnd?.drag ? " drop-ready" : ""}`} data-drop="top5">
       <div className="t5-head">
         <h2>{title}</h2>
         <span className="muted small">{t.full ? "Complet ✓" : `${t.picks.length}/5`}</span>
@@ -25,7 +28,12 @@ export default function Top5Panel({ t, onNavigate }) {
           const id = t.picks[i];
           const c = id && app.byId[id];
           return c ? (
-            <li key={id} className="t5-row in">
+            <li key={id} className={`t5-row in${over(i) ? " over" : ""}${dnd?.drag?.id === id ? " lifted" : ""}`} data-slot={i}>
+              {t.editable && (
+                <span className="grip" {...dnd.handle(c.id, { immediate: true })} aria-label={`Glisser ${c.nom} pour changer son rang`} role="img">
+                  <svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor" aria-hidden="true"><circle cx="4" cy="3" r="1.6"/><circle cx="10" cy="3" r="1.6"/><circle cx="4" cy="9" r="1.6"/><circle cx="10" cy="9" r="1.6"/><circle cx="4" cy="15" r="1.6"/><circle cx="10" cy="15" r="1.6"/></svg>
+                </span>
+              )}
               <span className="rank solid">{i + 1}</span>
               <Link href={`/candidate/${c.id}`} className="t5-who" onClick={onNavigate}>
                 <Thumb c={c} />
@@ -43,9 +51,9 @@ export default function Top5Panel({ t, onNavigate }) {
               )}
             </li>
           ) : (
-            <li key={`empty-${i}`} className="t5-row empty">
+            <li key={`empty-${i}`} className={`t5-row empty${over(i) ? " over" : ""}`} data-slot={i}>
               <span className="rank dashed">{i + 1}</span>
-              <span className="muted small">{label}{t.editable && i === t.picks.length ? " — touche « + » sur une candidate" : ""}</span>
+              <span className="muted small">{label}{t.editable && i === t.picks.length ? (dnd?.drag ? " — dépose ici" : " — « + » ou glisse une photo ici") : ""}</span>
             </li>
           );
         })}

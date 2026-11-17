@@ -6,6 +6,7 @@ import { supabase } from "@/lib/supabase";
 import Login from "./Login";
 import ToastProvider from "./Toast";
 import Top5Dock from "./Top5Dock";
+import DragProvider from "./Drag";
 
 const LINKS = [
   ["/", "Candidates"],
@@ -84,8 +85,10 @@ export default function Shell({ children }) {
         </div>
       </header>
       <ToastProvider>
-        <main className="wrap page">{children}</main>
-        {path !== "/prono" && path !== "/admin" && path !== "/admin/instagram" && <Top5Dock />}
+        <DragProvider>
+          <main className="wrap page">{children}</main>
+          {path !== "/prono" && path !== "/admin" && path !== "/admin/instagram" && <Top5Dock />}
+        </DragProvider>
       </ToastProvider>
     </>
   );

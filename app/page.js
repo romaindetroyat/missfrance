@@ -7,6 +7,7 @@ import Top5Panel from "@/components/Top5Panel";
 import { PHOTO_TYPES, featured } from "@/lib/photos";
 import { useTop5 } from "@/lib/top5";
 import { useCompare } from "@/lib/compare";
+import { useDrag } from "@/components/Drag";
 
 const SORTS = {
   region: ["Région", (a, b) => a.region.localeCompare(b.region, "fr")],
@@ -21,6 +22,7 @@ export default function Home() {
   const app = useApp();
   const t = useTop5();
   const cmp = useCompare();
+  const dnd = useDrag();
   const [sort, setSort] = useState("region");
   const [ptype, setPtype] = useState("officiel");
   const list = [...app.candidates].sort(SORTS[sort][1]);
@@ -50,7 +52,7 @@ export default function Home() {
           <p className="hint first">{cmp.ids.length} candidate{cmp.ids.length > 1 ? "s" : ""} à comparer · <a href="/comparer">Ouvrir le comparateur</a> · <a href="/defile">Lancer le défilé</a></p>
         )}
         {t.editable && t.picks.length === 0 && (
-          <p className="hint first">Touche <span className="plus-demo"><Plus /></span> sur une photo pour l'ajouter à ton Top 5, dans l'ordre de tes préférences.</p>
+          <p className="hint first">Touche <span className="plus-demo"><Plus /></span> sur une photo, ou glisse-la vers ton Top 5 (appui long sur mobile), pour l'ajouter dans l'ordre de tes préférences.</p>
         )}
         <div className="grid" key={sort}>
           {list.map((c, i) => {
@@ -59,10 +61,10 @@ export default function Home() {
             const n = app.photosBy[c.id]?.length || 0;
             return (
               <article key={c.id} className="card in" style={{ animationDelay: `${Math.min(i, 20) * 35}ms` }}>
-                <div className="card-img">
-                  <Link href={`/candidate/${c.id}`} className="card-link" aria-label={`Voir la fiche et les photos de ${c.nom}`}>
+                <div className={`card-img${dnd?.drag?.id === c.id ? " lifted" : ""}`} {...dnd.handle(c.id)}>
+                  <Link href={`/candidate/${c.id}`} className="card-link" draggable={false} aria-label={`Voir la fiche et les photos de ${c.nom}`}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    {src ? <img key={src} src={src} alt="" loading="lazy" className="fadein" /> : <span className="placeholder" />}
+                    {src ? <img key={src} src={src} alt="" loading="lazy" className="fadein" draggable={false} /> : <span className="placeholder" />}
                   </Link>
                   {n > 0 && <span className="pill">{n} photo{n > 1 ? "s" : ""}</span>}
                   {fallback && <span className="pill soft">Portrait</span>}

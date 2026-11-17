@@ -4,12 +4,14 @@ import { useApp } from "@/app/providers";
 import { portraitOf } from "@/components/Bits";
 import Top5Panel from "@/components/Top5Panel";
 import { useTop5 } from "@/lib/top5";
+import { useDrag } from "@/components/Drag";
 
 // Barre « Mon Top 5 » fixée en bas sur mobile ; ouvre une feuille pour réordonner et enregistrer.
 export default function Top5Dock() {
   const app = useApp();
   const t = useTop5();
   const [open, setOpen] = useState(false);
+  const dnd = useDrag();
   useEffect(() => {
     if (!open) return;
     const onKey = (e) => e.key === "Escape" && setOpen(false);
@@ -21,7 +23,7 @@ export default function Top5Dock() {
   const label = t.phase === "adjust" ? "Mes ajustements" : "Mon Top 5";
   return (
     <>
-      <button className={`dock${t.dirty ? " dirty" : ""}`} onClick={() => setOpen(true)} aria-label={`Ouvrir ${label}`}>
+      <button data-drop="top5" className={`dock${t.dirty ? " dirty" : ""}${dnd?.drag ? " drop-ready" : ""}`} onClick={() => setOpen(true)} aria-label={`Ouvrir ${label}`}>
         <span className="dock-text">
           <strong>{label}</strong>
           <span>{!t.editable ? "Verrouillé" : t.dirty ? "À enregistrer" : t.full ? "Complet ✓" : `${t.picks.length}/5 choisies`}</span>
@@ -32,9 +34,9 @@ export default function Top5Dock() {
             const src = c && portraitOf(app, c);
             return c ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <span key={c.id} className="slot filled pop">{src ? <img src={src} alt="" /> : c.nom[0]}</span>
+              <span key={c.id} data-slot={i} className={`slot filled pop${dnd?.drag?.slot === i ? " over" : ""}`}>{src ? <img src={src} alt="" /> : c.nom[0]}</span>
             ) : (
-              <span key={`e${i}`} className="slot">{i + 1}</span>
+              <span key={`e${i}`} data-slot={i} className={`slot${dnd?.drag?.slot === i ? " over" : ""}`}>{i + 1}</span>
             );
           })}
         </span>

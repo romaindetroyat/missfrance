@@ -6,6 +6,7 @@ import { cote } from "@/components/Bits";
 import { photosOf, TYPE_LABEL } from "@/lib/photos";
 import { useTop5 } from "@/lib/top5";
 import { useCompare, COMPARE_MAX } from "@/lib/compare";
+import { useDrag } from "@/components/Drag";
 
 const TABS = [["officiel", "Portrait officiel"], ["election", "Robe & écharpe"], ["maillot", "Maillot"], ["voyage", "Voyage"], ["tout", "Toutes"]];
 const I = ({ d, size = 18 }) => (
@@ -65,6 +66,7 @@ export default function Comparer() {
   const app = useApp();
   const t = useTop5();
   const cmp = useCompare();
+  const dnd = useDrag();
   const [tab, setTab] = useState("officiel");
   const [ks, setKs] = useState({});
   const [zoom, setZoom] = useState(null);
@@ -123,11 +125,11 @@ export default function Comparer() {
           const setK = (v) => setKs({ ...ks, [c.id]: (v + ph.length) % ph.length });
           return (
             <article key={c.id} className="cmp-col in" style={{ animationDelay: `${n * 70}ms` }}>
-              <div className="cmp-photo">
+              <div className="cmp-photo" {...dnd.handle(c.id)}>
                 {p ? (
                   <button className="cmp-img" onClick={() => setZoom({ c, ph, k })} aria-label={`Zoomer sur la photo de ${c.nom}`}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img key={p.id} src={p.url} alt="" className="fadein" />
+                    <img key={p.id} src={p.url} alt="" className="fadein" draggable={false} />
                   </button>
                 ) : <div className="cmp-none">Pas de photo « {TYPE_LABEL[tab]?.toLowerCase() || tab} » vérifiée</div>}
                 {ph.length > 0 && <span className="counter">{k + 1}/{ph.length}</span>}
