@@ -16,7 +16,7 @@ export default function RankPicker({ t, id, dark = false }) {
           <button key={i} className={`${mine === i ? "on" : ""}${other ? " taken" : ""}`}
             onClick={() => (mine === i ? t.clearSlot(i) : t.placeAt(id, i))}
             aria-pressed={mine === i}
-            title={mine === i ? "Retirer de ce rang" : other ? `Remplacer ${other.nom}` : `Placer en ${t.RANK_NAMES[i]}`}>
+            data-tip={mine === i ? "Retirer de ce rang" : other ? `Remplacer ${other.nom}` : `Placer en ${t.RANK_NAMES[i]}`}>
             <span className="rp-n">{label}</span>
             <span className="rp-who">{mine === i ? "✓" : other ? other.nom.split(" ")[0] : "libre"}</span>
           </button>

@@ -2,6 +2,7 @@
 import { useApp } from "../providers";
 import { CandidateRow } from "@/components/Bits";
 import { scoreFinal } from "@/lib/scoring";
+import Help from "@/components/Help";
 
 const hour = (t) => new Date(t).toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Paris" }).replace(":", " h ");
 
@@ -26,7 +27,7 @@ export default function Joueurs() {
     const played = app.status.filter((s) => s.has_played).length;
     return (
       <>
-        <h1>Joueurs</h1>
+        <h1>Joueurs <Help title="Les joueurs" label="les joueurs">Avant la cérémonie, tu vois seulement qui a déjà enregistré son Top 5. Les pronostics de chacun s'affichent à 21 h 10, quand plus personne ne peut changer ; les ajustements, à 22 h 30.</Help></h1>
         <p className="muted">
           {played} sur {app.status.length} ont enregistré leur Top 5. Les pronostics de chacun seront visibles au début de la cérémonie
           {app.lockAt ? `, à ${hour(app.lockAt)}` : ""}.
@@ -58,7 +59,7 @@ export default function Joueurs() {
 
   return (
     <>
-      <h1>{app.results ? "Classement" : "Les pronostics"}</h1>
+      <h1>{app.results ? "Classement" : "Les pronostics"} <Help title="Les scores" label="le calcul des scores">Une candidate de ton Top 5 présente dans le vrai Top 5 rapporte 10 × sa cote ; à la place exacte, c'est doublé ; Miss France trouvée en n° 1, triplé. Score final : 80 % Top 5 principal, 20 % ajustements.</Help></h1>
       {!app.results && (
         <p className="muted">
           {app.adjustLocked

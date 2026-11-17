@@ -3,8 +3,18 @@ import Providers from "./providers";
 import Shell from "@/components/Shell";
 
 export const metadata = {
+  metadataBase: new URL("https://missfrance-pi.vercel.app"),
   title: "Miss France 2027 — Pronostics",
   description: "Pronostics entre amis pour l'élection de Miss France 2027.",
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    siteName: "Miss France 2027 — Pronostics",
+    title: "Miss France 2027 — le grand pronostic entre amis",
+    description: "31 candidates, une couronne. Fais ton Top 5 et bats tes amis le soir de l'élection, le 12 décembre.",
+    url: "/",
+  },
+  twitter: { card: "summary_large_image", title: "Miss France 2027 — le grand pronostic entre amis", description: "31 candidates, une couronne. Fais ton Top 5 et bats tes amis !" },
   robots: { index: false, follow: false },
   applicationName: "Miss France 27",
   appleWebApp: { capable: true, title: "Miss France 27", statusBarStyle: "black-translucent" },

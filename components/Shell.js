@@ -7,6 +7,10 @@ import Login from "./Login";
 import ToastProvider from "./Toast";
 import Top5Dock from "./Top5Dock";
 import DragProvider from "./Drag";
+import Logo from "./Logo";
+import Share from "./Share";
+import Decor from "./Decor";
+import Tour, { startTour } from "./Tour";
 
 const LINKS = [
   ["/", "Candidates"],
@@ -15,7 +19,7 @@ const LINKS = [
   ["/comparer", "Comparer"],
   ["/prono", "Mon Top 5"],
   ["/joueurs", "Joueurs"],
-  ["/ia", "Pronos IA"],
+  ["/ia", "Pronos de l'IA"],
 ];
 
 export function countdown(target, now) {
@@ -57,9 +61,16 @@ export default function Shell({ children }) {
 
   return (
     <>
+      <Decor />
       <header className="top">
         <div className="wrap bar">
-          <Link href="/" className="brand">Miss France 2027</Link>
+          <Link href="/" className="brand-link" aria-label="Miss France 2027, accueil">
+            <Logo />
+            <span className="brand-stack">
+              <span className="brand">Miss France</span>
+              <span className="brand-sub">Pronos 2027</span>
+            </span>
+          </Link>
           <nav>
             {links.map(([href, label]) => (
               <Link key={href} href={href} className={path === href ? "active" : ""}>
@@ -67,6 +78,10 @@ export default function Shell({ children }) {
               </Link>
             ))}
           </nav>
+          <button type="button" className="tour-btn" onClick={startTour} aria-label="Visite guidée : comment ça marche ?" data-tip="Comment ça marche ?">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01" /></svg>
+            <span>Visite guidée</span>
+          </button>
         </div>
         <div className="wrap status">
           <span>
@@ -79,14 +94,15 @@ export default function Shell({ children }) {
               : "Pronostics verrouillés"}
           </span>
           <span className="who">
-            {app.me.display_name} ·{" "}
+            {app.me.display_name} · <Share /> ·{" "}
             <button className="link" onClick={() => supabase.auth.signOut()}>Quitter</button>
           </span>
         </div>
       </header>
       <ToastProvider>
         <DragProvider>
-          <main className="wrap page">{children}</main>
+          <main className="wrap page" key={path}>{children}</main>
+          <Tour />
           {!["/prono", "/admin", "/admin/instagram", "/defile"].includes(path) && <Top5Dock />}
         </DragProvider>
       </ToastProvider>

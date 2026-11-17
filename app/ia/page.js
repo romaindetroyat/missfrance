@@ -6,6 +6,7 @@ import { cote } from "@/components/Bits";
 import EtudeContent from "@/components/EtudeContent";
 import { photosOf } from "@/lib/photos";
 import { useTop5 } from "@/lib/top5";
+import Help from "@/components/Help";
 
 const RANKS = ["Miss France 2027", "1re dauphine", "2e dauphine", "3e dauphine", "4e dauphine"];
 const N_SIM = 20000;
@@ -74,7 +75,7 @@ export default function IA() {
     <article className="ia">
       <header className="ia-head">
         <p className="eyebrow">Pronostics de l'IA</p>
-        <h1>Qui sera Miss France 2027 ?</h1>
+        <h1>Qui sera Miss France 2027 ? <Help title="Les pronos de l'IA" label="les pronostics de l'IA">Les chances viennent d'un modèle statistique entraîné sur les élections 2010-2026, complété par les signaux de la saison (presse, Instagram, photos). La cote vaut environ 1 / chance d'être dans le Top 5 : plus elle est haute, plus la candidate rapporte de points si tu la trouves. Choisis un scénario pour éliminer des candidates et voir les chances se redistribuer.</Help></h1>
         <p className="muted">Le modèle combine l'historique de 17 éditions et les signaux de la saison (presse, Instagram, couverture médiatique), recalculés tous les 3 jours. Joue avec les scénarios : élimine des candidates, ou coche les demi-finalistes le soir de l'élection, et vois comment les chances se redistribuent.</p>
       </header>
 

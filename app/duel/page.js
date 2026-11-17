@@ -6,6 +6,7 @@ import { cote } from "@/components/Bits";
 import { photosOf } from "@/lib/photos";
 import { useTop5 } from "@/lib/top5";
 import { RANKS } from "@/lib/scoring";
+import Help from "@/components/Help";
 
 const KEY = "mf2027-duels";
 const ROUND = 12;
@@ -75,7 +76,7 @@ export default function Duel() {
     const top = rank.slice(0, 5);
     return (
       <div className="duel-end">
-        <h1>Ton classement d'après tes duels</h1>
+        <h1>Ton classement d'après tes duels <Help title="Ton classement" label="le classement des duels">Chaque candidate est classée selon la part de duels qu'elle a gagnés. « Utiliser comme mon Top 5 » remplit ton Top 5 avec les cinq premières ; tu peux ensuite le modifier.</Help></h1>
         <p className="muted">{s.played} duels joués. Classement selon ton taux de victoire, lissé pour ne pas surévaluer une candidate vue une seule fois.</p>
         <ol className="t5-list">
           {top.map((x, n) => {
@@ -119,7 +120,7 @@ export default function Duel() {
     <div className="duel">
       <div className="duel-head">
         <div>
-          <h1>Duel</h1>
+          <h1>Duel <Help title="Le duel" label="le duel">Deux candidates, une seule préférée : touche celle que tu choisis (ou utilise les flèches du clavier). Après 12 duels, ton classement apparaît et tu peux l'utiliser comme Top 5.</Help></h1>
           <p className="muted">Laquelle verrais-tu plus haut le soir de l'élection ? Touche sa photo.</p>
         </div>
         <span className="muted small">Duel {roundNo} sur {ROUND}</span>

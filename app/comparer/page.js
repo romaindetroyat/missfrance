@@ -7,6 +7,7 @@ import { photosOf, TYPE_LABEL } from "@/lib/photos";
 import { useTop5 } from "@/lib/top5";
 import { useCompare, COMPARE_MAX } from "@/lib/compare";
 import { useDrag } from "@/components/Drag";
+import Help from "@/components/Help";
 
 const TABS = [["officiel", "Portrait officiel"], ["election", "Robe & écharpe"], ["maillot", "Maillot"], ["voyage", "Voyage"], ["tout", "Toutes"]];
 const I = ({ d, size = 18 }) => (
@@ -78,7 +79,7 @@ export default function Comparer() {
     const fav = [...app.candidates].sort((a, b) => (a.cote ?? 99) - (b.cote ?? 99)).slice(0, 3).map((c) => c.id);
     return (
       <div className="cmp-empty">
-        <h1>Comparer</h1>
+        <h1>Comparer <Help title="Le comparateur" label="le comparateur">Choisis jusqu'à 4 candidates avec l'icône « comparer » de la grille ou du défilé. Elles s'affichent côte à côte avec le même type de photo. Clique sur une photo pour zoomer (molette ou curseur), et regarde le tableau : la meilleure valeur de chaque ligne est mise en avant.</Help></h1>
         <p className="muted">Mets jusqu'à {COMPARE_MAX} candidates côte à côte, sur le même type de photo, avec leurs chiffres.</p>
         <div className="side-actions">
           {t.count >= 2 && <button className="btn primary" onClick={() => cmp.set(t.picks.filter(Boolean).slice(0, COMPARE_MAX))}>Comparer mon Top 5</button>}
@@ -101,7 +102,7 @@ export default function Comparer() {
   return (
     <div className="cmp">
       <div className="cmp-head">
-        <h1>Comparer <span className="muted small">{sel.length}/{COMPARE_MAX}</span></h1>
+        <h1>Comparer <span className="muted small">{sel.length}/{COMPARE_MAX}</span> <Help title="Le comparateur" label="le comparateur">Les candidates s'affichent côte à côte avec le même type de photo. Clique sur une photo pour zoomer (molette ou curseur). Dans le tableau, la meilleure valeur de chaque ligne est mise en avant.</Help></h1>
         {sel.length < COMPARE_MAX && (
           <div className="adder">
             <select value={adding} onChange={(e) => setAdding(e.target.value)} aria-label="Ajouter une candidate au comparateur">

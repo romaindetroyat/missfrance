@@ -7,6 +7,7 @@ import { PHOTO_TYPES, TYPE_LABEL, photosOf } from "@/lib/photos";
 import { useTop5 } from "@/lib/top5";
 import { useCompare } from "@/lib/compare";
 import RankPicker from "@/components/RankPicker";
+import Help from "@/components/Help";
 
 const DURATION = 5000;
 const ORDERS = {
@@ -131,6 +132,7 @@ export default function Defile() {
           </div>
           <div className="story-top">
             <span>{i + 1} / {list.length}{cur && TYPE_LABEL[cur.type] ? ` · ${TYPE_LABEL[cur.type]}` : ""}</span>
+            <Help sheet title="Le défilé" label="le défilé">Les photos passent toutes seules. Touche à droite ou à gauche pour la photo suivante ou précédente, glisse vers le haut ou le bas (ou utilise les flèches) pour changer de candidate. Les boutons à droite l'ajoutent à ton Top 5 ou au comparateur.</Help>
             <button className="ghost-btn" onClick={() => setPaused((p) => !p)} aria-label={paused ? "Lecture" : "Pause"}>
               {paused ? <I d="M7 5l12 7-12 7z" size={18} /> : <I d="M8 5v14M16 5v14" size={18} />}
             </button>
@@ -142,15 +144,15 @@ export default function Defile() {
             <div>
               {t.editable ? (
                 pos >= 0 ? (
-                  <button key="on" className="act gold pop" onClick={() => t.toggle(c.id)} aria-label={`Retirer de mon Top 5 (n° ${pos + 1})`}>{pos + 1}</button>
+                  <button key="on" className="act gold pop" onClick={() => t.toggle(c.id)} aria-label={`Retirer de mon Top 5 (n° ${pos + 1})`} data-tip="Retirer de mon Top 5" data-tip-side="left">{pos + 1}</button>
                 ) : (
-                  <button key="off" className="act" onClick={() => t.toggle(c.id)} disabled={t.full} aria-label="Ajouter à mon Top 5"><I d="M12 5v14M5 12h14" /></button>
+                  <button key="off" className="act" onClick={() => t.toggle(c.id)} disabled={t.full} aria-label="Ajouter à mon Top 5" data-tip="Ajouter à mon Top 5" data-tip-side="left"><I d="M12 5v14M5 12h14" /></button>
                 )
               ) : <span className="act">{pos >= 0 ? pos + 1 : "–"}</span>}
               <span>Top 5</span>
             </div>
             <div>
-              <button className={`act${inCmp ? " blue" : ""}`} onClick={() => cmp.toggle(c.id)} aria-label={inCmp ? "Retirer du comparateur" : "Ajouter au comparateur"} aria-pressed={inCmp}>
+              <button className={`act${inCmp ? " blue" : ""}`} onClick={() => cmp.toggle(c.id)} aria-label={inCmp ? "Retirer du comparateur" : "Ajouter au comparateur"} aria-pressed={inCmp} data-tip={inCmp ? "Retirer du comparateur" : "Comparer"} data-tip-side="left">
                 <I d="M3 5h7v14H3zM14 5h7v14h-7z" />
               </button>
               <span>Comparer</span>
