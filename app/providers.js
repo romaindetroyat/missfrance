@@ -87,7 +87,10 @@ export default function Providers({ children }) {
     const photosBy = {};
     const rank = { officiel: 0, portrait: 1, election: 2, maillot: 3, voyage: 4, autre: 5 };
     for (const p of data.photos) (photosBy[p.candidate_id] ||= []).push(p);
-    for (const k in photosBy) photosBy[k].sort((a, b) => (rank[a.type] ?? 6) - (rank[b.type] ?? 6));
+    // Le portrait officiel (tenue officielle Miss France 2027) en tête de chaque fiche, puis par catégorie
+    const official = Object.fromEntries(data.candidates.map((c) => [c.id, c.portrait_url]));
+    const key = (p) => (p.url === official[p.candidate_id] ? -1 : rank[p.type] ?? 6);
+    for (const k in photosBy) photosBy[k].sort((a, b) => key(a) - key(b));
     return {
       session,
       email,
