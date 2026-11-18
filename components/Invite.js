@@ -95,16 +95,17 @@ export function PlayersAdmin() {
   const by = (ch) => (sends || []).filter((x) => x.channel === ch).length;
   const phones = new Set((sends || []).filter((x) => x.phone).map((x) => x.phone)).size;
   const when = (d) => new Date(d).toLocaleString("fr-FR", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
-  const CH = { whatsapp: "WhatsApp", sms: "SMS", copie: "Message copié" };
+  const CH = { whatsapp: "Invitation WhatsApp", sms: "Invitation SMS", copie: "Message copié", lien: "Inscrit par lien", email: "Ajouté par e-mail" };
   return (
     <>
     <section className="block">
-      <h2>Invitations envoyées <span className="muted small">({sends ? sends.length : "…"}, visible par toi seul)</span></h2>
+      <h2>Invitations <span className="muted small">({sends ? sends.length : "…"}, visible par toi seul)</span></h2>
       {sends && (
         <p className="muted small">
           {by("whatsapp")} par WhatsApp · {by("sms")} par SMS · {by("copie")} message{by("copie") > 1 ? "s" : ""} copié{by("copie") > 1 ? "s" : ""}
-          {phones ? ` · ${phones} numéro${phones > 1 ? "s" : ""} différent${phones > 1 ? "s" : ""}` : ""} — et {list.length} inscrits au total.
-          Les envois sans numéro (contact ou groupe choisi dans WhatsApp) sont comptés sans destinataire.
+          {phones ? ` (${phones} numéro${phones > 1 ? "s" : ""} différent${phones > 1 ? "s" : ""})` : ""}
+          {" "}· {by("lien")} inscrit{by("lien") > 1 ? "s" : ""} par lien · {by("email")} ajouté{by("email") > 1 ? "s" : ""} par e-mail — {list.length} joueurs au total.
+          Les envois WhatsApp sont comptés depuis le 18 novembre au soir ; ceux d'avant n'apparaissent qu'à travers les inscriptions par lien.
         </p>
       )}
       {sends?.length > 0 && (
@@ -112,7 +113,7 @@ export function PlayersAdmin() {
           {sends.slice(0, 50).map((x, i) => (
             <div key={i} className="row">
               <span className="row-main">
-                <span className="name">{CH[x.channel] || x.channel}{x.phone ? ` · ${x.phone}` : ""}</span>
+                <span className="name">{CH[x.channel] || x.channel}{x.invitee ? ` : ${x.invitee}` : ""}{x.phone ? ` · ${x.phone}` : ""}</span>
                 <span className="meta">par {x.sender_name} · {when(x.created_at)}</span>
               </span>
             </div>
