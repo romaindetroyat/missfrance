@@ -1,15 +1,31 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [state, setState] = useState({ step: "idle", msg: "" });
+  // Lien d'invitation (?invite=code) : la personne s'inscrit elle-même avec son prénom et son e-mail
+  const [code, setCode] = useState(null);
+  const [inviter, setInviter] = useState(null);
+  const [name, setName] = useState("");
+  useEffect(() => {
+    let c = new URLSearchParams(window.location.search).get("invite");
+    try { if (c) sessionStorage.setItem("mf-invite", c); else c = sessionStorage.getItem("mf-invite"); } catch {}
+    if (!c) return;
+    setCode(c);
+    supabase.rpc("invite_from", { p_code: c }).then(({ data }) => setInviter(data || ""));
+  }, []);
 
   async function submit(e) {
     e.preventDefault();
     const clean = email.trim().toLowerCase();
     setState({ step: "sending", msg: "" });
+    if (code && inviter) {
+      const { data: joined, error: ej } = await supabase.rpc("join_with_code", { p_code: code, p_name: name, p_email: clean });
+      if (ej) return setState({ step: "idle", msg: "Inscription impossible pour le moment. Réessaie dans un instant." });
+      if (joined !== "ok") return setState({ step: "idle", msg: joined });
+    }
     const { data: invited, error: e1 } = await supabase.rpc("is_invited", { p_email: clean });
     if (e1) return setState({ step: "idle", msg: "Connexion impossible pour le moment. Réessaie dans un instant." });
     if (!invited)
@@ -33,6 +49,10 @@ export default function Login() {
       <p className="eyebrow">12 décembre 2026</p>
       <h1>Miss France 2027</h1>
       <p className="lead">Les pronostics entre amis. Compose ton Top 5, dans l'ordre.</p>
+      {code && inviter && state.step !== "sent" && (
+        <p className="notice"><strong>{inviter} t'invite à jouer !</strong> Indique ton prénom et ton adresse e-mail : tu recevras ton lien de connexion.</p>
+      )}
+      {code && inviter === "" && <p className="error">Ce lien d'invitation n'est plus valable. Demande un nouveau lien à ton ami.</p>}
       {state.step === "sent" ? (
         <div className="notice">
           <strong>Lien envoyé à {email.trim().toLowerCase()}.</strong>
@@ -40,6 +60,12 @@ export default function Login() {
         </div>
       ) : (
         <form onSubmit={submit}>
+          {code && inviter && (
+            <>
+              <label htmlFor="name">Ton prénom</label>
+              <input id="name" required maxLength={40} autoComplete="given-name" placeholder="Camille" value={name} onChange={(e) => setName(e.target.value)} />
+            </>
+          )}
           <label htmlFor="email">Ton adresse e-mail</label>
           <input
             id="email"

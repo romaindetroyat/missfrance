@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useApp } from "@/app/providers";
 import { supabase } from "@/lib/supabase";
 import { useToast } from "./Toast";
@@ -65,7 +65,45 @@ export default function Invite() {
         </form>
       )}
       <p className="muted small">La personne se connecte ensuite avec cette adresse : elle reçoit un lien de connexion par e-mail, en anglais (« Magic Link »).</p>
+      <InviteLink />
     </section>
+  );
+}
+
+// Lien d'invitation personnel, pour les amis dont on n'a que le numéro : ils s'inscrivent eux-mêmes
+// avec leur prénom et leur e-mail. Envoi direct sur WhatsApp si on saisit leur numéro.
+const waNumber = (raw) => {
+  let d = String(raw || "").replace(/\D/g, "");
+  if (d.startsWith("00")) d = d.slice(2);
+  else if (d.length === 10 && d.startsWith("0")) d = "33" + d.slice(1); // numéro français
+  return d;
+};
+function InviteLink() {
+  const [code, setCode] = useState(null);
+  const [phone, setPhone] = useState("");
+  useEffect(() => { supabase.rpc("my_invite_code").then(({ data }) => setCode(data || null)); }, []);
+  if (!code) return null;
+  const link = `${window.location.origin}/?invite=${code}`;
+  const text = `Viens faire ton pronostic Miss France 2027 avec nous ! 👑 Ouvre ce lien, entre ton prénom et ton e-mail : ${link}\n\nTu recevras ensuite un e-mail de connexion en anglais (« Magic Link », expéditeur Supabase) : clique sur « Log In ». Pense à regarder dans tes indésirables.`;
+  const send = (e) => {
+    e.preventDefault();
+    const n = waNumber(phone);
+    window.open(`https://wa.me/${n.length >= 8 ? n : ""}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+  };
+  const copy = async () => { try { await navigator.clipboard.writeText(text); alert("Message copié."); } catch { prompt("Copie ce message :", text); } };
+  return (
+    <div className="invite-link">
+      <h3 className="sub">Tu n'as que son numéro ?</h3>
+      <p className="muted small">Envoie-lui ton lien d'invitation : il s'inscrit lui-même avec son prénom et son e-mail.</p>
+      <form className="invite-form" onSubmit={send}>
+        <label>
+          <span>Numéro WhatsApp (facultatif)</span>
+          <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} inputMode="tel" autoComplete="off" placeholder="06 12 34 56 78" />
+        </label>
+        <button className="btn primary">Envoyer sur WhatsApp</button>
+        <button type="button" className="btn" onClick={copy}>Copier le message</button>
+      </form>
+    </div>
   );
 }
 
