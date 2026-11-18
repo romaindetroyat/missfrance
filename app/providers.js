@@ -5,6 +5,20 @@ import { supabase } from "@/lib/supabase";
 const Ctx = createContext(null);
 export const useApp = () => useContext(Ctx);
 
+// Supabase renvoie au plus 1000 lignes par requête : les photos sont chargées par tranches, en parallèle
+const PHOTO_COLS = "id,candidate_id,url,type,caption,credit,source_page,width,height,added_at";
+async function allPhotos() {
+  const { count, error } = await supabase.from("photos").select("id", { count: "exact", head: true }).eq("hidden", false).eq("review", "ok");
+  if (error) return { error };
+  const PAGE = 1000;
+  const pages = await Promise.all(Array.from({ length: Math.max(1, Math.ceil((count || 0) / PAGE)) }, (_, i) =>
+    supabase.from("photos").select(PHOTO_COLS).eq("hidden", false).eq("review", "ok").order("id").range(i * PAGE, (i + 1) * PAGE - 1)));
+  const bad = pages.find((r) => r.error);
+  if (bad) return bad;
+  const data = pages.flatMap((r) => r.data).sort((x, y) => String(y.added_at).localeCompare(String(x.added_at)));
+  return { data, error: null };
+}
+
 export default function Providers({ children }) {
   const [session, setSession] = useState(undefined); // undefined = chargement
   const [data, setData] = useState(null);
@@ -33,7 +47,7 @@ export default function Providers({ children }) {
       supabase.from("players").select("*"),
       supabase.from("settings").select("*").eq("id", 1).maybeSingle(),
       supabase.from("candidates").select("*").order("region"),
-      supabase.from("photos").select("id,candidate_id,url,type,caption,credit,source_page,width,height,added_at").eq("hidden", false).eq("review", "ok").order("added_at", { ascending: false }),
+      allPhotos(),
       supabase.from("predictions").select("*"),
       supabase.rpc("players_status"),
       supabase.from("adjustments").select("*"),
