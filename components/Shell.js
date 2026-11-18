@@ -51,6 +51,7 @@ export default function Shell({ children }) {
     return (
       <main className="center">
         <p>L'adresse {app.email} n'est pas sur la liste des invités.</p>
+        <p className="muted">Demande à un ami déjà inscrit de t'inviter depuis la page Joueurs, avec cette adresse.</p>
         <button className="btn" onClick={() => supabase.auth.signOut()}>Changer d'adresse</button>
       </main>
     );

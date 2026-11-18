@@ -716,3 +716,15 @@ img.fadein { animation: fade-in .5s ease both; }
   .card-link, .card-link img, .pick, .chip, .btn, .rankpick button { transition: none !important; }
   [data-tip]::after { transition: none !important; }
 }
+
+/* ===== Invitations ===== */
+.invite { background: color-mix(in srgb, var(--surface) 90%, transparent); border: 1px solid color-mix(in srgb, var(--gold) 28%, transparent); border-radius: 20px; padding: 16px 18px; margin-top: 24px; }
+.invite h2 { margin-top: 0; }
+.invite-form { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-end; }
+.invite-form label { display: flex; flex-direction: column; gap: 4px; flex: 1 1 180px; font-size: .8125rem; font-weight: 700; color: var(--muted); }
+.invite-form input { font: inherit; font-size: 1rem; padding: 10px 12px; border-radius: 12px; border: 1.5px solid var(--line); background: var(--surface); color: var(--text); min-height: 44px; }
+.invite-form input:focus { outline: none; border-color: var(--gold); }
+.invite-form .btn { min-height: 44px; }
+.invite-done p { margin: 0 0 10px; }
+.invite-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.invite .small { margin: 10px 0 0; }
