@@ -8,6 +8,7 @@ import { useCompare } from "@/lib/compare";
 import RankPicker from "@/components/RankPicker";
 import Help from "@/components/Help";
 import { sized, onImgError } from "@/lib/img";
+import { LikeButton } from "@/components/Likes";
 
 const DURATION = 5000;
 const ORDERS = {
@@ -140,6 +141,12 @@ export default function Defile() {
           <button className="tap right" onClick={() => goPhoto(1)} aria-label="Photo suivante" />
 
           <div className="story-actions">
+            {cur && typeof cur.id === "number" && (
+              <div>
+                <LikeButton photo={cur} className="act-like" />
+                <span>J'aime</span>
+              </div>
+            )}
             <div>
               {t.editable ? (
                 pos >= 0 ? (

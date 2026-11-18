@@ -11,6 +11,7 @@ import { useTop5 } from "@/lib/top5";
 import RankPicker from "@/components/RankPicker";
 import { sized, onImgError } from "@/lib/img";
 import { createPortal } from "react-dom";
+import { LikeButton, useLikes } from "@/components/Likes";
 
 const FIELDS = [
   ["ville", "Ville"],
@@ -42,7 +43,9 @@ export default function Candidate() {
   const [mode, setMode] = useState("slides"); // slides | mosaic
   const [idx, setIdx] = useState(0);
   const [zoom, setZoom] = useState(false);
-  const photos = ptype === "tout" ? all : all.filter((p) => p.type === ptype);
+  const likes = useLikes();
+  const loved = all.filter((p) => likes.count(p.id) > 0).sort((a, b) => likes.count(b.id) - likes.count(a.id));
+  const photos = ptype === "tout" ? all : ptype === "likes" ? loved : all.filter((p) => p.type === ptype);
   const track = useRef(null);
   const thumbs = useRef(null);
 
@@ -103,6 +106,11 @@ export default function Candidate() {
               <button className={`chip${ptype === "tout" ? " on" : ""}`} onClick={() => setPtype("tout")}>
                 Toutes <span className="count">{all.length}</span>
               </button>
+              {loved.length > 0 && (
+                <button className={`chip${ptype === "likes" ? " on" : ""}`} onClick={() => setPtype("likes")}>
+                  ♥ Coups de cœur <span className="count">{loved.length}</span>
+                </button>
+              )}
               {PHOTO_TYPES.map(([k, label]) => {
                 const n = all.filter((p) => p.type === k).length;
                 return n ? (
@@ -130,6 +138,7 @@ export default function Candidate() {
                     <button key={p.id} className="slide" onClick={() => { setIdx(i); setZoom(true); }} aria-label={`Agrandir la photo ${i + 1}`}>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={sized(p.url, 1000)} onError={onImgError(p.url)} alt={p.caption || `${c.nom}, photo ${i + 1}`} loading={i < 2 ? "eager" : "lazy"} />
+                      <LikeButton photo={p} className="on-photo" />
                     </button>
                   ))}
                 </div>
@@ -166,6 +175,7 @@ export default function Candidate() {
                 <button key={p.id} className="in" style={{ animationDelay: `${Math.min(i, 24) * 20}ms` }} onClick={() => { setIdx(i); setMode("slides"); }} aria-label={`Voir la photo ${i + 1} en grand`}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={sized(p.url, 400)} onError={onImgError(p.url)} alt="" loading="lazy" />
+                  <LikeButton photo={p} className="on-photo small" />
                 </button>
               ))}
             </div>
@@ -250,6 +260,7 @@ export default function Candidate() {
             {cur.source_page && <> · <a href={cur.source_page} target="_blank" rel="noreferrer">Source</a></>}
           </p>
           {app.me?.is_admin && <button className="hide" onClick={(e) => { e.stopPropagation(); hide(cur); }}>Masquer</button>}
+          <LikeButton photo={cur} className="lb-like" />
           {photos.length > 1 && (
             <>
               <button className="nav prev" aria-label="Photo précédente" disabled={idx === 0} onClick={(e) => { e.stopPropagation(); setIdx(idx - 1); }}><Chevron dir="left" /></button>

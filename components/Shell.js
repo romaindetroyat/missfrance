@@ -11,6 +11,7 @@ import Logo from "./Logo";
 import Share from "./Share";
 import Decor from "./Decor";
 import Tour, { startTour } from "./Tour";
+import { LikesProvider } from "./Likes";
 
 const LINKS = [
   ["/", "Candidates"],
@@ -102,11 +103,13 @@ export default function Shell({ children }) {
         </div>
       </header>
       <ToastProvider>
+        <LikesProvider>
         <DragProvider>
           <main className="wrap page" key={path}>{children}</main>
           <Tour />
           {!["/prono", "/admin", "/admin/instagram", "/admin/suivi", "/defile"].includes(path) && <Top5Dock />}
         </DragProvider>
+        </LikesProvider>
       </ToastProvider>
     </>
   );

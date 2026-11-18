@@ -8,6 +8,7 @@ import { useTop5 } from "@/lib/top5";
 import { useCompare } from "@/lib/compare";
 import { useDrag } from "@/components/Drag";
 import Help from "@/components/Help";
+import Favorites from "@/components/Favorites";
 import { sized, onImgError } from "@/lib/img";
 
 const SORTS = {
@@ -53,6 +54,7 @@ export default function Home() {
         )}
       </div>
     </section>
+    <Favorites />
     <div className="home">
       <section className="home-main">
         <div className="head">

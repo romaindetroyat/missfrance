@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useApp } from "@/app/providers";
 import { PHOTO_TYPES, TYPE_LABEL } from "@/lib/photos";
 import { sized, onImgError } from "@/lib/img";
+import { LikeButton, useLikes } from "./Likes";
 
 // Visionneuse plein écran des photos d'une candidate (depuis Mon Top 5, les listes de joueurs…) :
 // on fait défiler du doigt, filtre par rubrique, lien vers la fiche complète.
@@ -12,7 +13,9 @@ export default function PhotoViewer({ c, onClose }) {
   const app = useApp();
   const all = app.photosBy[c.id]?.length ? app.photosBy[c.id] : c.portrait_url ? [{ id: "p", url: c.portrait_url, type: "officiel" }] : [];
   const [type, setType] = useState("tout");
-  const photos = type === "tout" ? all : all.filter((p) => p.type === type);
+  const likes = useLikes();
+  const loved = all.filter((p) => likes.count(p.id) > 0).sort((a, b) => likes.count(b.id) - likes.count(a.id));
+  const photos = type === "tout" ? all : type === "likes" ? loved : all.filter((p) => p.type === type);
   const [idx, setIdx] = useState(0);
   const track = useRef(null);
 
@@ -47,6 +50,7 @@ export default function PhotoViewer({ c, onClose }) {
       </div>
       <div className="pv-chips" role="group" aria-label="Type de photo">
         <button className={type === "tout" ? "on" : ""} onClick={() => setType("tout")}>Toutes {all.length}</button>
+        {loved.length > 0 && <button className={type === "likes" ? "on" : ""} onClick={() => setType("likes")}>♥ Coups de cœur {loved.length}</button>}
         {PHOTO_TYPES.map(([k, label]) => counts[k] ? (
           <button key={k} className={type === k ? "on" : ""} onClick={() => setType(k)}>{label} {counts[k]}</button>
         ) : null)}
@@ -68,6 +72,7 @@ export default function PhotoViewer({ c, onClose }) {
       )}
       <div className="pv-foot">
         <span>{photos.length ? `${idx + 1} / ${photos.length}` : ""}{cur && TYPE_LABEL[cur.type] ? ` · ${TYPE_LABEL[cur.type]}` : ""}</span>
+        <LikeButton photo={cur} className="pv-like" />
         <Link href={`/candidate/${c.id}`} className="pv-link" onClick={onClose}>Voir sa fiche</Link>
       </div>
     </div>,
