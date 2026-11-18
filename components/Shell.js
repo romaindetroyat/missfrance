@@ -20,6 +20,7 @@ const LINKS = [
   ["/prono", "Mon Top 5"],
   ["/joueurs", "Joueurs"],
   ["/ia", "Pronos de l'IA"],
+  ["/bourse", "Bourse"],
 ];
 
 export function countdown(target, now) {
