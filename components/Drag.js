@@ -3,6 +3,7 @@ import { createContext, useCallback, useContext, useEffect, useRef, useState } f
 import { useApp } from "@/app/providers";
 import { portraitOf } from "@/components/Bits";
 import { useTop5 } from "@/lib/top5";
+import { sized, onImgError } from "@/lib/img";
 
 // Glisser-déposer des candidates vers le Top 5 (souris et doigt, via les Pointer Events).
 // Cibles : tout élément [data-slot="n"] (une place du Top 5) ou [data-drop="top5"] (ajout en fin de liste).
@@ -106,7 +107,7 @@ export default function DragProvider({ children }) {
       {drag && c && (
         <div className="drag-ghost" style={{ left: drag.x, top: drag.y }} aria-hidden>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          {src ? <img src={src} alt="" /> : <span>{c.nom[0]}</span>}
+          {src ? <img src={sized(src, 200)} onError={onImgError(src)} alt="" /> : <span>{c.nom[0]}</span>}
           <em>{drag.slot != null ? `N° ${drag.slot + 1}` : drag.zone ? "Ajouter" : c.nom.split(" ")[0]}</em>
         </div>
       )}

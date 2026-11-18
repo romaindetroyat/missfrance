@@ -8,6 +8,7 @@ import { useTop5 } from "@/lib/top5";
 import { useCompare } from "@/lib/compare";
 import { useDrag } from "@/components/Drag";
 import Help from "@/components/Help";
+import { sized, onImgError } from "@/lib/img";
 
 const SORTS = {
   region: ["Région", (a, b) => a.region.localeCompare(b.region, "fr")],
@@ -97,7 +98,7 @@ export default function Home() {
                 <div className={`card-img${dnd?.drag?.id === c.id ? " lifted" : ""}`} {...dnd.handle(c.id)}>
                   <Link href={`/candidate/${c.id}`} className="card-link" draggable={false} aria-label={`Voir la fiche et les photos de ${c.nom}`}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    {src ? <img key={src} src={src} alt="" loading="lazy" className="fadein" draggable={false} /> : <span className="placeholder" />}
+                    {src ? <img key={src} src={sized(src, 480)} onError={onImgError(src)} alt="" loading="lazy" className="fadein" draggable={false} /> : <span className="placeholder" />}
                   </Link>
                   {n > 0 && <span className="pill">{n} photo{n > 1 ? "s" : ""}</span>}
                   {fallback && <span className="pill soft">Portrait</span>}

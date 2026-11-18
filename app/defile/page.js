@@ -7,6 +7,7 @@ import { useTop5 } from "@/lib/top5";
 import { useCompare } from "@/lib/compare";
 import RankPicker from "@/components/RankPicker";
 import Help from "@/components/Help";
+import { sized, onImgError } from "@/lib/img";
 
 const DURATION = 5000;
 const ORDERS = {
@@ -103,7 +104,7 @@ export default function Defile() {
             return (
               <button key={x.id} className={`queue-item${j === i ? " on" : ""}`} onClick={() => { setDir(j > i ? "next" : "prev"); setI(j); setK(0); }} aria-current={j === i}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <span className="queue-img">{src && <img src={src} alt="" loading="lazy" />}</span>
+                <span className="queue-img">{src && <img src={sized(src, 160)} onError={onImgError(src)} alt="" loading="lazy" />}</span>
                 <span className="queue-txt"><span className="q-region" style={{ "--h": hueOf(x.id) }}>{x.region}</span><span className="name">{x.nom}</span></span>
                 {t.picks.includes(x.id) && <span className="queue-rank">{t.picks.indexOf(x.id) + 1}</span>}
               </button>
@@ -117,7 +118,7 @@ export default function Defile() {
           <div key={`${c.id}-${dir}`} className={`story-frame ${dir === "next" ? "from-below" : "from-above"}`}>
             {cur ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <img key={cur.id} src={cur.url} alt={cur.caption || c.nom} className="story-img kenburns" />
+              <img key={cur.id} src={sized(cur.url, 1000)} onError={onImgError(cur.url)} alt={cur.caption || c.nom} className="story-img kenburns" />
             ) : (
               <div className="story-empty">Pas encore de photo {TYPE_LABEL[type] ? `« ${TYPE_LABEL[type].toLowerCase()} »` : ""} vérifiée pour {c.nom.split(" ")[0]}.</div>
             )}
@@ -187,7 +188,7 @@ export default function Defile() {
               {photos.map((p, j) => (
                 <button key={p.id} className={j === k ? "on" : ""} onClick={() => setK(j)} aria-label={`Photo ${j + 1}`}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={p.url} alt="" loading="lazy" />
+                  <img src={sized(p.url, 200)} onError={onImgError(p.url)} alt="" loading="lazy" />
                 </button>
               ))}
             </div>

@@ -9,6 +9,7 @@ import { PHOTO_TYPES, TYPE_LABEL } from "@/lib/photos";
 import { supabase } from "@/lib/supabase";
 import { useTop5 } from "@/lib/top5";
 import RankPicker from "@/components/RankPicker";
+import { sized, onImgError } from "@/lib/img";
 
 const FIELDS = [
   ["ville", "Ville"],
@@ -127,7 +128,7 @@ export default function Candidate() {
                   {photos.map((p, i) => (
                     <button key={p.id} className="slide" onClick={() => { setIdx(i); setZoom(true); }} aria-label={`Agrandir la photo ${i + 1}`}>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={p.url} alt={p.caption || `${c.nom}, photo ${i + 1}`} loading={i < 2 ? "eager" : "lazy"} />
+                      <img src={sized(p.url, 1000)} onError={onImgError(p.url)} alt={p.caption || `${c.nom}, photo ${i + 1}`} loading={i < 2 ? "eager" : "lazy"} />
                     </button>
                   ))}
                 </div>
@@ -145,7 +146,7 @@ export default function Candidate() {
                   {photos.map((p, i) => (
                     <button key={p.id} className={i === idx ? "on" : ""} onClick={() => go(i)} aria-label={`Voir la photo ${i + 1}`} aria-current={i === idx}>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={p.url} alt="" loading="lazy" />
+                      <img src={sized(p.url, 400)} onError={onImgError(p.url)} alt="" loading="lazy" />
                     </button>
                   ))}
                 </div>
@@ -163,7 +164,7 @@ export default function Candidate() {
               {photos.map((p, i) => (
                 <button key={p.id} className="in" style={{ animationDelay: `${Math.min(i, 24) * 20}ms` }} onClick={() => { setIdx(i); setMode("slides"); }} aria-label={`Voir la photo ${i + 1} en grand`}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={p.url} alt="" loading="lazy" />
+                  <img src={sized(p.url, 400)} onError={onImgError(p.url)} alt="" loading="lazy" />
                 </button>
               ))}
             </div>

@@ -8,6 +8,7 @@ import { useTop5 } from "@/lib/top5";
 import { useCompare, COMPARE_MAX } from "@/lib/compare";
 import { useDrag } from "@/components/Drag";
 import Help from "@/components/Help";
+import { sized, onImgError } from "@/lib/img";
 
 const TABS = [["officiel", "Portrait officiel"], ["election", "Robe & écharpe"], ["maillot", "Maillot"], ["voyage", "Voyage"], ["tout", "Toutes"]];
 const I = ({ d, size = 18 }) => (
@@ -47,7 +48,7 @@ function Zoom({ c, photos, start, onClose }) {
         onMouseMove={(e) => z > 1 && window.matchMedia("(hover: hover)").matches && setO(at(e))}
         onWheel={(e) => { setO(at(e)); setZ((v) => Math.max(1, Math.min(4, v - e.deltaY / 400))); }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        {p && <img key={p.id} src={p.url} alt={p.caption || c.nom} className="fadein" style={{ transform: `scale(${z})`, transformOrigin: `${o.x}% ${o.y}%` }} />}
+        {p && <img key={p.id} src={sized(p.url, 900)} onError={onImgError(p.url)} alt={p.caption || c.nom} className="fadein" style={{ transform: `scale(${z})`, transformOrigin: `${o.x}% ${o.y}%` }} />}
         <span className="zoom-hint">{z > 1 ? "Déplace-toi avec la souris ou touche un autre endroit · molette pour zoomer" : "Touche ou clique pour zoomer"}</span>
         {photos.length > 1 && <>
           <button className="arrow left" disabled={k === 0} onClick={(e) => { e.stopPropagation(); setK(k - 1); setZ(1); }} aria-label="Photo précédente"><I d="M15 6l-6 6 6 6" size={20} /></button>
@@ -130,7 +131,7 @@ export default function Comparer() {
                 {p ? (
                   <button className="cmp-img" onClick={() => setZoom({ c, ph, k })} aria-label={`Zoomer sur la photo de ${c.nom}`}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img key={p.id} src={p.url} alt="" className="fadein" draggable={false} />
+                    <img key={p.id} src={sized(p.url, 400)} onError={onImgError(p.url)} alt="" className="fadein" draggable={false} />
                   </button>
                 ) : <div className="cmp-none">Pas de photo « {TYPE_LABEL[tab]?.toLowerCase() || tab} » vérifiée</div>}
                 {ph.length > 0 && <span className="counter">{k + 1}/{ph.length}</span>}

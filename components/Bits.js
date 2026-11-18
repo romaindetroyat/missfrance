@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useApp } from "@/app/providers";
+import { sized, onImgError } from "@/lib/img";
 
 export const cote = (c) => (c?.cote != null ? Number(c.cote).toFixed(1).replace(".", ",") : "—");
 
@@ -13,7 +14,7 @@ export function Thumb({ c, size = 56 }) {
   const src = portraitOf(app, c);
   return src ? (
     // eslint-disable-next-line @next/next/no-img-element
-    <img className="thumb" src={src} alt="" width={size} height={size} loading="lazy" />
+    <img className="thumb" src={sized(src, 120)} onError={onImgError(src)} alt="" width={size} height={size} loading="lazy" />
   ) : (
     <span className="thumb placeholder" style={{ width: size, height: size }} aria-hidden />
   );

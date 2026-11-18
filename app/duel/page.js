@@ -7,6 +7,7 @@ import { photosOf } from "@/lib/photos";
 import { useTop5 } from "@/lib/top5";
 import { RANKS } from "@/lib/scoring";
 import Help from "@/components/Help";
+import { sized, onImgError } from "@/lib/img";
 
 const KEY = "mf2027-duels";
 const ROUND = 12;
@@ -86,7 +87,7 @@ export default function Duel() {
                 <span className="rank solid">{n + 1}</span>
                 <Link href={`/candidate/${x.c.id}`} className="t5-who">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <span className="thumb">{src && <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "50%" }} />}</span>
+                  <span className="thumb">{src && <img src={sized(src, 120)} onError={onImgError(src)} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "50%" }} />}</span>
                   <span><span className="region">{RANKS[n]}</span><span className="name">{x.c.nom}</span></span>
                 </Link>
                 <span className="meta">{x.w} / {x.v} gagnés</span>
@@ -138,7 +139,7 @@ export default function Duel() {
           return (
             <button key={c.id} className={`duel-card ${n ? "from-right" : "from-left"} ${state}`} onClick={() => vote(c)} aria-label={`Je préfère ${c.nom}`}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              {src ? <img src={src} alt="" /> : <span className="placeholder" />}
+              {src ? <img src={sized(src, 800)} onError={onImgError(src)} alt="" /> : <span className="placeholder" />}
               {!ph.length && tab !== "tout" && <span className="pill">Pas de photo de ce type</span>}
               <span className="duel-name"><span className="region">{c.region}</span><span className="name">{c.nom}</span><span className="meta">Cote {cote(c)}</span></span>
               <span className="duel-key" aria-hidden>{n ? "→" : "←"}</span>

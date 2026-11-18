@@ -5,6 +5,7 @@ import { portraitOf } from "@/components/Bits";
 import Top5Panel from "@/components/Top5Panel";
 import { useTop5 } from "@/lib/top5";
 import { useDrag } from "@/components/Drag";
+import { sized, onImgError } from "@/lib/img";
 
 // Barre « Mon Top 5 » fixée en bas sur mobile ; ouvre une feuille pour réordonner et enregistrer.
 export default function Top5Dock() {
@@ -34,7 +35,7 @@ export default function Top5Dock() {
             const src = c && portraitOf(app, c);
             return c ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <span key={c.id} data-slot={i} className={`slot filled pop${dnd?.drag?.slot === i ? " over" : ""}`}>{src ? <img src={src} alt="" /> : c.nom[0]}</span>
+              <span key={c.id} data-slot={i} className={`slot filled pop${dnd?.drag?.slot === i ? " over" : ""}`}>{src ? <img src={sized(src, 120)} onError={onImgError(src)} alt="" /> : c.nom[0]}</span>
             ) : (
               <span key={`e${i}`} data-slot={i} className={`slot${dnd?.drag?.slot === i ? " over" : ""}`}>{i + 1}</span>
             );

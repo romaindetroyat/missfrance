@@ -7,6 +7,7 @@ import EtudeContent from "@/components/EtudeContent";
 import { photosOf } from "@/lib/photos";
 import { useTop5 } from "@/lib/top5";
 import Help from "@/components/Help";
+import { sized, onImgError } from "@/lib/img";
 
 const RANKS = ["Miss France 2027", "1re dauphine", "2e dauphine", "3e dauphine", "4e dauphine"];
 const N_SIM = 20000;
@@ -86,7 +87,7 @@ export default function IA() {
           return (
             <Link key={`${c.id}-${i}`} href={`/candidate/${c.id}`} className={`ia-step s${i + 1} in`} style={{ animationDelay: `${i * 70}ms` }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <span className="ia-photo">{src && <img src={src} alt="" />}</span>
+              <span className="ia-photo">{src && <img src={sized(src, 400)} onError={onImgError(src)} alt="" />}</span>
               <span className="ia-rank">{RANKS[i]}</span>
               <span className="name">{c.nom}</span>
               <span className="region">{c.region}</span>
@@ -123,7 +124,7 @@ export default function IA() {
             return (
               <button key={c.id} className={`ia-cand${isOut ? " out" : ""}${mode === "demi" && inDemi ? " qualified" : ""}`} onClick={() => toggle(c.id)} aria-pressed={mode === "demi" ? inDemi : isOut}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <span className="ia-thumb">{src && <img src={src} alt="" />}</span>
+                <span className="ia-thumb">{src && <img src={sized(src, 160)} onError={onImgError(src)} alt="" loading="lazy" />}</span>
                 <span className="ia-txt">
                   <span className="region">{c.region}</span>
                   <span className="name">{c.nom}</span>
