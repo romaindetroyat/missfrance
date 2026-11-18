@@ -29,7 +29,7 @@ export default function Invite() {
     }
   };
 
-  const message = (d) => `${d.name}, viens faire ton pronostic Miss France 2027 avec nous ! 👑 Connecte-toi avec ton adresse ${d.email} : ${window.location.origin}`;
+  const message = (d) => `${d.name}, viens faire ton pronostic Miss France 2027 avec nous ! 👑 Connecte-toi avec ton adresse ${d.email} : ${window.location.origin}\n\nTu recevras un e-mail de connexion en anglais (« Magic Link », expéditeur Supabase) : clique sur « Log In ». Pense à regarder dans tes indésirables.`;
   const share = async (d) => {
     if (navigator.share) {
       try { await navigator.share({ title: "Miss France 2027 — Pronostics", text: message(d) }); return; } catch (err) { if (err?.name === "AbortError") return; }
@@ -64,7 +64,7 @@ export default function Invite() {
           <button className="btn primary" disabled={busy}>{busy ? "Ajout…" : "Inviter"}</button>
         </form>
       )}
-      <p className="muted small">La personne se connecte ensuite avec cette adresse : elle reçoit un lien de connexion par e-mail.</p>
+      <p className="muted small">La personne se connecte ensuite avec cette adresse : elle reçoit un lien de connexion par e-mail, en anglais (« Magic Link »).</p>
     </section>
   );
 }

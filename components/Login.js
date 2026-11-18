@@ -36,7 +36,7 @@ export default function Login() {
       {state.step === "sent" ? (
         <div className="notice">
           <strong>Lien envoyé à {email.trim().toLowerCase()}.</strong>
-          <p>Ouvre l'e-mail sur cet appareil et clique sur le lien pour entrer. Pense à vérifier les indésirables.</p>
+          <p>Ouvre l'e-mail sur cet appareil et clique sur le lien pour entrer. Il arrive en anglais (« Magic Link », envoyé par Supabase) : clique sur « Log In ». Pense à vérifier les indésirables.</p>
         </div>
       ) : (
         <form onSubmit={submit}>
