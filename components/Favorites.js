@@ -49,7 +49,7 @@ export default function Favorites({ max = 30 }) {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={sized(p.url, 360)} onError={onImgError(p.url)} alt="" loading="lazy" />
               <span className="fav-info"><span className="fav-region">{c.region}</span><span className="fav-name">{c.nom}</span></span>
-              <LikeButton photo={p} className="on-photo small" />
+              <LikeButton photo={p} inside className="fav-heart" />
             </button>
           );
         })}

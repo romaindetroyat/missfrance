@@ -814,3 +814,11 @@ img.fadein { animation: fade-in .5s ease both; }
   .invite-sheet { width: 100%; border-radius: 24px 24px 0 0; animation: sheet-up .42s var(--sheet-ease) both; }
   .invite-sheet .invite { border-radius: 24px 24px 0 0; padding-bottom: calc(18px + env(safe-area-inset-bottom)); }
 }
+/* Cœur avec le nombre de votes à l'intérieur (carrousel des coups de cœur) */
+.like-heart { position: absolute; right: 8px; bottom: 8px; z-index: 2; width: 44px; height: 42px; padding: 0; border: 0; background: none; cursor: pointer; display: grid; place-items: center; transition: transform .3s var(--spring); filter: drop-shadow(0 2px 6px rgba(0,0,0,.35)); }
+.like-heart:active { transform: scale(.85); }
+.like-heart svg { grid-area: 1 / 1; width: 44px; height: 42px; fill: rgba(255,255,255,.88); stroke: rgba(255,255,255,.95); stroke-width: 1.2; transition: fill .2s ease; }
+.like-heart .like-n { grid-area: 1 / 1; margin-top: -3px; font: 800 13px/1 var(--font-body); color: rgba(154, 61, 92, .55); font-variant-numeric: tabular-nums; }
+.like-heart.on svg { fill: #e2577f; stroke: #fff; animation: pop .4s var(--spring) both; }
+.like-heart.on .like-n { color: rgba(255,255,255,.85); }
+.fav-info { padding-right: 56px; padding-bottom: 12px; }

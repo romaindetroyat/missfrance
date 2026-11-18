@@ -44,10 +44,23 @@ const Heart = ({ filled }) => (
 );
 
 // Bouton cœur : un tap pour aimer / ne plus aimer, avec le nombre de « j'aime »
-export function LikeButton({ photo, className = "" }) {
+export function LikeButton({ photo, className = "", inside = false }) {
   const likes = useLikes();
   if (!photo || typeof photo.id !== "number") return null;
   const n = likes.count(photo.id), on = likes.mine(photo.id);
+  // Variante « inside » (carrousel des coups de cœur) : le nombre de votes s'inscrit dans le cœur, en contraste léger
+  if (inside) {
+    return (
+      <button type="button" className={`like-heart${on ? " on" : ""} ${className}`}
+        onClick={(e) => { e.preventDefault(); e.stopPropagation(); likes.toggle(photo.id); }}
+        aria-pressed={on} aria-label={`${n} j'aime${on ? ", dont le tien" : ""}. ${on ? "Retirer mon j'aime" : "J'aime cette photo"}`}>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" />
+        </svg>
+        <span className="like-n">{n}</span>
+      </button>
+    );
+  }
   return (
     <button type="button" className={`like-btn${on ? " on" : ""} ${className}`}
       onClick={(e) => { e.preventDefault(); e.stopPropagation(); likes.toggle(photo.id); }}
