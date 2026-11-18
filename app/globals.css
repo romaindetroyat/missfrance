@@ -728,9 +728,6 @@ img.fadein { animation: fade-in .5s ease both; }
 .lightbox { padding: calc(16px + env(safe-area-inset-top)) 16px calc(16px + env(safe-area-inset-bottom)); }
 .lightbox img { max-height: calc(100dvh - 120px - env(safe-area-inset-top) - env(safe-area-inset-bottom)); }
 .lightbox .close, .lightbox .hide { top: calc(12px + env(safe-area-inset-top)); }
-.paste-link { margin-top: 22px; padding: 14px 16px; border-radius: 16px; background: color-mix(in srgb, var(--surface) 92%, transparent); border: 1px dashed color-mix(in srgb, var(--gold) 55%, transparent); display: flex; flex-direction: column; gap: 8px; }
-.paste-link p { margin: 0; }
-.paste-link input { font: inherit; font-size: 1rem; padding: 10px 12px; border-radius: 12px; border: 1.5px solid var(--line); min-height: 44px; background: var(--surface); color: var(--text); }
 
 /* ===== Visionneuse de photos (Mon Top 5, listes) ===== */
 .photo-btn { position: relative; padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: 12px; flex: none; line-height: 0; transition: transform .3s var(--spring); }

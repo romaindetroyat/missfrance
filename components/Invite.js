@@ -21,7 +21,7 @@ export default function Invite() {
   useEffect(() => { supabase.rpc("my_invite_code").then(({ data }) => setCode(data || null)); }, []);
   if (!code) return null;
   const link = `${window.location.origin}/?invite=${code}`;
-  const text = `Viens faire ton pronostic Miss France 2027 avec nous ! 👑 Ouvre ce lien, entre ton prénom et ton e-mail : ${link}\n\nTu recevras ensuite un e-mail de connexion en anglais (« Magic Link », expéditeur Supabase) : clique sur « Log In ». Pense à regarder dans tes indésirables.`;
+  const text = `Viens faire ton pronostic Miss France 2027 avec nous ! 👑 Ouvre ce lien, entre ton prénom et ton e-mail : ${link}\n\nTu recevras ensuite un e-mail avec un code à 6 chiffres à taper sur le site (pense à regarder dans tes indésirables).`;
   const n = waNumber(phone);
   const whatsapp = (e) => {
     e.preventDefault();

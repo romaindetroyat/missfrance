@@ -20,27 +20,6 @@ export default function Login() {
   const [code, setCode] = useState(null);
   const [inviter, setInviter] = useState(null);
   const [name, setName] = useState("");
-  // App installée (écran d'accueil) : le lien de l'e-mail s'ouvre dans Safari, pas dans l'app.
-  // On permet donc de coller ce lien ici pour se connecter dans l'app.
-  const [standalone, setStandalone] = useState(false);
-  const [pasted, setPasted] = useState("");
-  const [pasteMsg, setPasteMsg] = useState("");
-  useEffect(() => {
-    setStandalone(window.matchMedia?.("(display-mode: standalone)").matches || window.navigator.standalone === true);
-  }, []);
-  async function connectWithPastedLink(e) {
-    e.preventDefault();
-    setPasteMsg("");
-    let url;
-    try { url = new URL(pasted.trim()); } catch { return setPasteMsg("Ce n'est pas un lien. Copie le lien du bouton « Log In » de l'e-mail."); }
-    const token_hash = url.searchParams.get("token") || url.searchParams.get("token_hash");
-    const t = url.searchParams.get("type");
-    if (!token_hash) return setPasteMsg("Ce lien ne contient pas de clé de connexion. Copie bien le lien du bouton « Log In ».");
-    const type = t === "signup" ? "signup" : t === "magiclink" ? "magiclink" : "email";
-    setPasteMsg("Connexion…");
-    const { error } = await supabase.auth.verifyOtp({ token_hash, type });
-    if (error) setPasteMsg(/expired|invalid/i.test(error.message) ? "Ce lien a expiré ou a déjà servi. Demande un nouveau lien ci-dessus." : "Connexion impossible : " + error.message);
-  }
   useEffect(() => {
     let c = new URLSearchParams(window.location.search).get("invite");
     try { if (c) sessionStorage.setItem("mf-invite", c); else c = sessionStorage.getItem("mf-invite"); } catch {}
@@ -120,15 +99,6 @@ export default function Login() {
             {state.step === "sending" ? "Envoi…" : "Recevoir mon lien de connexion"}
           </button>
           {state.msg && <p className="error">{state.msg}</p>}
-        </form>
-      )}
-      {standalone && (
-        <form className="paste-link" onSubmit={connectWithPastedLink}>
-          <strong>Tu utilises l'app installée sur l'écran d'accueil ?</strong>
-          <p className="muted small">Le lien de l'e-mail s'ouvre dans Safari, pas dans l'app. Dans l'e-mail, <strong>appuie longuement sur « Log In »</strong>, choisis <strong>« Copier le lien »</strong>, puis colle-le ici :</p>
-          <input value={pasted} onChange={(e) => setPasted(e.target.value)} placeholder="https://…supabase.co/auth/v1/verify?token=…" autoComplete="off" inputMode="url" />
-          <button className="btn primary" disabled={!pasted.trim()}>Me connecter dans l'app</button>
-          {pasteMsg && <p className={pasteMsg === "Connexion…" ? "muted small" : "error"}>{pasteMsg}</p>}
         </form>
       )}
     </main>
