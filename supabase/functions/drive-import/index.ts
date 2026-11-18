@@ -11,7 +11,7 @@
 import { createClient } from "jsr:@supabase/supabase-js@2";
 
 const sb = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
-const ROOT = "1MvO7nILfn53_XTYLy1Yqpt9PQL25BsKQ";
+const ROOT = "1iJWe6CZxAHfzSEb4qdvVsr9RzxVWP-Cp"; // dossier « Instagram » du Drive (le premier a été vidé et supprimé)
 const MIN_SIDE = 640; // en dessous : trop basse qualité
 const MIN_BYTES = 40000;
 
