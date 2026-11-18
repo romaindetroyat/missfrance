@@ -98,6 +98,10 @@ export async function GET(req) {
       // Image illisible ou introuvable : la photo est écartée
       if (/image|download|fetch|media|invalid|unsupported/i.test(msg)) {
         await sb.rpc("review_set", { p_key: key, p_id: p.id, p_ok: false, p_type: null, p_note: "image illisible : " + msg.slice(0, 120) });
+      } else if (/No object generated/i.test(msg)) {
+        // Réponse hors format (souvent un refus du modèle) : on écarte la photo sans réessayer en boucle,
+        // en gardant le début de la réponse pour comprendre pourquoi.
+        await sb.rpc("review_set", { p_key: key, p_id: p.id, p_ok: false, p_type: null, p_note: "à réexaminer : réponse invalide : " + String(e?.text || e?.finishReason || "").slice(0, 220) });
       }
     }
   }
