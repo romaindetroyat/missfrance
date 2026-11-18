@@ -10,6 +10,7 @@ import { supabase } from "@/lib/supabase";
 import { useTop5 } from "@/lib/top5";
 import RankPicker from "@/components/RankPicker";
 import { sized, onImgError } from "@/lib/img";
+import { createPortal } from "react-dom";
 
 const FIELDS = [
   ["ville", "Ville"],
@@ -238,7 +239,7 @@ export default function Candidate() {
         </div>
       )}
 
-      {zoom && cur && (
+      {zoom && cur && typeof document !== "undefined" && createPortal(
         <div className="lightbox" role="dialog" aria-modal="true" onClick={() => setZoom(false)}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img key={cur.id} className="fadein" src={cur.url} alt={cur.caption || `${c.nom}, photo ${idx + 1}`} onClick={(e) => e.stopPropagation()} />
@@ -256,7 +257,8 @@ export default function Candidate() {
             </>
           )}
           <button className="close" aria-label="Fermer" onClick={() => setZoom(false)}>×</button>
-        </div>
+        </div>,
+        document.body
       )}
     </article>
   );

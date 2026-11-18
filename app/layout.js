@@ -17,7 +17,7 @@ export const metadata = {
   twitter: { card: "summary_large_image", title: "Miss France 2027 — le grand pronostic entre amis", description: "31 candidates, une couronne. Fais ton Top 5 et bats tes amis !" },
   robots: { index: false, follow: false },
   applicationName: "Miss France 27",
-  appleWebApp: { capable: true, title: "Miss France 27", statusBarStyle: "black-translucent" },
+  appleWebApp: { capable: true, title: "Miss France 27", statusBarStyle: "default" },
   icons: { apple: "/icons/apple-touch-icon.png" },
   formatDetection: { telephone: false },
 };
@@ -25,10 +25,8 @@ export const viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#fbfaf8" },
-    { media: "(prefers-color-scheme: dark)", color: "#141312" },
-  ],
+  themeColor: "#fbf7f1",
+  colorScheme: "light",
 };
 
 export default function RootLayout({ children }) {

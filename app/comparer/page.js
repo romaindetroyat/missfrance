@@ -9,6 +9,7 @@ import { useCompare, COMPARE_MAX } from "@/lib/compare";
 import { useDrag } from "@/components/Drag";
 import Help from "@/components/Help";
 import { sized, onImgError } from "@/lib/img";
+import { createPortal } from "react-dom";
 
 const TABS = [["officiel", "Portrait officiel"], ["election", "Robe & écharpe"], ["maillot", "Maillot"], ["voyage", "Voyage"], ["tout", "Toutes"]];
 const I = ({ d, size = 18 }) => (
@@ -37,7 +38,7 @@ function Zoom({ c, photos, start, onClose }) {
     const r = box.current.getBoundingClientRect();
     return { x: ((e.clientX - r.left) / r.width) * 100, y: ((e.clientY - r.top) / r.height) * 100 };
   };
-  return (
+  return createPortal((
     <div className="zoom" role="dialog" aria-modal="true" aria-label={`Zoom sur ${c.nom}`}>
       <div className="zoom-bar">
         <span>{c.nom} · {k + 1}/{photos.length}{TYPE_LABEL[p?.type] ? ` · ${TYPE_LABEL[p.type]}` : ""}</span>
@@ -61,7 +62,7 @@ function Zoom({ c, photos, start, onClose }) {
         <span>4×</span>
       </div>
     </div>
-  );
+  ), document.body);
 }
 
 export default function Comparer() {
