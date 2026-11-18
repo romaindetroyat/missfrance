@@ -23,12 +23,15 @@ export default function Invite() {
   const link = `${window.location.origin}/?invite=${code}`;
   const text = `Viens faire ton pronostic Miss France 2027 avec nous ! 👑 Ouvre ce lien, entre ton prénom et ton e-mail : ${link}\n\nTu recevras ensuite un e-mail avec un code à 6 chiffres à taper sur le site (pense à regarder dans tes indésirables).`;
   const n = waNumber(phone);
+  // Chaque envoi est compté (avec le numéro s'il est saisi), pour le suivi des invitations par l'admin
+  const log = (channel) => { supabase.rpc("log_invite", { p_channel: channel, p_phone: n.length >= 8 ? "+" + n : null }).then(() => {}); };
   const whatsapp = (e) => {
     e.preventDefault();
+    log("whatsapp");
     window.open(`https://wa.me/${n.length >= 8 ? n : ""}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
   };
-  const sms = () => { window.location.href = `sms:${n.length >= 8 ? "+" + n : ""}?&body=${encodeURIComponent(text)}`; };
-  const copy = async () => { try { await navigator.clipboard.writeText(text); toast("Message copié : colle-le où tu veux."); } catch { prompt("Copie ce message :", text); } };
+  const sms = () => { log("sms"); window.location.href = `sms:${n.length >= 8 ? "+" + n : ""}?&body=${encodeURIComponent(text)}`; };
+  const copy = async () => { log("copie"); try { await navigator.clipboard.writeText(text); toast("Message copié : colle-le où tu veux."); } catch { prompt("Copie ce message :", text); } };
   return (
     <section className="invite block">
       <h2>Inviter un ami</h2>
@@ -77,7 +80,10 @@ export function InviteButton() {
 // Liste des joueurs pour l'admin : qui a invité qui, et retrait
 export function PlayersAdmin() {
   const app = useApp();
-  if (!app.me?.is_admin) return null;
+  const [sends, setSends] = useState(null);
+  const admin = !!app.me?.is_admin;
+  useEffect(() => { if (admin) supabase.rpc("invite_sends_admin").then(({ data }) => setSends(data || [])); }, [admin]);
+  if (!admin) return null;
   const nameOf = Object.fromEntries(app.players.map((p) => [p.email, p.display_name]));
   const remove = async (p) => {
     if (!confirm(`Retirer ${p.display_name} (${p.email}) ? Son Top 5 sera supprimé.`)) return;
@@ -86,7 +92,34 @@ export function PlayersAdmin() {
     app.reload();
   };
   const list = [...app.players].sort((a, b) => a.display_name.localeCompare(b.display_name, "fr"));
+  const by = (ch) => (sends || []).filter((x) => x.channel === ch).length;
+  const phones = new Set((sends || []).filter((x) => x.phone).map((x) => x.phone)).size;
+  const when = (d) => new Date(d).toLocaleString("fr-FR", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
+  const CH = { whatsapp: "WhatsApp", sms: "SMS", copie: "Message copié" };
   return (
+    <>
+    <section className="block">
+      <h2>Invitations envoyées <span className="muted small">({sends ? sends.length : "…"}, visible par toi seul)</span></h2>
+      {sends && (
+        <p className="muted small">
+          {by("whatsapp")} par WhatsApp · {by("sms")} par SMS · {by("copie")} message{by("copie") > 1 ? "s" : ""} copié{by("copie") > 1 ? "s" : ""}
+          {phones ? ` · ${phones} numéro${phones > 1 ? "s" : ""} différent${phones > 1 ? "s" : ""}` : ""} — et {list.length} inscrits au total.
+          Les envois sans numéro (contact ou groupe choisi dans WhatsApp) sont comptés sans destinataire.
+        </p>
+      )}
+      {sends?.length > 0 && (
+        <div className="list">
+          {sends.slice(0, 50).map((x, i) => (
+            <div key={i} className="row">
+              <span className="row-main">
+                <span className="name">{CH[x.channel] || x.channel}{x.phone ? ` · ${x.phone}` : ""}</span>
+                <span className="meta">par {x.sender_name} · {when(x.created_at)}</span>
+              </span>
+            </div>
+          ))}
+        </div>
+      )}
+    </section>
     <section className="block">
       <h2>Liste des invités <span className="muted small">({list.length}, visible par toi seul)</span></h2>
       <div className="list">
@@ -101,5 +134,6 @@ export function PlayersAdmin() {
         ))}
       </div>
     </section>
+    </>
   );
 }
