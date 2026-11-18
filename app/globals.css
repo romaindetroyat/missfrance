@@ -802,3 +802,15 @@ img.fadein { animation: fade-in .5s ease both; }
 .fav-region { font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #f3d38b; }
 .fav-name { font: 600 14px var(--font-title); }
 @media (min-width: 900px) { .fav-card { width: 180px; } }
+.favs-hint { margin: -4px 0 8px; }
+.invite-btn { background: linear-gradient(135deg, #d4a64a, var(--rose)); color: #fff; border: 0; }
+.invite-btn svg { color: #fff; }
+.invite-modal { position: fixed; inset: 0; z-index: 90; background: rgba(27,26,24,.45); display: flex; align-items: center; justify-content: center; padding: 16px; animation: fade-in .2s ease both; }
+.invite-sheet { position: relative; width: min(560px, 100%); max-height: calc(100dvh - 32px); overflow: auto; animation: bubble .35s var(--spring) both; }
+.invite-sheet .invite { margin: 0; background: var(--surface); }
+.invite-x { position: absolute; top: 10px; right: 10px; z-index: 1; width: 40px; height: 40px; border-radius: 50%; border: 0; background: var(--line); color: var(--text); font-size: 24px; line-height: 1; cursor: pointer; }
+@media (max-width: 700px) {
+  .invite-modal { align-items: flex-end; padding: 0; }
+  .invite-sheet { width: 100%; border-radius: 24px 24px 0 0; animation: sheet-up .42s var(--sheet-ease) both; }
+  .invite-sheet .invite { border-radius: 24px 24px 0 0; padding-bottom: calc(18px + env(safe-area-inset-bottom)); }
+}
