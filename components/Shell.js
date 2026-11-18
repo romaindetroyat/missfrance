@@ -58,7 +58,7 @@ export default function Shell({ children }) {
 
   const left = app.lockAt ? countdown(app.lockAt, app.now) : null;
   const leftAdjust = app.adjustUntil ? countdown(app.adjustUntil, app.now) : null;
-  const links = app.me.is_admin ? [...LINKS, ["/admin", "Résultats"]] : LINKS;
+  const links = app.me.is_admin ? [...LINKS, ["/admin/suivi", "Suivi"], ["/admin", "Résultats"]] : LINKS;
 
   return (
     <>
@@ -104,7 +104,7 @@ export default function Shell({ children }) {
         <DragProvider>
           <main className="wrap page" key={path}>{children}</main>
           <Tour />
-          {!["/prono", "/admin", "/admin/instagram", "/defile"].includes(path) && <Top5Dock />}
+          {!["/prono", "/admin", "/admin/instagram", "/admin/suivi", "/defile"].includes(path) && <Top5Dock />}
         </DragProvider>
       </ToastProvider>
     </>

@@ -71,6 +71,11 @@ export default function Providers({ children }) {
     reload();
   }, [reload]);
 
+  // Dernière visite (pour l'écran de suivi de l'admin)
+  useEffect(() => {
+    if (email) supabase.rpc("touch_player").then(() => {});
+  }, [email]);
+
   const value = useMemo(() => {
     if (!data) return { session, email, loading: session === undefined || (!!email && !error), error, reload };
     const me = data.players.find((p) => p.email === email) || null;

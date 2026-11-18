@@ -732,3 +732,16 @@ img.fadein { animation: fade-in .5s ease both; }
 .invite-link .sub { margin: 0 0 4px; }
 .invite-link .small { margin: 0 0 10px; }
 .login .notice { text-align: left; }
+
+/* ===== Suivi des joueurs (admin) ===== */
+.suivi-kpis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 6px 0 12px; }
+.suivi-kpis div { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 12px; display: flex; flex-direction: column; align-items: center; }
+.suivi-kpis strong { font: 700 1.75rem/1 var(--font-title); color: #9a3d5c; }
+.suivi-kpis span { font-size: .8125rem; color: var(--muted); margin-top: 4px; text-align: center; }
+.suivi .row { align-items: flex-start; }
+.suivi .meta { display: block; }
+.suivi-state { flex: none; font-size: .75rem; font-weight: 800; padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
+.suivi-state.ok { background: color-mix(in srgb, var(--ok) 15%, transparent); color: var(--ok); }
+.suivi-state.warn { background: color-mix(in srgb, var(--gold) 18%, transparent); color: var(--accent); }
+.suivi-state.muted { background: var(--line); color: var(--muted); }
+@media (prefers-color-scheme: dark) { .suivi-kpis strong { color: #f07fa0; } }
