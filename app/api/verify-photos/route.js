@@ -23,7 +23,7 @@ const BATCH = 24;
 const PARALLEL = Number(process.env.VERIFY_PARALLEL || 8);
 
 const Verdict = z.object({
-  content: z.enum(["candidate", "lieu_paysage", "nourriture_objet", "texte_graphique", "autre"]).describe("Ce que montre la photo 2 : une personne (candidate), un lieu ou paysage sans personne au premier plan, un plat ou un objet, du texte / affiche / capture d'écran, autre chose"),
+  content: z.string().describe("Ce que montre la photo 2, une seule valeur parmi : candidate (une personne), lieu_paysage (lieu ou paysage sans personne au premier plan), nourriture_objet (plat ou objet), texte_graphique (texte, affiche, capture d'écran), autre"),
   same_person: z.enum(["oui", "non", "incertain"]).describe("La personne principale de la photo 2 est-elle la même que sur le portrait officiel (photo 1) ?"),
   main_subject: z.boolean().describe("Cette personne est-elle le sujet principal, bien visible (pas une silhouette lointaine) ?"),
   others: z.enum(["aucun", "arriere_plan", "accompagnee"]).describe("Autres personnes : aucune ; seulement au loin / floues en arrière-plan ; ou bien posant avec elle ou au premier plan (amis, famille, autres Miss, groupe)"),
@@ -34,6 +34,16 @@ const Verdict = z.object({
   category: z.enum(["officiel", "portrait", "election", "maillot", "voyage", "autre"]),
   reason: z.string().describe("Une phrase courte en français"),
 });
+
+// Le modèle invente parfois d'autres mots pour « content » (personne, portrait, objet, groupe…) : on les ramène aux cinq valeurs
+function contentOf(raw) {
+  const t = String(raw || "").toLowerCase();
+  if (/texte|graph|affiche|capture|screen/.test(t)) return "texte_graphique";
+  if (/nourrit|plat|objet|bouteille|voiture|produit/.test(t)) return "nourriture_objet";
+  if (/lieu|paysage|d[ée]cor|b[aâ]timent|vue/.test(t)) return "lieu_paysage";
+  if (/candidate|personne|portrait|femme|groupe|accompagn|selfie|maillot/.test(t)) return "candidate";
+  return "autre";
+}
 
 const PROMPT = (nom, region) => `Tu tries les photos d'une candidate à Miss France 2027 : ${nom}, Miss ${region} 2026.
 On ne garde QUE les photos où l'on voit bien la candidate, seule, nette et bien cadrée.
@@ -66,7 +76,7 @@ export async function GET(req) {
   async function one(p) {
     if (!p.ref_url) return;
     try {
-      const { object: v } = await generateObject({
+      const { object: raw } = await generateObject({
         model,
         schema: Verdict,
         maxRetries: 1,
@@ -80,6 +90,7 @@ export async function GET(req) {
           ],
         }],
       });
+      const v = { ...raw, content: contentOf(raw.content) };
       // Photos du Drive : elles viennent de son propre compte Instagram, un « incertain » seule à l'image suffit
       const fromOwnAccount = p.url.startsWith("https://lh3.googleusercontent.com/");
       const isHer = v.same_person === "oui" || (fromOwnAccount && v.same_person === "incertain" && v.others === "aucun");
