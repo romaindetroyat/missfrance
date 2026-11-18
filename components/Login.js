@@ -5,6 +5,17 @@ import { supabase } from "@/lib/supabase";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [state, setState] = useState({ step: "idle", msg: "" });
+  // Code à 6 chiffres reçu par e-mail (marche aussi dans l'app installée, où le lien s'ouvrirait dans Safari)
+  const [code6, setCode6] = useState("");
+  const [codeMsg, setCodeMsg] = useState("");
+  async function submitCode(e) {
+    e.preventDefault();
+    setCodeMsg("Vérification…");
+    const mail = email.trim().toLowerCase();
+    let { error } = await supabase.auth.verifyOtp({ email: mail, token: code6, type: "email" });
+    if (error) ({ error } = await supabase.auth.verifyOtp({ email: mail, token: code6, type: "signup" }));
+    if (error) setCodeMsg(/expired|invalid/i.test(error.message) ? "Code incorrect ou expiré. Vérifie le dernier e-mail reçu, ou demande-en un nouveau." : "Connexion impossible : " + error.message);
+  }
   // Lien d'invitation (?invite=code) : la personne s'inscrit elle-même avec son prénom et son e-mail
   const [code, setCode] = useState(null);
   const [inviter, setInviter] = useState(null);
@@ -76,8 +87,16 @@ export default function Login() {
       {code && inviter === "" && <p className="error">Ce lien d'invitation n'est plus valable. Demande un nouveau lien à ton ami.</p>}
       {state.step === "sent" ? (
         <div className="notice">
-          <strong>Lien envoyé à {email.trim().toLowerCase()}.</strong>
-          <p>Ouvre l'e-mail sur cet appareil et clique sur le lien pour entrer. Il arrive en anglais (« Magic Link », envoyé par Supabase) : clique sur « Log In ». Pense à vérifier les indésirables.</p>
+          <strong>E-mail envoyé à {email.trim().toLowerCase()}.</strong>
+          <p>Tape le code reçu ci-dessous, ou touche le bouton « Me connecter » de l'e-mail. Pense à vérifier les indésirables.</p>
+          <form className="code-form" onSubmit={submitCode}>
+            <label htmlFor="code">Code reçu par e-mail</label>
+            <input id="code" value={code6} onChange={(e) => setCode6(e.target.value.replace(/\D/g, "").slice(0, 8))}
+              inputMode="numeric" autoComplete="one-time-code" placeholder="123456" maxLength={8} />
+            <button className="btn primary" disabled={code6.length < 6 || codeMsg === "Vérification…"}>Me connecter</button>
+            {codeMsg && <p className={codeMsg === "Vérification…" ? "muted small" : "error"}>{codeMsg}</p>}
+          </form>
+          <button type="button" className="link" onClick={() => { setState({ step: "idle", msg: "" }); setCode6(""); setCodeMsg(""); }}>Changer d'adresse ou renvoyer un e-mail</button>
         </div>
       ) : (
         <form onSubmit={submit}>

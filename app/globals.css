@@ -822,3 +822,6 @@ img.fadein { animation: fade-in .5s ease both; }
 .like-heart.on svg { fill: #e2577f; stroke: #fff; animation: pop .4s var(--spring) both; }
 .like-heart.on .like-n { color: rgba(255,255,255,.85); }
 .fav-info { padding-right: 56px; padding-bottom: 12px; }
+.code-form { display: flex; flex-direction: column; gap: 8px; margin: 12px 0 8px; }
+.code-form input { font: 700 1.5rem var(--font-title); letter-spacing: .3em; text-align: center; padding: 10px 12px; border-radius: 14px; border: 1.5px solid var(--line); background: var(--surface); color: var(--text); }
+.code-form input:focus { outline: none; border-color: var(--gold); }
