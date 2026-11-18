@@ -1,12 +1,13 @@
 "use client";
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { supabase } from "@/lib/supabase";
+import { registerThumbs } from "@/lib/img";
 
 const Ctx = createContext(null);
 export const useApp = () => useContext(Ctx);
 
 // Supabase renvoie au plus 1000 lignes par requête : les photos sont chargées par tranches, en parallèle
-const PHOTO_COLS = "id,candidate_id,url,type,caption,credit,source_page,width,height,added_at";
+const PHOTO_COLS = "id,candidate_id,url,type,caption,credit,source_page,width,height,added_at,thumb_url";
 async function allPhotos() {
   const { count, error } = await supabase.from("photos").select("id", { count: "exact", head: true }).eq("hidden", false).eq("review", "ok");
   if (error) return { error };
@@ -55,6 +56,7 @@ export default function Providers({ children }) {
     const err = [players, settings, candidates, photos, predictions, status, adjustments].find((r) => r.error);
     if (err) return setError(err.error.message);
     setError(null);
+    registerThumbs(photos.data, candidates.data);
     setData({
       players: players.data,
       settings: settings.data,
