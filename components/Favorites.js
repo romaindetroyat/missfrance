@@ -18,30 +18,17 @@ export default function Favorites({ max = 30 }) {
     .filter((x) => x.p && app.byId[x.p.candidate_id])
     .sort((a, b) => b.n - a.n || b.p.id - a.p.id)
     .slice(0, max);
-  // Tant qu'il y a peu de coups de cœur : des photos à découvrir (une par candidate, tirées au hasard), à aimer directement
-  const [seed] = useState(() => Math.random());
-  const discover = liked.length >= 8 ? [] : (() => {
-    const taken = new Set(liked.map((x) => x.p.id));
-    const out = [];
-    for (const c of app.candidates) {
-      const pool = (app.photosBy[c.id] || []).filter((p) => ["portrait", "maillot", "election"].includes(p.type) && !taken.has(p.id));
-      if (pool.length) out.push({ p: pool[Math.floor(((seed * 9301 + c.id.length * 49297) % 1) * pool.length) % pool.length], n: 0 });
-    }
-    return out.sort((a, b) => ((a.p.id * seed) % 1) - ((b.p.id * seed) % 1)).slice(0, max - liked.length);
-  })();
-  const list = [...liked, ...discover];
-  if (!list.length) return null;
+  const list = liked; // uniquement des photos qui ont reçu au moins un vote
 
   return (
     <section className="favs" aria-label="Coups de cœur des joueurs">
       <h2 className="sec-title">♥ Coups de cœur des joueurs</h2>
-      {liked.length < 8 && (
+      {!list.length && (
         <p className="muted small favs-hint">
-          {liked.length ? "Les photos les plus aimées passent en tête. " : "Pas encore de coup de cœur. "}
-          Touche le ♥ des photos que tu préfères : elles apparaîtront ici pour tout le monde.
+          Pas encore de coup de cœur. Touche le ♥ des photos que tu préfères (sur les fiches, dans le défilé…) : elles apparaîtront ici pour tout le monde.
         </p>
       )}
-      <div className="favs-strip">
+      {list.length > 0 && <div className="favs-strip">
         {list.map(({ p }, i) => {
           const c = app.byId[p.candidate_id];
           return (
@@ -53,7 +40,7 @@ export default function Favorites({ max = 30 }) {
             </button>
           );
         })}
-      </div>
+      </div>}
       {open >= 0 && <FavViewer list={list.map((x) => x.p)} start={open} onClose={() => setOpen(-1)} />}
     </section>
   );
