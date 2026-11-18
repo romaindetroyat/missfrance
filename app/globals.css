@@ -731,3 +731,29 @@ img.fadein { animation: fade-in .5s ease both; }
 .paste-link { margin-top: 22px; padding: 14px 16px; border-radius: 16px; background: color-mix(in srgb, var(--surface) 92%, transparent); border: 1px dashed color-mix(in srgb, var(--gold) 55%, transparent); display: flex; flex-direction: column; gap: 8px; }
 .paste-link p { margin: 0; }
 .paste-link input { font: inherit; font-size: 1rem; padding: 10px 12px; border-radius: 12px; border: 1.5px solid var(--line); min-height: 44px; background: var(--surface); color: var(--text); }
+
+/* ===== Visionneuse de photos (Mon Top 5, listes) ===== */
+.photo-btn { position: relative; padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: 12px; flex: none; line-height: 0; transition: transform .3s var(--spring); }
+.photo-btn:active { transform: scale(.93); }
+.photo-btn .thumb { display: block; }
+.photo-count { position: absolute; right: -4px; bottom: -4px; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 999px; background: linear-gradient(135deg, #d4a64a, var(--rose)); color: #fff; font: 800 11px/20px var(--font-body); text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,.2); }
+.pv { position: fixed; inset: 0; z-index: 80; background: #0f0e0d; color: #fff; display: flex; flex-direction: column; animation: fade-in .2s ease both; }
+.pv-bar { display: flex; align-items: center; gap: 12px; padding: calc(10px + env(safe-area-inset-top)) 14px 6px; }
+.pv-who { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.pv-region { font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #e9c27a; }
+.pv-who strong { font: 600 18px var(--font-title); }
+.pv-close { width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255,255,255,.14); color: #fff; font-size: 26px; line-height: 1; cursor: pointer; }
+.pv-chips { display: flex; gap: 6px; overflow-x: auto; padding: 4px 14px 8px; scrollbar-width: none; }
+.pv-chips button { flex: none; border: 0; border-radius: 999px; padding: 7px 12px; background: rgba(255,255,255,.12); color: #fff; font: 700 13px var(--font-body); cursor: pointer; }
+.pv-chips button.on { background: linear-gradient(90deg, #d4a64a, var(--rose)); }
+.pv-track { flex: 1; display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior: contain; }
+.pv-track::-webkit-scrollbar, .pv-chips::-webkit-scrollbar { display: none; }
+.pv-slide { flex: 0 0 100%; scroll-snap-align: center; display: flex; align-items: center; justify-content: center; padding: 0 8px; }
+.pv-slide img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px; }
+.pv-empty { margin: auto; color: #bbb; }
+.pv-nav { position: absolute; top: 50%; width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255,255,255,.16); color: #fff; font-size: 28px; line-height: 1; cursor: pointer; }
+.pv-nav.prev { left: 10px; } .pv-nav.next { right: 10px; }
+.pv-nav:disabled { opacity: .2; }
+@media (hover: none) { .pv-nav { display: none; } }
+.pv-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 14px calc(12px + env(safe-area-inset-bottom)); font-size: 13px; color: #ccc; }
+.pv-link { color: #fff; font-weight: 800; text-decoration: none; background: rgba(255,255,255,.14); padding: 9px 14px; border-radius: 999px; }

@@ -5,6 +5,7 @@ import { Thumb } from "@/components/Bits";
 import { RANKS } from "@/lib/scoring";
 import { useDrag } from "@/components/Drag";
 import Help from "@/components/Help";
+import { PhotoButton } from "./PhotoViewer";
 
 const SHORT = ["Miss France", "1re dauphine", "2e dauphine", "3e dauphine", "4e dauphine"];
 const Icon = ({ d }) => (
@@ -42,8 +43,8 @@ export default function Top5Panel({ t, onNavigate }) {
                 </span>
               )}
               <span className="rank solid">{i + 1}</span>
+              <PhotoButton c={c}><Thumb c={c} /></PhotoButton>
               <Link href={`/candidate/${c.id}`} className="t5-who" onClick={onNavigate}>
-                <Thumb c={c} />
                 <span>
                   <span className="region">{SHORT[i]}</span>
                   <span className="name">{c.nom}</span>

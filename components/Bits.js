@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useApp } from "@/app/providers";
 import { sized, onImgError } from "@/lib/img";
+import { PhotoButton } from "./PhotoViewer";
 
 export const cote = (c) => (c?.cote != null ? Number(c.cote).toFixed(1).replace(".", ",") : "—");
 
@@ -27,7 +28,7 @@ export function CandidateRow({ id, rank, right }) {
   return (
     <div className="row">
       {rank != null && <span className="rank">{rank}</span>}
-      <Thumb c={c} />
+      <PhotoButton c={c}><Thumb c={c} /></PhotoButton>
       <Link href={`/candidate/${c.id}`} className="row-main">
         <span className="region">{c.region}</span>
         <span className="name">{c.nom}</span>

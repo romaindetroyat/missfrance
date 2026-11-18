@@ -103,7 +103,8 @@ async function importOne(f: { id: string; name: string; handle: string; candidat
   return "imported";
 }
 
-// Copie dans le stockage du site d'une photo acceptée (et passée au dédoublonnage)
+// Copie dans le stockage du site d'une photo acceptée (et passée au dédoublonnage) : photos du Drive,
+// et portraits officiels CG-TV à re-télécharger
 // Format de stockage : 1200 px maximum, WebP qualité 80 (assez pour l'écran, 3 à 4 fois plus léger que l'original)
 const slim = (url: string) => `https://wsrv.nl/?url=${encodeURIComponent(url)}&w=1200&h=1200&fit=inside&we&q=80&output=webp`;
 
@@ -126,7 +127,7 @@ async function promote(p: { id: number; candidate_id: string; url: string; hash:
 
 const STORE = "/storage/v1/object/public/photos/";
 async function cleanup(): Promise<number> {
-  const { data } = await sb.from("photos").select("id,url,source_url").or("review.eq.rejected,hidden.eq.true").like("url", `%${STORE}%`).limit(200);
+  const { data } = await sb.from("photos").select("id,url,source_url").or("review.eq.rejected,hidden.eq.true").like("url", `https://%${STORE}%`).limit(200);
   if (!data?.length) return 0;
   const paths = data.map((p) => decodeURIComponent(p.url.split(STORE)[1]));
   const { error } = await sb.storage.from("photos").remove(paths);
@@ -160,7 +161,7 @@ Deno.serve(async (req) => {
   });
   // Photos acceptées, empreinte calculée (dédoublonnage passé), pas masquées : copie sur le site
   const { data: ready } = await sb.from("photos").select("id,candidate_id,url,hash").eq("review", "ok").eq("hidden", false)
-    .like("url", "https://lh3.googleusercontent.com/%").not("phash", "is", null).limit(Number(body.promote) || 30);
+    .or("url.like.https://lh3.googleusercontent.com/%,url.like.https://media.cg-tv.com/%").not("phash", "is", null).limit(Number(body.promote) || 30);
   const promoted: Record<string, number> = {};
   await pool(ready || [], 6, async (p) => {
     if (Date.now() - t0 > 135000) return;

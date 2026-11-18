@@ -71,7 +71,7 @@ function dist(a: string, b: string): number {
   return n;
 }
 
-type Photo = { id: number; candidate_id: string; url: string; type: string; phash: string | null; width: number | null; height: number | null; bytes: number | null };
+type Photo = { id: number; candidate_id: string; url: string; type: string; phash: string | null; width: number | null; height: number | null; bytes: number | null; credit: string | null };
 
 Deno.serve(async (req) => {
   const { data: cfg } = await sb.from("collector_config").select("secret").eq("id", 1).single();
@@ -102,9 +102,12 @@ Deno.serve(async (req) => {
   const body = await req.json().catch(() => ({}));
   const cands = body.all ? (await sb.from("candidates").select("id")).data!.map((c) => c.id) : [...touched];
   for (const cid of cands) {
-    const { data: photos } = await sb.from("photos").select("id,candidate_id,url,type,phash,width,height,bytes").eq("candidate_id", cid).eq("hidden", false).eq("review", "ok").not("phash", "is", null).neq("phash", "erreur");
+    const { data: photos } = await sb.from("photos").select("id,candidate_id,url,type,phash,width,height,bytes,credit").eq("candidate_id", cid).eq("hidden", false).eq("review", "ok").not("phash", "is", null).neq("phash", "erreur");
     const list = (photos || []) as Photo[];
-    const quality = (p: Photo) => (p.width || 0) * (p.height || 0) * 1e3 + (p.bytes || 0) / 1e3;
+    // Le portrait officiel (série CG-TV, tenue officielle avec l'écharpe) est toujours gardé, même si une copie
+    // Instagram est plus grande : celle-ci est souvent recadrée et coupe l'écharpe.
+    const official = (p: Photo) => /cg-tv/i.test(p.credit || "");
+    const quality = (p: Photo) => (official(p) ? 1e15 : 0) + (p.width || 0) * (p.height || 0) * 1e3 + (p.bytes || 0) / 1e3;
     list.sort((a, b) => quality(b) - quality(a)); // la meilleure d'abord
     const kept: Photo[] = [];
     for (const p of list) {
