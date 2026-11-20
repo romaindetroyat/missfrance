@@ -47,7 +47,7 @@ export default function Invite() {
           <span>Son numéro (facultatif)</span>
           <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} inputMode="tel" autoComplete="off" placeholder="06 12 34 56 78" />
         </label>
-        {canShare && <button type="button" className="btn primary" onClick={share}>Partager à plusieurs…</button>}
+        {canShare && <button type="button" className="btn primary" onClick={share}>Partager…</button>}
         <button className={`btn${canShare ? "" : " primary"}`}>Envoyer sur WhatsApp</button>
         <button type="button" className="btn" onClick={sms}>Par SMS</button>
         <button type="button" className="btn" onClick={copy}>Copier le message</button>
@@ -55,9 +55,8 @@ export default function Invite() {
       <details className="invite-tips">
         <summary>Inviter beaucoup de monde d'un coup</summary>
         <ul className="muted small">
-          <li><strong>Plusieurs discussions :</strong> touche « Partager à plusieurs… » ou « Envoyer sur WhatsApp » sans numéro, puis coche plusieurs contacts ou groupes dans WhatsApp (jusqu'à 5 à la fois ; recommence pour les suivants).</li>
+          <li><strong>Le plus simple, une liste de diffusion WhatsApp :</strong> touche « Copier le message » ci-dessus, puis dans WhatsApp : Discussions › Listes (ou ⋮ › Nouvelle diffusion), crée une liste avec tes contacts (jusqu'à 256) et colle le message. Chacun le reçoit en privé, comme un message normal ; seuls ceux qui ont ton numéro enregistré le reçoivent.</li>
           <li><strong>Un groupe WhatsApp :</strong> envoie le message dans le groupe de tes amis, chacun s'inscrit avec le même lien.</li>
-          <li><strong>Liste de diffusion WhatsApp :</strong> dans WhatsApp, menu des discussions › Nouvelle diffusion, choisis tes contacts (jusqu'à 256), puis colle le message (« Copier le message » ci-dessus). Chacun le reçoit en privé ; seuls ceux qui ont ton numéro enregistré le reçoivent.</li>
         </ul>
       </details>
     </section>
