@@ -3,7 +3,7 @@ import { useApp } from "../providers";
 import { CandidateRow } from "@/components/Bits";
 import { scoreFinal } from "@/lib/scoring";
 import Help from "@/components/Help";
-import Invite, { PlayersAdmin } from "@/components/Invite";
+import Invite from "@/components/Invite";
 
 const hour = (t) => new Date(t).toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Paris" }).replace(":", " h ");
 
@@ -46,7 +46,6 @@ export default function Joueurs() {
           ))}
         </div>
         <Invite />
-        <PlayersAdmin />
       </>
     );
   }
@@ -92,7 +91,6 @@ export default function Joueurs() {
           )}
         </section>
       ))}
-      <PlayersAdmin />
     </>
   );
 }

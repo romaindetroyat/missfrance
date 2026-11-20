@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { useApp } from "../../providers";
 import { supabase } from "@/lib/supabase";
+import { InvitesLog } from "@/components/Invite";
 
 const when = (t) => {
   if (!t) return null;
@@ -13,7 +14,7 @@ const when = (t) => {
     d.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Paris" }).replace(":", " h ");
 };
 
-// Suivi des joueurs (admin) : invités, connectés, Top 5 enregistrés
+// Suivi des joueurs (admin) : invités, connectés, Top 5 enregistrés, invitations envoyées, retrait d'un joueur
 export default function Suivi() {
   const app = useApp();
   const [rows, setRows] = useState(null);
@@ -27,6 +28,14 @@ export default function Suivi() {
 
   const connected = rows.filter((r) => r.first_login || r.last_seen).length;
   const played = rows.filter((r) => r.has_top5).length;
+  const adminOf = Object.fromEntries(app.players.map((p) => [p.email, p.is_admin]));
+  const remove = async (r) => {
+    if (!confirm(`Retirer ${r.display_name} (${r.email}) ? Son Top 5 sera supprimé.`)) return;
+    const { data, error } = await supabase.rpc("remove_player", { p_email: r.email });
+    if (error || data !== "ok") return alert(error?.message || data);
+    load();
+    app.reload();
+  };
   const stateOf = (r) => (r.has_top5 ? ["Top 5 enregistré", "ok"] : r.first_login || r.last_seen ? ["Connecté, pas de Top 5", "warn"] : ["Jamais connecté", "muted"]);
 
   return (
@@ -57,11 +66,15 @@ export default function Suivi() {
                   {r.has_adjust ? " · ajustement fait" : ""}
                 </span>
               </span>
-              <span className={`suivi-state ${cls}`}>{label}</span>
+              <span className="suivi-side">
+                <span className={`suivi-state ${cls}`}>{label}</span>
+                {!adminOf[r.email] && <button type="button" className="link small" onClick={() => remove(r)}>Retirer</button>}
+              </span>
             </div>
           );
         })}
       </div>
+      <InvitesLog />
     </>
   );
 }

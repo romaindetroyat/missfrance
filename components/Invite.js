@@ -77,34 +77,25 @@ export function InviteButton() {
   );
 }
 
-// Liste des joueurs pour l'admin : qui a invité qui, et retrait
-export function PlayersAdmin() {
+// Suivi des invitations pour l'admin (page Suivi) : envois WhatsApp / SMS, inscriptions par lien, ajouts par e-mail
+export function InvitesLog() {
   const app = useApp();
   const [sends, setSends] = useState(null);
   const admin = !!app.me?.is_admin;
   useEffect(() => { if (admin) supabase.rpc("invite_sends_admin").then(({ data }) => setSends(data || [])); }, [admin]);
   if (!admin) return null;
-  const nameOf = Object.fromEntries(app.players.map((p) => [p.email, p.display_name]));
-  const remove = async (p) => {
-    if (!confirm(`Retirer ${p.display_name} (${p.email}) ? Son Top 5 sera supprimé.`)) return;
-    const { data, error } = await supabase.rpc("remove_player", { p_email: p.email });
-    if (error || data !== "ok") return alert(error?.message || data);
-    app.reload();
-  };
-  const list = [...app.players].sort((a, b) => a.display_name.localeCompare(b.display_name, "fr"));
   const by = (ch) => (sends || []).filter((x) => x.channel === ch).length;
   const phones = new Set((sends || []).filter((x) => x.phone).map((x) => x.phone)).size;
-  const when = (d) => new Date(d).toLocaleString("fr-FR", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
+  const when = (d) => new Date(d).toLocaleString("fr-FR", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Paris" });
   const CH = { whatsapp: "Invitation WhatsApp", sms: "Invitation SMS", copie: "Message copié", lien: "Inscrit par lien", email: "Ajouté par e-mail" };
   return (
-    <>
     <section className="block">
-      <h2>Invitations <span className="muted small">({sends ? sends.length : "…"}, visible par toi seul)</span></h2>
+      <h2>Invitations <span className="muted small">({sends ? sends.length : "…"})</span></h2>
       {sends && (
         <p className="muted small">
           {by("whatsapp")} par WhatsApp · {by("sms")} par SMS · {by("copie")} message{by("copie") > 1 ? "s" : ""} copié{by("copie") > 1 ? "s" : ""}
           {phones ? ` (${phones} numéro${phones > 1 ? "s" : ""} différent${phones > 1 ? "s" : ""})` : ""}
-          {" "}· {by("lien")} inscrit{by("lien") > 1 ? "s" : ""} par lien · {by("email")} ajouté{by("email") > 1 ? "s" : ""} par e-mail — {list.length} joueurs au total.
+          {" "}· {by("lien")} inscrit{by("lien") > 1 ? "s" : ""} par lien · {by("email")} ajouté{by("email") > 1 ? "s" : ""} par e-mail.
           Les envois WhatsApp sont comptés depuis le 18 novembre au soir ; ceux d'avant n'apparaissent qu'à travers les inscriptions par lien.
         </p>
       )}
@@ -121,20 +112,5 @@ export function PlayersAdmin() {
         </div>
       )}
     </section>
-    <section className="block">
-      <h2>Liste des invités <span className="muted small">({list.length}, visible par toi seul)</span></h2>
-      <div className="list">
-        {list.map((p) => (
-          <div key={p.email} className="row">
-            <span className="row-main">
-              <span className="name">{p.display_name}</span>
-              <span className="meta">{p.email}{p.invited_by ? ` · invité par ${nameOf[p.invited_by] || p.invited_by}` : ""}</span>
-            </span>
-            {!p.is_admin && <button type="button" className="btn" onClick={() => remove(p)}>Retirer</button>}
-          </div>
-        ))}
-      </div>
-    </section>
-    </>
   );
 }
