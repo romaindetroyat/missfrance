@@ -31,6 +31,12 @@ export default function Invite() {
     window.open(`https://wa.me/${n.length >= 8 ? n : ""}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
   };
   const sms = () => { log("sms"); window.location.href = `sms:${n.length >= 8 ? "+" + n : ""}?&body=${encodeURIComponent(text)}`; };
+  // Menu de partage du téléphone (iPhone / Android) : WhatsApp, Messages, Mail… ; dans WhatsApp, on peut cocher plusieurs discussions
+  const canShare = typeof navigator !== "undefined" && !!navigator.share;
+  const share = async () => {
+    try { await navigator.share({ title: "Miss France 2027 entre amis", text }); log("partage"); }
+    catch (e) { if (e?.name !== "AbortError") copy(); }
+  };
   const copy = async () => { log("copie"); try { await navigator.clipboard.writeText(text); toast("Message copié : colle-le où tu veux."); } catch { prompt("Copie ce message :", text); } };
   return (
     <section className="invite block">
@@ -41,10 +47,19 @@ export default function Invite() {
           <span>Son numéro (facultatif)</span>
           <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} inputMode="tel" autoComplete="off" placeholder="06 12 34 56 78" />
         </label>
-        <button className="btn primary">Envoyer sur WhatsApp</button>
+        {canShare && <button type="button" className="btn primary" onClick={share}>Partager à plusieurs…</button>}
+        <button className={`btn${canShare ? "" : " primary"}`}>Envoyer sur WhatsApp</button>
         <button type="button" className="btn" onClick={sms}>Par SMS</button>
         <button type="button" className="btn" onClick={copy}>Copier le message</button>
       </form>
+      <details className="invite-tips">
+        <summary>Inviter beaucoup de monde d'un coup</summary>
+        <ul className="muted small">
+          <li><strong>Plusieurs discussions :</strong> touche « Partager à plusieurs… » ou « Envoyer sur WhatsApp » sans numéro, puis coche plusieurs contacts ou groupes dans WhatsApp (jusqu'à 5 à la fois ; recommence pour les suivants).</li>
+          <li><strong>Un groupe WhatsApp :</strong> envoie le message dans le groupe de tes amis, chacun s'inscrit avec le même lien.</li>
+          <li><strong>Liste de diffusion WhatsApp :</strong> dans WhatsApp, menu des discussions › Nouvelle diffusion, choisis tes contacts (jusqu'à 256), puis colle le message (« Copier le message » ci-dessus). Chacun le reçoit en privé ; seuls ceux qui ont ton numéro enregistré le reçoivent.</li>
+        </ul>
+      </details>
     </section>
   );
 }
@@ -87,13 +102,13 @@ export function InvitesLog() {
   const by = (ch) => (sends || []).filter((x) => x.channel === ch).length;
   const phones = new Set((sends || []).filter((x) => x.phone).map((x) => x.phone)).size;
   const when = (d) => new Date(d).toLocaleString("fr-FR", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Paris" });
-  const CH = { whatsapp: "Invitation WhatsApp", sms: "Invitation SMS", copie: "Message copié", lien: "Inscrit par lien", email: "Ajouté par e-mail" };
+  const CH = { partage: "Partage (menu du téléphone)", whatsapp: "Invitation WhatsApp", sms: "Invitation SMS", copie: "Message copié", lien: "Inscrit par lien", email: "Ajouté par e-mail" };
   return (
     <section className="block">
       <h2>Invitations <span className="muted small">({sends ? sends.length : "…"})</span></h2>
       {sends && (
         <p className="muted small">
-          {by("whatsapp")} par WhatsApp · {by("sms")} par SMS · {by("copie")} message{by("copie") > 1 ? "s" : ""} copié{by("copie") > 1 ? "s" : ""}
+          {by("partage")} partage{by("partage") > 1 ? "s" : ""} groupé{by("partage") > 1 ? "s" : ""} · {by("whatsapp")} par WhatsApp · {by("sms")} par SMS · {by("copie")} message{by("copie") > 1 ? "s" : ""} copié{by("copie") > 1 ? "s" : ""}
           {phones ? ` (${phones} numéro${phones > 1 ? "s" : ""} différent${phones > 1 ? "s" : ""})` : ""}
           {" "}· {by("lien")} inscrit{by("lien") > 1 ? "s" : ""} par lien · {by("email")} ajouté{by("email") > 1 ? "s" : ""} par e-mail.
           Les envois WhatsApp sont comptés depuis le 18 novembre au soir ; ceux d'avant n'apparaissent qu'à travers les inscriptions par lien.

@@ -827,3 +827,8 @@ img.fadein { animation: fade-in .5s ease both; }
 .suivi-side { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex-shrink: 0; }
 .suivi-side .link.small { font-size: 0.78rem; opacity: 0.7; }
 .suivi-side .link.small:hover { opacity: 1; }
+
+/* Invitations : astuces pour inviter beaucoup de monde */
+.invite-tips { margin-top: 12px; }
+.invite-tips summary { cursor: pointer; font-weight: 600; font-size: 0.9rem; }
+.invite-tips ul { margin: 8px 0 0; padding-left: 18px; display: grid; gap: 6px; }
